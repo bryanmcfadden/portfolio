@@ -56,20 +56,6 @@ html, body {
   margin: 0;
   padding: 0; }
 
-.mainContentBox {
-  height: 100%;
-  overflow: auto;
-  position: relative;
-  /* opacity: 0; */
-  transition: opacity 1s;
-  z-index: 200;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  box-sizing: border-box; }
-
 .portfolio-body {
   background-color: #000;
   height: 100%; }
@@ -93,6 +79,26 @@ html, body {
 @media screen and (max-width: 600px) {
   html {
     font-size: 12px; } }
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 10px; } }
+
+.mainContentBox {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  /* opacity: 0; */
+  transition: opacity 1s;
+  z-index: 200;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box; }
+  .mainContentBox .mCSB_container {
+    width: 100% !important; }
 
 /* Introduction  ============================================ */
 .sectionIntro {
