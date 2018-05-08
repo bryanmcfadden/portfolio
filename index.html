@@ -24,9 +24,9 @@
 <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 </head>
 <body class="portfolio-body">
-	<div class="mCustomScrollBar" style="display:block; height:100%; overflow-y:auto;">
-		<div id="22" style="position:relative; overflow:hidden; height:100%; max-width:100%; outline:none;" tabindex="0">
-			<div id="33">
+	<div class="mainContentBox mCustomScrollBar mCS-autoHide" style="overflow:visible;">
+		<div id="mCSB_1" class="mCustomScrollBox mCS-light-2 mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+			<div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width:100%;" dir="ltr">
 				<!-- ************************************************************************************ -->
 				<!-- ***************************** INTRODUCTION ***************************************** -->
 				<!-- ************************************************************************************ -->
@@ -62,33 +62,33 @@
 				<!-- ************************************************************************************ -->
 				<section id="aboutMe">
 				  <h2>About me<span class="decoBar"></span></h2>
-				    <p class="whoIAm">
-				      I’m a UX designer & researcher with over two decades experience.<br>
-				      I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
-				      When I'm not glued to a monitor, you'll find me watching soccer.<br>
-				      Or possibly playing disc jockey for my friends and family.
-				    </p>
-				    <h4>Want to know more?</h4>
-				    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" class="btn goldBtn enCV" target="_blank">
-				      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-				        <span class="paddingWrapper">
-				          <span class="subWrapper">
-				          <img src="img/microsoft_word.svg" alt="Wicrosoft Word document" class="mCS_img_loaded">
-				        </span>
-				      </span>
-				    </a>
-				    <span class="btn goldBtn mainBtn">
-				      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-				        <span class="paddingWrapper"><!-- <i class="icon-file-pdf"></i> --> View my resume</span>
-				    </span>
-				    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" class="btn goldBtn frCV" target="_blank">
-				      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-				        <span class="paddingWrapper">
-				          <span class="subWrapper">
-				          <img src="img/adobe_pdf.svg" alt="Adobe PDF" class="mCS_img_loaded">
-				        </span>
-				      </span>
-				    </a>
+			    <p class="whoIAm">
+			      I’m a UX designer & researcher with over two decades experience.<br>
+			      I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
+			      When I'm not glued to a monitor, you'll find me watching soccer.<br>
+			      Or possibly playing disc jockey for my friends and family.
+			    </p>
+			    <h4>Want to know more?</h4>
+			    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" class="btn goldBtn enCV" target="_blank">
+			      <span class="decoBckd1"></span><span class="decoBckd2"></span>
+			        <span class="paddingWrapper">
+			          <span class="subWrapper">
+			          <img src="img/microsoft_word.svg" alt="Wicrosoft Word document" class="mCS_img_loaded">
+			        </span>
+			      </span>
+			    </a>
+			    <span class="btn goldBtn mainBtn">
+			      <span class="decoBckd1"></span><span class="decoBckd2"></span>
+			        <span class="paddingWrapper"><!-- <i class="icon-file-pdf"></i> --> View my resume</span>
+			    </span>
+			    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" class="btn goldBtn frCV" target="_blank">
+			      <span class="decoBckd1"></span><span class="decoBckd2"></span>
+			        <span class="paddingWrapper">
+			          <span class="subWrapper">
+			          <img src="img/adobe_pdf.svg" alt="Adobe PDF" class="mCS_img_loaded">
+			        </span>
+			      </span>
+			    </a>
 				</section><!-- end sectionAboutMe -->
 				<!-- ************************************************************************************ -->
 				<!-- ***************************** FOOTER *********************************************** -->
@@ -120,20 +120,9 @@
 				</footer>
 			</div>
 		</div>
-	</div>
-	<!--
-	<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="width:10px; display: block; right: 0px; opacity: 1;">
-		<div class="mCSB_draggerContainer">
-			<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; display: block; height: 212px; max-height: 895px; top: 0px;">
-				<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-			</div>
-			<div class="mCSB_draggerRail"></div>
-		</div>
-	</div>
--->
-	<!-- ************************************************************************************ -->
-	<!-- ******************************** MAIN MENU ***************************************** -->
-	<!-- ************************************************************************************ -->
+		<!-- ************************************************************************************ -->
+		<!-- ******************************** MAIN MENU ***************************************** -->
+		<!-- ************************************************************************************ -->
   <nav class="mainMenu">
       <div class="endorsementWrapper">
       	<div class="endorsementSubWrapper">
@@ -164,75 +153,63 @@
   </nav><!-- end of class="mainMenuBox" -->
 </div><!-- end of class="rootBox" -->
 
-  <!-- ============================================ JAVASCRIPT FILES ======================================================== -->
-  <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<!-- ============================================ JAVASCRIPT FILES ======================================================== -->
+<!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
 
-  <!-- vendor JS files-->
-  <script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script> -->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script> -->
-	<script src="js/vendor/jquery.simpleWeather.min.js"></script>
+<!-- vendor JS files-->
+<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script> -->
+<script src="js/vendor/jquery.simpleWeather.min.js"></script>
 
-	<!-- Include font-awesome icons -->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
-  <!-- perso JS files
-  <script src="js/plugins_0_data.js"></script>
-  <script src="js/plugins_1.js"></script>
-  <script src="js/plugins_2_btn_menu.js"></script>
-  <script src="js/plugins_3_init_app.js"></script>
-  <script src="js/plugins_4_modal_work_details.js"></script>
-  <script src="js/plugins_4_bis_slider_work_details.js"></script>
-  <script src="js/plugins_5_inspi_box.js"></script>
-  <script src="js/plugins_6_0_weather.js"></script>
-  <script src="js/plugins_6_home.js"></script>
-  <script src="js/plugins_6_home_part_2.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script> -->
+<!-- Include font-awesome icons -->
+<!-- local -->
+<script src="js\vendor\font-awesome.5.0.12.all.js"></script>
+<!-- web
+<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+-->
+<script src="js/vendor/jquery.easing.1.4.1.min.js"></script>
+<script src="js/vendor/jquery.waypoints.min.js"></script>
 
-	<script src="js/vendor/jquery.easing.1.4.1.min.js"></script>
-	<script src="js/vendor/jquery.waypoints.min.js"></script>
+<script language="javascript">
+//create custom mCSB_1_scrollbar
+$(window).load(function(){
+	$(".mainContentBox").mCustomScrollbar({
+		theme: "light-2",
+		scrollButtons:{ enable: 0 },
+		scrollInertia:700,
+		mouseWheel:{ scrollAmount: 300 },
+		callbacks:{
+			whileScrolling:function(){
+				//$(".btnNextSection").removeClass("movingArrow");
+			//	majStyleBtnBurger((this.mcs.top)*-1);
+			}
+		}
+	});
+});
 
-	<script language="javascript">
-		jQuery(document).ready(function($) {
+$(document).ready(function() {
+	// Animate Bar-Chart
+	 $('.bar-chart').waypoint(function(event, direction) {
+		 alert('here');
+		 $('#skill1').css({'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
+		 $('#skill2').css({'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
+		 $('#skill3').css({'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
+		 $('#skill4').css({'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
+		 $('#skill5').css({'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
+	 }, {
+	 offset: '80%',
+	 triggerOnce: true
+ });
 
-			//create custom mCSB_1_scrollbar
-			$(window).on("load", function(){
-				$(".mCustomScrollBar").mCustomScrollbar({
-					theme: "light-thick",
-					scrollButtons:{ enable: 0 },
-					scrollInertia:700,
-					mouseWheel:{ scrollAmount: 300 },
-					callbacks:{
-						whileScrolling:function(){
-							//$(".btnNextSection").removeClass("movingArrow");
-						//	majStyleBtnBurger((this.mcs.top)*-1);
-						}
-					}
-				});
-			});
+ /*
+ function showMainScrollbar(fctCallback){
+ 	$(".mCustomScrollbar .mCSB_scrollTools").animate({"right": 0, "opacity":1}, function(){if(fctCallback){fctCallback();}});
+ }
+ */
 
-			/*	$(".mCustomScrollBar .mCSB_scrollTools").css("right", "-30px");
-				showMainScrollbar(); */
-	//	});
-
-			// Animate Bar-Chart
-			 $('.bar-chart').waypoint(function(event, direction) {
-				 alert('here');
-				 $('#skill1').css({'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
-				 $('#skill2').css({'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
-				 $('#skill3').css({'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
-				 $('#skill4').css({'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
-				 $('#skill5').css({'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
-			 }, {
-			 offset: '80%',
-			 triggerOnce: true
-		 });
-
-		 function showMainScrollbar(fctCallback){
-		 	$(".mCustomScrollbar .mCSB_scrollTools").animate({"right": 0, "opacity":1}, function(){if(fctCallback){fctCallback();}});
-		 }
-
-	 });
-	</script>
-  </body>
+});
+</script>
+</body>
 </html>
