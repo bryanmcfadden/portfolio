@@ -1,5 +1,6 @@
 # portfolio
 portfolio
 
-requires npm install node
-         npm install sass - run npm run scss to compile
+requires<br> 
+npm install node<br>
+npm install sass - run npm run scss to compile
