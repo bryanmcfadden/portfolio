@@ -18,5 +18,15 @@
     "developer"
   ],
   "author": "Bryan McFadden",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanmcfadden/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bryanmcfadden/portfolio/issues"
+  },
+  "homepage": "https://github.com/bryanmcfadden/portfolio#readme"
 }
