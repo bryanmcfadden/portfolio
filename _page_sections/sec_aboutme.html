@@ -1,33 +1,93 @@
-<!-- ************************************************************************************ -->
-<!-- ******************************** ABOUT ME ****************************************** -->
-<!-- ************************************************************************************ -->
-<section class="sctMainCntt lighter sctAboutMe" id="aboutArea">
-  <h2>About me<span class="decoBar"></span></h2>
-    <p class="whoIAm">
-      I’m a UX designer & researcher with over two decades experience.<br>
-      I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
-      When I'm not glued to a monitor, you'll find me watching soccer.<br>
-      Or possibly playing disc jockey for my friends and family.
-    </p>
-    <h4>Want to know more?</h4>
-    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" class="btn goldBtn enCV" target="_blank">
-      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-        <span class="paddingWrapper">
-          <span class="subWrapper">
-          <img src="img/microsoft_word.svg" alt="Wicrosoft Word document" class="mCS_img_loaded">
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Portfolio | Bryan McFadden - UI / UX Designer & Researcher, Code Monkey</title>
+<meta name="description" content="Web portfolio of Bryan McFadden - UI / UX Designer & Researcher based in Newnan, GA.">
+<!-- Crafting awesome high quality responsive websites and exceptional user experience, motivated by a big passion for the digital world. Currently open to worldwide new opportunities. -->
+<meta name="keywords" content="web, ux, user experience, UX Designer, UX Developer, UI/UX designer, creative designer, portfolio, usability, UX researcher">
+<meta name="viewport" content="initial-scale=1.0,width=device-width,maximum-scale=1">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio | Bryan McFadden - UI / UX Designer & Researcher, Code Monkey">
+<meta property="og:description" content="Web portfolio of Bryan McFadden - UI / UX Designer & Researcher based in Newnan, GA.">
+<meta property="og:url" content="http://portfolio.fertileimagination.com/">
+<meta property="og:image" content="http://portfolio.fertileimagination.com/img/portfolio_logo.jpg">
+<script src="../js/vendor/scrollreveal.min.js"></script>
+<script>
+  window.sr = new ScrollReveal();
+</script>
+<link href="http://portfolio.fertileimagination.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link rel="stylesheet" href="../css/normalize.css">
+<!-- CSS Preprocessor -->
+<link rel="stylesheet" href="../css/portfolio.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!-- <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css"> -->
+<!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+<style>
+  .resume {
+    display:inline-block;
+    border:1px solid #CCC;
+    border-radius:4px;
+    visibility:hidden;
+    width:1px; */
+    /* width:60px; */
+    /* height:60px; */
+    opacity:0;
+    margin-right:0px;
+    margin-left:0px;
+    z-index:1;
+    vertical-align:middle;
+  }
+  .resume-img {
+    width:100%;
+    border:none;
+  }
+  .resume:hover {
+    background-color: #ffff00;
+  }
+  .resume-doc {
+    transition: transform .8s;
+  }
+  .resume-pdf {
+    transition: transform .8s;
+  }
+</style>
+</head>
+<body style="overflow:auto;">
+  <!-- ************************************************************************************ -->
+  <!-- ******************************** ABOUT ME ****************************************** -->
+  <!-- ************************************************************************************ -->
+  <section id="aboutArea" style="background-color:#fff; padding:90px 0; text-align:center; position:relative; overflow:hidden; display:block; box-sizing:border-box;">
+    <h2 style="color:#111; font-size:2em; letter-spacing: 0.02em; margin:0 auto 20px; display:inline-block;">About me<span class="decoBar"></span></h2>
+      <p style="padding:1.2em 2em; line-height:1.5em;">
+        I’m a UX designer & researcher with over two decades experience.<br>
+        I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
+        When I'm not glued to a monitor, you'll find me watching soccer.<br>
+        Or possibly playing disc jockey for my friends and family.
+      </p>
+      <h4 style="margin-top: 50px; font-size: 1.1em; font-weight:300;">Want to know more?</h4>
+      <a id="resume_doc" class="resume resume-doc" href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" target="_blank">
+        <span style="width:100%; display:table-cell; vertical-align:middle; padding:10px;">
+          <img src="../img/microsoft_word.svg" alt="Wicrosoft Word document" class="resume-img">
         </span>
-      </span>
-    </a>
-    <span class="btn goldBtn mainBtn">
-      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-        <span class="paddingWrapper"><!-- <i class="icon-file-pdf"></i> --> View my resume</span>
-    </span>
-    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" class="btn goldBtn frCV" target="_blank">
-      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-        <span class="paddingWrapper">
-          <span class="subWrapper">
-          <img src="img/adobe_pdf.svg" alt="Adobe PDF" class="mCS_img_loaded">
+      </a>
+      <button id="btnViewResume" style="background:transparent; height:60px; line-height:56px; border-radius: .5em; border:1px solid #ccc; padding:0 25px; vertical-align:middle;">
+        View my resume
+      </button>
+      <a id="resume_pdf" class="resume resume-pdf" href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" target="_blank">
+        <span style="width:100%; display:table-cell; vertical-align:middle; padding:10px;">
+          <img src="../img/adobe_pdf.svg" alt="Adobe PDF" class="resume-img">
         </span>
-      </span>
-    </a>
-</section><!-- end sectionAboutMe -->
+      </a>
+  </section>
+</body>
+<!-- ============================================ JAVASCRIPT FILES ======================================================== -->
+<!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../js/portfolio.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
+<!-- <script src="../js/vendor/jquery.easing.1.4.1.min.js"></script> -->
+</html>
