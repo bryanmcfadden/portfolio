@@ -26,51 +26,147 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <!-- <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css"> -->
 <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+<style>
+  #footer {
+    background-color:#272727;
+    line-height:20px;
+    display:block;
+    overflow:auto;
+    text-align:center;
+  }
+  .footer-ico {
+    color:#f7f7f7;
+    padding-top:67px;
+    padding-bottom:30px;
+  }
+  .footer-ico div:first-child {
+    margin-bottom:20px;
+    font-size:26px;
+  }
+  .footer-ico div svg {
+    font-size:1.3em !important;
+    color:#fff;
+  }
+  .footer-ico a {
+    color:#939393;
+    text-decoration:none;
+    text-transform:lowercase;
+  }
+  .footer-ico div:last-child {
+    color:#939393;
+    text-transform:lowercase;
+  }
+  .footer-social-ico {
+    background:#171717;
+    padding-top:50px;
+    padding-bottom:65px;
+    text-align:center;
+  }
+  @media only screen and (max-width: 400px) {
+    .footer-ico, .footer-social-ico p { font-size:1.5em; }
+    .footer-social-ico { margin-bottom: 15px; }
+    .footer-social-ico ul li svg { font-size:2.5em !important; }
+  }
+  .footer-social-ico p {
+    color:#939393;
+    text-transform:lowercase;"
+  }
+  .footer-social-ico ul {
+    list-style:none;
+    padding-left:0 !important;
+    line-height:30px;
+  }
+ .footer-social-ico ul li {
+   display:inline-block;
+   margin:5px 10px;
+ }
+ .footer-social-ico ul li svg {
+   box-sizing:border-box;
+   color:#fff;
+   font-size:1.5em;
+   vertical-align:middle;
+ }
+</style>
 </head>
 <body>
-	<footer id="footer" style="background-color:#272727; line-height:20px; display:block; overflow:auto;">
-		<div class="container" style="text-align:center;">
-			<div class="col-md-3" style="color:#f7f7f7; padding-top:67px; padding-bottom:30px;">
-				<div style="margin-bottom:15px; font-size:30px;">
-					<img src="http://portfolio.fertileimagination.com/wp-content/uploads/2016/07/mappoint_white.png" alt="">
-				</div>
-				<div style="color:#939393;">
-					127 Cliffhaven Circle<br>
-					Newnan, GA 30263
-				</div>
-			</div>
-			<div class="col-md-3" style="color:#f7f7f7; padding-top:67px; padding-bottom:30px;">
-				<div style="margin-bottom:15px; font-size:30px;">
-					<img src="http://portfolio.fertileimagination.com/wp-content/uploads/2016/07/envelope_white.png" alt="">
+  <div>
+    <div class="container">
+      <div id="map" class="col-md-6 col-xs-12" style="height:300px; border:1px solid #ccc;"></div>
+      <script>
+      /* ========= GoogleMaps API ================================================== */
+        function initMap(){
+          var bmlatlng = new google.maps.LatLng(33.37249851,-84.786496854);
+          var mapOptions = {
+            zoom: 7,
+            center: {lat: 33.74900, lng: -84.38798}
+          }
+          var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+          var marker = new google.maps.Marker({
+            position: bmlatlng,
+            map: map,
+            title: "Click to zoom"
+          });
+          marker.setMap(map);
+          map.addListener('center_changed', function() {
+            window.setTimeout(function() {
+              map.panTo(marker.getPosition());
+            }, 3000);
+          });
+
+          marker.addListener('click', function() {
+            map.setZoom(10);
+            map.setCenter(marker.getPosition());
+          });
+        }
+      </script>
+      <!-- GoogleMaps API -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-iEYgzfpOANsC-zi-76cny5m1iRnJBMs&callback=initMap"
+      async defer></script>
+    </div>
+  </div>
+	<footer id="footer" class="clear-fix">
+		<div class="container">
+			<div class="col-md-3 footer-ico">
+				<div>
+          <i class="fas fa-map-marker-alt"></i>
 				</div>
 				<div>
-					<a href="mailto:bryan.mcfadden@gmail.com" style="color:#939393; text-decoration:none;">bryan.mcfadden@gmail.com</a>
+					127 CLIFFHAVEN CIRCLE<br>
+					NEWNAN, GA 30263
 				</div>
 			</div>
-			<div class="col-md-3" style="color:#939393; padding-top:67px; padding-bottom:30px;">
-				<div style="margin-bottom:15px; font-size:30px;">
-					<img src="http://portfolio.fertileimagination.com/wp-content/uploads/2016/07/phone_white.png" alt="">
+			<div class="col-md-3 footer-ico">
+				<div>
+          <i class="fas fa-envelope"></i>
 				</div>
 				<div>
-					<a href="tel:678 723 5031" style="color:#939393; text-decoration:none;">678.723.5031</a>
+					<a href="mailto:bryan.mcfadden@gmail.com">BRYAN.MCFADDEN@GMAIL.COM</a>
 				</div>
 			</div>
-			<div class="col-md-3" style="background:#171717; padding-top:67px; padding-bottom:67px; text-align:center;">
-				<ul style="margin:0 0 1.5em 0 !important; list-style:none; padding-left:0 !important;">
-					<li style="display:inline-block; margin:5px 10px;">
+			<div class="col-md-3 footer-ico">
+				<div>
+          <i class="fas fa-phone-square"></i>
+				</div>
+				<div>
+					<a href="tel:678 723 5031">678.723.5031</a>
+				</div>
+			</div>
+			<div class="col-md-3 footer-social-ico">
+				<ul>
+					<li>
 						<a target="_blank" href="https://twitter.com/3DAnim8r">
 							<span class="sr-only">Twitter link</span>
-							<i class="fab fa-twitter-square" style="font-size:1.5em; color:#939393; box-sizing:border-box; vertical-align:middle;"></i>
+							<i class="fab fa-twitter-square"></i>
 						</a>
 					</li>
-					<li style="display:inline-block; margin:5px 10px;">
+					<li>
 						<a target="_blank" href="https://www.linkedin.com/in/bryanmcfadden">
 							<span class="sr-only">Linkedin link</span>
-							<i class="fab fa-linkedin" style="font-size:1.5em; color:#939393; box-sizing:border-box; vertical-align:middle;"></i>
+							<i class="fab fa-linkedin"></i>
 						</a>
 					</li>
 				</ul>
-				<p style="color:#939393;">©2018 - Bryan McFadden</p>
+				<p>©2018 - BRYAN MCFADDEN</p>
 			</div>
 		</div>
 	</footer>

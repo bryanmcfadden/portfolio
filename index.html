@@ -16,6 +16,7 @@
 <meta property="og:url" content="http://portfolio.fertileimagination.com/">
 <meta property="og:image" content="http://portfolio.fertileimagination.com/img/portfolio_logo.jpg">
 <link href="http://portfolio.fertileimagination.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- <link rel="icon" href="http://mikedekker.com/wp-content/uploads/2016/11/256x256-150x150.png" sizes="32x32"> -->
 
 <link rel="stylesheet" href="css/normalize.css">
 <!-- CSS Preprocessor -->
@@ -172,23 +173,10 @@
 <script src="js/vendor/jquery.easing.1.4.1.min.js"></script>
 <script src="js/vendor/jquery.waypoints.min.js"></script>
 
-<script language="javascript">
-//create custom mCSB_1_scrollbar
-$(window).load(function(){
-	$(".mainContentBox").mCustomScrollbar({
-		theme: "light-2",
-		scrollButtons:{ enable: 0 },
-		scrollInertia:700,
-		mouseWheel:{ scrollAmount: 300 },
-		callbacks:{
-			whileScrolling:function(){
-				//$(".btnNextSection").removeClass("movingArrow");
-			//	majStyleBtnBurger((this.mcs.top)*-1);
-			}
-		}
-	});
-});
+<!-- portfolio JS file-->
+<script src="js/portfolio.js"></script>
 
+<script language="javascript">
 $(document).ready(function() {
 	// Animate Bar-Chart
 	 $('.bar-chart').waypoint(function(event, direction) {
@@ -202,13 +190,6 @@ $(document).ready(function() {
 	 offset: '80%',
 	 triggerOnce: true
  });
-
- /*
- function showMainScrollbar(fctCallback){
- 	$(".mCustomScrollbar .mCSB_scrollTools").animate({"right": 0, "opacity":1}, function(){if(fctCallback){fctCallback();}});
- }
- */
-
 });
 </script>
 </body>
