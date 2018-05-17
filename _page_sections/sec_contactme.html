@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="../css/normalize.css">
 <!-- CSS Preprocessor -->
 <link rel="stylesheet" href="../css/portfolio.css" type="text/css" media="all">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro|Work+Sans" rel="stylesheet">
 <!-- <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css"> -->
 <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 </head>
@@ -43,38 +43,35 @@
   </style>
   <div class="clear-fix" style="display:table; background: #0071bc; overflow:auto; padding-bottom:80px; width:100%; text-align:center;">
     <section>
-      <div class="container">
-        <div>
-        	<!-- SECTION HEADER -->
-        	<div style="padding:60px 0; letter-spacing:1.5px;">
-        	  <h2 class="contact-me">Contact me</h2>
+        <div style="padding:60px 0;">
+          <h2 class="contact-me">Contact Me<span></span></h2>
+        </div>
+        <div class="container">
+        	<div id="contactForm">
+          	<form method="post" enctype="application/x-www-form-urlencoded" style="padding-bottom:60px;">
+          	  <div>
+                <div class="three-inputs-wrapper">
+                  <div class="col-md-4 col-sm-12 form-input">
+                    <input class="contact-name" id="contact-name" name="contact-name" placeholder="Your Name" required="" oninvalid="this.setCustomValidity('Enter your name')" onchange="this.setCustomValidity('')" value="" type="text">
+                  </div>
+                  <div class="col-md-4 col-sm-12 form-input">
+                    <input class="contact-email" id="contact-email" name="contact-email" placeholder="Your Email" required="" oninvalid="this.setCustomValidity('Enter a valid email')" onchange="this.setCustomValidity('')" value="" type="email">
+                  </div>
+                  <div class="col-md-4 col-sm-12 form-input">
+                    <input class="contact-subject" id="contact-subject" name="pirate-forms-contact-subject" placeholder="Subject" required="" oninvalid="this.setCustomValidity('Please enter a subject')" onchange="this.setCustomValidity('')" value="" type="text">
+                  </div>
+                </div>
+                <div class="form-input">
+                  <textarea style="display:inline-block;" rows="5" cols="30" class="contact-message" id="contact-message" name="pirate-forms-contact-message" placeholder="Your message" required="" oninvalid="this.setCustomValidity('Enter your question or comment')" onchange="this.setCustomValidity('')"></textarea>
+                </div>
+                <div class="form-input col-sm-12 col-md-2 align-right">
+                    <button type="submit" class="contact-submit" id="form-contact-submit" name="form-contact-submit">Send</button>
+                </div>
+              </div>
+            </form>
           </div>
-        </div>
-      	<!-- / END SECTION HEADER -->
-      	<div id="contactForm">
-        	<form method="post" enctype="application/x-www-form-urlencoded" style="padding-bottom:60px;">
-        	  <div>
-              <div class="three-inputs-wrapper">
-                <div class="col-md-4 col-sm-12 form-input">
-                  <input class="contact-name" id="contact-name" name="contact-name" placeholder="Your Name" required="" oninvalid="this.setCustomValidity('Enter your name')" onchange="this.setCustomValidity('')" value="" type="text">
-                </div>
-                <div class="col-md-4 col-sm-12 form-input">
-                  <input class="contact-email" id="contact-email" name="contact-email" placeholder="Your Email" required="" oninvalid="this.setCustomValidity('Enter a valid email')" onchange="this.setCustomValidity('')" value="" type="email">
-                </div>
-                <div class="col-md-4 col-sm-12 form-input">
-                  <input class="contact-subject" id="contact-subject" name="pirate-forms-contact-subject" placeholder="Subject" required="" oninvalid="this.setCustomValidity('Please enter a subject')" onchange="this.setCustomValidity('')" value="" type="text">
-                </div>
-              </div>
-              <div class="form-input">
-                <textarea style="display:inline-block;" rows="5" cols="30" class="contact-message" id="contact-message" name="pirate-forms-contact-message" placeholder="Your message" required="" oninvalid="this.setCustomValidity('Enter your question or comment')" onchange="this.setCustomValidity('')"></textarea>
-              </div>
-              <div class="form-input col-sm-12 col-md-2 align-right">
-                  <button type="submit" class="contact-submit" id="form-contact-submit" name="form-contact-submit">Send</button>
-              </div>
-            </div>
-          </form>
-        </div>
-    	</div>
+      	</div>
+      </div>
     </section>
   </div>
   <div style="height:200px; padding:40px;">

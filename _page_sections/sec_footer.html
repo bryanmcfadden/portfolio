@@ -50,11 +50,9 @@
   .footer-ico a {
     color:#939393;
     text-decoration:none;
-    text-transform:lowercase;
   }
   .footer-ico div:last-child {
     color:#939393;
-    text-transform:lowercase;
   }
   .footer-social-ico {
     background:#171717;
@@ -63,13 +61,15 @@
     text-align:center;
   }
   @media only screen and (max-width: 400px) {
-    .footer-ico, .footer-social-ico p { font-size:1.5em; }
-    .footer-social-ico { margin-bottom: 15px; }
-    .footer-social-ico ul li svg { font-size:2.5em !important; }
+    .footer-ico, .footer-social-ico p { font-size:1.4em; }
+    .footer-social-ico {
+      margin-top: 40px;
+      margin-bottom: 15px;
+      }
+    .footer-social-ico ul li svg { font-size:2.8em !important; }
   }
   .footer-social-ico p {
     color:#939393;
-    text-transform:lowercase;"
   }
   .footer-social-ico ul {
     list-style:none;
@@ -86,6 +86,10 @@
    font-size:1.5em;
    vertical-align:middle;
  }
+
+ svg.selectable:hover {
+   cursor:pointer;
+   opacity:.5;}
 </style>
 </head>
 <body>
@@ -128,24 +132,24 @@
 		<div class="container">
 			<div class="col-md-3 footer-ico">
 				<div>
-          <i class="fas fa-map-marker-alt"></i>
+          <i class="fas fa-map-marker-alt selectable"></i>
 				</div>
 				<div>
-					127 CLIFFHAVEN CIRCLE<br>
-					NEWNAN, GA 30263
-				</div>
-			</div>
-			<div class="col-md-3 footer-ico">
-				<div>
-          <i class="fas fa-envelope"></i>
-				</div>
-				<div>
-					<a href="mailto:bryan.mcfadden@gmail.com">BRYAN.MCFADDEN@GMAIL.COM</a>
+					127 Cliffhaven Circle<br>
+					Newnan, GA 30263
 				</div>
 			</div>
 			<div class="col-md-3 footer-ico">
 				<div>
-          <i class="fas fa-phone-square"></i>
+          <i class="fas fa-envelope selectable"></i>
+				</div>
+				<div>
+					<a href="mailto:bryan.mcfadden@gmail.com">bryan.mcfadden@gmail.com</a>
+				</div>
+			</div>
+			<div class="col-md-3 footer-ico">
+				<div>
+          <i class="fas fa-phone-square selectable"></i>
 				</div>
 				<div>
 					<a href="tel:678 723 5031">678.723.5031</a>
@@ -156,17 +160,17 @@
 					<li>
 						<a target="_blank" href="https://twitter.com/3DAnim8r">
 							<span class="sr-only">Twitter link</span>
-							<i class="fab fa-twitter-square"></i>
+							<i class="fab fa-twitter-square selectable"></i>
 						</a>
 					</li>
 					<li>
 						<a target="_blank" href="https://www.linkedin.com/in/bryanmcfadden">
 							<span class="sr-only">Linkedin link</span>
-							<i class="fab fa-linkedin"></i>
+							<i class="fab fa-linkedin selectable"></i>
 						</a>
 					</li>
 				</ul>
-				<p>©2018 - BRYAN MCFADDEN</p>
+				<p>©2018 - Bryan McFadden</p>
 			</div>
 		</div>
 	</footer>

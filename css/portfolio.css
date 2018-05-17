@@ -1,6 +1,13 @@
 @charset "UTF-8";
-/* ========================================================= */
+/* =========================================================
+color codes
+blue = #2298d8; rgb(34,152,216)
+gray = #ccc; rgba(0,0,0,0.5)
+============================================================ */
 /* Global Variables ======================================== */
+/* color bar underneath titles */
+/* outline and font color */
+/* rollover color */
 /* Fonts =================================================== */
 @font-face {
   font-family: 'Roboto';
@@ -219,48 +226,6 @@ form .form-input {
   box-sizing: border-box;
   padding: 0 15px; }
 
-form input, form textarea, form button {
-  box-sizing: border-box;
-  text-align: left;
-  line-height: 20px;
-  padding-left: 15px !important;
-  border-radius: 4px;
-  width: 100%;
-  max-width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  color: #555;
-  font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  text-transform: none; }
-
-form input {
-  display: inline-block;
-  min-height: 46px;
-  padding-left: 15px !important;
-  vertical-align: baseline;
-  visibility: hidden;
-  margin-bottom: 20px; }
-
-form textarea {
-  display: inline-block;
-  padding: 15px; }
-
-form button {
-  padding: 13px 0;
-  text-transform: uppercase;
-  text-align: center;
-  border: none;
-  display: table;
-  color: #2298d8;
-  cursor: pointer;
-  margin-top: 15px;
-  overflow: visible;
-  line-height: 1.42857143;
-  vertical-align: middle; }
-  form button:focus {
-    outline: dotted; }
-
 /* Global Styles =========================================== */
 .clear-fix {
   clear: both; }
@@ -281,12 +246,33 @@ h1 {
   margin: 0; }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5em;
+  font-family: "Work Sans";
+  font-size: 2em;
+  margin: 0 auto 20px;
+  display: inline-block;
+  padding-bottom: 20px;
   text-transform: uppercase;
   line-height: 42px; }
   h2.contact-me {
     color: #fff; }
+  h2 span {
+    position: relative;
+    float: left;
+    top: 20px;
+    left: 15%;
+    width: 70%;
+    height: 1px;
+    border-bottom: 1px solid #2298d8; }
+
+h4 {
+  margin-top: 50px;
+  font-size: 1.1em;
+  font-weight: 300;
+  letter-spacing: 1.2px; }
+
+p {
+  padding: 1.2em 2em;
+  line-height: 1.5em; }
 
 html, body {
   height: 100%;
@@ -296,8 +282,13 @@ html, body {
   margin: 0;
   padding: 0; }
 
+a {
+  text-decoration: none;
+  color: #2298d8; }
+  a:hover {
+    color: rgba(34, 152, 216, 0.5); }
+
 .portfolio-body {
-  background-color: #000;
   height: 100%; }
 
 .wrapper {
@@ -310,14 +301,43 @@ html, body {
   display: table-cell;
   vertical-align: middle; }
 
-button {
+input, textarea, button {
+  cursor: pointer;
   background: transparent;
-  height: 60px;
-  line-height: 56px;
-  border-radius: .5em;
-  border: 1px solid #ccc;
-  padding: 0 25px;
-  vertical-align: middle; }
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #2298d8;
+  border: 1px solid #2298d8;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-align: left;
+  line-height: 20px;
+  padding-left: 15px;
+  vertical-align: baseline; }
+
+input {
+  display: inline-block;
+  padding-left: 15px !important;
+  min-height: 46px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%; }
+
+textarea {
+  display: inline-block;
+  padding: 15px;
+  width: 100%;
+  max-width: 100%; }
+
+button {
+  padding: 15px 20px;
+  text-transform: uppercase;
+  text-align: center; }
+  button:hover {
+    color: rgba(34, 152, 216, 0.5);
+    border-color: rgba(34, 152, 216, 0.5); }
+  button:focus {
+    outline: #000 dotted; }
 
 #main {
   text-align: center; }
@@ -353,7 +373,7 @@ button {
 .sectionIntro {
   position: relative;
   transition: filter 1s, opacity 1s;
-  color: #fff;
+  color: #2298d8;
   height: 100vh;
   /* -------------- role-title -------------*/
   /* -------------- my-roles -------------*/ }
@@ -399,7 +419,7 @@ button {
       text-align: center;
       transition: margin-top 1s; }
       .sectionIntro .btnNext .bouncing-arrow:hover {
-        color: #ffff00; }
+        color: rgba(34, 152, 216, 0.5); }
   .sectionIntro .intro-title {
     color: #fff;
     display: inline-block;
@@ -439,11 +459,11 @@ button {
       .sectionIntro .my-roles h1 .role-title {
         font-weight: normal;
         font-size: inherit;
-        color: #ffff00;
+        color: #2298d8;
         text-transform: uppercase; }
     .sectionIntro .my-roles #location:hover {
       cursor: pointer;
-      color: #ffff00; }
+      color: #2298d8; }
     .sectionIntro .my-roles em {
       display: inline-block;
       position: relative;
@@ -458,7 +478,7 @@ button {
         transition: opacity 1s, width 1s, margin 1s;
         width: 100%; }
         .sectionIntro .my-roles em .under-lined:after {
-          border-bottom: 2px dotted #ffff00;
+          border-bottom: 2px dotted #2298d8;
           content: "";
           display: block;
           position: absolute;
@@ -531,24 +551,11 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   overflow: hidden;
   display: block;
   box-sizing: border-box; }
-  #aboutMe h2 {
-    color: #fff;
-    font-size: 2em;
-    letter-spacing: 0.5em;
-    margin: 0 auto 20px;
-    display: inline-block; }
-  #aboutMe h4 {
-    margin-top: 50px;
-    font-size: 1.1em;
-    font-weight: 300;
-    letter-spacing: 1.2px; }
-  #aboutMe p {
-    padding: 1.2em 2em;
-    line-height: 1.5em; }
   #aboutMe .resume {
     display: inline-block;
-    border: 1px solid #CCC;
+    border: 1px solid #2298d8;
     border-radius: 4px;
+    color: #2298d8;
     visibility: hidden;
     width: 1px;
     /* width:60px; */
@@ -559,15 +566,19 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     z-index: 1;
     vertical-align: middle; }
     #aboutMe .resume:hover {
-      background-color: #ffff00; }
+      border-color: rgba(34, 152, 216, 0.5);
+      color: rgba(34, 152, 216, 0.5); }
+      #aboutMe .resume:hover svg {
+        color: rgba(34, 152, 216, 0.5); }
     #aboutMe .resume span {
       width: 100%;
       display: table-cell;
       vertical-align: middle;
       padding: 10px; }
-    #aboutMe .resume img {
-      width: 100%;
-      border: none; }
+    #aboutMe .resume svg {
+      font-size: 40px;
+      color: #2298d8;
+      margin-left: 5px; }
 
 /* Main-Menu  ============================================== */
 .mainMenu {
@@ -760,6 +771,13 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   -moz-box-shadow: inset 0 0 0 0 #ffffff;
   box-shadow: inset 0 0 0 0 #ffffff; }
 
-/* About Me  ============================================== */
-#aboutMe {
-  background-color: #fff; }
+/* Contact-Me  ============================================ */
+#contactForm input, #contactForm textarea, #contactForm button {
+  background-color: #fff;
+  color: #414141;
+  border: 1px solid #ccc; }
+
+#contactForm button {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%; }
