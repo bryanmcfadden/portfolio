@@ -23,7 +23,8 @@
 <link rel="stylesheet" href="../css/normalize.css">
 <!-- CSS Preprocessor -->
 <link rel="stylesheet" href="../css/portfolio.css" type="text/css" media="all">
-<link href="https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro|Work+Sans" rel="stylesheet">
+<link rel="stylesheet" href="../css/vendor/hamburgers.min.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro|Work+Sans|RobotoExo|Montserrat|Oxygen" rel="stylesheet">
 <!--
 fonts:
 Source Sans Pro
@@ -130,15 +131,222 @@ Questrial
   margin-top:20px;
   display: inline-block;
 }
+/* -------------------- project details -------------------------------------*/
+@keyframes closeProjectDetails{
+  0% {
+    transform: scale(1) rotateX(0);
+    top: 0;
+    opacity: 1;
+    visibility: visible; }
+  33% {
+    transform: scale(0.7) rotateX(5deg);
+    top: 0;
+    opacity: 1;
+    visibility: visible; }
+  66% {
+    transform: scale(0.7) rotateX(5deg);
+    top: -300px;
+    opacity: 0;
+    visibility: visible; }
+  100% {
+    transform: scale(0.7) rotateX(5deg);
+    top: -300px;
+    opacity: 0;
+    visibility: hidden; }}
+
+  @keyframes openProjectDetails{
+    0% {
+    /* transform: scale(0.3); */
+    /*  top: 300px; */
+      top:-100%;
+      left:0;
+      opacity: 0;
+      visibility: visible; }
+       }
+    100% {
+      /* transform: scale(1); */
+      top: 0;
+      left:0;
+      opacity: 1;
+      visibility: visible; }}
+
+.project-details.close {
+  animation-name: closeProjectDetails;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+.project-details.open {
+  animation-name: openProjectDetails;
+  animation-duration: 1.0s;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+.project-details {
+  background:#fff;
+  box-shadow: 0 0 200px 0 rgba(0,0,0, 0.7);
+  display:block;
+  height:100.1%;
+  left:0;
+  opacity:0;
+  position:absolute;
+  text-align:center;
+  top:0;
+  transform:scale(1);
+  visibility:hidden;
+  width:100%;
+  z-index:250;
+}
 </style>
 </head>
 <body style="overflow:auto;">
+  <div class="nav-bar">
+    <button class="hamburger hamburger--spin" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  </div>
+  <!-- ************************************************************************************ -->
+  <!-- ************************ PROJECT DETAILS ******************************************* -->
+  <!-- ************************************************************************************ -->
+  <div class="project-details">
+      <!-- PHP include starts here -->
+      <header style="padding:80px 5%; position:relative; background-color:#000; color:#fff;">
+          <!-- <div class="bckgdBox"></div> -->
+          <h2>tSpace</h2><br>
+          <h3>Internal Social Media App </h3><br>
+          <em>UX / UI Design</em><br>
+          <!-- left navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+          <button style="border:1px solid #fff; color:#fff; position:absolute; bottom:74px; left:140px;">
+              <i style="color:#fff; margin-right:10px;" class="fas fa-angle-left"></i>
+               Prev.
+         </button>
+        <!-- right navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+        <button style="border:1px solid #fff; color:#fff; position:absolute; bottom:74px; right:140px;">
+             Next
+             <i style="color:#fff; margin-left:10px;" class="fas fa-angle-right"></i>
+       </button>
+      </header>
+
+      <section class="sctWorkCntt sctCaptures">
+        <h3 style="display:none;">Project screenshots</h3>
+        <div class="illustrationSubBox transitionOk">
+            <div class="deviceSimulBox">
+              <div class="deviceSimulBoxSubWraper">
+                <div class="camDisk"></div>
+                <div class="soundBar"></div>
+                <div class="homeBtnTablet"></div>
+                <div class="homeBtnPhone"></div>
+                <div class="screenSimulBox">
+                    <div class="illustBox illustBox1">
+                        <figure class="workIllustration">
+                            <img src="../img/mm_img_tspace.jpg" alt="Listing of agreements families.">
+                        </figure>
+                    </div>
+                    <div class="illustBox illustBox2" style="display:none;">
+                        <figure class="workIllustration">
+                            <img src="../img/illustration_2.png" alt="Form of new priority creation.">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          </div><!-- fin de .illustrationSubBox -->
+          <div class="illustLegend">
+            <span class="legendLabel">UI de suivi des accords commerciaux d’un portfeuille client (données test).</span>
+          </div>
+
+          <div class="navSlider">
+              <div class="navSliderSubWrapper">
+                  <button class="btn btnNavSliderArrow prevSlideBtn goldBtn sideBar">
+                      <span class="decoBckd1"></span><span class="decoBckd2"></span>
+                      <span class="paddingWrapper"><i class="icon-left-open-big"></i></span>
+                  </button>
+
+                  <ul class="btnsNavSlider">
+                      <li><button class="btn sliderBtn"><span class="puceSliderBtn"></span></button></li>
+                      <li><button class="btn sliderBtn active"><span class="puceSliderBtn"></span></button></li>
+                      <li><button class="btn sliderBtn"><span class="puceSliderBtn"></span></button></li>
+                      <li><button class="btn sliderBtn"><span class="puceSliderBtn"></span></button></li>
+                  </ul>
+
+                  <button class="btn btnNavSliderArrow nextSlideBtn goldBtn sideBar">
+                      <span class="decoBckd1"></span><span class="decoBckd2"></span>
+                      <span class="paddingWrapper"><i class="icon-right-open-big"></i></span>
+                  </button>
+              </div>
+          </div><!-- fin de la structure à injectée via jQuery -->
+      </section><!-- end of class="sctCaptures" -->
+
+      <section style="padding:50px 0; box-sizing:border-box;" class="sctBrief">
+        <h3 style="display:none;">Project description</h3>
+        <br>
+        <p style="width:80%; display:inline-block; max-width:700px; color:#333; line-height:1.6em; font-style:normal; letter-spacing:.02em; font-family:'Roboto';">
+            Vision 360 est une <em>application de business intelligence</em> destiné aux entités commerciales d'Essilor France. Elle permet d'<em>ajuster
+              la politique commerciale</em> du groupe et de mieux <em>orienter les efforts de la force de vente</em>. Sont notamment présentés les
+              <em>indicateurs clés d'évolution</em> du chiffre d'affaires des portefeuilles client, de justesse des partenariats mis en place ou encore de
+              ciblage des prospects et de suivi des parts de marché d’Essilor, sur le territoire français.
+        </p>
+      </section><!-- end of class="sctDescription" -->
+
+
+
+      <section class="sctWorkCntt lighter sctRole"><!-- start of class="sctRole" -->
+        <h2>
+          My role in this project
+          <span class="decoBar"></span>
+        </h2>
+        <br>
+        <ul class="skillsTagsList">
+          <li class="skillTag">UX Design</li>
+          <li class="skillTag">Logotype</li>
+          <li class="skillTag">HTML</li>
+          <li class="skillTag">UI Design</li>
+          <li class="skillTag">Wireframing</li>
+          <li class="skillTag">CSS</li>
+          <li class="skillTag">Javascript</li>
+          <li class="skillTag">SCRUM</li>
+          <li class="skillTag">jQuery</li>
+        </ul>
+        <br>
+        <p class="roleOnTheProject">
+          Accompagné de développeurs Qlikview, de products owners et d'une data scientist, mon rôle a été de concevoir le système de navigation global et les interfaces de
+          visualisation des données. Unchantier d'envergure de plusieurs mois. Durant lesquels la conception itérative et les divers tests utilisateurs ont pris tous leur
+          sens pource projet à grande valeur ajouté.
+        </p>
+      </section><!-- end of class="sctRole" -->
+
+      <footer class="sctWorkCntt sctFooter">
+        <div class="bckgdBox"></div>
+          <a href="#workAreaTop" class="btn goldBtn backToTop" onclick="event.preventDefault(); return false;">
+            <span class="decoBckd1"></span>
+            <span class="decoBckd2"></span>
+            <span class="paddingWrapper">
+              <i class="icon-up-small"></i> Back to top
+            </span>
+          </a>
+          <br>
+          <small class="copyrights">
+            © <!--<i class="icon-copyright"></i>--> 2017
+            <span class="midDot">·</span>
+            <i class="icon-logo_aldric_rivat"></i>{ Aldric RIVAT }
+            <span class="midDot">·</span>
+            <span class="statusFooter">UX Designer / Front-end developer</span>
+          </small>
+      </footer><!-- end of class="sctFooter" -->
+  </div><!-- end of class="modalWorkDetails" -->
   <!-- ************************************************************************************ -->
   <!-- ******************************** MY WORK ******************************************* -->
   <!-- ************************************************************************************ -->
   <section id="currentProjects">
     <h2>Recent Projects<span class="title-underline"></span></h2>
-    <ul class="clear-fix">
+    <ul class="current-project-list clear-fix">
       <li class="col-sm-4 col-xs-12">
         <span class="project" style="background-image:url('../img/illustrations/bw_macbook_01.jpg');"></span>
         <span class="details-wrapper">
@@ -234,7 +442,10 @@ Questrial
 <!-- ============================================ JAVASCRIPT FILES ======================================================== -->
 <!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- <script src="../js/portfolio.js"></script> -->
+<!-- Include font-awesome icons -->
+<!-- local -->
+<script src="..\js\vendor\font-awesome.5.0.12.all.js"></script>
+<script src="../js/portfolio.js"></script>
 <!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
 <!-- <script src="../js/vendor/jquery.easing.1.4.1.min.js"></script> -->
 </html>

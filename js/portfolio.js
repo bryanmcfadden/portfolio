@@ -4,8 +4,9 @@ Bryan McFadden
 
 All functionality required for my portfolio pages
 ============================================================================== */
+var viewProjects;
 //Custom Scrollbar Creation
-$(window).load(function(){
+/*$(window).load(function(){
 	$(".mainContentBox").mCustomScrollbar({
 		theme: "light-2",
 		scrollButtons:{ enable: 0 },
@@ -19,13 +20,28 @@ $(window).load(function(){
 		}
 	});
 });
-
+*/
 $(document).ready(function(){
+
+	$('.hamburger').on('click', function(e){
+		// check to see if viewProjects is true
+		if(viewProjects){
+			$('.hamburger').toggleClass('light');
+		}
+		$('.hamburger').toggleClass('is-active');
+		// can close menu here or do something else
+	});
 
   /* ========= Introduction ================================================== */
 
 
-
+	/* ========= My Projects =================================================== */
+	$('.current-project-list li').on('click', function(){
+		  $(".project-details").addClass("open");
+			$(".project-details").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},500);
+			viewProjects = true;
+			$('.hamburger').toggleClass('light is-active');
+	});
 
 
   /* ========= About Me ====================================================== */

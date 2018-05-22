@@ -22,9 +22,18 @@
 <!-- CSS Preprocessor -->
 <link rel="stylesheet" href="css/portfolio.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css">
+<link rel="stylesheet" href="css/vendor/hamburgers.min.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro|Work+Sans|Roboto|Exo|Montserrat|Oxygen" rel="stylesheet">
 <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 </head>
 <body class="portfolio-body">
+  <div class="nav-bar">
+    <button class="hamburger light hamburger--spin" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  </div>
 	<div class="mainContentBox mCustomScrollBar mCS-autoHide" style="overflow:visible;">
 		<!-- <div id="mCSB_1" class="mCustomScrollBox mCS-light-2 mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
 			<div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width:100%;" dir="ltr"> -->
@@ -62,62 +71,57 @@
 				<!-- ***************************** ABOUT ME ********************************************* -->
 				<!-- ************************************************************************************ -->
 				<section id="aboutMe">
-				  <h2>About me<span class="decoBar"></span></h2>
-			    <p class="whoIAm">
-			      I’m a UX designer & researcher with over two decades experience.<br>
-			      I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
-			      When I'm not glued to a monitor, you'll find me watching soccer.<br>
-			      Or possibly playing disc jockey for my friends and family.
-			    </p>
-			    <h4>Want to know more?</h4>
-			    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" class="btn goldBtn enCV" target="_blank">
-			      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-			        <span class="paddingWrapper">
-			          <span class="subWrapper">
-			          <img src="img/microsoft_word.svg" alt="Wicrosoft Word document" class="mCS_img_loaded">
-			        </span>
-			      </span>
-			    </a>
-			    <span class="btn goldBtn mainBtn">
-			      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-			        <span class="paddingWrapper"><!-- <i class="icon-file-pdf"></i> --> View my resume</span>
-			    </span>
-			    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" class="btn goldBtn frCV" target="_blank">
-			      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-			        <span class="paddingWrapper">
-			          <span class="subWrapper">
-			          <img src="img/adobe_pdf.svg" alt="Adobe PDF" class="mCS_img_loaded">
-			        </span>
-			      </span>
-			    </a>
+				 <div style="height:300px;"></div>
 				</section><!-- end sectionAboutMe -->
 				<!-- ************************************************************************************ -->
 				<!-- ***************************** FOOTER *********************************************** -->
 				<!-- ************************************************************************************ -->
-				<footer>
-					<div class="office-bg"></div>
-					<nav class="networksLinks">
-						<ul class="clearfix">
-								<li><a href="mailto:bryan.mcfadden@gmail.com" class="btn" title="Send me an email"><i class="icon-paper-plane-1"></i></a></li>
-									<li><a href="https://linkedin.com/in/bryanmcfadden" class="btn" title="Go to my LinkedIn profile"><i class="icon-linkedin"></i></a></li>
-									<!-- <li><a href="https://www.viadeo.com/p/0021s4dlcc08sbu4" class="btn" title="Go to my Viadeo profile"><i class="icon-viadeo-1"></i></a></li> -->
-									<li><a href="https://www.pinterest.com/bryanmcfadden/" class="btn" title="Get inspired by my Pinterest pins"><i class="icon-pinterest-1"></i></a></li>
-									<li><a href="https://unsplash.com/@aldric" class="btn" title="See my Unsplash photos"><i class="icon-facebook"></i></a></li>
+				<footer id="footer" class="clear-fix">
+					<div class="office-bg-footer"></div>
+					<div class="container">
+						<div class="col-md-3 footer-ico">
+							<div>
+			          <i class="fas fa-map-marker-alt selectable"></i>
+							</div>
+							<div>
+								127 Cliffhaven Circle<br>
+								Newnan, GA 30263
+							</div>
+						</div>
+						<div class="col-md-3 footer-ico">
+							<div>
+			          <i class="fas fa-envelope selectable"></i>
+							</div>
+							<div>
+								<a href="mailto:bryan.mcfadden@gmail.com">bryan.mcfadden@gmail.com</a>
+							</div>
+						</div>
+						<div class="col-md-3 footer-ico">
+							<div>
+			          <i class="fas fa-phone-square selectable"></i>
+							</div>
+							<div>
+								<a href="tel:678 723 5031">678.723.5031</a>
+							</div>
+						</div>
+						<div class="col-md-3 footer-social-ico">
+							<ul>
+								<li>
+									<a target="_blank" href="https://twitter.com/3DAnim8r">
+										<span class="sr-only">Twitter link</span>
+										<i class="fab fa-twitter-square selectable"></i>
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://www.linkedin.com/in/bryanmcfadden">
+										<span class="sr-only">Linkedin link</span>
+										<i class="fab fa-linkedin selectable"></i>
+									</a>
+								</li>
 							</ul>
-					 </nav>
-
-					 <a href="#mainTop" class="btn goldBtn backToTop" onclick="event.preventDefault(); return false;">
-						<span class="decoBckd1"></span>
-						<span class="decoBckd2"></span>
-						<span class="paddingWrapper">
-							<i class="icon-up-small"></i><!-- icon-up --> Back to top
-						</span>
-					</a>
-					<br>
-
-					<small class="copyrights">© <!--<i class="icon-copyright"></i>--> 2018
-						<span class="midDot">·</span>Bryan McFadden<span class="midDot">·</span><span class="statusFooter">UX Designer / Researcher</span>
-					</small>
+							<p>©2018 - Bryan McFadden</p>
+						</div>
+					</div>
 				</footer>
 		<!--	</div>
 		</div> -->

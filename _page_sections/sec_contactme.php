@@ -41,34 +41,31 @@
       0% { box-shadow:0 0 0 5px rgba(34,152,216,0.5) }
     }
   </style>
-  <div class="clear-fix" style="display:table; position:relative; background: #0071bc; overflow:auto; padding-bottom:80px; width:100%; text-align:center;">
-    <div id="messageLoader" style="display:none; position:absolute; box-sizing:border-box; width:100%; height:100%; background: rgba(255,255,255,0.9); z-index:10; overflow:auto; padding-top:150px;">
-      <i class="fa fa-spinner fa-pulse fa-fw" arai-hidden="true" style="font-size:100px; color:#2298d8;"></i>
-    </div>
+  <div class="clear-fix" style="display:table; background: #0071bc; overflow:auto; padding-bottom:80px; width:100%; text-align:center;">
     <section>
         <div style="padding:60px 0;">
           <h2 class="contact-me">Contact Me<span></span></h2>
         </div>
         <div class="container">
         	<div id="contactForm">
-          	<form id="ajax-contact" method="post" action="process.php" style="padding-bottom:60px;">
+          	<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" target="_blank" style="padding-bottom:60px;">
           	  <div>
                 <div class="three-inputs-wrapper">
                   <div class="col-md-4 col-sm-12 form-input">
-                    <input id="name" name="name" placeholder="Your Name" required="" oninvalid="this.setCustomValidity('Enter your name')" onchange="this.setCustomValidity('')" value="" type="text">
+                    <input class="contact-name" id="contact-name" name="contact-name" placeholder="Your Name" required="" oninvalid="this.setCustomValidity('Enter your name')" onchange="this.setCustomValidity('')" value="" type="text">
                   </div>
                   <div class="col-md-4 col-sm-12 form-input">
-                    <input id="email" name="email" placeholder="Your Email" required="" oninvalid="this.setCustomValidity('Enter a valid email')" onchange="this.setCustomValidity('')" value="" type="email">
+                    <input class="contact-email" id="contact-email" name="contact-email" placeholder="Your Email" required="" oninvalid="this.setCustomValidity('Enter a valid email')" onchange="this.setCustomValidity('')" value="" type="email">
                   </div>
                   <div class="col-md-4 col-sm-12 form-input">
-                    <input id="subject" name="subject" placeholder="Subject" required="" oninvalid="this.setCustomValidity('Please enter a subject')" onchange="this.setCustomValidity('')" value="" type="text">
+                    <input class="contact-subject" id="contact-subject" name="contact-subject" placeholder="Subject" required="" oninvalid="this.setCustomValidity('Please enter a subject')" onchange="this.setCustomValidity('')" value="" type="text">
                   </div>
                 </div>
                 <div class="form-input">
-                  <textarea style="display:inline-block;" rows="5" cols="30" id="message" name="message" placeholder="Your message" required="" oninvalid="this.setCustomValidity('Enter your question or comment')" onchange="this.setCustomValidity('')"></textarea>
+                  <textarea style="display:inline-block;" rows="5" cols="30" class="contact-message" id="contact-message" name="contact-message" placeholder="Your message" required="" oninvalid="this.setCustomValidity('Enter your question or comment')" onchange="this.setCustomValidity('')"></textarea>
                 </div>
                 <div class="form-input col-sm-12 col-md-2 align-right">
-                    <button id="submit" type="submit">Send</button>
+                    <button type="submit" class="contact-submit" id="submit" name="submit" value="send">Send</button>
                 </div>
               </div>
             </form>
@@ -86,9 +83,6 @@
   <!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
-  <!-- Include font-awesome icons -->
-  <!-- local -->
-  <script src="..\js\vendor\font-awesome.5.0.12.all.js"></script>
   <!-- <script src="../js/vendor/jquery.easing.1.4.1.min.js"></script> -->
   <script language="javascript">
   var contactname = {
@@ -125,44 +119,31 @@
   }
 
   sr.reveal(".contact-me", {origin: "top", distance: "50px", duration: "500"});
-  sr.reveal("#name", contactname);
-  sr.reveal("#email", contactemail);
-  sr.reveal("#subject", contactsubject);
-  sr.reveal("#message", contactmessage);
-  sr.reveal("#submit", contactsubmit);
+  sr.reveal(".contact-name", contactname);
+  sr.reveal(".contact-email", contactemail);
+  sr.reveal(".contact-subject", contactsubject);
+  sr.reveal(".contact-message", contactmessage);
+  sr.reveal(".contact-submit", contactsubmit);
 
-  $(document).ready(function(){
-    $('#submit').click(function(e){
-      var formData = $('#ajax-contact').serialize();
-      $('#messageLoader').css('display', 'block');
+  $(function(){
+    $('.contact-submit').click(function(){
+      // collect values
+      var name = $('.contact-name').val();
+      var email = $('.contact-email').val();
+      var subject = $('.contact-subject').val();
+      var message = $('.contact-message').val();
+      var msg = 'name=' + name + '&email=' email + '&subject=' + subject + '&message=' + message;
 
-      var request = $.ajax({
-        type: 'POST',
-        url: $('#ajax-contact').attr('action'),
-        data: formData,
-        success: function(data){
-          // message sent successfully
-          //clear all values and show success modal
-          alert('Message sent! '+ data.http_response_code);
-          $('#messageLoader').css('display', 'none');
-          $('#name').val('');
-          $('#email').val('');
-          $('#subject').val('');
-          $('#message').val('');
-        },
-        error: function(status, errorThrown){
-          // error in sending the messages
-          // display error modal
-          alert("Status: " + textStatus + "\n ErrorThrown: " + errorThrown);
-          $('#messageLoader').css('display', 'none');
+      alert(msg);
+      $.ajax({
+        type: "POST",
+        url: "./phpmailer/process.php",
+        data: msg,
+        sucess: function() {
+          alert('ok!');
         }
       });
-
-      //request.done(function(data){
-        //alert(data);
-      //});
-      e.preventDefault();
-
+      return false;
     });
   });
   </script>

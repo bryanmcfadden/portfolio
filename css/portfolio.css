@@ -1,14 +1,19 @@
 @charset "UTF-8";
-/* =========================================================
+/* =============================================================================
 color codes
 blue = #2298d8; rgb(34,152,216)
 gray = #ccc; rgba(0,0,0,0.5)
-============================================================ */
-/* Global Variables ======================================== */
+============================================================================= */
+/* =============================================================================
+color codes
+blue = #2298d8; rgb(34,152,216)
+gray = #ccc; rgba(0,0,0,0.5)
+============================================================================= */
+/* Global Variables ========================================================= */
 /* color bar underneath titles */
 /* outline and font color */
 /* rollover color */
-/* Fonts =================================================== */
+/* Fonts ==================================================================== */
 @font-face {
   font-family: 'Roboto';
   src: url("./fonts/text_fonts/Roboto-Regular.eot");
@@ -54,7 +59,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   font-weight: 100;
   font-style: normal; }
 
-/* Responsive  Styles ====================================== */
+/* Responsive  Styles ======================================================= */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -215,7 +220,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   .col-xl-12 {
     width: 100%; } }
 
-/* Form Styles =============================================== */
+/* Form Styles ============================================================== */
 form .three-inputs-wrapper {
   float: left;
   width: 100%;
@@ -226,7 +231,7 @@ form .form-input {
   box-sizing: border-box;
   padding: 0 15px; }
 
-/* Global Styles =========================================== */
+/* Global Styles ============================================================ */
 .clear-fix {
   clear: both; }
 
@@ -289,6 +294,7 @@ a {
     color: rgba(34, 152, 216, 0.5); }
 
 .portfolio-body {
+  background-color: #000;
   height: 100%; }
 
 .wrapper {
@@ -369,14 +375,27 @@ button {
   .mainContentBox .mCSB_container {
     width: 100% !important; }
 
-/* Introduction  ============================================ */
+/* Nav-bar  ================================================================= */
+.nav-bar {
+  position: fixed;
+  /* background-color:#000; */
+  width: 100%;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  z-index: 900; }
+
+.hamburger.light .hamburger-inner {
+  background-color: #fff !important; }
+
+/* Introduction  ============================================================ */
 .sectionIntro {
   position: relative;
   transition: filter 1s, opacity 1s;
   color: #2298d8;
   height: 100vh;
   /* -------------- role-title -------------*/
-  /* -------------- my-roles -------------*/ }
+  /* -------------- my-roles ----------------*/ }
   .sectionIntro.hidden {
     opacity: 0; }
   .sectionIntro .office-bg {
@@ -441,6 +460,7 @@ button {
   .sectionIntro.hidden .intro-title, .sectionIntro.hidden .my-roles {
     opacity: 0; }
   .sectionIntro .my-roles {
+    color: #fff;
     display: inline-block;
     font-size: 1.7em;
     font-family: 'Roboto Lt', Arial, sans-serif;
@@ -457,6 +477,7 @@ button {
       .sectionIntro .my-roles h1 span {
         margin-right: 10px; }
       .sectionIntro .my-roles h1 .role-title {
+        font-family: 'Oxygen', Arial, sans-serif;
         font-weight: normal;
         font-size: inherit;
         color: #2298d8;
@@ -537,12 +558,12 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   .subWrapperBtnNextSection .btnNextSection.movingArrow {
     animation: none; } }
 
-/* Custom Scrollber Overrides ===========================+*/
+/* Custom Scrollber Overrides ===============================================+*/
 .mCSB_inside > .mCSB_container {
   margin-right: 20px !important; }
 
 /* .mCustomScrollBar .mCSB_dragger .mCSB_draggerRail{ width: 6px; } */
-/* About Me  ============================================ */
+/* About Me  ================================================================ */
 #aboutMe {
   background-color: #fff;
   padding: 90px 0;
@@ -607,7 +628,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   opacity: 1;
   transform: scale(1); }
 
-/* --------- ENDORSEMENTS ------------- */
+/* Endorsements  ============================================================ */
 .endorsementWrapper, .mainMenuLinks {
   height: 50%;
   top: 25%;
@@ -781,3 +802,76 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   margin-top: 20px;
   text-align: center;
   width: 100%; }
+
+/* Footer  ================================================== */
+#footer {
+  overflow: hidden;
+  position: relative;
+  text-align: center; }
+  #footer .office-bg-footer {
+    background: url("../img/office_bg.jpg");
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .07;
+    z-index: -1; }
+  #footer svg.selectable:hover {
+    cursor: pointer;
+    opacity: .5; }
+  #footer .footer-ico {
+    color: #f7f7f7;
+    padding-top: 67px;
+    padding-bottom: 30px; }
+    #footer .footer-ico div:first-child {
+      margin-bottom: 20px;
+      font-size: 26px; }
+    #footer .footer-ico div svg {
+      font-size: 1.3em !important;
+      color: #fff; }
+    #footer .footer-ico a {
+      color: #939393;
+      text-decoration: none; }
+    #footer .footer-ico div:last-child {
+      color: #939393; }
+  #footer .footer-social-ico {
+    background: #2298d8;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    position: relative;
+    text-align: center; }
+    #footer .footer-social-ico p {
+      padding: 0;
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      margin-left: 25%;
+      color: #fff; }
+    #footer .footer-social-ico ul {
+      list-style: none;
+      padding-left: 0 !important;
+      line-height: 30px; }
+      #footer .footer-social-ico ul li {
+        display: inline-block;
+        margin: 5px 10px; }
+        #footer .footer-social-ico ul li svg {
+          box-sizing: border-box;
+          color: #fff;
+          font-size: 2em;
+          vertical-align: middle; }
+
+@media only screen and (max-width: 400px) {
+  .footer-ico, .footer-social-ico p {
+    font-size: 1.4em; }
+  .footer-social-ico {
+    margin-top: 40px;
+    margin-bottom: 15px; }
+    .footer-social-ico ul li svg {
+      font-size: 2.8em !important; } }
