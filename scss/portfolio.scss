@@ -132,8 +132,9 @@ h1 {
   font-size: inherit;
   margin: 0;}
 h2 {
-  font-family:"Work Sans";
-  font-size:2em;
+  font-family: 'Monteserrat', Arial, sans-serif;
+  font-size: 2em;
+  letter-spacing:.05em;
   margin:0 auto 20px;
   display:inline-block;
   padding-bottom:20px;
@@ -149,6 +150,14 @@ h2 {
     width:70%;
     height:1px;
     border-bottom:1px solid $title-color;}
+}
+h3 {
+  font-family: 'Roboto Lt', Arial, sans-serif;
+  text-transform:none;
+  font-size: 1em;
+  font-weight:100;
+  letter-spacing:.03em;
+
 }
 h4 {
   margin-top: 50px;
@@ -171,7 +180,10 @@ a {
 
   &:hover {color: $default-hover-color;}
 }
-
+ul {
+  padding:0;
+  margin:0;
+}
 .portfolio-body{
   background-color:#000;
   height:100%;}
@@ -211,7 +223,7 @@ textarea {
   width:100%;
   max-width:100%;}
 button {
-  padding:15px 20px;
+  padding:10px 20px;
   text-transform: uppercase;
   text-align:center;
 
