@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../css/portfolio.css" type="text/css" media="all">
 <link rel="stylesheet" href="../css/vendor/hamburgers.min.css" type="text/css" media="all">
 <!--<link href="https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro|Work+Sans|Roboto|Exo|Montserrat|Oxygen" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Lt" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet"> <!-- Title font -->
@@ -122,7 +122,7 @@ Questrial
   opacity: 0.5;
   color: #fff;
   font-family: 'Roboto Lt', Arial, sans-serif;
-  font-size: .6em;
+  font-size: .8em;
   letter-spacing:.03em;
   font-weight: 100;
   margin-top: 2px;
@@ -168,7 +168,7 @@ Questrial
       top:-100%;
       left:0;
       opacity: 0;
-      visibility: visible; }
+      visibility: hidden; }
        }
     100% {
       /* transform: scale(1); */
@@ -259,7 +259,7 @@ em {
        </button>
       </header>
       <!-- start brief section -->
-      <section id="sectBrief" style="padding:50px 0; box-sizing:border-box;">
+      <section id="sectBrief" style="padding:40px 0; box-sizing:border-box;">
         <p style="width:80%; display:inline-block; max-width:700px; color:#333; line-height:1.6em; font-style:normal; letter-spacing:.02em; font-family:'Roboto';">
             Vision 360 est une application de business intelligence destiné aux entités commerciales d'Essilor France. Elle permet d'ajuster
               la politique commerciale du groupe et de mieux orienter les efforts de la force de vente. Sont notamment présentés les
@@ -268,7 +268,7 @@ em {
         </p>
       </section><!-- end of sectBrief -->
 
-      <!-- start of project graphic -->
+      <!-- start of project graphic
       <section id="sectProjGraphic">
         <div>
           <div class="mm-graphic">
@@ -284,11 +284,166 @@ em {
         <div style="background-color:#f7f7f7; border-top:5px solid #f2f2f2; padding:20px 0;">
             [ ------------- --------------- ------------- ]
         </div>
-      </section><!-- end of sectProjGraphic -->
+      </section> end of sectProjGraphic -->
+
+      <style>
+        /* jssor slider loading skin spin css */
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+          .project-img { max-width:640px; }
+        }
+        @media only screen and (min-width: 1192px) {
+          .project-img { max-width:1024px; }
+        }
+        .i {cursor:pointer;}
+        .i .b {fill:#000;fill-opacity:0.5;}
+        .i:hover .b {fill-opacity:.7;}
+
+        .a {fill:none;stroke:#000;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+
+        #sectProjGraphic {
+          border-bottom:5px solid #f2f2f2;
+          padding-bottom:40px;}
+
+        button:hover, .proj-view-nav ul li button:hover {opacity:.5;}
+        .project-view-wrapper {position:relative;}
+        .proj-view-nav {
+          background-color:#f7f7f7;
+          padding:20px 0;
+          border-top:5px solid #f2f2f2;}
+        .proj-view-nav ul {list-style-type:none;}
+        .proj-view-nav ul li {
+          display:inline-block;
+          margin-right:5px;
+          vertical-align:middle;}
+        .proj-view-nav ul li button {
+          height:12px;
+          width:12px;
+          line-height:12px;
+          background-color:transparent;
+          border:none;
+          opacity:1;
+          box-shadow:none;
+          padding:0;
+        }
+        .proj-view-nav ul li span {
+          transition:.3s;
+          border-radius:50%;
+          width:100%;
+          height:100%;
+          display:block;
+          background-color:#ccc;}
+        .proj-view-nav ul li span.active {background-color:#2298d8;}
+    </style>
+      <!-- start of project graphic -->
+      <section id="sectProjGraphic">
+        <div class="project-view-wrapper">
+          <!-- Loading Screen -->
+          <!-- <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+              <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../images/static-svg/spin.svg" />
+          </div>  -->
+          <button style="left:50px;display:block;position:absolute;cursor:pointer;top:250px;box-shadow:none;border:none;">
+            <i class="fas fa-chevron-left fa-5x" style="color:#ccc;"></i>
+          </button>
+          <!-- Right Arrow -->
+          <button style="right:50px;display:block;position:absolute;cursor:pointer;top:250px;box-shadow:none;border:none;">
+            <i class="fas fa-chevron-right fa-5x" style="color:#ccc;"></i>
+          </button>
+          <!-- slides -->
+          <div>
+              <img class="project-img" src="../img/mm_img_tspace.jpg" style="height:100%; width:100%;"/>
+          </div>
+          <div style="display:none;">
+              <img class="project-img" src="../img/mm_img_tspace.jpg" style="height:100%; width:100%;"/>
+          </div>
+          <!--
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/002.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/003.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/004.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/005.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/006.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/007.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/008.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/009.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/010.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/011.jpg" />
+          </div>
+          <div>
+              <img data-u="image" src="../img/gallery/980x380/012.jpg" />
+          </div>
+        -->
+        </div>
+        <!-- Bullet Navigator -->
+        <div class="proj-view-nav"><!-- position:relative;bottom:0;right:0;top:20px;  -->
+           <!-- for each image, the div should be built with a link to the corresponding image -->
+          <ul>
+            <li>
+              <button title="Project view 1">
+                  <span class="active"></span>
+              </button>
+            </li>
+            <li>
+              <button title="Project view 2">
+                  <span></span>
+              </button>
+            </li>
+            <li>
+              <button title="Project view 3">
+                  <span></span>
+              </button>
+            </li>
+          </ul>
+         </div>
+         <div style="padding-top:40px; color: rgb(51,51,51); width:80%; margin:auto; max-width:700px; line-height:1.6em; letter-spacing:.02em;">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo
+           sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor erat lacinia. Quisque sit amet purus pulvinar erat convallis blandit sit amet quis eros. Morbi consequat nibh nec
+           fermentum vehicula. Integer ultricies malesuada neque quis finibus. Maecenas ultricies mauris dui, quis viverra nulla scelerisque sed. Maecenas ullamcorper sapien vitae justo sollicitudin,
+            molestie finibus justo auctor. Morbi molestie nisi sit amet nisl elementum, ac luctus tortor fermentum. Praesent eu tempor nisl, eget venenatis ante. Mauris tempus, libero vitae tristique
+            imperdiet, dui felis sodales est, sed mattis purus metus eget orci. In mattis finibus diam, non fringilla metus congue luctus.
+         </div>
+      </section>
 
       <!-- start of sctUXDeliverables -->
-      <section class="sctUXDeliverables" style="padding-top:80px; padding-bottom:50px;">
-        <h2 style="text-transform:none;">Required deliverables<span class="title-underline"></span></h2>
+      <section class="sctUXDeliverables" style="padding-top:100px; padding-bottom:50px;">
+        <h2 style="text-transform:none;">UX deliverables<span class="title-underline"></span></h2>
         <br>
         <ul id="lstUXDeliverables" stle="list-style-type:none; padding:0px; margin:0px;">
           <li class="delIA" style="display:inline-block; border-radius:4px; background-color:#2298d8; color:#fff; padding:5px 10px; font-size:12px;">Information Architecture</li>
@@ -297,7 +452,7 @@ em {
           <li class="dsnVisualDesign" style="display:inline-block; border-radius:4px; background-color:#2298d8; color:#fff; padding:5px 10px; font-size:12px;">Visual Design</li>
         </ul>
         <br>
-        <p>
+        <div style="padding-top:40px; color: rgb(51,51,51); width:80%; margin:auto; max-width:700px; line-height:1.6em; letter-spacing:.02em;">
           Accompagné de développeurs Qlikview, de products owners et d'une data scientist, mon rôle a été de concevoir le système de navigation global et les interfaces de
           visualisation des données. Unchantier d'envergure de plusieurs mois. Durant lesquels la conception itérative et les divers tests utilisateurs ont pris tous leur
           sens pource projet à grande valeur ajouté.
@@ -318,7 +473,7 @@ em {
   <!-- ************************************************************************************ -->
   <!-- ***************    RECENT PROJECTS SELECTOR    ************************************* -->
   <!-- ************************************************************************************ -->
-  <section id="currentProjects">
+  <section id="currentProjects" class="recent-projects">
     <h2>Recent Projects<span class="title-underline"></span></h2>
     <ul class="current-project-list clear-fix">
       <li class="col-sm-4 col-xs-12">
@@ -419,6 +574,7 @@ em {
 <!-- Include font-awesome icons -->
 <!-- local -->
 <script src="..\js\vendor\font-awesome.5.0.12.all.js"></script>
+
 <script src="../js/portfolio.js"></script>
 <!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
 <!-- <script src="../js/vendor/jquery.easing.1.4.1.min.js"></script> -->
@@ -428,5 +584,50 @@ function SrcollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+jQuery(document).ready(function ($) {
+          var jssor_1_SlideshowTransitions = [
+            {$Duration:1200,$Opacity:2}
+          ];
+
+          var jssor_1_options = {
+            $AutoPlay: 1,
+            $SlideshowOptions: {
+              $Class: $JssorSlideshowRunner$,
+              $Transitions: jssor_1_SlideshowTransitions,
+              $TransitionsOrder: 1
+            },
+            $ArrowNavigatorOptions: {
+              $Class: $JssorArrowNavigator$
+            },
+            $BulletNavigatorOptions: {
+              $Class: $JssorBulletNavigator$
+            }
+          };
+
+          var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+          /*#region responsive code begin*/
+
+          var MAX_WIDTH = 980;
+          function ScaleSlider() {
+              var containerElement = jssor_1_slider.$Elmt.parentNode;
+              var containerWidth = containerElement.clientWidth;
+
+              if (containerWidth) {
+                  var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+                  jssor_1_slider.$ScaleWidth(expectedWidth);
+              }else{
+                  window.setTimeout(ScaleSlider, 30);
+              }
+          }
+
+          ScaleSlider();
+
+          $(window).bind("load", ScaleSlider);
+          $(window).bind("resize", ScaleSlider);
+          $(window).bind("orientationchange", ScaleSlider);
+          /*#endregion responsive code end*/
+      });
 </script>
 </html>

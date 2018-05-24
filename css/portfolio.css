@@ -273,7 +273,7 @@ h2 {
 h3 {
   font-family: 'Roboto Lt', Arial, sans-serif;
   text-transform: none;
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 100;
   letter-spacing: .03em; }
 
@@ -290,7 +290,9 @@ p {
 html, body {
   height: 100%;
   width: 100%;
-  font-size: 1em;
+  font-family: 'Roboto Lt', Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
   /*	overflow:hidden; */
   margin: 0;
   padding: 0; }

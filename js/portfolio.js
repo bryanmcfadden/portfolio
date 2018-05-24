@@ -4,7 +4,6 @@ Bryan McFadden
 
 All functionality required for my portfolio pages
 ============================================================================== */
-var viewProjects;
 //Custom Scrollbar Creation
 /*$(window).load(function(){
 	$(".mainContentBox").mCustomScrollbar({
@@ -23,24 +22,35 @@ var viewProjects;
 */
 $(document).ready(function(){
 
-	$('.hamburger').on('click', function(e){
-		// check to see if viewProjects is true
-		if(viewProjects){
-			$('.hamburger').toggleClass('light');
-		}
-		$('.hamburger').toggleClass('is-active');
-		// can close menu here or do something else
-	});
+	function DisplayProjectView(){
+	var proj = $(".project-details");
 
+		if(proj.hasClass("open")){
+			//alert('closing project view');
+			proj.toggleClass("open");
+			proj.animate({opacity: 0.0,},1000,function(){
+				proj.css({visibility: "hidden"});
+			});
+			$(".recent-projects").animate({opacity: 1, visibility: "visible"},1000);
+			$('.hamburger').toggleClass('light is-active');
+		}else{
+			//alert('opening project view');
+			proj.toggleClass("open");
+			proj.css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},500);
+			$(".recent-projects").animate({opacity: 0, visibility: "hidden"},1000);
+			$('.hamburger').toggleClass('light is-active');
+		}
+	}
+
+	$('.hamburger').on('click', function(e){
+		DisplayProjectView();
+	});
   /* ========= Introduction ================================================== */
 
 
 	/* ========= My Projects =================================================== */
 	$('.current-project-list li').on('click', function(){
-		  $(".project-details").addClass("open");
-			$(".project-details").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},500);
-			viewProjects = true;
-			$('.hamburger').toggleClass('light is-active');
+		  DisplayProjectView();
 	});
 
 
