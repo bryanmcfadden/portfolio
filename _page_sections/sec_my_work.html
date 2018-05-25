@@ -37,197 +37,6 @@ Questrial
 
 <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css"> -->
 <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
-<style>
-#currentProjects {
-  padding:90px 0;
-  display: block;
-  background-color:#fff;
-  text-align:center;
-  /* position:relative; */
-  overflow:hidden;
-  box-sizing:border-box;
-}
-
-#currentProjects button span {
-  margin-right:10px;}
-#currentProjects ul {
-  padding:0;
-  margin:60px 15% 60px;
-  list-style:none;
-  box-sizing:border-box;
-}
-#currentProjects ul li {
-  height:240px;
-  cursor:pointer;
-  display:block;
-  overflow:hidden;
-  border-right:2px solid #fff;
-  margin-top:2px;
-  transform: scale(1);
-  position:relative;
-  transition: width .6s, height 6s, transform .5s .6s, opacity .5s .6s, border-radius .5s;
-  transform-origin: center center;
-  list-style:none;
-  box-sizing:border-box;
-}
-#currentProjects ul li:hover {
-  transform:
-}
-#currentProjects ul li.hidden { display:none; }
-#currentProjects ul li:nth-child(1) { border-radius:10px 0 0 0; }
-#currentProjects ul li:nth-child(3) { border-radius:0 10px 0 0; border-right:none;}
-#currentProjects ul li:nth-child(4) { border-radius:0 0 0 10px; }
-#currentProjects ul li:nth-child(6) { border-radius:0 0 10px 0; border-right:none;}
-#currentProjects span.project {
-  transition: none;
-  background-position:center;
-  background-size:cover;
-  position:absolute;
-  width:100%;
-  height:100%;
-  left:0;
-  top:0;
-  z-index:5;
-}
-#currentProjects .details-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.85);
-  opacity: 0;
-  position: relative;
-  z-index: 10;
-  font-size: 1.2em;
-  transition: opacity .5s;
-}
-#currentProjects .details-wrapper:hover { opacity: 1; }
-.details-wrapper .details {
-  display: table-cell;
-  vertical-align:middle;
-  padding:0 25px;
-  transition: transform .5s;
-  box-sizing:border-box;
-}
-.details-wrapper .details:hover {
-  transform: scale(1.2);
-}
-.details-wrapper .workTitle {
-  color: #fff;
-  font-size: 1.1em;
-  font-weight: normal;
-  font-style: normal;
-}
-.details-wrapper .infoCompWork {
-  opacity: 0.5;
-  color: #fff;
-  font-family: 'Roboto Lt', Arial, sans-serif;
-  font-size: .8em;
-  letter-spacing:.03em;
-  font-weight: 100;
-  margin-top: 2px;
-  display: inline-block; }
-
-.details-wrapper .infoCompWork .company-name {
-  text-transform: uppercase;
-}
-.details-wrapper em {
-  color:#2298d8;
-  font-weight:200;
-  font-size: .8em;
-  margin-top:20px;
-  display: inline-block;
-}
-/* -------------------- project details -------------------------------------*/
-@keyframes closeProjectDetails{
-  0% {
-    transform: scale(1) rotateX(0);
-    top: 0;
-    opacity: 1;
-    visibility: visible; }
-  33% {
-    transform: scale(0.7) rotateX(5deg);
-    top: 0;
-    opacity: 1;
-    visibility: visible; }
-  66% {
-    transform: scale(0.7) rotateX(5deg);
-    top: -300px;
-    opacity: 0;
-    visibility: visible; }
-  100% {
-    transform: scale(0.7) rotateX(5deg);
-    top: -300px;
-    opacity: 0;
-    visibility: hidden; }}
-
-  @keyframes openProjectDetails{
-    0% {
-    /* transform: scale(0.3); */
-    /*  top: 300px; */
-      top:-100%;
-      left:0;
-      opacity: 0;
-      visibility: hidden; }
-       }
-    100% {
-      /* transform: scale(1); */
-      top: 0;
-      left:0;
-      opacity: 1;
-      visibility: visible; }}
-
-.project-details.close {
-  animation-name: closeProjectDetails;
-  animation-duration: 2.5s;
-  animation-iteration-count: 1;
-  animation-delay: 0;
-  animation-timing-function: ease;
-  animation-fill-mode: backwards;
-}
-.project-details.open {
-  animation-name: openProjectDetails;
-  animation-duration: 1.0s;
-  animation-iteration-count: 1;
-  animation-delay: 0;
-  animation-timing-function: ease;
-  animation-fill-mode: backwards;
-}
-.project-details {
-  background:#fff;
-/*  box-shadow: 0 0 200px 0 rgba(0,0,0, 0.7); */
-  display:block;
-  height:100.1%;
-  left:0;
-  opacity:0;
-  position:absolute;
-  text-align:center;
-  top:0;
-  transform:scale(1);
-  visibility:hidden;
-  width:100%;
-  z-index:250;
-}
-header {
-  padding:80px 5%;
-  position:relative;
-  background-color:#000;
-  color:#fff;}
-header h2 {
-  color:#fff;
-  margin-bottom:0;
-  padding-bottom:0;
-  display: inline-block; }
-h3 {
-  opacity: 0.5;
-  margin-top:10px;
-  margin-bottom:60px;}
-em {
-  color: #2298d8;
-  font-size:1.3em;
-  font-family: 'Roboto', Arial, sans-serif;
-  letter-spacing: .05em;}
-</style>
 </head>
 <body style="overflow:auto;">
   <div id="top-point" class="nav-bar">
@@ -243,176 +52,79 @@ em {
   <div class="project-details">
       <!-- PHP include starts here -->
       <header>
+        <div class="col-md-12">
           <!-- <div class="bckgdBox"></div> -->
           <h2>tSpace</h2>
           <h3>AT&T / Internal social media app </h3><br>
-          <em>UX / UI Design</em><br>
-          <!-- left navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-          <button style="border:1px solid #fff; color:#fff; position:absolute; bottom:65px; left:140px;">
-              <i style="color:#fff; margin-right:10px;" class="fas fa-angle-left"></i>
-               Prev.
-         </button>
-        <!-- right navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-        <button style="border:1px solid #fff; color:#fff; position:absolute; bottom:65px; right:140px;">
-             Next
-             <i style="color:#fff; margin-left:10px;" class="fas fa-angle-right"></i>
-       </button>
+          <em>UX / UI Design</em>
+        </div>
+        <div class="clear-fix">
+          <div>
+            <div class="col-md-6 col-xs-6 lalign">
+              <!-- left navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+              <button class="disabled" id="btnPrevProj">
+                  <i class="fas fa-angle-left"></i>
+                   Prev.
+             </button>
+            </div>
+            <div class="col-md-6 col-xs-6 ralign">
+            <!-- right navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+              <button id="btnNextProj">
+                   Next
+                   <i class="fas fa-angle-right"></i>
+             </button>
+           </div>
+         </div>
+       </div>
       </header>
       <!-- start brief section -->
-      <section id="sectBrief" style="padding:40px 0; box-sizing:border-box;">
-        <p style="width:80%; display:inline-block; max-width:700px; color:#333; line-height:1.6em; font-style:normal; letter-spacing:.02em; font-family:'Roboto';">
-            Vision 360 est une application de business intelligence destiné aux entités commerciales d'Essilor France. Elle permet d'ajuster
-              la politique commerciale du groupe et de mieux orienter les efforts de la force de vente. Sont notamment présentés les
-              indicateurs clés d'évolution du chiffre d'affaires des portefeuilles client, de justesse des partenariats mis en place ou encore de
-              ciblage des prospects et de suivi des parts de marché d’Essilor, sur le territoire français.
-        </p>
+      <section id="sectBrief">
+        <div class="text-summary">
+          Vision 360 est une application de business intelligence destiné aux entités commerciales d'Essilor France. Elle permet d'ajuster
+          la politique commerciale du groupe et de mieux orienter les efforts de la force de vente. Sont notamment présentés les
+          indicateurs clés d'évolution du chiffre d'affaires des portefeuilles client, de justesse des partenariats mis en place ou encore de
+          ciblage des prospects et de suivi des parts de marché d’Essilor, sur le territoire français.
+        </div>
       </section><!-- end of sectBrief -->
 
-      <!-- start of project graphic
-      <section id="sectProjGraphic">
-        <div>
-          <div class="mm-graphic">
-            <span>
-              <i class-"fas fa-angle-left"></i>
-            </span>
-            <img src="../img/mm_img_tspace.jpg" alt="tSpace social media application" style="height:100%; width:100%; max-width:1024px; border:none;">
-          </div>
-        </div>
-        <div style="padding:10px 0 40px 0;">
-            Overall image of app on desktop and tablet
-        </div>
-        <div style="background-color:#f7f7f7; border-top:5px solid #f2f2f2; padding:20px 0;">
-            [ ------------- --------------- ------------- ]
-        </div>
-      </section> end of sectProjGraphic -->
-
-      <style>
-        /* jssor slider loading skin spin css */
-        .jssorl-009-spin img {
-            animation-name: jssorl-009-spin;
-            animation-duration: 1.6s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-
-        @keyframes jssorl-009-spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @media only screen and (max-width: 800px) {
-          .project-img { max-width:640px; }
-        }
-        @media only screen and (min-width: 1192px) {
-          .project-img { max-width:1024px; }
-        }
-        .i {cursor:pointer;}
-        .i .b {fill:#000;fill-opacity:0.5;}
-        .i:hover .b {fill-opacity:.7;}
-
-        .a {fill:none;stroke:#000;stroke-width:360;stroke-miterlimit:10;}
-        .jssora051:hover {opacity:.8;}
-        .jssora051.jssora051dn {opacity:.5;}
-        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
-
-        #sectProjGraphic {
-          border-bottom:5px solid #f2f2f2;
-          padding-bottom:40px;}
-
-        button:hover, .proj-view-nav ul li button:hover {opacity:.5;}
-        .project-view-wrapper {position:relative;}
-        .proj-view-nav {
-          background-color:#f7f7f7;
-          padding:20px 0;
-          border-top:5px solid #f2f2f2;}
-        .proj-view-nav ul {list-style-type:none;}
-        .proj-view-nav ul li {
-          display:inline-block;
-          margin-right:5px;
-          vertical-align:middle;}
-        .proj-view-nav ul li button {
-          height:12px;
-          width:12px;
-          line-height:12px;
-          background-color:transparent;
-          border:none;
-          opacity:1;
-          box-shadow:none;
-          padding:0;
-        }
-        .proj-view-nav ul li span {
-          transition:.3s;
-          border-radius:50%;
-          width:100%;
-          height:100%;
-          display:block;
-          background-color:#ccc;}
-        .proj-view-nav ul li span.active {background-color:#2298d8;}
-    </style>
       <!-- start of project graphic -->
       <section id="sectProjGraphic">
         <div class="project-view-wrapper">
-          <!-- Loading Screen -->
-          <!-- <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+          <!-- Loading Screen
+          <style>
+            .jssorl-009-spin img {
+                animation-name: jssorl-009-spin;
+                animation-duration: 1.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;}
+            @keyframes jssorl-009-spin {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(360deg);}
+            }
+        </style>
+          <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
               <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../images/static-svg/spin.svg" />
           </div>  -->
-          <button style="left:50px;display:block;position:absolute;cursor:pointer;top:250px;box-shadow:none;border:none;">
-            <i class="fas fa-chevron-left fa-5x" style="color:#ccc;"></i>
-          </button>
-          <!-- Right Arrow -->
-          <button style="right:50px;display:block;position:absolute;cursor:pointer;top:250px;box-shadow:none;border:none;">
-            <i class="fas fa-chevron-right fa-5x" style="color:#ccc;"></i>
-          </button>
+          <div class="col-md-3 xs-hidden">&nbsp;
+            <button class="prev-hlight">
+              <i class="fas fa-chevron-left fa-5x"></i>
+            </button>
+          </div>
           <!-- slides -->
-          <div>
-              <img class="project-img" src="../img/mm_img_tspace.jpg" style="height:100%; width:100%;"/>
+          <div class="col-md-6 col-xs-12">
+              <img class="project-img" src="../img/mm_img_tspace.jpg" />
           </div>
-          <div style="display:none;">
-              <img class="project-img" src="../img/mm_img_tspace.jpg" style="height:100%; width:100%;"/>
+          <div class="col-md-8 hide">
+              <img class="project-img" src="../img/mm_img_tspace.jpg" />
           </div>
-          <!--
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/002.jpg" />
+          <div class="col-md-3 xs-hidden">&nbsp;
+            <!-- Right Arrow -->
+            <button class="next-hlight">
+              <i class="fas fa-chevron-right fa-5x"></i>
+            </button>
           </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/003.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/004.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/005.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/006.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/007.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/008.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/009.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/010.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/011.jpg" />
-          </div>
-          <div>
-              <img data-u="image" src="../img/gallery/980x380/012.jpg" />
-          </div>
-        -->
         </div>
-        <!-- Bullet Navigator -->
-        <div class="proj-view-nav"><!-- position:relative;bottom:0;right:0;top:20px;  -->
+        <div class="clear-fix proj-view-nav">
            <!-- for each image, the div should be built with a link to the corresponding image -->
           <ul>
             <li>
@@ -432,7 +144,7 @@ em {
             </li>
           </ul>
          </div>
-         <div style="padding-top:40px; color: rgb(51,51,51); width:80%; margin:auto; max-width:700px; line-height:1.6em; letter-spacing:.02em;">
+         <div class="text-summary">
            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo
            sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor erat lacinia. Quisque sit amet purus pulvinar erat convallis blandit sit amet quis eros. Morbi consequat nibh nec
            fermentum vehicula. Integer ultricies malesuada neque quis finibus. Maecenas ultricies mauris dui, quis viverra nulla scelerisque sed. Maecenas ullamcorper sapien vitae justo sollicitudin,
@@ -441,39 +153,29 @@ em {
          </div>
       </section>
 
-      <!-- start of sctUXDeliverables -->
-      <section class="sctUXDeliverables" style="padding-top:100px; padding-bottom:50px;">
-        <h2 style="text-transform:none;">UX deliverables<span class="title-underline"></span></h2>
-        <br>
-        <ul id="lstUXDeliverables" stle="list-style-type:none; padding:0px; margin:0px;">
-          <li class="delIA" style="display:inline-block; border-radius:4px; background-color:#2298d8; color:#fff; padding:5px 10px; font-size:12px;">Information Architecture</li>
-          <li class="delWireframes" style="display:inline-block; border-radius:4px; background-color:#000; color:#fff; padding:5px 10px; font-size:12px;">Wireframes</li>
-          <li class="dsnPersonas" style="display:inline-block; border-radius:4px; background-color:#2298d8; color:#fff; padding:5px 10px; font-size:12px;">Personas</li>
-          <li class="dsnVisualDesign" style="display:inline-block; border-radius:4px; background-color:#2298d8; color:#fff; padding:5px 10px; font-size:12px;">Visual Design</li>
-        </ul>
-        <br>
-        <div style="padding-top:40px; color: rgb(51,51,51); width:80%; margin:auto; max-width:700px; line-height:1.6em; letter-spacing:.02em;">
-          Accompagné de développeurs Qlikview, de products owners et d'une data scientist, mon rôle a été de concevoir le système de navigation global et les interfaces de
-          visualisation des données. Unchantier d'envergure de plusieurs mois. Durant lesquels la conception itérative et les divers tests utilisateurs ont pris tous leur
-          sens pource projet à grande valeur ajouté.
-        </p>
+      <section id="sectUXDeliverables"><!-- start of sctUXDeliverables -->
+        <div>
+          <h2>UX deliverables<span class="title-underline"></span></h2>
+          <br>
+          <ul id="lstUXDeliverables">
+            <li class="delIA">Information Architecture</li>
+            <li class="delWireframes">Wireframes</li>
+            <li class="dsnPersonas">Personas</li>
+            <li class="dsnVisualDesign">Visual Design</li>
+          </ul>
+          <br>
+          <div class="text-summary">
+            Accompagné de développeurs Qlikview, de products owners et d'une data scientist, mon rôle a été de concevoir le système de navigation global et les interfaces de
+            visualisation des données. Unchantier d'envergure de plusieurs mois. Durant lesquels la conception itérative et les divers tests utilisateurs ont pris tous leur
+            sens pource projet à grande valeur ajouté.
+          </p>
+        </div>
       </section><!-- end of sctUXDeliverables -->
-
-      <footer class="sctWorkCntt sctFooter">
-        <div class="bckgdBox"></div>
-          <a href="#" class="btn goldBtn backToTop" onclick="javascript:ScrollToTop();">
-            <span class="decoBckd1"></span>
-            <span class="decoBckd2"></span>
-            <span class="paddingWrapper">
-              <i class="icon-up-small"></i> Back to top
-            </span>
-          </a>
-      </footer><!-- end of Footer -->
-  </div><!-- end of class="modalWorkDetails" -->
+  </div>
   <!-- ************************************************************************************ -->
   <!-- ***************    RECENT PROJECTS SELECTOR    ************************************* -->
   <!-- ************************************************************************************ -->
-  <section id="currentProjects" class="recent-projects">
+  <section id="recentProjects" class="recent-projects">
     <h2>Recent Projects<span class="title-underline"></span></h2>
     <ul class="current-project-list clear-fix">
       <li class="col-sm-4 col-xs-12">
@@ -585,49 +287,5 @@ function SrcollToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-jQuery(document).ready(function ($) {
-          var jssor_1_SlideshowTransitions = [
-            {$Duration:1200,$Opacity:2}
-          ];
-
-          var jssor_1_options = {
-            $AutoPlay: 1,
-            $SlideshowOptions: {
-              $Class: $JssorSlideshowRunner$,
-              $Transitions: jssor_1_SlideshowTransitions,
-              $TransitionsOrder: 1
-            },
-            $ArrowNavigatorOptions: {
-              $Class: $JssorArrowNavigator$
-            },
-            $BulletNavigatorOptions: {
-              $Class: $JssorBulletNavigator$
-            }
-          };
-
-          var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-          /*#region responsive code begin*/
-
-          var MAX_WIDTH = 980;
-          function ScaleSlider() {
-              var containerElement = jssor_1_slider.$Elmt.parentNode;
-              var containerWidth = containerElement.clientWidth;
-
-              if (containerWidth) {
-                  var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-                  jssor_1_slider.$ScaleWidth(expectedWidth);
-              }else{
-                  window.setTimeout(ScaleSlider, 30);
-              }
-          }
-
-          ScaleSlider();
-
-          $(window).bind("load", ScaleSlider);
-          $(window).bind("resize", ScaleSlider);
-          $(window).bind("orientationchange", ScaleSlider);
-          /*#endregion responsive code end*/
-      });
 </script>
 </html>
