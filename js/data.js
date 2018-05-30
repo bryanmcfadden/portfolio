@@ -10,7 +10,7 @@ assigned job title,
 main image,
 project description,
 image arrays (images & descriptions),
-ux deliverables array (deliverables & description)
+ux deliverables array (deliverables tags & description)
 
 -------------------------------------------------------------------------------
 ---------------------------------------------------------------------------- */

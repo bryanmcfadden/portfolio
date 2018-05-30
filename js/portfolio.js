@@ -5,7 +5,8 @@ Bryan McFadden
 All functionality required for my portfolio pages
 ============================================================================== */
 //Custom Scrollbar Creation
-/*$(window).load(function(){
+$(window).load(function(){
+	// instantiate main content area scrollbar
 	$(".mainContentBox").mCustomScrollbar({
 		theme: "light-2",
 		scrollButtons:{ enable: 0 },
@@ -18,16 +19,28 @@ All functionality required for my portfolio pages
 			}
 		}
 	});
+	// instantiate project view area scrollbar
+	$(".projContentBox").mCustomScrollbar({
+		theme: "light-2",
+		scrollButtons:{ enable: 0 },
+		scrollInertia:700,
+		mouseWheel:{ scrollAmount: 300 },
+		callbacks:{
+			whileScrolling:function(){
+				//do something
+			}
+		}
+	});
 });
-*/
+
 $(document).ready(function(){
 
 	function DisplayProjectView(){
-	var proj = $(".project-details");
+	var proj = $(".projContentBox");
 
 		if(proj.hasClass("open")){
 			//alert('closing project view');
-			proj.toggleClass("open");
+			proj.toggleClass("open close");
 			proj.animate({opacity: 0.0,},1000,function(){
 				proj.css({visibility: "hidden"});
 			});

@@ -211,12 +211,11 @@ $default-color: #2298d8;  /* outline and font color */
 
   h2 {
     font-family: 'Monteserrat', Arial, sans-serif;
-    font-size: 2.2em;
+    font-size: 2.6em;
     letter-spacing:.05em;
     margin:0 auto 20px;
     display:inline-block;
     padding-bottom:20px;
-    text-transform: uppercase;
     line-height:42px;
 
     &.contact-me {color:#fff;}
@@ -283,9 +282,9 @@ $default-color: #2298d8;  /* outline and font color */
     width:100%;
     max-width:100%;}
   button {
-    padding:10px 20px;
-    font-size:12px;
-    text-transform: uppercase;
+    padding:8px 22px;
+    font-size:14px;
+    border-radius:8px;
     text-align:center;
     opacity: 1;
 

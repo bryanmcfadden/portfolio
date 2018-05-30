@@ -29,134 +29,374 @@
 <body class="portfolio-body">
   <div class="nav-bar">
     <button class="hamburger light hamburger--spin" type="button">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button>
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
   </div>
-	<div class="mainContentBox mCustomScrollBar mCS-autoHide" style="overflow:visible;">
-		<!-- <div id="mCSB_1" class="mCustomScrollBox mCS-light-2 mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
-			<div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width:100%;" dir="ltr"> -->
-				<!-- ************************************************************************************ -->
-				<!-- ***************************** INTRODUCTION ***************************************** -->
-				<!-- ************************************************************************************ -->
-				<section id="main" class="sectionIntro" tabindex="-1">
-				  <div class="office-bg"></div>
-			    <div class="wrapper">
-			      <div class="subWrapper">
-			      	<!-- TITLE *********************************** -->
-			      	<span class="intro-title">Hi! I'm <em>Bryan</em>.</span>
-			        <br>
-							<div class="my-roles">
-								<h1>
-									<span class="role-title">UX Designer</span>
-									<span>&amp;</span>
-									<span class="role-title">Researcher</span>
-								</h1>
-								<span>living near</span>
-								<em>
-									<span class="under-lined"></span>
-									<span id="location">Atlanta, GA</span>
-								</em>
-							</div>
-							<div class="btnNext" style="position:absolute; bottom: 15%; display: block; color: #fff; opacity: 1; z-index: 1; height: 70px; width: 100%; text-align: center; transition: bottom 1s, opacity 1s, transform 1s;">
-									<div style="display: inline-block; font-size: 2em; width: 70px; height: 70px; transition: transform .5s;">
-										<i class="fas fa-angle-down bouncing-arrow"></i>
-									</div>
-							</div><!-- icon-down-open -->
-						</div>
-			  	</div><!-- end class="wrapper" -->
-			  </section><!-- end sectionIntro -->
-				<!-- ************************************************************************************ -->
-				<!-- ***************************** ABOUT ME ********************************************* -->
-				<!-- ************************************************************************************ -->
-				<section id="aboutMe">
-				 <div style="height:300px;"></div>
-				</section><!-- end sectionAboutMe -->
-				<!-- ************************************************************************************ -->
-				<!-- ***************************** FOOTER *********************************************** -->
-				<!-- ************************************************************************************ -->
-				<footer id="footer" class="clear-fix">
-					<div class="office-bg-footer"></div>
-					<div class="container">
-						<div class="col-md-3 footer-ico">
-							<div>
-			          <i class="fas fa-map-marker-alt selectable"></i>
-							</div>
-							<div>
-								127 Cliffhaven Circle<br>
-								Newnan, GA 30263
-							</div>
-						</div>
-						<div class="col-md-3 footer-ico">
-							<div>
-			          <i class="fas fa-envelope selectable"></i>
-							</div>
-							<div>
-								<a href="mailto:bryan.mcfadden@gmail.com">bryan.mcfadden@gmail.com</a>
-							</div>
-						</div>
-						<div class="col-md-3 footer-ico">
-							<div>
-			          <i class="fas fa-phone-square selectable"></i>
-							</div>
-							<div>
-								<a href="tel:678 723 5031">678.723.5031</a>
-							</div>
-						</div>
-						<div class="col-md-3 footer-social-ico">
-							<ul>
-								<li>
-									<a target="_blank" href="https://twitter.com/3DAnim8r">
-										<span class="sr-only">Twitter link</span>
-										<i class="fab fa-twitter-square selectable"></i>
-									</a>
-								</li>
-								<li>
-									<a target="_blank" href="https://www.linkedin.com/in/bryanmcfadden">
-										<span class="sr-only">Linkedin link</span>
-										<i class="fab fa-linkedin selectable"></i>
-									</a>
-								</li>
-							</ul>
-							<p>©2018 - Bryan McFadden</p>
-						</div>
-					</div>
-				</footer>
-		<!--	</div>
-		</div> -->
-		<!-- ************************************************************************************ -->
-		<!-- ******************************** MAIN MENU ***************************************** -->
-		<!-- ************************************************************************************ -->
-	  <nav class="mainMenu">
-	      <div class="endorsementWrapper">
-	      	<div class="endorsementSubWrapper">
-	      		<h3>Endorsements</h3>
-	            <q cite="" class="endorsement">Bryan brings a high level of competency, passion and skills to deliver the best UX experience to the user. Bryan can work with the user to come up with the best UX design and then turn right around and write the code to deliver the desired UX experience</q>
-	            <br>
-	            <span class="endorsementAuthor">David Geiger - Associate Director - AT&T</span>
-	        </div>
-	      </div>
-	      <!--  MAIN MENU LINKS *********************************************** -->
-	      <ul class="mainMenuLinks">
-	      	<li class="mainLink linkToHome">
-	          <a href="#mainTop" class="" onclick="event.preventDefault(); return false;">Home</a>
-	        </li>
-	      	<li class="mainLink linkToAbout">
-	          <a href="#aboutArea" class="" onclick="event.preventDefault(); return false;">About Me</a>
-	        </li>
-	      	<li class="mainLink linkToExpertise">
-	          <a href="#expertiseArea" class="" onclick="event.preventDefault(); return false;">My Skills</a>
-	        </li>
-	      	<li class="mainLink linkToWork">
-	          <a href="#workArea" class="" onclick="event.preventDefault(); return false;">Recent Projects</a>
-	        </li>
-	      	<li class="mainLink linkToContact">
-	          <a href="#contactArea" class="" onclick="event.preventDefault(); return false;">Contact</a>
-	        </li>
-	      </ul>
-	  </nav><!-- end of class="mainMenuBox" -->
-</div><!-- end of class="rootBox" -->
+  <div id="portfolio-content" style="height:100%; width:100%; overflow:hidden; position:relative; perspective:500px; margin:0; padding:0; box-sizing:border-box;">
+    <div class="projContentBox mCustomScrollBar mCS-autoHide" style="overflow:visible;">
+      <!-- ************************************************************************************ -->
+      <!-- ************************ PROJECT DETAILS ******************************************* -->
+      <!-- ************************************************************************************ -->
+      <div class="project-details">
+          <!-- PHP include starts here -->
+          <header>
+            <div class="col-md-12">
+              <!-- <div class="bckgdBox"></div> -->
+              <h2>tSpace</h2>
+              <h3>AT&T / Internal social media app </h3>
+              <em>UX / UI Design</em>
+            </div>
+            <div class="clear-fix">
+              <div>
+                <div class="col-md-6 col-xs-6 lalign">
+                  <!-- left navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                  <button class="disabled" id="btnPrevProj">
+                      <i class="fas fa-angle-left"></i>
+                       &nbsp; Prev.
+                 </button>
+                </div>
+                <div class="col-md-6 col-xs-6 ralign">
+                <!-- right navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                  <button id="btnNextProj">
+                       Next &nbsp;
+                       <i class="fas fa-angle-right"></i>
+                 </button>
+               </div>
+             </div>
+           </div>
+          </header>
+          <!-- start brief section -->
+          <section id="sectBrief">
+            <div class="text-summary">
+              Vision 360 est une application de business intelligence destiné aux entités commerciales d'Essilor France. Elle permet d'ajuster
+              la politique commerciale du groupe et de mieux orienter les efforts de la force de vente. Sont notamment présentés les
+              indicateurs clés d'évolution du chiffre d'affaires des portefeuilles client, de justesse des partenariats mis en place ou encore de
+              ciblage des prospects et de suivi des parts de marché d’Essilor, sur le territoire français.
+            </div>
+          </section><!-- end of sectBrief -->
+
+          <!-- start of project graphic -->
+          <section id="sectProjGraphic">
+            <div class="project-view-wrapper">
+              <!-- Loading Screen
+              <style>
+                .jssorl-009-spin img {
+                    animation-name: jssorl-009-spin;
+                    animation-duration: 1.6s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;}
+                @keyframes jssorl-009-spin {
+                    from {transform: rotate(0deg);}
+                    to {transform: rotate(360deg);}
+                }
+            </style>
+              <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                  <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../images/static-svg/spin.svg" />
+              </div>  -->
+              <div class="col-md-3 xs-hidden">&nbsp;
+                <button class="prev-hlight">
+                  <i class="fas fa-chevron-left fa-5x"></i>
+                </button>
+              </div>
+              <!-- slides -->
+              <div class="col-md-6 col-xs-12">
+                  <img class="project-img" src="img/mm_img_tspace.jpg" />
+              </div>
+              <div class="col-md-8 hide">
+                  <img class="project-img" src="img/mm_img_tspace.jpg" />
+              </div>
+              <div class="col-md-3 xs-hidden">&nbsp;
+                <!-- Right Arrow -->
+                <button class="next-hlight">
+                  <i class="fas fa-chevron-right fa-5x"></i>
+                </button>
+              </div>
+            </div>
+            <div class="clear-fix proj-view-nav">
+               <!-- for each image, the div should be built with a link to the corresponding image -->
+              <ul>
+                <li>
+                  <button title="Project view 1">
+                      <span class="active"></span>
+                  </button>
+                </li>
+                <li>
+                  <button title="Project view 2">
+                      <span></span>
+                  </button>
+                </li>
+                <li>
+                  <button title="Project view 3">
+                      <span></span>
+                  </button>
+                </li>
+              </ul>
+             </div>
+          </section>
+
+          <section id="sectUXDeliverables"><!-- start of sctUXDeliverables -->
+            <div>
+              <h2>UX deliverables<span class="title-underline"></span></h2>
+              <br>
+              <ul id="lstUXDeliverables">
+                <li class="delIA">Information Architecture</li>
+                <li class="delWireframes hide">Wireframes</li>
+                <li class="dsnPersonas">Personas</li>
+                <li class="dsnVisualDesign hide">Visual Design</li>
+              </ul>
+              <br>
+              <div class="text-summary">
+                Accompagné de développeurs Qlikview, de products owners et d'une data scientist, mon rôle a été de concevoir le système de navigation global et les interfaces de
+                visualisation des données. Unchantier d'envergure de plusieurs mois. Durant lesquels la conception itérative et les divers tests utilisateurs ont pris tous leur
+                sens pource projet à grande valeur ajouté.
+              </p>
+              </div>
+            </div>
+          </section><!-- end of sctUXDeliverables -->
+      </div>
+    </div>
+    <div class="mainContentBox mCustomScrollBar mCS-autoHide" style="overflow:visible;">
+      <!-- <div id="mCSB_1" class="mCustomScrollBox mCS-light-2 mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+        <div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width:100%;" dir="ltr"> -->
+          <!-- ************************************************************************************ -->
+          <!-- ***************************** INTRODUCTION ***************************************** -->
+          <!-- ************************************************************************************ -->
+          <section id="main" class="sectionIntro" tabindex="-1">
+            <div class="office-bg"></div>
+            <div class="wrapper">
+              <div class="subWrapper">
+                <!-- TITLE *********************************** -->
+                <span class="intro-title">Hi! I'm <em>Bryan</em>.</span>
+                <br>
+                <div class="my-roles">
+                  <h1>
+                    <span class="role-title">UX Designer</span>
+                    <span>&amp;</span>
+                    <span class="role-title">Researcher</span>
+                  </h1>
+                  <span>living near</span>
+                  <em>
+                    <span class="under-lined"></span>
+                    <span id="location">Atlanta, GA</span>
+                  </em>
+                </div>
+                <div class="btnNext" style="position:absolute; bottom: 15%; display: block; color: #fff; opacity: 1; z-index: 1; height: 70px; width: 100%; text-align: center; transition: bottom 1s, opacity 1s, transform 1s;">
+                    <div style="display: inline-block; font-size: 2em; width: 70px; height: 70px; transition: transform .5s;">
+                      <i class="fas fa-angle-down bouncing-arrow"></i>
+                    </div>
+                </div><!-- icon-down-open -->
+              </div>
+            </div><!-- end class="wrapper" -->
+          </section><!-- end sectionIntro -->
+          <!-- ************************************************************************************ -->
+          <!-- ***************************** ABOUT ME ********************************************* -->
+          <!-- ************************************************************************************ -->
+          <section id="aboutMe">
+            <h2>About Me<span></span></h2>
+              <p>
+                I’m a UX designer & researcher with over two decades experience.<br>
+                I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
+                When I'm not glued to a monitor, you'll find me watching soccer.<br>
+                Or possibly playing disc jockey for my friends and family.
+              </p>
+              <h4>Want to know more?</h4>
+              <a id="resume_doc" class="resume resume-doc" href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" target="_blank">
+                <span>
+                  <i class="fas fa-file-word" alt="Adobe PDF"></i>
+                </span>
+              </a>
+              <button id="btnViewResume">
+                View my resume
+              </button>
+              <a id="resume_pdf" class="resume resume-pdf" href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" target="_blank">
+                <span>
+                  <i class="fas fa-file-pdf" alt="Adobe PDF"></i>
+                </span>
+              </a>
+          </section>
+          <!-- ************************************************************************************ -->
+          <!-- ***************    RECENT PROJECTS SELECTOR    ************************************* -->
+          <!-- ************************************************************************************ -->
+          <section id="recentProjects" class="recent-projects">
+            <h2>Recent Projects<span class="title-underline"></span></h2>
+            <ul class="current-project-list clear-fix">
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_01.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Christmas Tree ePermit</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">U.S. Forest Service</span> / <span>Consumer web app</span>
+                    </span>
+                    <br>
+                    <em>UX Research</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_tablet_01.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Disaster Data Portal</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">H.U.D.</span> / <span>Corporate web app</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_02.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">R.A.F.T.</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Financial web app</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_03.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Notice to Mariners</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">U.S.G.S.</span> / <span>Desktop app</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_tablet_03.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">tSpace</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Social media app</span>
+                    </span>
+                    <br>
+                    <em>UX / Visual Design</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_05.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Technology Delivery Center</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Data portal</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+            </ul>
+            <div style="clear:both; text-align:center; padding-top:60px;">
+              <button>
+                <span>+</span>More projects
+              </button>
+            </div>
+          </section>
+          <!-- ************************************************************************************ -->
+          <!-- ***************************** FOOTER *********************************************** -->
+          <!-- ************************************************************************************ -->
+          <footer id="footer" class="clear-fix">
+            <div class="office-bg-footer"></div>
+            <div class="container">
+              <div class="col-md-3 footer-ico">
+                <div>
+                  <i class="fas fa-map-marker-alt selectable"></i>
+                </div>
+                <div>
+                  127 Cliffhaven Circle<br>
+                  Newnan, GA 30263
+                </div>
+              </div>
+              <div class="col-md-3 footer-ico">
+                <div>
+                  <i class="fas fa-envelope selectable"></i>
+                </div>
+                <div>
+                  <a href="mailto:bryan.mcfadden@gmail.com">bryan.mcfadden@gmail.com</a>
+                </div>
+              </div>
+              <div class="col-md-3 footer-ico">
+                <div>
+                  <i class="fas fa-phone-square selectable"></i>
+                </div>
+                <div>
+                  <a href="tel:678 723 5031">678.723.5031</a>
+                </div>
+              </div>
+              <div class="col-md-3 footer-social-ico">
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://twitter.com/3DAnim8r">
+                      <span class="sr-only">Twitter link</span>
+                      <i class="fab fa-twitter-square selectable"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/bryanmcfadden">
+                      <span class="sr-only">Linkedin link</span>
+                      <i class="fab fa-linkedin selectable"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p>©2018 - Bryan McFadden</p>
+              </div>
+            </div>
+          </footer>
+      <!--	</div> -->
+    </div>
+  	<!-- ************************************************************************************ -->
+  	<!-- ******************************** MAIN MENU ***************************************** -->
+  	<!-- ************************************************************************************ -->
+    <nav class="mainMenu">
+        <div class="endorsementWrapper">
+        	<div class="endorsementSubWrapper">
+        		<h3>Endorsements</h3>
+              <q cite="" class="endorsement">Bryan brings a high level of competency, passion and skills to deliver the best UX experience to the user. Bryan can work with the user to come up with the best UX design and then turn right around and write the code to deliver the desired UX experience</q>
+              <br>
+              <span class="endorsementAuthor">David Geiger - Associate Director - AT&T</span>
+          </div>
+        </div>
+        <!--  MAIN MENU LINKS *********************************************** -->
+        <ul class="mainMenuLinks">
+        	<li class="mainLink linkToHome">
+            <a href="#mainTop" class="" onclick="event.preventDefault(); return false;">Home</a>
+          </li>
+        	<li class="mainLink linkToAbout">
+            <a href="#aboutArea" class="" onclick="event.preventDefault(); return false;">About Me</a>
+          </li>
+        	<li class="mainLink linkToExpertise">
+            <a href="#expertiseArea" class="" onclick="event.preventDefault(); return false;">My Skills</a>
+          </li>
+        	<li class="mainLink linkToWork">
+            <a href="#workArea" class="" onclick="event.preventDefault(); return false;">Recent Projects</a>
+          </li>
+        	<li class="mainLink linkToContact">
+            <a href="#contactArea" class="" onclick="event.preventDefault(); return false;">Contact</a>
+          </li>
+        </ul>
+    </nav><!-- end of class="mainMenuBox" -->
+  </div>
 
 <!-- ============================================ JAVASCRIPT FILES ======================================================== -->
 <!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
