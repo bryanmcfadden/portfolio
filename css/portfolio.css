@@ -421,7 +421,10 @@ button {
   box-sizing: border-box; }
 
 .mCSB_container {
-  width: 100% !important; }
+  width: 100% !important;
+  position: relative;
+  top: 0;
+  left: 0; }
 
 .mCSB_inside > .mCSB_container {
   margin-right: 20px !important; }
@@ -431,6 +434,7 @@ button {
   height: 100.1%;
   width: 100%;
   display: block;
+  box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.7);
   overflow: auto;
   position: absolute;
   top: 0;
@@ -491,19 +495,19 @@ button {
 
 .projContentBox.close {
   animation-name: closeProjectView;
-  animation-duration: 2.5s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-delay: 0;
   animation-timing-function: ease;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: forwards; }
 
 .projContentBox.open {
   animation-name: openProjectView;
-  animation-duration: 1.0s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-delay: 0;
   animation-timing-function: ease;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: forwards; }
 
 /* Nav-bar  ================================================================= */
 .nav-bar {
@@ -1103,46 +1107,42 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     max-width: 1024px; } }
 
 /* -------------- Project details --------------*/
-.project-details {
-  /*
-  text-align:center;
-  top:0;
-  transform:scale(1);
-  visibility:hidden;
-  width:100%;
-  z-index:250;
-  letter-spacing:.05em;
- */ }
-  .project-details #btnPrevProj, .project-details #btnNextProj {
-    border: 1px solid #fff;
-    color: #fff;
-    position: relative;
-    top: 0;
-    padding: 0.7em 1.2em; }
-  .project-details #btnPrevProj {
-    left: 10px; }
-  .project-details #btnNextProj {
-    right: 10px; }
-  .project-details i {
-    color: #fff;
-    margin-right: 10px; }
-  .project-details h2 {
-    color: #fff;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    display: inline-block; }
-  .project-details h3 {
-    opacity: .5;
-    font-size: 1.3em;
-    margin-top: 10px;
-    /* letter-spacing: .05em; */
-    font-family: 'Roboto Lt', Arial, sans-serif; }
-  .project-details em {
-    color: #2298d8;
-    font-size: 1.3em;
-    position: relative;
-    top: 40px;
-    font-family: 'Roboto', Arial, sans-serif; }
+.project-details #btnPrevProj, .project-details #btnNextProj {
+  border: 1px solid #fff;
+  color: #fff;
+  position: relative;
+  top: 0;
+  padding: 0.7em 1.2em; }
+
+.project-details #btnPrevProj {
+  left: 10px; }
+
+.project-details #btnNextProj {
+  right: 10px; }
+
+.project-details i {
+  color: #fff;
+  margin-right: 10px; }
+
+.project-details h2 {
+  color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  display: inline-block; }
+
+.project-details h3 {
+  opacity: .5;
+  font-size: 1.3em;
+  margin-top: 10px;
+  /* letter-spacing: .05em; */
+  font-family: 'Roboto Lt', Arial, sans-serif; }
+
+.project-details em {
+  color: #2298d8;
+  font-size: 1.3em;
+  position: relative;
+  top: 40px;
+  font-family: 'Roboto', Arial, sans-serif; }
 
 .text-summary {
   padding: 40px 0;

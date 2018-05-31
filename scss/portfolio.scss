@@ -43,13 +43,14 @@ gray = #ccc; rgba(0,0,0,0.5)
   background-attachment: fixed;
   box-sizing: border-box;
 }
-.mCSB_container { width:100% !important;}
+.mCSB_container {width:100% !important; position:relative; top:0; left:0;}
 .mCSB_inside > .mCSB_container { margin-right:20px !important; }
 /* ------- project view area --------------- */
 .projContentBox {
   height: 100.1%;
   width:100%;
   display:block;
+  box-shadow:0 0 200px 0 rgba(0,0,0,0.7);
   overflow: auto;
   position: absolute;
   top:0;
@@ -110,19 +111,19 @@ gray = #ccc; rgba(0,0,0,0.5)
 }
 .projContentBox.close {
   animation-name: closeProjectView;
-  animation-duration: 2.5s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-delay: 0;
   animation-timing-function: ease;
-  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
 }
 .projContentBox.open {
   animation-name: openProjectView;
-  animation-duration: 1.0s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-delay: 0;
   animation-timing-function: ease;
-  animation-fill-mode: backwards;
+  animation-fill-mode: forwards;
 }
 /* Nav-bar  ================================================================= */
 .nav-bar{
@@ -721,15 +722,6 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 }
 /* -------------- Project details --------------*/
 .project-details {
-  /*
-  text-align:center;
-  top:0;
-  transform:scale(1);
-  visibility:hidden;
-  width:100%;
-  z-index:250;
-  letter-spacing:.05em;
- */
 
   & #btnPrevProj, & #btnNextProj {
     border:1px solid #fff;

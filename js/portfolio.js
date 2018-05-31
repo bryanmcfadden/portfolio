@@ -36,21 +36,25 @@ $(window).load(function(){
 $(document).ready(function(){
 
 	function DisplayProjectView(){
-	var proj = $(".projContentBox");
+		var proj = $(".projContentBox");
 
 		if(proj.hasClass("open")){
 			//alert('closing project view');
-			proj.toggleClass("open close");
+			proj.toggleClass("open");
+			proj.addClass("close");
 			proj.animate({opacity: 0.0,},1000,function(){
 				proj.css({visibility: "hidden"});
 			});
-			$(".recent-projects").animate({opacity: 1, visibility: "visible"},1000);
+			$('.mainContentBox').animate({opacity: 1, visibility: "visible"},1000);
+			//$(".recent-projects").animate({opacity: 1, visibility: "visible"},1000);
 			$('.hamburger').toggleClass('light is-active');
 		}else{
 			//alert('opening project view');
 			proj.toggleClass("open");
+			proj.removeClass("close");
 			proj.css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},500);
-			$(".recent-projects").animate({opacity: 0, visibility: "hidden"},1000);
+			//$(".recent-projects").animate({opacity: 0, visibility: "hidden"},1000);
+			$('.mainContentBox').animate({opacity: 0, visibility: "hidden"},1000);
 			$('.hamburger').toggleClass('light is-active');
 		}
 	}
