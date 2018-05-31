@@ -8,7 +8,7 @@ All functionality required for my portfolio pages
 $(window).load(function(){
 	// instantiate main content area scrollbar
 	$(".mainContentBox").mCustomScrollbar({
-		theme: "light-2",
+		theme: "dark-2",
 		scrollButtons:{ enable: 0 },
 		scrollInertia:700,
 		mouseWheel:{ scrollAmount: 300 },
@@ -21,7 +21,7 @@ $(window).load(function(){
 	});
 	// instantiate project view area scrollbar
 	$(".projContentBox").mCustomScrollbar({
-		theme: "light-2",
+		theme: "dark-2",
 		scrollButtons:{ enable: 0 },
 		scrollInertia:700,
 		mouseWheel:{ scrollAmount: 300 },
@@ -34,6 +34,18 @@ $(window).load(function(){
 });
 
 $(document).ready(function(){
+
+	// Animate Bar-Chart
+	 $('.bar-chart').waypoint(function(event, direction) {
+		 $('#skill1').css({'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
+		 $('#skill2').css({'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
+		 $('#skill3').css({'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
+		 $('#skill4').css({'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
+		 $('#skill5').css({'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
+	 }, {
+	 offset: '80%',
+	 triggerOnce: true
+ 	});
 
 	function DisplayProjectView(){
 		var proj = $(".projContentBox");

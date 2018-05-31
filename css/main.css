@@ -5,7 +5,7 @@ gray = #ccc; rgba(0,0,0,0.5)
 ============================================================================= */
 /* Global Variables ========================================================= */
 /* color bar underneath titles */
-/* outline and font color */
+/* outline and font color #2298d8 */
 /* Fonts ==================================================================== */
 @font-face {
   font-family: 'Roboto';
@@ -52,7 +52,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   font-weight: 100;
   font-style: normal; }
 
-/* Responsive  Styles ======================================================= */
+/* Responsive  Styles ===================================================== */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -103,14 +103,19 @@ gray = #ccc; rgba(0,0,0,0.5)
   .col-xs-11 {
     width: 91.66%; }
   .col-xs-12 {
-    width: 100%; } }
+    width: 100%; }
+  h1 {
+    font-size: 1.2em; }
+  .project-details em {
+    margin: 20px 0 60px !important; } }
 
 @media only screen and (min-width: 600px) {
   .sm-hidden {
     display: none; }
   .sm-show {
     display: block; }
-  /*.container {width:590px; }*/
+  .container {
+    width: 590px; }
   .col-sm-1 {
     width: 8.33%; }
   .col-sm-2 {
@@ -141,7 +146,8 @@ gray = #ccc; rgba(0,0,0,0.5)
     display: none; }
   .md-show {
     display: block; }
-  /*.container {width:750px; }*/
+  .container {
+    width: 750px; }
   .col-md-1 {
     width: 8.33%; }
   .col-md-2 {
@@ -168,7 +174,8 @@ gray = #ccc; rgba(0,0,0,0.5)
     width: 100%; } }
 
 @media only screen and (min-width: 992px) {
-  /*.container {width:970px; }*/
+  .container {
+    width: 970px; }
   .col-lg-1 {
     width: 8.33%; }
   .col-lg-2 {
@@ -195,7 +202,8 @@ gray = #ccc; rgba(0,0,0,0.5)
     width: 100%; } }
 
 @media only screen and (min-width: 1200px) {
-  /*.container {width:1170px; }*/
+  .container {
+    width: 1170px; }
   .col-xl-1 {
     width: 8.33%; }
   .col-xl-2 {
@@ -221,7 +229,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   .col-xl-12 {
     width: 100%; } }
 
-/* Form Styles ============================================================== */
+/* Form Styles ============================================================ */
 form .three-inputs-wrapper {
   float: left;
   width: 100%;
@@ -242,6 +250,9 @@ form .form-input {
 .align-left {
   float: left; }
 
+.bold {
+  font-weight: bold; }
+
 .ralign {
   text-align: right; }
 
@@ -259,31 +270,29 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   color: #333333;
   /*	overflow:hidden; */
   margin: 0;
   padding: 0; }
 
 header {
-  padding: 80px 5%;
+  padding: 80px 5% 60px;
   position: relative;
   background-color: #000;
   color: #fff;
   overflow: auto; }
 
 em, h1 {
-  font-weight: inherit;
-  font-style: inherit; }
+  font-style: normal; }
 
 h1 {
   display: inline-block;
-  font-size: inherit;
   margin: 0; }
 
 h2 {
   font-family: 'Monteserrat', Arial, sans-serif;
-  font-size: 2.6em;
+  font-size: 2.2em;
   letter-spacing: .05em;
   margin: 0 auto 20px;
   display: inline-block;
@@ -298,7 +307,7 @@ h2 {
     left: 15%;
     width: 70%;
     height: 1px;
-    border-bottom: 1px solid #2298d8; }
+    border-bottom: 1px solid #ccc; }
 
 h3 {
   text-transform: none;
@@ -307,8 +316,8 @@ h3 {
   letter-spacing: .03em; }
 
 h4 {
-  margin-top: 50px;
-  font-size: 1.1em;
+  margin: 60px 0 20px;
+  font-size: 1em;
   font-weight: 300;
   letter-spacing: 1.2px; }
 
@@ -359,7 +368,7 @@ textarea {
 button {
   padding: 8px 22px;
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
   opacity: 1; }
   button:hover {
@@ -377,3 +386,157 @@ button {
 @media screen and (max-width: 400px) {
   html {
     font-size: 10px; } }
+
+/* Custom Scrollbars = ==================================================== */
+/* ------- main content area -------------- */
+.mainContentBox {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  /* opacity: 0; */
+  transition: opacity 1s;
+  z-index: 200;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box; }
+
+.mCSB_container {
+  width: 100% !important;
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #2298d8 !important; }
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 20px !important; }
+
+/* ------- project view area --------------- */
+.projContentBox {
+  height: 100.1%;
+  width: 100%;
+  display: block;
+  box-shadow: 0 0 200px 0 rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+  z-index: 250;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  transform: scale(1);
+  letter-spacing: .05em; }
+
+@keyframes closeProjectView {
+  0% {
+    transform: scale(1) rotateX(0);
+    top: 0;
+    opacity: 1;
+    visibility: visible; }
+  33% {
+    transform: scale(0.7) rotateX(5deg);
+    top: 0;
+    opacity: 1;
+    visibility: visible; }
+  66% {
+    transform: scale(0.7) rotateX(5deg);
+    top: -300px;
+    opacity: 0;
+    visibility: visible; }
+  100% {
+    transform: scale(0.7) rotateX(5deg);
+    top: -300px;
+    opacity: 0;
+    visibility: hidden; } }
+
+@keyframes openProjectView {
+  0% {
+    transform: scale(0.7) rotateX(5deg);
+    top: -300px;
+    opacity: 0;
+    visibility: hidden; }
+  33% {
+    transform: scale(0.7) rotateX(5deg);
+    top: -300px;
+    opacity: 0;
+    visibility: visible; }
+  66% {
+    transform: scale(0.7) rotateX(5deg);
+    top: 0;
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    /* transform: scale(1); */
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible; } }
+
+.projContentBox.close {
+  animation-name: closeProjectView;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards; }
+
+.projContentBox.open {
+  animation-name: openProjectView;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards; }
+
+/* Nav-bar  =============================================================== */
+.nav-bar {
+  position: fixed;
+  /* background-color:#000; */
+  width: 100%;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  z-index: 900; }
+
+/* ------- Hamburger icon  ------------ */
+.hamburger.light .hamburger-inner {
+  background-color: #fff !important; }
+
+.hamburger:hover {
+  background-color: #2298d8;
+  opacity: 1; }
+
+/* ------- Main-Menu  --------------- */
+.mainMenu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 300; }
+
+.mainMenu {
+  opacity: 0;
+  background-color: #fff;
+  transform: scale(1.2);
+  transition: opacity .5s, transform .5s;
+  transform-origin: right top 0; }
+
+/*
+    @media screen and (max-width: 700px;) {
+      .mainMenu { background-color: #fff; }
+    }
+    */
+.mainMenu.visible {
+  opacity: 1;
+  transform: scale(1); }

@@ -11,7 +11,7 @@ gray = #ccc; rgba(0,0,0,0.5)
 ============================================================================= */
 /* Global Variables ========================================================= */
 /* color bar underneath titles */
-/* outline and font color */
+/* outline and font color #2298d8 */
 /* Fonts ==================================================================== */
 @font-face {
   font-family: 'Roboto';
@@ -58,7 +58,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   font-weight: 100;
   font-style: normal; }
 
-/* Responsive  Styles ======================================================= */
+/* Responsive  Styles ===================================================== */
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -109,14 +109,19 @@ gray = #ccc; rgba(0,0,0,0.5)
   .col-xs-11 {
     width: 91.66%; }
   .col-xs-12 {
-    width: 100%; } }
+    width: 100%; }
+  h1 {
+    font-size: 1.2em; }
+  .project-details em {
+    margin: 20px 0 60px !important; } }
 
 @media only screen and (min-width: 600px) {
   .sm-hidden {
     display: none; }
   .sm-show {
     display: block; }
-  /*.container {width:590px; }*/
+  .container {
+    width: 590px; }
   .col-sm-1 {
     width: 8.33%; }
   .col-sm-2 {
@@ -147,7 +152,8 @@ gray = #ccc; rgba(0,0,0,0.5)
     display: none; }
   .md-show {
     display: block; }
-  /*.container {width:750px; }*/
+  .container {
+    width: 750px; }
   .col-md-1 {
     width: 8.33%; }
   .col-md-2 {
@@ -174,7 +180,8 @@ gray = #ccc; rgba(0,0,0,0.5)
     width: 100%; } }
 
 @media only screen and (min-width: 992px) {
-  /*.container {width:970px; }*/
+  .container {
+    width: 970px; }
   .col-lg-1 {
     width: 8.33%; }
   .col-lg-2 {
@@ -201,7 +208,8 @@ gray = #ccc; rgba(0,0,0,0.5)
     width: 100%; } }
 
 @media only screen and (min-width: 1200px) {
-  /*.container {width:1170px; }*/
+  .container {
+    width: 1170px; }
   .col-xl-1 {
     width: 8.33%; }
   .col-xl-2 {
@@ -227,7 +235,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   .col-xl-12 {
     width: 100%; } }
 
-/* Form Styles ============================================================== */
+/* Form Styles ============================================================ */
 form .three-inputs-wrapper {
   float: left;
   width: 100%;
@@ -248,6 +256,9 @@ form .form-input {
 .align-left {
   float: left; }
 
+.bold {
+  font-weight: bold; }
+
 .ralign {
   text-align: right; }
 
@@ -265,31 +276,29 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   color: #333333;
   /*	overflow:hidden; */
   margin: 0;
   padding: 0; }
 
 header {
-  padding: 80px 5%;
+  padding: 80px 5% 60px;
   position: relative;
   background-color: #000;
   color: #fff;
   overflow: auto; }
 
 em, h1 {
-  font-weight: inherit;
-  font-style: inherit; }
+  font-style: normal; }
 
 h1 {
   display: inline-block;
-  font-size: inherit;
   margin: 0; }
 
 h2 {
   font-family: 'Monteserrat', Arial, sans-serif;
-  font-size: 2.6em;
+  font-size: 2.2em;
   letter-spacing: .05em;
   margin: 0 auto 20px;
   display: inline-block;
@@ -304,7 +313,7 @@ h2 {
     left: 15%;
     width: 70%;
     height: 1px;
-    border-bottom: 1px solid #2298d8; }
+    border-bottom: 1px solid #ccc; }
 
 h3 {
   text-transform: none;
@@ -313,8 +322,8 @@ h3 {
   letter-spacing: .03em; }
 
 h4 {
-  margin-top: 50px;
-  font-size: 1.1em;
+  margin: 60px 0 20px;
+  font-size: 1em;
   font-weight: 300;
   letter-spacing: 1.2px; }
 
@@ -365,7 +374,7 @@ textarea {
 button {
   padding: 8px 22px;
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
   opacity: 1; }
   button:hover {
@@ -384,27 +393,7 @@ button {
   html {
     font-size: 10px; } }
 
-#main {
-  text-align: center; }
-  #main:focus {
-    border: none;
-    outline: none; }
-
-.portfolio-body {
-  background-color: #000;
-  height: 100%; }
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-  display: table; }
-
-.subWrapper {
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle; }
-
-/* Custom Scrollbars = ====================================================== */
+/* Custom Scrollbars = ==================================================== */
 /* ------- main content area -------------- */
 .mainContentBox {
   height: 100%;
@@ -425,6 +414,10 @@ button {
   position: relative;
   top: 0;
   left: 0; }
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #2298d8 !important; }
 
 .mCSB_inside > .mCSB_container {
   margin-right: 20px !important; }
@@ -509,7 +502,7 @@ button {
   animation-timing-function: ease;
   animation-fill-mode: forwards; }
 
-/* Nav-bar  ================================================================= */
+/* Nav-bar  =============================================================== */
 .nav-bar {
   position: fixed;
   /* background-color:#000; */
@@ -519,10 +512,15 @@ button {
   left: 0;
   z-index: 900; }
 
+/* ------- Hamburger icon  ------------ */
 .hamburger.light .hamburger-inner {
   background-color: #fff !important; }
 
-/* Main-Menu  ============================================== */
+.hamburger:hover {
+  background-color: #2298d8;
+  opacity: 1; }
+
+/* ------- Main-Menu  --------------- */
 .mainMenu {
   width: 100%;
   height: 100%;
@@ -541,13 +539,33 @@ button {
   transform-origin: right top 0; }
 
 /*
-  @media screen and (max-width: 700px;) {
-    .mainMenu { background-color: #fff; }
-  }
-  */
+    @media screen and (max-width: 700px;) {
+      .mainMenu { background-color: #fff; }
+    }
+    */
 .mainMenu.visible {
   opacity: 1;
   transform: scale(1); }
+
+#main {
+  text-align: center; }
+  #main:focus {
+    border: none;
+    outline: none; }
+
+.portfolio-body {
+  background-color: #000;
+  height: 100%; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: table; }
+
+.subWrapper {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle; }
 
 /* Introduction  ============================================================ */
 .sectionIntro {
@@ -628,6 +646,7 @@ button {
     font-family: 'Roboto Lt', Arial, sans-serif;
     font-weight: 300;
     font-style: normal;
+    line-height: 32px;
     margin-top: 35px;
     opacity: 1;
     transition: opacity 1s, top 1s;
@@ -637,11 +656,11 @@ button {
     .sectionIntro .my-roles h1 {
       color: #fff; }
       .sectionIntro .my-roles h1 span {
-        margin-right: 10px; }
+        margin-right: 10px;
+        font-size: .5em; }
       .sectionIntro .my-roles h1 .role-title {
         font-family: 'Oxygen', Arial, sans-serif;
         font-weight: normal;
-        font-size: inherit;
         color: #2298d8;
         text-transform: uppercase; }
     .sectionIntro .my-roles #location:hover {
@@ -825,77 +844,81 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   font-weight: normal;
   font-style: italic; }
 
-/* Bar-Chart =============================================== */
-#bar-chart {
-  display: block; }
-
-.bar-chart {
-  list-style: none;
-  height: 450px;
-  position: relative;
-  background: url(../images/axis.png) repeat-x;
-  padding: 0;
-  text-align: left;
-  margin: 0px; }
-
-.bar-chart .label {
-  color: #666666;
-  margin: -0.6em 0 88px 0;
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-shadow: 0px 1px 1px #ffffff; }
-
-.bar-chart li {
-  margin: 0 1.6% 0 0;
-  display: inline-block;
-  width: 16%;
-  height: 100%;
-  background-color: #CCC;
+/* My Skills ================================================================ */
+#mySkills {
+  background-color: #f1f1f1;
+  padding: 90px 0;
   text-align: center;
-  font-weight: normal;
-  color: #FFF;
   position: relative;
-  font-size: 18px;
-  font-size: 1.8rem;
-  border: #BBB solid 1px;
-  vertical-align: bottom;
-  border-bottom: #BBB solid 1px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
-  -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
-  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6); }
+  overflow: hidden;
+  display: block;
+  box-sizing: border-box; }
 
-.bar-chart li:nth-child(6n) {
-  margin-right: 0; }
-
-.bar-chart .percent,
-.bar-chart .skill {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25); }
-
-.bar-chart .percent {
-  opacity: 0.3;
-  position: absolute;
-  bottom: 35px;
-  font-size: 60px;
-  font-size: 6rem;
-  width: 100%;
-  line-height: 1em; }
-
-.bar-chart .percent span {
-  font-size: 24px;
-  font-size: 2.4rem;
-  padding-left: 3px; }
-
-.bar-chart .skill {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  font-size: 16px;
-  font-size: 1.6rem; }
+/* -------------- bar chart ----------------*/
+.bar-chart-wrapper {
+  padding-top: 50px;
+  width: 75%;
+  margin: 0 auto 0 auto;
+  display: block; }
+  .bar-chart-wrapper .bar-chart {
+    list-style: none;
+    height: 450px;
+    position: relative;
+    background: url(../img/axis.png) repeat-x;
+    padding: 0;
+    text-align: left;
+    margin: 0px; }
+    .bar-chart-wrapper .bar-chart .label {
+      color: #666666;
+      margin: -0.6em 0 88px 0;
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: normal;
+      text-shadow: 0px 1px 1px #ffffff; }
+    .bar-chart-wrapper .bar-chart li {
+      margin: 0 1.6% 0 0;
+      display: inline-block;
+      width: 16%;
+      height: 100%;
+      background-color: #CCC;
+      text-align: center;
+      font-weight: normal;
+      color: #FFF;
+      position: relative;
+      font-size: 18px;
+      font-size: 1.8rem;
+      border: #BBB solid 1px;
+      vertical-align: bottom;
+      border-bottom: #BBB solid 1px;
+      -moz-border-radius-topleft: 3px;
+      -moz-border-radius-topright: 3px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-top-right-radius: 3px;
+      -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+      -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6); }
+      .bar-chart-wrapper .bar-chart li:nth-child(6n) {
+        margin-right: 0; }
+    .bar-chart-wrapper .bar-chart .percent, .bar-chart-wrapper .bar-chart .skill {
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25); }
+    .bar-chart-wrapper .bar-chart .percent {
+      opacity: 0.3;
+      position: absolute;
+      bottom: 35px;
+      font-size: 60px;
+      font-size: 6rem;
+      width: 100%;
+      line-height: 1em; }
+      .bar-chart-wrapper .bar-chart .percent span {
+        font-size: 24px;
+        font-size: 2.4rem;
+        padding-left: 3px; }
+    .bar-chart-wrapper .bar-chart .skill {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      font-size: 16px;
+      font-size: 1.6rem; }
 
 .bar-chart .blue {
   height: 0px;
@@ -1028,7 +1051,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   opacity: 0.5;
   color: #fff;
   font-family: 'Roboto Lt', Arial, sans-serif;
-  font-size: .8em;
+  font-size: .6em;
   letter-spacing: .03em;
   font-weight: 100;
   margin-top: 2px;
@@ -1132,7 +1155,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 
 .project-details h3 {
   opacity: .5;
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-top: 10px;
   /* letter-spacing: .05em; */
   font-family: 'Roboto Lt', Arial, sans-serif; }
@@ -1141,17 +1164,21 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   color: #2298d8;
   font-size: 1.3em;
   position: relative;
-  top: 40px;
+  margin-top: 50px;
+  display: inline-block;
   font-family: 'Roboto', Arial, sans-serif; }
 
 .text-summary {
-  padding: 40px 0;
+  padding: 40px 0 80px;
   width: 80%;
   display: inline-block;
   max-width: 700px;
   line-height: 1.6em;
   font-style: normal;
   letter-spacing: .02em; }
+
+#sectProjGraphic {
+  background-color: #fff; }
 
 #sectUXDeliverables h2 {
   color: #000;
@@ -1172,6 +1199,8 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 
 #sectUXDeliverables ul#lstUXDeliverables li {
   display: inline-block;
+  font-family: 'Roboto Lt', Arial, sans-serif;
+  font-weight: 100;
   border-radius: 4px;
   background-color: #2298d8;
   color: #fff;
@@ -1221,16 +1250,12 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
       color: #939393; }
   #footer .footer-social-ico {
     background: #2298d8;
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding: 70px 0;
     position: relative;
     text-align: center; }
     #footer .footer-social-ico p {
       padding: 0;
-      position: absolute;
-      bottom: 10px;
       font-size: 12px;
-      margin-left: 25%;
       color: #fff; }
     #footer .footer-social-ico li {
       display: inline-block;

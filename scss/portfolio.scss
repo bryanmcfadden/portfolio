@@ -27,144 +27,6 @@ gray = #ccc; rgba(0,0,0,0.5)
   display: table-cell;
   vertical-align: middle;
 }
-/* Custom Scrollbars = ====================================================== */
-/* ------- main content area -------------- */
-.mainContentBox {
-  height: 100%;
-  overflow: auto;
-  position: relative;
-  /* opacity: 0; */
-  transition: opacity 1s;
-  z-index: 200;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  box-sizing: border-box;
-}
-.mCSB_container {width:100% !important; position:relative; top:0; left:0;}
-.mCSB_inside > .mCSB_container { margin-right:20px !important; }
-/* ------- project view area --------------- */
-.projContentBox {
-  height: 100.1%;
-  width:100%;
-  display:block;
-  box-shadow:0 0 200px 0 rgba(0,0,0,0.7);
-  overflow: auto;
-  position: absolute;
-  top:0;
-  left:0;
-  transition: opacity 1s;
-  z-index: 250;
-  background-color:#fff;
-  visibility: hidden;
-  opacity:0;
-  text-align:center;
-  transform:scale(1);
-  letter-spacing:.05em;
-}
-@keyframes closeProjectView{
-  0% {
-    transform: scale(1) rotateX(0);
-    top: 0;
-    opacity: 1;
-    visibility: visible;}
-  33% {
-    transform: scale(0.7) rotateX(5deg);
-    top: 0;
-    opacity: 1;
-    visibility: visible;}
-  66% {
-    transform: scale(0.7) rotateX(5deg);
-    top: -300px;
-    opacity: 0;
-    visibility: visible;}
-  100% {
-    transform: scale(0.7) rotateX(5deg);
-    top: -300px;
-    opacity: 0;
-    visibility: hidden;}
-}
-@keyframes openProjectView{
-  0% {
-    transform: scale(0.7) rotateX(5deg);
-    top: -300px;
-    opacity: 0;
-    visibility: hidden;}
-  33% {
-    transform: scale(0.7) rotateX(5deg);
-    top: -300px;
-    opacity: 0;
-    visibility: visible;}
-  66% {
-    transform: scale(0.7) rotateX(5deg);
-    top: 0;
-    opacity: 1;
-    visibility: visible;}
-  100% {
-    /* transform: scale(1); */
-    top: 0;
-    left:0;
-    opacity: 1;
-    visibility: visible;}
-}
-.projContentBox.close {
-  animation-name: closeProjectView;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  animation-delay: 0;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-.projContentBox.open {
-  animation-name: openProjectView;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  animation-delay: 0;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-/* Nav-bar  ================================================================= */
-.nav-bar{
-  position: fixed;
-  /* background-color:#000; */
-  width:100%;
-  padding:10px;
-  top:0;
-  left:0;
-  z-index:900;
-}
-.hamburger.light .hamburger-inner {
-  background-color::#fff !important; }
-
-  /* Main-Menu  ============================================== */
-  .mainMenu {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    display: none;
-    z-index: 300;
-  }
-  .mainMenu {
-    opacity: 0;
-    background-color: #fff;
-    transform: scale(1.2);
-    transition: opacity .5s, transform .5s;
-    transform-origin: right top 0;
-  }
-  /*
-  @media screen and (max-width: 700px;) {
-    .mainMenu { background-color: #fff; }
-  }
-  */
-  .mainMenu.visible {
-    opacity: 1;
-    transform: scale(1);
-  }
 
 /* Introduction  ============================================================ */
 .sectionIntro {
@@ -254,6 +116,7 @@ gray = #ccc; rgba(0,0,0,0.5)
     font-family: 'Roboto Lt', Arial, sans-serif;
     font-weight: 300;
     font-style: normal;
+    line-height:32px;
     margin-top: 35px;
     opacity: 1;
     transition: opacity 1s, top 1s;
@@ -264,12 +127,14 @@ gray = #ccc; rgba(0,0,0,0.5)
     h1 {
       color:#fff;
 
-      span { margin-right:10px; }
+      span {
+        margin-right:10px;
+        font-size: .5em;
+      }
 
       .role-title {
         font-family: 'Oxygen', Arial, sans-serif;
         font-weight:normal;
-        font-size:inherit;
         color: $default-color;
         text-transform:uppercase;
       }
@@ -457,78 +322,93 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   font-weight: normal;
   font-style: italic;
 }
-/* Bar-Chart =============================================== */
-#bar-chart {
+/* My Skills ================================================================ */
+#mySkills {
+  background-color:#f1f1f1;
+  padding:90px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  display:block;
+  box-sizing:border-box;
+}
+/* -------------- bar chart ----------------*/
+.bar-chart-wrapper {
+  padding-top:50px;
+  width:75%;
+  margin:0 auto 0 auto;
   display: block;
+
+  .bar-chart {
+    list-style: none;
+    height: 450px;
+    position: relative;
+    background: url(../img/axis.png) repeat-x;
+    padding: 0;
+    text-align:left;
+    margin: 0px;
+
+    .label {
+      color: #666666;
+      margin: -0.6em 0 88px 0;
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: normal;
+      text-shadow: 0px 1px 1px #ffffff;
+    }
+
+    li {
+      margin: 0 1.6% 0 0;
+      display: inline-block;
+      width: 16%;
+      height: 100%;
+      background-color: #CCC;
+      text-align: center;
+      font-weight: normal;
+      color: #FFF;
+      position: relative;
+      font-size: 18px;
+      font-size: 1.8rem;
+      border: #BBB solid 1px;
+      vertical-align: bottom;
+      border-bottom: #BBB solid 1px;
+      -moz-border-radius-topleft: 3px;
+      -moz-border-radius-topright: 3px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-top-right-radius: 3px;
+      -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+      -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
+
+      &:nth-child(6n) {margin-right: 0;}
+    }
+
+    .percent, .skill {text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);}
+    .percent {
+      opacity: 0.3;
+      position: absolute;
+      bottom: 35px;
+      font-size: 60px;
+      font-size: 6rem;
+      width: 100%;
+      line-height: 1em;
+
+      span {
+        font-size: 24px;
+        font-size: 2.4rem;
+        padding-left: 3px;}
+    }
+
+    .skill {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 16px;
+    font-size: 1.6rem;}
+  }
 }
-.bar-chart {
-  list-style: none;
-  height: 450px;
-  position: relative;
-  background: url(../images/axis.png) repeat-x;
-  padding: 0;
-  text-align:left;
-  margin: 0px;
-}
-.bar-chart .label {
-  color: #666666;
-  margin: -0.6em 0 88px 0;
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-shadow: 0px 1px 1px #ffffff;
-}
-.bar-chart li {
-  margin: 0 1.6% 0 0;
-  display: inline-block;
-  width: 16%;
-  height: 100%;
-  background-color: #CCC;
-  text-align: center;
-  font-weight: normal;
-  color: #FFF;
-  position: relative;
-  font-size: 18px;
-  font-size: 1.8rem;
-  border: #BBB solid 1px;
-  vertical-align: bottom;
-  border-bottom: #BBB solid 1px;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
-  -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
-  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.6);
-}
-.bar-chart li:nth-child(6n) {
-  margin-right: 0;
-}
-.bar-chart .percent,
-.bar-chart .skill {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
-}
-.bar-chart .percent {
-  opacity: 0.3;
-  position: absolute;
-  bottom: 35px;
-  font-size: 60px;
-  font-size: 6rem;
-  width: 100%;
-  line-height: 1em;
-}
-.bar-chart .percent span {
-  font-size: 24px;
-  font-size: 2.4rem;
-  padding-left: 3px;
-}
-.bar-chart .skill {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  font-size: 16px;
-  font-size: 1.6rem;
-}
+
+
 .bar-chart .blue {
   height:0px;
   border-color: #2298d8;
@@ -649,7 +529,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   opacity: 0.5;
   color: #fff;
   font-family: 'Roboto Lt', Arial, sans-serif;
-  font-size: .8em;
+  font-size: .6em;
   letter-spacing:.03em;
   font-weight: 100;
   margin-top: 2px;
@@ -659,7 +539,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   text-transform: uppercase;
 }
 .details-wrapper em {
-  color:#2298d8;
+  color: $default-color;
   font-weight:200;
   font-size: .8em;
   margin-top:20px;
@@ -742,7 +622,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
       display: inline-block; }
   h3 {
     opacity:.5;
-    font-size:1.3em;
+    font-size:1.2em;
     margin-top:10px;
     /* letter-spacing: .05em; */
     font-family:'Roboto Lt', Arial, sans-serif;
@@ -751,13 +631,14 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
     color: $default-color;
     font-size:1.3em;
     position:relative;
-    top:40px;
+    margin-top:50px;
+    display:inline-block;
     font-family:'Roboto', Arial, sans-serif;
   }
 }
 
 .text-summary {
-  padding:40px 0;
+  padding:40px 0 80px;
   width:80%;
   display:inline-block;
   max-width:700px;
@@ -765,7 +646,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   font-style:normal;
   letter-spacing:.02em;
 }
-
+#sectProjGraphic {background-color: #fff;}
 #sectUXDeliverables {
   h2 {
     color:#000;
@@ -781,6 +662,8 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   div:first-child {margin-top:80px;}
   ul#lstUXDeliverables li {
     display:inline-block;
+    font-family:'Roboto Lt', Arial, sans-serif;
+    font-weight:100;
     border-radius:4px;
     background-color: $default-color;
     color:#fff;
@@ -840,17 +723,13 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 
   .footer-social-ico {
     background: $default-color;
-    padding-top:50px;
-    padding-bottom:70px;
+    padding:70px 0;
     position:relative;
     text-align:center;
 
     p {
       padding:0;
-      position:absolute;
-      bottom:10px;
       font-size:12px;
-      margin-left:25%;
       color:#fff;}
 
       li {

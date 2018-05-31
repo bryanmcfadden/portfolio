@@ -46,10 +46,10 @@
               <!-- <div class="bckgdBox"></div> -->
               <h2>tSpace</h2>
               <h3>AT&T / Internal social media app </h3>
+              <br>
               <em>UX / UI Design</em>
-            </div>
-            <div class="clear-fix">
-              <div>
+              <br>
+              <div style="position:relative; top:-30px;">
                 <div class="col-md-6 col-xs-6 lalign">
                   <!-- left navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
                   <button class="disabled" id="btnPrevProj">
@@ -64,8 +64,8 @@
                        <i class="fas fa-angle-right"></i>
                  </button>
                </div>
-             </div>
-           </div>
+              </div>
+            </div>
           </header>
           <!-- start brief section -->
           <section id="sectBrief">
@@ -201,7 +201,7 @@
                 When I'm not glued to a monitor, you'll find me watching soccer.<br>
                 Or possibly playing disc jockey for my friends and family.
               </p>
-              <h4>Want to know more?</h4>
+              <h4 class="bold">Want to know more?</h4>
               <a id="resume_doc" class="resume resume-doc" href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" target="_blank">
                 <span>
                   <i class="fas fa-file-word" alt="Adobe PDF"></i>
@@ -215,6 +215,43 @@
                   <i class="fas fa-file-pdf" alt="Adobe PDF"></i>
                 </span>
               </a>
+          </section>
+          <!-- ************************************************************************************ -->
+          <!-- ***********************   MY SKILLS  *********************************************** -->
+          <!-- ************************************************************************************ -->
+          <section id="mySkills">
+            <h2>My Skills<span></span></h2>
+            <div class="bar-chart-wrapper">
+              <ul class="bar-chart">
+                <li class="axis">
+                  <div class="label">OMG!</div>
+                  <div class="label">Guru</div>
+                  <div class="label">Clever</div>
+                  <div class="label">Mediocre</div>
+                  <div class="label">Clueless</div>
+                </li>
+                <li id="skill1" class="blue">
+                  <div class="percent">95<span>%</span></div>
+                  <div class="skill">HTML/CSS</div>
+                </li>
+                <li id="skill2" class="blue">
+                  <div class="percent">60<span>%</span></div>
+                  <div class="skill">JavaScript</div>
+                </li>
+                <li id="skill3" class="blue">
+                  <div class="percent">95<span>%</span></div>
+                  <div class="skill">Skill 3</div>
+                </li>
+                <li id="skill4" class="blue">
+                  <div class="percent">75<span>%</span></div>
+                  <div class="skill">Skill 4</div>
+                </li>
+                <li id="skill5" class="blue">
+                  <div class="percent"></div>
+                  <div class="skill">Women</div>
+                </li>
+              </ul>
+            </div>
           </section>
           <!-- ************************************************************************************ -->
           <!-- ***************    RECENT PROJECTS SELECTOR    ************************************* -->
@@ -321,7 +358,7 @@
             <div class="container">
               <div class="col-md-3 footer-ico">
                 <div>
-                  <i class="fas fa-map-marker-alt selectable"></i>
+                  <i class="fas fa-map-marker-alt selectable" title="Find me on a map" onclick="javascript:alert('here');"></i>
                 </div>
                 <div>
                   127 Cliffhaven Circle<br>
@@ -330,7 +367,7 @@
               </div>
               <div class="col-md-3 footer-ico">
                 <div>
-                  <i class="fas fa-envelope selectable"></i>
+                  <i class="fas fa-envelope selectable" title="Send me an email"></i>
                 </div>
                 <div>
                   <a href="mailto:bryan.mcfadden@gmail.com">bryan.mcfadden@gmail.com</a>
@@ -338,7 +375,7 @@
               </div>
               <div class="col-md-3 footer-ico">
                 <div>
-                  <i class="fas fa-phone-square selectable"></i>
+                  <i class="fas fa-phone-square selectable" title="Give me a call"></i>
                 </div>
                 <div>
                   <a href="tel:678 723 5031">678.723.5031</a>
@@ -407,6 +444,7 @@
 <script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script> -->
 <script src="js/vendor/jquery.simpleWeather.min.js"></script>
+<script src="js/vendor/jquery.waypoints.1.1.7.js"></script>
 
 <!-- Include font-awesome icons -->
 <!-- local -->
@@ -414,27 +452,8 @@
 <!-- web
 <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
 -->
-<script src="js/vendor/jquery.easing.1.4.1.min.js"></script>
-<script src="js/vendor/jquery.waypoints.min.js"></script>
 
 <!-- portfolio JS file-->
 <script src="js/portfolio.js"></script>
-
-<script language="javascript">
-$(document).ready(function() {
-	// Animate Bar-Chart
-	 $('.bar-chart').waypoint(function(event, direction) {
-		 alert('here');
-		 $('#skill1').css({'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
-		 $('#skill2').css({'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
-		 $('#skill3').css({'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
-		 $('#skill4').css({'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
-		 $('#skill5').css({'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
-	 }, {
-	 offset: '80%',
-	 triggerOnce: true
- });
-});
-</script>
 </body>
 </html>
