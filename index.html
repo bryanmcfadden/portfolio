@@ -16,223 +16,425 @@
 <meta property="og:url" content="http://portfolio.fertileimagination.com/">
 <meta property="og:image" content="http://portfolio.fertileimagination.com/img/portfolio_logo.jpg">
 <link href="http://portfolio.fertileimagination.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- <link rel="icon" href="http://mikedekker.com/wp-content/uploads/2016/11/256x256-150x150.png" sizes="32x32"> -->
 
 <link rel="stylesheet" href="css/normalize.css">
 <!-- CSS Preprocessor -->
 <link rel="stylesheet" href="css/portfolio.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css">
+<link rel="stylesheet" href="css/vendor/hamburgers.min.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro|Work+Sans|Roboto|Exo|Montserrat|Oxygen" rel="stylesheet">
 <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 </head>
 <body class="portfolio-body">
-	<div class="mCustomScrollBar" style="display:block; height:100%; overflow-y:auto;">
-		<div id="22" style="position:relative; overflow:hidden; height:100%; max-width:100%; outline:none;" tabindex="0">
-			<div id="33">
-				<!-- ************************************************************************************ -->
-				<!-- ***************************** INTRODUCTION ***************************************** -->
-				<!-- ************************************************************************************ -->
-				<section id="main" class="sectionIntro" tabindex="-1">
-				  <div class="office-bg"></div>
-			    <div class="wrapper">
-			      <div class="subWrapper">
-			      	<!-- TITLE *********************************** -->
-			      	<span class="intro-title">Hi! I'm <em>Bryan</em>.</span>
-			        <br>
-							<div class="my-roles">
-								<h1>
-									<span class="role-title">UX Designer</span>
-									<span>&amp;</span>
-									<span class="role-title">Researcher</span>
-								</h1>
-								<span>living near</span>
-								<em>
-									<span class="under-lined"></span>
-									<span id="location">Atlanta, GA</span>
-								</em>
-							</div>
-							<div class="btnNext" style="position:absolute; bottom: 15%; display: block; color: #fff; opacity: 1; z-index: 1; height: 70px; width: 100%; text-align: center; transition: bottom 1s, opacity 1s, transform 1s;">
-									<div style="display: inline-block; font-size: 2em; width: 70px; height: 70px; transition: transform .5s;">
-										<i class="fas fa-angle-down bouncing-arrow"></i>
-									</div>
-							</div><!-- icon-down-open -->
-						</div>
-			  	</div><!-- end class="wrapper" -->
-			  </section><!-- end sectionIntro -->
-				<!-- ************************************************************************************ -->
-				<!-- ***************************** ABOUT ME ********************************************* -->
-				<!-- ************************************************************************************ -->
-				<section id="aboutMe">
-				  <h2>About me<span class="decoBar"></span></h2>
-				    <p class="whoIAm">
-				      I’m a UX designer & researcher with over two decades experience.<br>
-				      I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
-				      When I'm not glued to a monitor, you'll find me watching soccer.<br>
-				      Or possibly playing disc jockey for my friends and family.
-				    </p>
-				    <h4>Want to know more?</h4>
-				    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" class="btn goldBtn enCV" target="_blank">
-				      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-				        <span class="paddingWrapper">
-				          <span class="subWrapper">
-				          <img src="img/microsoft_word.svg" alt="Wicrosoft Word document" class="mCS_img_loaded">
-				        </span>
-				      </span>
-				    </a>
-				    <span class="btn goldBtn mainBtn">
-				      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-				        <span class="paddingWrapper"><!-- <i class="icon-file-pdf"></i> --> View my resume</span>
-				    </span>
-				    <a href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" class="btn goldBtn frCV" target="_blank">
-				      <span class="decoBckd1"></span><span class="decoBckd2"></span>
-				        <span class="paddingWrapper">
-				          <span class="subWrapper">
-				          <img src="img/adobe_pdf.svg" alt="Adobe PDF" class="mCS_img_loaded">
-				        </span>
-				      </span>
-				    </a>
-				</section><!-- end sectionAboutMe -->
-				<!-- ************************************************************************************ -->
-				<!-- ***************************** FOOTER *********************************************** -->
-				<!-- ************************************************************************************ -->
-				<footer>
-					<div class="office-bg"></div>
-					<nav class="networksLinks">
-						<ul class="clearfix">
-								<li><a href="mailto:bryan.mcfadden@gmail.com" class="btn" title="Send me an email"><i class="icon-paper-plane-1"></i></a></li>
-									<li><a href="https://linkedin.com/in/bryanmcfadden" class="btn" title="Go to my LinkedIn profile"><i class="icon-linkedin"></i></a></li>
-									<!-- <li><a href="https://www.viadeo.com/p/0021s4dlcc08sbu4" class="btn" title="Go to my Viadeo profile"><i class="icon-viadeo-1"></i></a></li> -->
-									<li><a href="https://www.pinterest.com/bryanmcfadden/" class="btn" title="Get inspired by my Pinterest pins"><i class="icon-pinterest-1"></i></a></li>
-									<li><a href="https://unsplash.com/@aldric" class="btn" title="See my Unsplash photos"><i class="icon-facebook"></i></a></li>
-							</ul>
-					 </nav>
+  <div class="nav-bar">
+    <button class="hamburger light hamburger--spin" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+  <div id="portfolio-content" style="height:100%; width:100%; overflow:hidden; position:relative; perspective:500px; margin:0; padding:0; box-sizing:border-box;">
+    <div class="projContentBox mCustomScrollBar mCS-autoHide" style="overflow:visible;">
+      <!-- ************************************************************************************ -->
+      <!-- ************************ PROJECT DETAILS ******************************************* -->
+      <!-- ************************************************************************************ -->
+      <div class="project-details">
+          <!-- PHP include starts here -->
+          <header>
+            <div class="col-md-12">
+              <!-- <div class="bckgdBox"></div> -->
+              <h2>tSpace</h2>
+              <h3>AT&T / Internal social media app </h3>
+              <em>UX / UI Design</em>
+            </div>
+            <div class="clear-fix">
+              <div>
+                <div class="col-md-6 col-xs-6 lalign">
+                  <!-- left navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                  <button class="disabled" id="btnPrevProj">
+                      <i class="fas fa-angle-left"></i>
+                       &nbsp; Prev.
+                 </button>
+                </div>
+                <div class="col-md-6 col-xs-6 ralign">
+                <!-- right navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                  <button id="btnNextProj">
+                       Next &nbsp;
+                       <i class="fas fa-angle-right"></i>
+                 </button>
+               </div>
+             </div>
+           </div>
+          </header>
+          <!-- start brief section -->
+          <section id="sectBrief">
+            <div class="text-summary">
+              Vision 360 est une application de business intelligence destiné aux entités commerciales d'Essilor France. Elle permet d'ajuster
+              la politique commerciale du groupe et de mieux orienter les efforts de la force de vente. Sont notamment présentés les
+              indicateurs clés d'évolution du chiffre d'affaires des portefeuilles client, de justesse des partenariats mis en place ou encore de
+              ciblage des prospects et de suivi des parts de marché d’Essilor, sur le territoire français.
+            </div>
+          </section><!-- end of sectBrief -->
 
-					 <a href="#mainTop" class="btn goldBtn backToTop" onclick="event.preventDefault(); return false;">
-						<span class="decoBckd1"></span>
-						<span class="decoBckd2"></span>
-						<span class="paddingWrapper">
-							<i class="icon-up-small"></i><!-- icon-up --> Back to top
-						</span>
-					</a>
-					<br>
+          <!-- start of project graphic -->
+          <section id="sectProjGraphic">
+            <div class="project-view-wrapper">
+              <!-- Loading Screen
+              <style>
+                .jssorl-009-spin img {
+                    animation-name: jssorl-009-spin;
+                    animation-duration: 1.6s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;}
+                @keyframes jssorl-009-spin {
+                    from {transform: rotate(0deg);}
+                    to {transform: rotate(360deg);}
+                }
+            </style>
+              <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                  <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../images/static-svg/spin.svg" />
+              </div>  -->
+              <div class="col-md-3 xs-hidden">&nbsp;
+                <button class="prev-hlight">
+                  <i class="fas fa-chevron-left fa-5x"></i>
+                </button>
+              </div>
+              <!-- slides -->
+              <div class="col-md-6 col-xs-12">
+                  <img class="project-img" src="img/mm_img_tspace.jpg" />
+              </div>
+              <div class="col-md-8 hide">
+                  <img class="project-img" src="img/mm_img_tspace.jpg" />
+              </div>
+              <div class="col-md-3 xs-hidden">&nbsp;
+                <!-- Right Arrow -->
+                <button class="next-hlight">
+                  <i class="fas fa-chevron-right fa-5x"></i>
+                </button>
+              </div>
+            </div>
+            <div class="clear-fix proj-view-nav">
+               <!-- for each image, the div should be built with a link to the corresponding image -->
+              <ul>
+                <li>
+                  <button title="Project view 1">
+                      <span class="active"></span>
+                  </button>
+                </li>
+                <li>
+                  <button title="Project view 2">
+                      <span></span>
+                  </button>
+                </li>
+                <li>
+                  <button title="Project view 3">
+                      <span></span>
+                  </button>
+                </li>
+              </ul>
+             </div>
+          </section>
 
-					<small class="copyrights">© <!--<i class="icon-copyright"></i>--> 2018
-						<span class="midDot">·</span>Bryan McFadden<span class="midDot">·</span><span class="statusFooter">UX Designer / Researcher</span>
-					</small>
-				</footer>
-			</div>
-		</div>
-	</div>
-	<!--
-	<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="width:10px; display: block; right: 0px; opacity: 1;">
-		<div class="mCSB_draggerContainer">
-			<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; display: block; height: 212px; max-height: 895px; top: 0px;">
-				<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-			</div>
-			<div class="mCSB_draggerRail"></div>
-		</div>
-	</div>
--->
-	<!-- ************************************************************************************ -->
-	<!-- ******************************** MAIN MENU ***************************************** -->
-	<!-- ************************************************************************************ -->
-  <nav class="mainMenu">
-      <div class="endorsementWrapper">
-      	<div class="endorsementSubWrapper">
-      		<h3>Endorsements</h3>
-            <q cite="" class="endorsement">Bryan brings a high level of competency, passion and skills to deliver the best UX experience to the user. Bryan can work with the user to come up with the best UX design and then turn right around and write the code to deliver the desired UX experience</q>
-            <br>
-            <span class="endorsementAuthor">David Geiger - Associate Director - AT&T</span>
-        </div>
+          <section id="sectUXDeliverables"><!-- start of sctUXDeliverables -->
+            <div>
+              <h2>UX deliverables<span class="title-underline"></span></h2>
+              <br>
+              <ul id="lstUXDeliverables">
+                <li class="delIA">Information Architecture</li>
+                <li class="delWireframes hide">Wireframes</li>
+                <li class="dsnPersonas">Personas</li>
+                <li class="dsnVisualDesign hide">Visual Design</li>
+              </ul>
+              <br>
+              <div class="text-summary">
+                Accompagné de développeurs Qlikview, de products owners et d'une data scientist, mon rôle a été de concevoir le système de navigation global et les interfaces de
+                visualisation des données. Unchantier d'envergure de plusieurs mois. Durant lesquels la conception itérative et les divers tests utilisateurs ont pris tous leur
+                sens pource projet à grande valeur ajouté.
+              </p>
+              </div>
+            </div>
+          </section><!-- end of sctUXDeliverables -->
       </div>
-      <!--  MAIN MENU LINKS *********************************************** -->
-      <ul class="mainMenuLinks">
-      	<li class="mainLink linkToHome">
-          <a href="#mainTop" class="" onclick="event.preventDefault(); return false;">Home</a>
-        </li>
-      	<li class="mainLink linkToAbout">
-          <a href="#aboutArea" class="" onclick="event.preventDefault(); return false;">About Me</a>
-        </li>
-      	<li class="mainLink linkToExpertise">
-          <a href="#expertiseArea" class="" onclick="event.preventDefault(); return false;">My Skills</a>
-        </li>
-      	<li class="mainLink linkToWork">
-          <a href="#workArea" class="" onclick="event.preventDefault(); return false;">Recent Projects</a>
-        </li>
-      	<li class="mainLink linkToContact">
-          <a href="#contactArea" class="" onclick="event.preventDefault(); return false;">Contact</a>
-        </li>
-      </ul>
-  </nav><!-- end of class="mainMenuBox" -->
-</div><!-- end of class="rootBox" -->
+    </div>
+    <div class="mainContentBox mCustomScrollBar mCS-autoHide" style="overflow:visible;">
+      <!-- <div id="mCSB_1" class="mCustomScrollBox mCS-light-2 mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+        <div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px; width:100%;" dir="ltr"> -->
+          <!-- ************************************************************************************ -->
+          <!-- ***************************** INTRODUCTION ***************************************** -->
+          <!-- ************************************************************************************ -->
+          <section id="main" class="sectionIntro" tabindex="-1">
+            <div class="office-bg"></div>
+            <div class="wrapper">
+              <div class="subWrapper">
+                <!-- TITLE *********************************** -->
+                <span class="intro-title">Hi! I'm <em>Bryan</em>.</span>
+                <br>
+                <div class="my-roles">
+                  <h1>
+                    <span class="role-title">UX Designer</span>
+                    <span>&amp;</span>
+                    <span class="role-title">Researcher</span>
+                  </h1>
+                  <span>living near</span>
+                  <em>
+                    <span class="under-lined"></span>
+                    <span id="location">Atlanta, GA</span>
+                  </em>
+                </div>
+                <div class="btnNext" style="position:absolute; bottom: 15%; display: block; color: #fff; opacity: 1; z-index: 1; height: 70px; width: 100%; text-align: center; transition: bottom 1s, opacity 1s, transform 1s;">
+                    <div style="display: inline-block; font-size: 2em; width: 70px; height: 70px; transition: transform .5s;">
+                      <i class="fas fa-angle-down bouncing-arrow"></i>
+                    </div>
+                </div><!-- icon-down-open -->
+              </div>
+            </div><!-- end class="wrapper" -->
+          </section><!-- end sectionIntro -->
+          <!-- ************************************************************************************ -->
+          <!-- ***************************** ABOUT ME ********************************************* -->
+          <!-- ************************************************************************************ -->
+          <section id="aboutMe">
+            <h2>About Me<span></span></h2>
+              <p>
+                I’m a UX designer & researcher with over two decades experience.<br>
+                I enjoy solving challenges, by creating clean, simple, and easy to understand designs.<br>
+                When I'm not glued to a monitor, you'll find me watching soccer.<br>
+                Or possibly playing disc jockey for my friends and family.
+              </p>
+              <h4>Want to know more?</h4>
+              <a id="resume_doc" class="resume resume-doc" href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.doc" target="_blank">
+                <span>
+                  <i class="fas fa-file-word" alt="Adobe PDF"></i>
+                </span>
+              </a>
+              <button id="btnViewResume">
+                View my resume
+              </button>
+              <a id="resume_pdf" class="resume resume-pdf" href="http://portfolio.fertileimagination.com/resume/bryan.mcfadden.pdf" target="_blank">
+                <span>
+                  <i class="fas fa-file-pdf" alt="Adobe PDF"></i>
+                </span>
+              </a>
+          </section>
+          <!-- ************************************************************************************ -->
+          <!-- ***************    RECENT PROJECTS SELECTOR    ************************************* -->
+          <!-- ************************************************************************************ -->
+          <section id="recentProjects" class="recent-projects">
+            <h2>Recent Projects<span class="title-underline"></span></h2>
+            <ul class="current-project-list clear-fix">
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_01.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Christmas Tree ePermit</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">U.S. Forest Service</span> / <span>Consumer web app</span>
+                    </span>
+                    <br>
+                    <em>UX Research</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_tablet_01.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Disaster Data Portal</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">H.U.D.</span> / <span>Corporate web app</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_02.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">R.A.F.T.</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Financial web app</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_03.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Notice to Mariners</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">U.S.G.S.</span> / <span>Desktop app</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_tablet_03.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">tSpace</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Social media app</span>
+                    </span>
+                    <br>
+                    <em>UX / Visual Design</em>
+                  </span>
+                </span>
+              </li>
+              <li class="col-sm-4 col-xs-12">
+                <span class="project" style="background-image:url('img/illustrations/bw_macbook_05.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Technology Delivery Center</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Data portal</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+            </ul>
+            <div style="clear:both; text-align:center; padding-top:60px;">
+              <button>
+                <span>+</span>More projects
+              </button>
+            </div>
+          </section>
+          <!-- ************************************************************************************ -->
+          <!-- ***************************** FOOTER *********************************************** -->
+          <!-- ************************************************************************************ -->
+          <footer id="footer" class="clear-fix">
+            <div class="office-bg-footer"></div>
+            <div class="container">
+              <div class="col-md-3 footer-ico">
+                <div>
+                  <i class="fas fa-map-marker-alt selectable"></i>
+                </div>
+                <div>
+                  127 Cliffhaven Circle<br>
+                  Newnan, GA 30263
+                </div>
+              </div>
+              <div class="col-md-3 footer-ico">
+                <div>
+                  <i class="fas fa-envelope selectable"></i>
+                </div>
+                <div>
+                  <a href="mailto:bryan.mcfadden@gmail.com">bryan.mcfadden@gmail.com</a>
+                </div>
+              </div>
+              <div class="col-md-3 footer-ico">
+                <div>
+                  <i class="fas fa-phone-square selectable"></i>
+                </div>
+                <div>
+                  <a href="tel:678 723 5031">678.723.5031</a>
+                </div>
+              </div>
+              <div class="col-md-3 footer-social-ico">
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://twitter.com/3DAnim8r">
+                      <span class="sr-only">Twitter link</span>
+                      <i class="fab fa-twitter-square selectable"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/bryanmcfadden">
+                      <span class="sr-only">Linkedin link</span>
+                      <i class="fab fa-linkedin selectable"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p>©2018 - Bryan McFadden</p>
+              </div>
+            </div>
+          </footer>
+      <!--	</div> -->
+    </div>
+  	<!-- ************************************************************************************ -->
+  	<!-- ******************************** MAIN MENU ***************************************** -->
+  	<!-- ************************************************************************************ -->
+    <nav class="mainMenu">
+        <div class="endorsementWrapper">
+        	<div class="endorsementSubWrapper">
+        		<h3>Endorsements</h3>
+              <q cite="" class="endorsement">Bryan brings a high level of competency, passion and skills to deliver the best UX experience to the user. Bryan can work with the user to come up with the best UX design and then turn right around and write the code to deliver the desired UX experience</q>
+              <br>
+              <span class="endorsementAuthor">David Geiger - Associate Director - AT&T</span>
+          </div>
+        </div>
+        <!--  MAIN MENU LINKS *********************************************** -->
+        <ul class="mainMenuLinks">
+        	<li class="mainLink linkToHome">
+            <a href="#mainTop" class="" onclick="event.preventDefault(); return false;">Home</a>
+          </li>
+        	<li class="mainLink linkToAbout">
+            <a href="#aboutArea" class="" onclick="event.preventDefault(); return false;">About Me</a>
+          </li>
+        	<li class="mainLink linkToExpertise">
+            <a href="#expertiseArea" class="" onclick="event.preventDefault(); return false;">My Skills</a>
+          </li>
+        	<li class="mainLink linkToWork">
+            <a href="#workArea" class="" onclick="event.preventDefault(); return false;">Recent Projects</a>
+          </li>
+        	<li class="mainLink linkToContact">
+            <a href="#contactArea" class="" onclick="event.preventDefault(); return false;">Contact</a>
+          </li>
+        </ul>
+    </nav><!-- end of class="mainMenuBox" -->
+  </div>
 
-  <!-- ============================================ JAVASCRIPT FILES ======================================================== -->
-  <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<!-- ============================================ JAVASCRIPT FILES ======================================================== -->
+<!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
 
-  <!-- vendor JS files-->
-  <script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script> -->
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script> -->
-	<script src="js/vendor/jquery.simpleWeather.min.js"></script>
+<!-- vendor JS files-->
+<script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script> -->
+<script src="js/vendor/jquery.simpleWeather.min.js"></script>
 
-	<!-- Include font-awesome icons -->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
-  <!-- perso JS files
-  <script src="js/plugins_0_data.js"></script>
-  <script src="js/plugins_1.js"></script>
-  <script src="js/plugins_2_btn_menu.js"></script>
-  <script src="js/plugins_3_init_app.js"></script>
-  <script src="js/plugins_4_modal_work_details.js"></script>
-  <script src="js/plugins_4_bis_slider_work_details.js"></script>
-  <script src="js/plugins_5_inspi_box.js"></script>
-  <script src="js/plugins_6_0_weather.js"></script>
-  <script src="js/plugins_6_home.js"></script>
-  <script src="js/plugins_6_home_part_2.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script> -->
+<!-- Include font-awesome icons -->
+<!-- local -->
+<script src="js\vendor\font-awesome.5.0.12.all.js"></script>
+<!-- web
+<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+-->
+<script src="js/vendor/jquery.easing.1.4.1.min.js"></script>
+<script src="js/vendor/jquery.waypoints.min.js"></script>
 
-	<script src="js/vendor/jquery.easing.1.4.1.min.js"></script>
-	<script src="js/vendor/jquery.waypoints.min.js"></script>
+<!-- portfolio JS file-->
+<script src="js/portfolio.js"></script>
 
-	<script language="javascript">
-		jQuery(document).ready(function($) {
-
-			//create custom mCSB_1_scrollbar
-			$(window).on("load", function(){
-				$(".mCustomScrollBar").mCustomScrollbar({
-					theme: "light-thick",
-					scrollButtons:{ enable: 0 },
-					scrollInertia:700,
-					mouseWheel:{ scrollAmount: 300 },
-					callbacks:{
-						whileScrolling:function(){
-							//$(".btnNextSection").removeClass("movingArrow");
-						//	majStyleBtnBurger((this.mcs.top)*-1);
-						}
-					}
-				});
-			});
-
-			/*	$(".mCustomScrollBar .mCSB_scrollTools").css("right", "-30px");
-				showMainScrollbar(); */
-	//	});
-
-			// Animate Bar-Chart
-			 $('.bar-chart').waypoint(function(event, direction) {
-				 alert('here');
-				 $('#skill1').css({'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
-				 $('#skill2').css({'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
-				 $('#skill3').css({'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
-				 $('#skill4').css({'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
-				 $('#skill5').css({'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
-			 }, {
-			 offset: '80%',
-			 triggerOnce: true
-		 });
-
-		 function showMainScrollbar(fctCallback){
-		 	$(".mCustomScrollbar .mCSB_scrollTools").animate({"right": 0, "opacity":1}, function(){if(fctCallback){fctCallback();}});
-		 }
-
-	 });
-	</script>
-  </body>
+<script language="javascript">
+$(document).ready(function() {
+	// Animate Bar-Chart
+	 $('.bar-chart').waypoint(function(event, direction) {
+		 alert('here');
+		 $('#skill1').css({'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
+		 $('#skill2').css({'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
+		 $('#skill3').css({'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
+		 $('#skill4').css({'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
+		 $('#skill5').css({'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
+	 }, {
+	 offset: '80%',
+	 triggerOnce: true
+ });
+});
+</script>
+</body>
 </html>

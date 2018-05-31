@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Portfolio | Bryan McFadden - UI / UX Designer & Researcher, Code Monkey</title>
+<meta name="description" content="Web portfolio of Bryan McFadden - UI / UX Designer & Researcher based in Newnan, GA.">
+<!-- Crafting awesome high quality responsive websites and exceptional user experience, motivated by a big passion for the digital world. Currently open to worldwide new opportunities. -->
+<meta name="keywords" content="web, ux, user experience, UX Designer, UX Developer, UI/UX designer, creative designer, portfolio, usability, UX researcher">
+<meta name="viewport" content="initial-scale=1.0,width=device-width,maximum-scale=1">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio | Bryan McFadden - UI / UX Designer & Researcher, Code Monkey">
+<meta property="og:description" content="Web portfolio of Bryan McFadden - UI / UX Designer & Researcher based in Newnan, GA.">
+<meta property="og:url" content="http://portfolio.fertileimagination.com/">
+<meta property="og:image" content="http://portfolio.fertileimagination.com/img/portfolio_logo.jpg">
+<script src="../js/vendor/scrollreveal.min.js"></script>
+<script>
+  window.sr = new ScrollReveal();
+</script>
+<link href="http://portfolio.fertileimagination.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link rel="stylesheet" href="../css/normalize.css">
+<!-- CSS Preprocessor -->
+<link rel="stylesheet" href="../css/portfolio.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!-- <link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css"> -->
+<!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+</head>
+<body style="background: #000;">
+  <div>
+    <div class="container">
+      <div id="map" class="col-md-6 col-xs-12" style="height:300px; border:1px solid #ccc;"></div>
+      <script>
+      /* ========= GoogleMaps API ================================================== */
+        function initMap(){
+          var bmlatlng = new google.maps.LatLng(33.37249851,-84.786496854);
+          var mapOptions = {
+            zoom: 7,
+            center: {lat: 33.74900, lng: -84.38798}
+          }
+          var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+          var marker = new google.maps.Marker({
+            position: bmlatlng,
+            map: map,
+            title: "Click to zoom"
+          });
+          marker.setMap(map);
+          map.addListener('center_changed', function() {
+            window.setTimeout(function() {
+              map.panTo(marker.getPosition());
+            }, 3000);
+          });
+
+          marker.addListener('click', function() {
+            map.setZoom(10);
+            map.setCenter(marker.getPosition());
+          });
+        }
+      </script>
+      <!-- GoogleMaps API -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-iEYgzfpOANsC-zi-76cny5m1iRnJBMs&callback=initMap"
+      async defer></script>
+    </div>
+  </div>
+	<footer id="footer" class="clear-fix">
+    <div class="office-bg-footer"></div>
+		<div class="container">
+			<div class="col-md-3 footer-ico">
+				<div>
+          <i class="fas fa-map-marker-alt selectable"></i>
+				</div>
+				<div>
+					127 Cliffhaven Circle<br>
+					Newnan, GA 30263
+				</div>
+			</div>
+			<div class="col-md-3 footer-ico">
+				<div>
+          <i class="fas fa-envelope selectable"></i>
+				</div>
+				<div>
+					<a href="mailto:bryan.mcfadden@gmail.com">bryan.mcfadden@gmail.com</a>
+				</div>
+			</div>
+			<div class="col-md-3 footer-ico">
+				<div>
+          <i class="fas fa-phone-square selectable"></i>
+				</div>
+				<div>
+					<a href="tel:678 723 5031">678.723.5031</a>
+				</div>
+			</div>
+			<div class="col-md-3 footer-social-ico">
+				<ul>
+					<li>
+						<a target="_blank" href="https://twitter.com/3DAnim8r">
+							<span class="sr-only">Twitter link</span>
+							<i class="fab fa-twitter-square selectable"></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.linkedin.com/in/bryanmcfadden">
+							<span class="sr-only">Linkedin link</span>
+							<i class="fab fa-linkedin selectable"></i>
+						</a>
+					</li>
+				</ul>
+				<p>©2018 - Bryan McFadden</p>
+			</div>
+		</div>
+	</footer>
+</body>
+<!-- ============================================ JAVASCRIPT FILES ======================================================== -->
+<!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- Include font-awesome icons -->
+<!-- local -->
+<script src="..\js\vendor\font-awesome.5.0.12.all.js"></script>
+
+<!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
+<!-- <script src="../js/vendor/jquery.easing.1.4.1.min.js"></script> -->
+<script language="javascript"></script>
+</html>
