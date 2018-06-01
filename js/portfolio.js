@@ -3,9 +3,12 @@
 Bryan McFadden
 
 All functionality required for my portfolio pages
-============================================================================== */
+============================================================================= */
+
 //Custom Scrollbar Creation
 $(window).load(function(){
+var skillsShown;
+
 	// instantiate main content area scrollbar
 	$(".mainContentBox").mCustomScrollbar({
 		theme: "dark-2",
@@ -34,14 +37,23 @@ $(window).load(function(){
 	});
 
 	function MenuButtonBackground(scrollTopValue){
-		var tempHeight = $(".sectionIntro").height() + parseInt($(".sectionIntro").css("padding-top")) + parseInt($(".sectionIntro").css("padding-bottom")) - 74; // - 80
-		if(scrollTopValue>tempHeight){
+		var secIntro = $(".sectionIntro").height() + parseInt($(".sectionIntro").css("padding-top")) + parseInt($(".sectionIntro").css("padding-bottom")) - 74; // - 80
+		if(scrollTopValue>secIntro){
 			//alert('scrollTopValue='+scrollTopValue+'< tempHeight='+tempHeight);
 			//change the menu button background color to black
 			if($(".hamburger").hasClass("light")){
 				$(".hamburger").removeClass("light");
-			}
 
+				//show skills animation if necessary
+				if(!skillsShown){
+					$('.bar-chart #skill1').css({'opacity': 1,'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
+					$('.bar-chart #skill2').css({'opacity': 1,'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
+					$('.bar-chart #skill3').css({'opacity': 1,'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
+					$('.bar-chart #skill4').css({'opacity': 1,'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
+					$('.bar-chart #skill5').css({'opacity': 1,'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
+					skillsShown = true;
+				}
+			}
 		}else{
 			//change the menu button background color to white
 			$(".hamburger").addClass("light");
@@ -50,18 +62,6 @@ $(window).load(function(){
 });
 
 $(document).ready(function(){
-
-	// Animate Bar-Chart
-	 $('.bar-chart').waypoint(function(event, direction) {
-		 $('#skill1').css({'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
-		 $('#skill2').css({'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
-		 $('#skill3').css({'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
-		 $('#skill4').css({'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
-		 $('#skill5').css({'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
-	 }, {
-	 offset: '80%',
-	 triggerOnce: true
- 	});
 
 	function DisplayProjectView(){
 		var proj = $(".projContentBox");
