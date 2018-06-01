@@ -15,7 +15,8 @@ $(window).load(function(){
 		callbacks:{
 			whileScrolling:function(){
 				//$(".btnNextSection").removeClass("movingArrow");
-			//	majStyleBtnBurger((this.mcs.top)*-1);
+				//majStyleBtnBurger((this.mcs.top)*-1);
+				MenuButtonBackground((this.mcs.top)*-1);
 			}
 		}
 	});
@@ -31,6 +32,21 @@ $(window).load(function(){
 			}
 		}
 	});
+
+	function MenuButtonBackground(scrollTopValue){
+		var tempHeight = $(".sectionIntro").height() + parseInt($(".sectionIntro").css("padding-top")) + parseInt($(".sectionIntro").css("padding-bottom")) - 74; // - 80
+		if(scrollTopValue>tempHeight){
+			//alert('scrollTopValue='+scrollTopValue+'< tempHeight='+tempHeight);
+			//change the menu button background color to black
+			if($(".hamburger").hasClass("light")){
+				$(".hamburger").removeClass("light");
+			}
+
+		}else{
+			//change the menu button background color to white
+			$(".hamburger").addClass("light");
+		}
+ }
 });
 
 $(document).ready(function(){
