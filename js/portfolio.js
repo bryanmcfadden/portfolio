@@ -94,10 +94,34 @@ $(document).ready(function(){
 
 
 	/* ========= My Projects =================================================== */
+	//$("body").on("click", '.openWorkDetails', function(){
 	$('.current-project-list li').on('click', function(){
-		  DisplayProjectView();
+	var selProj = $(this).index(); //selected item
+
+	LoadSelectedProject(selProj);
+	//alert(projectsList[selProj][0]);
+
+
+		 DisplayProjectView();
 	});
 
+	function LoadSelectedProject(pid) {
+		var projTotal = projectsList.length;
+		//check to see if project exists...then fetch Data
+
+		//populate project values
+		$('.project-details header h2').html(projectsList[pid][0]); //project name
+		$('.project-details header h3').html(projectsList[pid][1] + ' / ' + projectsList[pid][2]); //project company + / + project type
+		$('.project-details header em').html(projectsList[pid][3]); //ux roles
+		//$('.project-details .text-summary').html(projectsList[pid][4]); //assigned job title
+		$('.project-details .text-summary').html(projectsList[pid][5][0][1]); //image description
+
+		//load images
+		for(let i=0; i<projectsList[pid][5].length; i++){
+			alert(projectsList[pid][5][i][0] + '-' + projectsList[pid][5][i][1]);
+		}
+
+	}
 
   /* ========= About Me ====================================================== */
   var timerResumeButtons = {

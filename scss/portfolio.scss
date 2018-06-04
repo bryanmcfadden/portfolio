@@ -434,7 +434,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   box-shadow: inset 0 0 0 0 #ffffff;
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (max-width: 768px){
   .bar-chart-wrapper {
     width:80%;
 
@@ -666,7 +666,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   font-style:normal;
   letter-spacing:.02em;
 }
-#sectProjGraphic {background-color: #fff;}
+#sectWorkSlides {background-color: #fff;}
 #sectUXDeliverables {
   h2 {
     color:#000;
