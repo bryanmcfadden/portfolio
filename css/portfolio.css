@@ -1122,13 +1122,39 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   display: inline-block;
   font-family: 'Roboto', Arial, sans-serif; }
 
+.project-summary {
+  padding: 60px 0;
+  text-align: center;
+  overflow: hidden; }
+  .project-summary div.wrapper:first-child {
+    font-weight: 100;
+    text-align: left;
+    max-width: 60%;
+    margin: 0 auto;
+    font-family: 'Roboto Lt';
+    letter-spacing: .03em; }
+  .project-summary div.wrapper .row {
+    padding-bottom: 10px; }
+    .project-summary div.wrapper .row:last-child {
+      padding-bottom: 0; }
+    .project-summary div.wrapper .row div:first-child {
+      font-weight: bold; }
+  .project-summary div.wrapper ul li {
+    font-size: .8em;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #2298d8;
+    padding: 2px 10px;
+    display: inline-block;
+    margin: 0 5px 5px 0; }
+
 /* -------------- Project slides ------------------ */
 .project-slides {
   position: relative;
   overflow: hidden; }
   .project-slides button {
     position: absolute;
-    top: 400px;
+    top: 250px;
     box-shadow: none;
     border: none; }
     .project-slides button.prev-slide {
@@ -1152,7 +1178,8 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 .proj-slides-nav {
   background-color: #f7f7f7;
   padding: 20px 0;
-  border-top: 5px solid #f2f2f2; }
+  border-top: 3px solid #f2f2f2;
+  border-bottom: 3px solid #f2f2f2; }
   .proj-slides-nav ul {
     list-style-type: none; }
     .proj-slides-nav ul li {

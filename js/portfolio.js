@@ -9,6 +9,7 @@ All functionality required for my portfolio pages
 $(window).load(function(){
 var skillsShown;
 var project, projectSlide;
+var projTotal = projectsList.length;
 
 	// instantiate main content area scrollbar
 	$(".mainContentBox").mCustomScrollbar({
@@ -105,18 +106,18 @@ $(document).ready(function(){
 	});
 
 	function LoadSelectedProject(pid) {
-		var projTotal = projectsList.length;
 		project = pid;
 		//check to see if project exists...then fetch Data
 
 		//populate project values
 		$('.project-details header h2').html(projectsList[pid][0]); //project name
 		$('.project-details header h3').html(projectsList[pid][1] + ' / ' + projectsList[pid][2]); //project company + / + project type
-		$('.project-details header em').html(projectsList[pid][3]); //ux roles
-		$('.project-details .brief').html(projectsList[pid][4]); //ux roles
-		$('.project-details .job-title').html(projectsList[pid][5]); //assigned job title
+		$('.project-details header em').html(projectsList[pid][3]); //ux methods
+		$('.project-details .brief').html(projectsList[pid][4]); //project brief
+		$('.project-details .job-title').html(projectsList[pid][5]); //assigned job title(s)
 		$('.project-slides .summary').html(projectsList[pid][4]); //image description
-		$('.project-slides img').attr("src", projectsList[pid][7][0][0]); //image source
+		/*Grab first image within array */
+		$('.project-slides img').attr("src", projectsList[pid][7][0][0]); //image source (aka img/mm_img_tspace.jpg)
 		$('.project-slides .title').html(projectsList[pid][7][0][1]); //image caption
 
 		//load images
@@ -125,15 +126,31 @@ $(document).ready(function(){
 			alert(projectsList[pid][5][i][0] + '-' + projectsList[pid][5][i][1]);
 		}
 		*/
+		//function to load all ux deliverables
+		LoadProjectUXDeliverables();
 
-
-		$('.prev-slide').addClass("disabled");
+		if(pid=>(projTotal-1)){
+			$('.next-slide').addClass("disabled");
+		}else if((pid-1)==0){
+			$('.prev-slide').addClass("disabled");
+		}
 		projectSlide=0;
 	}
 
+	//this function loads all ux deliverables from project into the header
+	function LoadProjectUXDeliverables(){
+	var i;
+		$('.project-details .deliverables ul').html('');
+		for(i=0;i<projectsList[project][6].length;i++){
+			$('.project-details .deliverables ul').append('<li>'+ projectsList[project][6][i] + '</li>');
+		}
+	}
+
+
+
 	$("body").on("click", ".next-project", function(){
-		project+=1;
-		//set the project title
+		project++;
+
 		$('.project-details header h2').fadeOut(1000, function(){
 			$('.project-details header h2').html(projectsList[project][0]).fadeIn(1000);
 
@@ -145,7 +162,7 @@ $(document).ready(function(){
 
 		//set the project company and type
 		$('.project-details header h3').fadeOut(1000, function(){
-			$('.project-details header h3').html(projectsList[project][1] + ' / ' + projectsList[(project=1)][2]).fadeIn(1000);
+			$('.project-details header h3').html(projectsList[project][1] + ' / ' + projectsList[project][2]).fadeIn(1000);
 		});
 
 		//set the ux roles
@@ -153,15 +170,34 @@ $(document).ready(function(){
 			$('.project-details header em').html(projectsList[project][3]).fadeIn(1000);
 		});
 
+		//set the project brief
+		$('.project-summary .brief').fadeOut(1000, function(){
+			$('.project-summary .brief').html(projectsList[project][4]).fadeIn(1000);
+		});
+
+		//set the assigned job title(s)
+		$('.project-summary .job-title').fadeOut(1000, function(){
+			$('.project-summary .job-title').html(projectsList[project][5]).fadeIn(1000);
+		});
+
+		$('.project-summary .deliverables').fadeOut(1000, function(){
+		 LoadProjectUXDeliverables();
+		 $('.project-summary .deliverables').fadeIn(1000);
+	 });
+
 		//set slide description (slide 0)
 		$('.proj-slides .summary').fadeOut(1000, function(){
-			$('.proj-slides .summary').html(projectsList[project][5][0][0]).fadeIn(1000);
+			$('.proj-slides .summary').html(projectsList[project][7][0][0]).fadeIn(1000);
 		});
 
 		//set slide title (slide 0)
 		$('.proj-slides .title').fadeOut(1000, function(){
-			$('.proj-slides .title').html(projectsList[project][5][0][2]).fadeIn(1000);
+			$('.proj-slides .title').html(projectsList[project][7][0][2]).fadeIn(1000);
 		});
+
+		if((project-1)==projectsList.length){
+			$('.next-project').addClass("disabled");
+		}
 });
 
   /* ========= About Me ====================================================== */
