@@ -8,6 +8,7 @@ All functionality required for my portfolio pages
 //Custom Scrollbar Creation
 $(window).load(function(){
 var skillsShown;
+var project, projectSlide;
 
 	// instantiate main content area scrollbar
 	$(".mainContentBox").mCustomScrollbar({
@@ -100,28 +101,68 @@ $(document).ready(function(){
 
 	LoadSelectedProject(selProj);
 	//alert(projectsList[selProj][0]);
-
-
 		 DisplayProjectView();
 	});
 
 	function LoadSelectedProject(pid) {
 		var projTotal = projectsList.length;
+		project = pid;
 		//check to see if project exists...then fetch Data
 
 		//populate project values
 		$('.project-details header h2').html(projectsList[pid][0]); //project name
 		$('.project-details header h3').html(projectsList[pid][1] + ' / ' + projectsList[pid][2]); //project company + / + project type
 		$('.project-details header em').html(projectsList[pid][3]); //ux roles
-		//$('.project-details .text-summary').html(projectsList[pid][4]); //assigned job title
-		$('.project-details .text-summary').html(projectsList[pid][5][0][1]); //image description
+		$('.project-details .brief').html(projectsList[pid][4]); //ux roles
+		$('.project-details .job-title').html(projectsList[pid][5]); //assigned job title
+		$('.project-slides .summary').html(projectsList[pid][4]); //image description
+		$('.project-slides img').attr("src", projectsList[pid][7][0][0]); //image source
+		$('.project-slides .title').html(projectsList[pid][7][0][1]); //image caption
 
 		//load images
+		/*
 		for(let i=0; i<projectsList[pid][5].length; i++){
 			alert(projectsList[pid][5][i][0] + '-' + projectsList[pid][5][i][1]);
 		}
+		*/
 
+
+		$('.prev-slide').addClass("disabled");
+		projectSlide=0;
 	}
+
+	$("body").on("click", ".next-project", function(){
+		project+=1;
+		//set the project title
+		$('.project-details header h2').fadeOut(1000, function(){
+			$('.project-details header h2').html(projectsList[project][0]).fadeIn(1000);
+
+			//enable previous project button
+			if(project<projectsList.length){
+				$('.previous-project').removeClass("disabled");
+			}
+		});
+
+		//set the project company and type
+		$('.project-details header h3').fadeOut(1000, function(){
+			$('.project-details header h3').html(projectsList[project][1] + ' / ' + projectsList[(project=1)][2]).fadeIn(1000);
+		});
+
+		//set the ux roles
+		$('.project-details header em').fadeOut(1000, function(){
+			$('.project-details header em').html(projectsList[project][3]).fadeIn(1000);
+		});
+
+		//set slide description (slide 0)
+		$('.proj-slides .summary').fadeOut(1000, function(){
+			$('.proj-slides .summary').html(projectsList[project][5][0][0]).fadeIn(1000);
+		});
+
+		//set slide title (slide 0)
+		$('.proj-slides .title').fadeOut(1000, function(){
+			$('.proj-slides .title').html(projectsList[project][5][0][2]).fadeIn(1000);
+		});
+});
 
   /* ========= About Me ====================================================== */
   var timerResumeButtons = {

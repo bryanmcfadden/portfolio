@@ -565,72 +565,17 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   margin-top:20px;
   display: inline-block;
 }
-/* -------------- Project navigation ------------- */
-.project-view-wrapper {
-  position:relative;
-
-   img {
-    height:100%;
-    width:100%;}
-   button {
-    position:absolute;
-    cursor:pointer;
-    top:250px;
-    box-shadow:none;
-    border:none;
-
-    &.prev-hlight {left:50px;}
-    &.next-hlight {right:50px;}
-    svg {
-      color:#ccc;
-      cursor:pointer;}
-  }
-}
-.proj-view-nav {
-  background-color:#f7f7f7;
-  padding:20px 0;
-  border-top:5px solid #f2f2f2;}
-.proj-view-nav ul {list-style-type:none;}
-.proj-view-nav ul li {
-  display:inline-block;
-  margin-right:5px;
-  vertical-align:middle;}
-.proj-view-nav ul li button {
-  height:12px;
-  width:12px;
-  line-height:12px;
-  background-color:transparent;
-  border:none;
-  box-shadow:none;
-  padding:0;
-}
-.proj-view-nav ul li span {
-  transition:.3s;
-  border-radius:50%;
-  width:100%;
-  height:100%;
-  display:block;
-  background-color:#ccc;}
-.proj-view-nav ul li span.active {background-color:#2298d8;}
-
-/* -------------- Project images ------------- */
-@media only screen and (max-width: 800px) {
-  .project-img { max-width:640px; }
-}
-@media only screen and (min-width: 1192px) {
-  .project-img { max-width:1024px; }
-}
 /* -------------- Project details --------------*/
 .project-details {
 
-  & #btnPrevProj, & #btnNextProj {
+  .previous-project, .next-project {
     border:1px solid #fff;
     color:#fff;
     position:relative;
     top:0;
     padding:0.7em 1.2em;}
-  & #btnPrevProj {left:10px;}
-  & #btnNextProj {right:10px;}
+  .previous-project {left:10px;}
+  .next-project {right:10px;}
 
   i {
     color:#fff;
@@ -656,16 +601,81 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
     font-family:'Roboto', Arial, sans-serif;
   }
 }
+/* -------------- Project slides ------------------ */
+.project-slides {
+  position:relative;
+  overflow:hidden;
 
-.text-summary {
-  padding:40px 0 80px;
-  width:80%;
-  display:inline-block;
-  max-width:700px;
-  line-height:1.6em;
-  font-style:normal;
-  letter-spacing:.02em;
+   button {
+    position:absolute;
+    top:400px;
+    box-shadow:none;
+    border:none;
+
+    &.prev-slide {left:50px;}
+    &.next-slide {right:50px;}
+    svg {
+      color:#ccc;
+      cursor:pointer;}
+  }
+
+  img {
+    height:100%;
+    width:100%;
+    max-width:1024px;}
+
+  .slide {
+      span {
+        display:block;
+        padding:40px 0;
+        width:80%;
+        margin:0 auto;
+      }
+    }
 }
+/* -------------- Project navigation ------------- */
+.proj-slides-nav {
+  background-color:#f7f7f7;
+  padding:20px 0;
+  border-top:5px solid #f2f2f2;
+
+  ul {
+    list-style-type:none;
+
+    li {
+      display:inline-block;
+      margin-right:5px;
+      vertical-align:middle;
+
+        button {
+          height:12px;
+          width:12px;
+          line-height:12px;
+          background-color:transparent;
+          border:none;
+          box-shadow:none;
+          padding:0;}
+
+        span {
+          transition:.3s;
+          border-radius:50%;
+          width:100%;
+          height:100%;
+          display:block;
+          background-color:#ccc;
+          &.active {background-color:#2298d8;}
+        }
+      }
+  }
+}
+/* -------------- Project images ------------- */
+@media only screen and (max-width: 800px) {
+  .project-img { max-width:640px; }
+}
+@media only screen and (min-width: 1192px) {
+  .project-img { max-width:1024px; }
+}
+
 #sectWorkSlides {background-color: #fff;}
 #sectUXDeliverables {
   h2 {

@@ -6,15 +6,17 @@ projectsList
 projectsList[0][0] = project name
 projectsList[0][1] = project company
 projectsList[0][2] = project type
-projectsList[0][3] = ux roles
-projectsList[0][4] = assigned job title
-projectsList[0][5][0] = image array (images & descriptions)
-projectsList[0][6][0] = ux deliverables array (deliverables tags & description)
-projectsList[0][7] = ux solution
-
+projectsList[0][3] = ux methods
+projectsList[0][4] = project brief
+projectsList[0][5] = assigned job title(s)
+projectsList[0][6][0] = ux deliverables array (ux deliverables tags)
+projectsList[0][5][0] = image array (images & >3 line descriptions)
+  [0] = summary
+  [1] = image file
+  [2] = title
 -------------------------------------------------------------------------------
 ---------------------------------------------------------------------------- */
-var imgPath = "../images/";
+var imgPath = "img/";
 /* ----------------------------------------------------------------------------
 Data dictionary:
 uxDeliverables
@@ -30,13 +32,14 @@ var xmasTreePermit = new Array(
   "U.S. Forest Service",
   "Consumer web app",
   "UX / Research / UI Design",
+  "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis "+
+  "adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor. Lorem ipsum dolor sit amet, consectetur",
   "UX Researcher",
-  new Array(
-    new Array(imgPath + "x_epermit_01.jpg", "As an UX designer, UI designer and front-end developer, my tasks were varied. The end result was a clear and user-friendly website, adapted to the specific needs of the business and, above all, highly appreciated by end users."),
-    new Array(imgPath + "x_epermit_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
-  ),
   new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
-  "My objective to the project was to create an application that was easy to understand"
+  new Array(
+    new Array(imgPath+"mm_img_tspace.jpg","Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros."),
+    new Array(imgPath+"mm_img_tspace.jpg","Suspendisse tellus odio, aliquet quis lorem ipsum dolor sit amet, consectetur commodo eget, efficitur vel eros.")
+  )
 );
 
 
@@ -45,13 +48,14 @@ var disasterDataPortal = new Array(
   "H.U.D.",
   "Internal web app",
   "UX / IxD / Front-end",
+  "Lorem ipsum aliquet quis commodo eget, dolor sit amet, consectetur Suspendisse tellus odio, sollicitudin leo sit amet suscipit euismod efficitur vel eros. Nulla. Aliquam iaculis "+
+  "adipiscing elit. Curabitur feugiat. nunc et sapien rutrum, in eros in hendrerit ut porttitor. Lorem ipsum dolor sit amet, consectetur",
   "Sr. UX Designer",
-  new Array(
-    new Array(imgPath + "hud_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor"),
-    new Array(imgPath + "hud_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
-  ),
   new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
-  "My solution to the UX issue was to ....."
+  new Array(
+    new Array(imgPath+"hud_01.jpg","This would be a description of the Disaster Data Portal project"),
+    new Array(imgPath+"hud_02.jpg","Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis")
+  )
 );
 
 var raft = new Array(
@@ -59,13 +63,14 @@ var raft = new Array(
   "AT&T Telecommunications",
   "Internal web app",
   "UX / IxD / Front-end",
+  "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis "+
+  "adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor. Lorem ipsum dolor sit amet, consectetur",
   "Lead UX Designer",
+  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
   new Array(
     new Array(imgPath + "raft_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor"),
     new Array(imgPath + "raft_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
-  ),
-  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
-  "Another solution for this was to ....."
+  )
 );
 
 var noticeToMariners = new Array(
@@ -73,13 +78,14 @@ var noticeToMariners = new Array(
   "National Geospatial-Intelligence Agency (NGA)",
   "Internal web app",
   "UX / IxD / Front-end",
+  "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis "+
+  "adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor. Lorem ipsum dolor sit amet, consectetur",
   "Full Stack UX",
+  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
   new Array(
     new Array(imgPath + "ntm_01.jpg", "The US (NTM) Notice to Mariners is a weekly publication that renders marine safety information in the interest of ocean-going vessels. Collected from foreign and domestic sources (including nine US Coast Guard districts), they are designed to provide updates and corrections of unclassified US nautical charts. With a manual process currently in place, the 400,000+ corrections require experience and process knowledge which is difficult to transfer between employees."),
     new Array(imgPath + "ntm_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
-  ),
-  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
-  "As a UX designer, I decided to do this .....  to solve the problem"
+  )
 );
 
 var tspace = new Array(
@@ -87,13 +93,14 @@ var tspace = new Array(
   "AT&T Telecommunications",
   "Internal social media app",
   "UX / IxD / Front-end",
+  "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis "+
+  "adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor. Lorem ipsum dolor sit amet, consectetur",
   "UX Designer",
+  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
   new Array(
     new Array(imgPath + "tspace_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor"),
     new Array(imgPath + "tspace_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
-  ),
-  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
-  "The overall objective was to...."
+  )
 );
 
 var tdc = new Array(
@@ -101,13 +108,14 @@ var tdc = new Array(
   "AT&T Telecommunications",
   "Internal web portal",
   "UX / IxD / Front-end",
+  "Lorem ipsum dolor sit amet, Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros."+
+  "adipiscing elit. Curabitur feugiat, ut porttitor. Lorem ipsum dolor sit amet, consectetur in eros in hendrerit. nunc et sapien rutrum",
   "Director of User Experience",
+  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
   new Array(
     new Array(imgPath + "tdc_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor"),
     new Array(imgPath + "tdc_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
-  ),
-  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
-  "The solution to creating a web portal was to....."
+  )
 );
 
 var projectsList = new Array(
