@@ -297,7 +297,7 @@ $default-section-bg-alt: #f7f7f7;
 
     &:hover { opacity: .5;}
     &:focus { outline: #000 dotted;}
-    &.disabled {
+    &:disabled {
       opacity: .2;
       cursor: default;}
   }

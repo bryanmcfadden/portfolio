@@ -381,7 +381,7 @@ button {
     opacity: .5; }
   button:focus {
     outline: #000 dotted; }
-  button.disabled {
+  button:disabled {
     opacity: .2;
     cursor: default; }
 
@@ -1162,8 +1162,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     .project-slides button.next-slide {
       right: 50px; }
     .project-slides button svg {
-      color: #ccc;
-      cursor: pointer; }
+      color: #ccc; }
   .project-slides img {
     height: 100%;
     width: 100%;

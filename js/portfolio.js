@@ -4,13 +4,12 @@ Bryan McFadden
 
 All functionality required for my portfolio pages
 ============================================================================= */
-
-//Custom Scrollbar Creation
-$(window).load(function(){
 var skillsShown;
 var project, projectSlide;
 var projTotal = projectsList.length;
 
+//Custom Scrollbar Creation
+$(window).load(function(){
 	// instantiate main content area scrollbar
 	$(".mainContentBox").mCustomScrollbar({
 		theme: "dark-2",
@@ -98,10 +97,8 @@ $(document).ready(function(){
 	/* ========= My Projects =================================================== */
 	//$("body").on("click", '.openWorkDetails', function(){
 	$('.current-project-list li').on('click', function(){
-	var selProj = $(this).index(); //selected item
-
-	LoadSelectedProject(selProj);
-	//alert(projectsList[selProj][0]);
+		LoadSelectedProject($(this).index()); //array based - starts at 0
+		//alert(projectsList[selProj][0]);
 		 DisplayProjectView();
 	});
 
@@ -125,15 +122,19 @@ $(document).ready(function(){
 		for(let i=0; i<projectsList[pid][5].length; i++){
 			alert(projectsList[pid][5][i][0] + '-' + projectsList[pid][5][i][1]);
 		}
+
 		*/
 		//function to load all ux deliverables
 		LoadProjectUXDeliverables();
 
-		if(pid=>(projTotal-1)){
-			$('.next-slide').addClass("disabled");
-		}else if((pid-1)==0){
-			$('.prev-slide').addClass("disabled");
+		//disable previous/next project buttons according to which project was selected
+		if((pid+1) >= projTotal){
+			DisableProjectNavigation('next', true);
+		}else if(pid == 0){
+			DisableProjectNavigation('previous', true);
 		}
+
+		$('.prev-slide').prop("disabled", true);
 		projectSlide=0;
 	}
 
@@ -146,59 +147,80 @@ $(document).ready(function(){
 		}
 	}
 
+  function DisableProjectNavigation(btn, val){
+		//enable/disable previous 7 next project button
+		if(val){
+			$('.'+btn+'-project').addClass("disabled");
+			$('.'+btn+'-project').prop("disabled", true);
+		}else{
+			$('.'+btn+'-project').removeClass("disabled");
+			$('.'+btn+'-project').prop("disabled", false);
+		}
+	}
 
+	function LoadProjectView(){
+	var speed = 800;
 
-	$("body").on("click", ".next-project", function(){
-		project++;
-
-		$('.project-details header h2').fadeOut(1000, function(){
-			$('.project-details header h2').html(projectsList[project][0]).fadeIn(1000);
-
+		//project name
+		$('.project-details header h2').fadeOut(speed, function(){
+			$('.project-details header h2').html(projectsList[project][0]).fadeIn(speed);
 			//enable previous project button
 			if(project<projectsList.length){
 				$('.previous-project').removeClass("disabled");
 			}
 		});
-
-		//set the project company and type
-		$('.project-details header h3').fadeOut(1000, function(){
-			$('.project-details header h3').html(projectsList[project][1] + ' / ' + projectsList[project][2]).fadeIn(1000);
+		//project company and type
+		$('.project-details header h3').fadeOut(speed, function(){
+			$('.project-details header h3').html(projectsList[project][1] + ' / ' + projectsList[project][2]).fadeIn(speed);
 		});
-
-		//set the ux roles
-		$('.project-details header em').fadeOut(1000, function(){
-			$('.project-details header em').html(projectsList[project][3]).fadeIn(1000);
+		//ux methods
+		$('.project-details header em').fadeOut(speed, function(){
+			$('.project-details header em').html(projectsList[project][3]).fadeIn(speed);
 		});
-
-		//set the project brief
-		$('.project-summary .brief').fadeOut(1000, function(){
-			$('.project-summary .brief').html(projectsList[project][4]).fadeIn(1000);
+		//project brief
+		$('.project-summary .brief').fadeOut(speed, function(){
+			$('.project-summary .brief').html(projectsList[project][4]).fadeIn(speed);
 		});
-
-		//set the assigned job title(s)
-		$('.project-summary .job-title').fadeOut(1000, function(){
-			$('.project-summary .job-title').html(projectsList[project][5]).fadeIn(1000);
+		//assigned job title(s)
+		$('.project-summary .job-title').fadeOut(speed, function(){
+			$('.project-summary .job-title').html(projectsList[project][5]).fadeIn(speed);
 		});
-
-		$('.project-summary .deliverables').fadeOut(1000, function(){
+		//ux deliverable(s)
+		$('.project-summary .deliverables').fadeOut(speed, function(){
 		 LoadProjectUXDeliverables();
-		 $('.project-summary .deliverables').fadeIn(1000);
+		 $('.project-summary .deliverables').fadeIn(speed);
 	 });
-
-		//set slide description (slide 0)
-		$('.proj-slides .summary').fadeOut(1000, function(){
-			$('.proj-slides .summary').html(projectsList[project][7][0][0]).fadeIn(1000);
+		//slide description (slide 0)
+		$('.proj-slides .summary').fadeOut(speed, function(){
+			$('.proj-slides .summary').html(projectsList[project][7][0][0]).fadeIn(speed);
 		});
-
-		//set slide title (slide 0)
-		$('.proj-slides .title').fadeOut(1000, function(){
-			$('.proj-slides .title').html(projectsList[project][7][0][2]).fadeIn(1000);
+		//slide title (slide 0)
+		$('.proj-slides .title').fadeOut(speed, function(){
+			$('.proj-slides .title').html(projectsList[project][7][0][2]).fadeIn(speed);
 		});
+	}
 
-		if((project-1)==projectsList.length){
-			$('.next-project').addClass("disabled");
+	$("body").on("click", ".previous-project", function(){
+		project--;
+		//alert((project+1) + ' ' + projectsList.length);
+		LoadProjectView();
+
+		if(project == 0){
+			DisableProjectNavigation('previous', true);
 		}
-});
+		DisableProjectNavigation('next', false);
+	});
+
+	$("body").on("click", ".next-project", function(){
+		project++;
+		//alert((project+1) + ' ' + projectsList.length);
+		LoadProjectView();
+
+		if(project == (projectsList.length-1)){
+			DisableProjectNavigation('next', true);
+		}
+		DisableProjectNavigation('previous', false);
+	});
 
   /* ========= About Me ====================================================== */
   var timerResumeButtons = {

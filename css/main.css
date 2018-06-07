@@ -375,7 +375,7 @@ button {
     opacity: .5; }
   button:focus {
     outline: #000 dotted; }
-  button.disabled {
+  button:disabled {
     opacity: .2;
     cursor: default; }
 
