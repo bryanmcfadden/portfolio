@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "role": "Placer",
+            "per unit hours": "10",
+            "due date minus": "06/28/2015",
+            "capital ratio": "200",
+			"":""
+        },
+        {
+            "role": "Some Other Role",
+            "per unit hours": "50",
+            "due date minus": "07/06/2015",
+            "capital ratio": "1400",
+			"":""
+        },
+		 {
+            "role": "Splicer",
+            "per unit hours": "21",
+            "due date minus": "06/25/2015",
+            "capital ratio": "201",
+			"":""
+        }
+    ]
+}

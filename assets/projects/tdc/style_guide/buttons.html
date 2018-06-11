@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang="en" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<title>TDC Style Guide</title>
+<head>
+	        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- JAVASCRIPT ----------------------- -->
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>		
+<script src="js/jquery-ui.min-1.10.4.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/prettify.js" type="text/javascript"></script>
+<script src="js/run_prettify.js" type="text/javascript"></script>
+    	<script>
+			$(document).ready(function() {
+				//Start here
+				var checkElement = $('a[href="buttons.html#buttons"]').next();
+				$('a[href="buttons.html#buttons"]').closest('li').addClass('active');
+				if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+						
+				}
+				//End here
+				$('#side_menu > ul > li:has(ul)').addClass("has-sub");
+				
+				$('#side_menu > ul > li > a').click(function() {
+				
+					var checkElement = $(this).next();
+
+					$('#side_menu li').removeClass('active');
+					$(this).closest('li').addClass('active');	
+				
+					if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+						$(this).closest('li').removeClass('active');
+						checkElement.slideUp('normal');
+					}
+				
+					if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+					}
+				
+					if (checkElement.is('ul')) {
+						return false;
+					} else {
+						return true;	
+					}
+				});
+				
+				$('input:checkbox').click(function() {
+					if ($(this).val() == "Two Buttons") {
+						$("#two_button_group").toggle(!this.checked);
+						$("#two_button_group_dimensions").toggle(this.checked);
+					}
+					else {
+						$("#three_button_group").toggle(!this.checked);
+						$("#three_button_group_dimensions").toggle(this.checked);						
+					}
+
+		
+				});
+			});
+			
+			function scrollTo(hash) {
+   		 		location.hash = "#" + hash;
+			}
+		</script>
+	<!-- CSS STYLESHEETS ------------------ -->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css"/>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/prettify.css">
+	<link rel="stylesheet" type="text/css" href="css/style_guide.css">
+	<link rel="shortcut icon" href="images/logo+favicon/favicon.ico" type="image/x-icon" />
+
+<style>
+	.ltGray { background-color:#f7f7f7; }
+</style>
+</head>
+<body style="padding-top:75px;">
+	<div class="col-lg-12 hidden-xs" style="position:absolute; z-index:9999;">
+		<div id="navigation_bar">
+			<img id="logo" alt="TDC Styles logo" src="images/logo.png">
+			<nav id="main_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="templates.html">Templates</a></li>
+					<li id="active"><a href="style_guide.html">Style Guide</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<!-- MENU GOES HERE ------------------------------------------------------ -->
+		<div id="menu-wrapper" class="col-lg-2">
+			<nav id="side_menu" >
+				<!--<div id="accordion_menu"> ------------------------------------ -->
+				<ul>
+					<li><a href="buttons.html#buttons">Buttons<i></i></a>
+						<ul>
+							<li><a href="buttons.html#button_styles">Button Styles</a></li>
+							<li><a href="buttons.html#button_group">Button Group</a></li>
+						</ul>
+					</li>
+					<li><a href="colors_and_layout.html#colors_and_layout">Colors & Layouts<i></i></a>
+						<ul>
+							<li><a href="colors_and_layout.html#color_palette">Color Palette</a></li>
+							<li><a href="colors_and_layout.html#two_column_layout">Two Column Layout</a></li>
+							<li><a href="colors_and_layout.html#three_column_layout">Three Column Layout</a></li>
+						</ul>
+					</li>
+					<li><a href="containers_and_separators.html#containers_and_separators">Containers & Separators<i></i></a>
+						<ul>
+							<li><a href="containers_and_separators.html#containers">Containers</a></li>
+							<li><a href="containers_and_separators.html#horizontal_and_vertical _rules">Horizontal and Vertical Rules</a></li>
+						</ul>
+					</li>
+					<li><a href="forms_input_and_selections.html#forms_input_and_selections">Forms, Input & Selections<i></i></a>
+						<ul>
+							<li><a href="forms_input_and_selections.html#autofill_text_field">Autocomplete</a></li>
+							<li><a href="forms_input_and_selections.html#checkboxes">Checkboxes</a></li>
+							<li><a href="forms_input_and_selections.html#date_field">Date Field</a></li>
+							<li><a href="forms_input_and_selections.html#form_layout">Form Layout</a></li>
+							<li><a href="forms_input_and_selections.html#radio_buttons">Radio Buttons</a></li>
+							<li><a href="forms_input_and_selections.html#text_area">Text Area</a></li>
+							<li><a href="forms_input_and_selections.html#text_field">Text Field</a></li>
+							<li><a href="forms_input_and_selections.html#text_field_helper">Text Field Helper</a></li>
+							<li><a href="forms_input_and_selections.html#validation">Validation</a></li>	
+						</ul>
+					</li>
+					<li><a href="icons_and_images.html#icons_and_images">Icons & Images<i></i></a>
+						<ul>
+							<li><a href="icons_and_images.html#file_format">File Format</a></li>
+							<li><a href="icons_and_images.html#icons">Icons</a></li>
+							<li><a href="icons_and_images.html#logo">Logo</a></li>
+							<li><a href="icons_and_images.html#proportions">Proportions</a></li>
+						</ul>
+					</li>
+					<li><a href="lists.html#lists">Lists<i></i></a>
+						<ul>
+							<li><a href="lists.html#bulleted">Bulleted</a></li>
+							<li><a href="lists.html#description">Description</a></li>
+							<li><a href="lists.html#horizontal_description">Horizontal Description</a></li>
+							<li><a href="lists.html#numbered">Numbered</a></li>
+							<li><a href="lists.html#Unstyled">Unstyled</a></li>
+						</ul>
+					</li>
+					<li><a href="modals_dialogs_and_utilities.html#modals_dialogs_and_utilities">Modals, Dialogs & Utilities<i></i></a>
+						<ul>
+							<li><a href="modals_dialogs_and_utilities.html#help">Help</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#dialog_box">Dialog Box</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#notifications">Notifications</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#progress indicator">Progress Indicator</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#tooltips">Tooltips</a></li>
+						</ul>
+					</li>
+					<li><a href="navigation.html#navigation">Navigation<i></i></a>
+						<ul>
+							<li><a href="navigation.html#breadcrumbs">Breadcrumbs</a></li>
+							<li><a href="navigation.html#carousel">Carousel</a></li>
+							<li><a href="navigation.html#header">Header</a></li>
+							<li><a href="navigation.html#footer">Footer</a></li>
+							<li><a href="navigation.html#global_menu">Global Menu</a></li>
+							<li><a href="navigation.html#local_menu">Local Menu</a></li>
+							<li><a href="navigation.html#pager">Pager</a></li>
+							<li><a href="navigation.html#pagination">Pagination</a></li>
+							<li><a href="navigation.html#tree">Tree</a></li>		
+						</ul>
+					</li>
+					<li><a href="portlets.html#portlets">Portlets<i></i></a>
+						<ul>
+							<li><a href="portlets.html#portlet_layout">Layout</a></li>
+							<li><a href="portlets.html#interactions">Interactions</a></li>
+						</ul>
+					</li>
+					<li><a href="responsive_web_design.html#responsive_web_design">Responsive Web Design<i></i></a>
+						<ul>
+							<li><a href="responsive_web_design.html#mobile">Mobile</a></li>
+							<li><a href="responsive_web_design.html#tablet">Tablet</a></li>
+						</ul>
+					</li>
+					<li><a href="tabs_accordions_tables.html#tabs_accordions_tables">Tabs, Accordions & Tables<i></i></a>
+						<ul>
+							<li><a href="tabs_accordions_tables.html#accordion">Accordion</a></li>
+							<li><a href="tabs_accordions_tables.html#column_table">Table - Column Table</a></li>
+							<li><a href="tabs_accordions_tables.html#data_table">Table - Data Table</a></li>
+							<li><a href="tabs_accordions_tables.html#grid_style">Table - Grid Style</a></li>
+							<li><a href="tabs_accordions_tables.html#task_table">Table - Task Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tree_table">Table - Tree Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tabs">Tabs</a></li>							
+						</ul>						
+					</li>
+					<li><a href="text.html#text">Text<i></i></a>
+						<ul>
+							<li><a href="text.html#caption">Caption</a></li>
+							<li><a href="text.html#fonts">Fonts</a></li>
+							<li><a href="text.html#headings">Headings</a></li>
+							<li><a href="text.html#links">Links</a></li>
+							<li><a href="text.html#paragraph">Paragraph</a></li>
+							<li><a href="text.html#styling">Styling</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- CONTENT AREA ------------------------------------------------------------ -->
+		<div id="content-wrapper">
+			<h1>Buttons</h1>
+				<div>
+				<div class="well ltGray">This type of component is commonly used to submit or save information in forms; to provide a means for the user to access more information through a modal; or to allow the user to navigate to another page.</div>
+				</div>
+				
+				<h2><a class="subtitle" name="button_styles">Button Styles</a></h2>
+				<div role="tabpanel">
+					<ul class="nav nav-tabs" role="tablist">
+					    <li role="presentation" class="active"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+					    <li role="presentation"><a href="#specs" aria-controls="specs" role="tab" data-toggle="tab">Specs</a></li>
+					    <li role="presentation"><a href="#position" aria-controls="position" role="tab" data-toggle="tab">Position</a></li>
+					    <li role="presentation"><a href="#html" aria-controls="html" role="tab" data-toggle="tab">HTML + CSS</a></li>
+	  				</ul>
+	  				
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="about">
+							<h3>Description</h3>
+							<p>Button styles refers to the sizing and colors used for buttons. We will also discuss the use of special buttons in this section.</p>
+							<p>The size for buttons can vary to match the size of elements that are positioned closely to them to promote proper grouping. For example, if you have a keyword search text field with a “Search” button, you would want the height of the two elements to closely match each other. This supports a better user experience as it allows the user to quickly associate the components with each other.</p>
+							
+							<div class="round_corner">
+								<img id="button_sizing" class="center framed" src="images/buttons/example_button_sizing.png" alt="Button sizing done the right and wrong ways">			
+							</div>
+							
+							<p>In addition to sizing, different colors affect the way users perceive a button as well as their expectations as to what the button may do. For example, when using a button in a form, the most commonly used button or most important button should be colored AT&T Orange; this color draws attention and makes users immediately focus on the element when it is in a group.</p>
+							
+							<h3>Special Buttons</h3>
+							<p>One last aspect of buttons you should be aware of is the special classes that exist within TDC. We currently have three special buttons:</p>
+							<ul>
+								<li>Team Chat: opens a chatroom in Q so the user can communicate with his or her team</li>
+								<li>Collaborate: links to a tSpace page, usually a forum</li>
+								<li>Attach Files: typically used in forms to allow users to upload their documents</li>
+							</ul>
+							
+							<table class="special_buttons_table">
+								<thead>
+									<th>Special Button</th>
+									<th>Name</th>
+								</thead>
+								<tr class="odd_row">
+									<td><img src="images/buttons/team-chat.png" width="153" height="34" alt="Team Chat button"></td>
+									<td>Team Chat</td>
+								</tr>
+								<tr>
+									<td><img src="images/buttons/collaborate.png" width="146" height="34" alt="Collaborate button"></td>
+									<td>Collaborate</td>
+								</tr>
+								<tr class="odd_row">
+									<td><img src="images/buttons/attach-files.png" width="161" height="30" alt="Attach Files button"></td>
+									<td>Attach Files</td>
+								</tr>
+							</table>
+						</div>
+						
+						<div role="tabpanel" class="tab-pane" id="specs">
+							<h3>Sizing</h3>
+							<div class="icons_example">
+								<p>A button's width and height must be at least 42px.</p>
+								<p>Regardless of the size, your button must have a padding of 10px all around. We do not have a set of standard button sizes since labels and/or icons can cause a significant variation in the width of the button. Please use your best judgment when it comes to your button's dimensions. If you have any doubts, feel free to contact us.</p>
+								<p>Refer to the table below to see examples of some buttons with different dimensions. You do not have to use the exact dimensions seen below; these buttons are meant to give you a better idea of what some dimensions look like.</p>
+								
+								<table class="button_sizing_table">
+									<thead>
+										<th>Button</th>
+										<th>Size</th>
+									</thead>
+									<tr class="odd_row">
+										<td><img src="images/buttons/button_long_label.png" width="132" height="29" alt="Review All Policies button"></td>
+										<td>132 x 29px</td>
+									</tr>
+									<tr>
+										<td><img src="images/buttons/button_two_lines.png" width="124" height="48" alt="How Everything Fits Together button"></td>
+										<td>124 x 48px</td>
+									</tr>
+									<tr class="odd_row">
+										<td><img src="images/buttons/view_all.png" width="67" height="29" alt="View All button"></td>
+										<td>67 x 29px</td>
+									</tr>
+									<tr>
+										<td><img src="images/buttons/add.png" width="51" height="35" alt="Add button"></td>
+										<td>51 x 35px</td>
+									</tr>
+									<tr class="odd_row">
+										<td><img src="images/buttons/button_icon.png" width="42" height="42" alt="Search button"></td>
+										<td>42 x 42px</td>
+									</tr>
+								</table>	
+							</div>
+							
+							<h3>Button Labels and Icons</h3>
+							<p>Button labels should be clear and concise. If you find yourself using a rather long label, please consider revising it. Users should get an idea of what the button does after reading the first two words of the label. We suggest you use action-oriented verbiage (e.g. “Create Project” instead of “New Project”) to help the user determine the button’s functionality.</p>
+							<p>Follow these standards when you include a label and/or icon in your button:</p>				
+							<ul>
+								<li>The color of the label and/or icon should be white except if the color of the button is <a href="colors_and_layout.html#color_palette">AT&T Gray Highlight,</a> in which case the label and/or icon should be <a href="colors_and_layout.html#color_palette">AT&T Gray</a></li>
+								<li>Position the label and/or icon so the component(s) is/are centered both horizontally and vertically within the button
+</li>
+								<li>You may include no more than one icon in a button</li>
+							</ul>
+
+							<div class="round_corner">
+								<img id="button_label_colors" class="center framed" src="images/buttons/example_button_label_colors.png" alt="Button sizing done the right and wrong ways">			
+							</div>
+							
+							
+							<h3>Colors</h3>
+								<div class="specs_color">
+									<div class="color_swatch blue"></div>
+									<p><a href="colors_and_layout.html#color_palette">AT&T Blue (#067ab5)</a></p>
+									<br>
+									<p>Used for all single buttons (i.e., buttons that are not grouped with any other buttons) in TDC. This color can also be used for buttons that do not need emphasis when they are in a group.</p>
+	
+									<div class="color_swatch blue_highlight"></div>
+									<p><a href="colors_and_layout.html#color_palette">AT&T Blue  Highlight (#0574ac)</a></p>
+									<br>
+									<p>When the user hovers over a button colored AT&T Blue it needs to change to AT&T Blue Highlight.</p>
+									<br>
+									
+									<div class="color_swatch orange"></div>
+									<p><a href="colors_and_layout.html#color_palette">AT&T Orange (#ff7200)</a></p>
+									<br>
+									<p>Use this color to place emphasis on a button within a button group.</p>
+									<br>
+									
+									<div class="color_swatch orange_highlight"></div>
+									<p><a href="colors_and_layout.html#color_palette">AT&T Orange Highlight (#fcb314)</a></p>
+									<br>
+									<p>When the user hovers over a button colored AT&T Orange it needs to change to AT&T Orange Highlight.</p>
+									<br>
+									
+									<div class="color_swatch gray_highlight"></div>
+									<p><a href="colors_and_layout.html#color_palette">AT&T Gray Highlight (#f2f2f2)</a></p>
+									<br>
+									<p>When a button is disabled use this color.</p>
+									<br>							
+								</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="position">
+							<h3>General Placement</h3>
+								<p>When a button is inside of a portlet or container if the button is not associated with an input field, it should be displayed as block and centered horizontally.</p>
+								<div class="round_corner">
+									<img class="center framed" src="images/buttons/example_button_position.png" alt="Button sizing done the right and wrong ways">			
+								</div>
+								<p>If a button or button group is in a form they must be positioned in the lower right corner of the form.</p>
+								<div class="round_corner">
+									<img class="center framed" src="images/buttons/example_button_position_2.png" alt="Button sizing done the right and wrong ways">			
+								</div>
+								<p>Finally, if the button is associated with an input field, it must be positioned to the right of that element.</p>
+								<div class="round_corner">
+									<img class="center framed" src="images/buttons/example_button_position_3.png" alt="Button sizing done the right and wrong ways">			
+								</div>
+						
+						</div>
+						<div role="tabpanel" class="tab-pane" id="html">
+							<pre class="prettyprint">
+
+&lt;!--Button that triggers function when it is clicked--&gt;
+&lt;button type="button" onclick="doSomething()"&gt; Label &lt;/button&gt;
+
+&lt;!--Button used to take user to another page--&gt;
+&lt;form action="http://deliverycenter.web.att.com/"&gt;
+	&lt;input type="submit" value="TDC Homepage"&gt;
+&lt;/form&gt;
+&lt;!--You should use &lt;input&gt; for buttons when you are handling any kind of form--&gt;
+&lt;!--Otherwise, feel free to use &lt;button&gt; --&gt;								
+							</pre>	
+							<p>The following CSS produces a medium-sized AT&T Blue button:</p>
+							<pre class="prettyprint">
+								
+.button {
+	background: #067ab5;
+	border-radius: 3px;
+	color: #ffffff;
+	font-size: 14px;
+	height: 30px;
+	padding: 10px;
+	width: 80px;
+}
+							</pre>						
+						</div>
+					</div>			
+				</div>	
+				<h2><a class="subtitle" name="button_group">Button Group</a></h2>
+				<p>In TDC, buttons are generally grouped in twos and threes. The number of buttons within a group depends on the number of options you intend to have. Do note that button groups are usually used in forms.</p>
+				<div class="round_corner">
+					<div class="dimension_display_switch">
+						<label>Display Dimensions</label> <input type="checkbox" name="two_button_group_check" value="Two Buttons">
+					</div>
+					<img id="two_button_group" class="center framed" src="images/buttons/example_two_button_groups.png" alt="Button groups with 2 buttons">
+					<img id="two_button_group_dimensions" class="center framed" style="display: none;" src="images/buttons/example_two_button_groups_dimensions.png" alt="Dimensions for button groups with 2 buttons">
+				</div>
+				<br>
+				<br>
+				<div class="round_corner">
+					<div class="dimension_display_switch">
+						<label>Display Dimensions</label> <input type="checkbox" name="three_button_group_check" value="Three Buttons">
+					</div>
+					<img id="three_button_group" class="center framed" src="images/buttons/example_three_button_group.png"  alt="Button group with 3 buttons">
+					<img id="three_button_group_dimensions" class="center framed" style="display: none;" src="images/buttons/example_three_button_group_dimensions.png"  alt="Dimensions for button group with 3 buttons">
+				</div>
+				
+				<script>
+
+				</script>
+				
+         
+		</div>
+	</div>
+</body>
+
+</html>

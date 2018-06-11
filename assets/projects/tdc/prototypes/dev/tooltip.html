@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> 
+<html class="no-js" lang="en"> 
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Software Delivery Center - Framework</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="MobileOptimized" content="320">
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- END GLOBAL MANDATORY STYLES -->
+</head>
+<body style="background-color:#fff !important;">
+	<div>
+		<div style="padding:100px 0 0 300px;">
+			tooltip:<button id="btn_hlp_my_comm" title="Tooltip Example" 
+			data-original-title="Communities" 
+			data-html="true"
+			data-placement="right"
+			data-content="The <a href='#'>Activity Center</a> portlet shows, in the My Approvals view, any PRISM approvals, ITRR approvals, and One AT&T CR Tool approvals that are waiting on your action, and gives you access to any approvals you took action on in the previous 30 days.">popover</button>
+		</div>
+	</div>
+</body>
+<!-- BEGIN CORE JS -->
+<script src="js/core/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script>
+// Set jQuery into noConflict() mode to avoid issues with dojo
+				jQuery.noConflict();
+</script>
+<!-- IMPORTANT! ----------------------------------------------------------------------------------------------------
+	Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip 
+	-------------------------------------------------------------------------------------------------------------------- -->
+	<script src="js/core/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+	<script src="js/core/bootstrap.min.js" type="text/javascript"></script>
+	<script language="javascript">
+		jQuery(document).ready(function($) {    
+			$('#btn_hlp_my_comm').click(function(){
+				$(this).popover('show');
+			});
+		});
+	</script>
+</html>

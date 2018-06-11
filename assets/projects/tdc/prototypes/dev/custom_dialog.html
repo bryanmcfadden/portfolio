@@ -1,0 +1,59 @@
+<!-- HELP DIALOG -->
+<div id="dialog_help">
+	<div class="modal-dialog">
+		<div class="modal-content" style="height:300.0px; width:500.0px;">
+			<div class="modal-header">
+				<button class="close" aria-hidden="true" data-dismiss="modal" type="button"></button>
+				<h4 id="mod_basic_title" class="modal-title">[SHORT-TEXT]</h4>
+			</div>
+			<div id="mod_custom_contents" class="modal-body">
+				[RICH-TEXT-EDITOR]
+			</div>
+			<div class="modal-footer">
+				<button id="hlp_btn_close" class="btn default" data-dismiss="modal" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- BASIC DIALOG -->
+<div id="dialog_basic">
+	<div class="modal-dialog">
+		<div class="modal-content" style="height:300px; width:500px;">
+			<div class="modal-header">
+				<button class="close" aria-hidden="true" data-dismiss="modal" type="button"></button>
+				<h4 id="mod_basic_title" class="modal-title">[SHORT-TEXT]</h4>
+			</div>
+			<div id="mod_custom_contents" class="modal-body">
+				[RICH-TEXT-EDITOR]
+			</div>
+			<div class="modal-footer">
+				<button id="basic_ok" class="btn green" type="button" onclick="$('#basic_dialog').modal('hide');">OK</button>
+				<button id="basic_continue" class="btn btn-primary" type="button">Continue</button>
+				<button id="basic_delete" class="btn btn-danger" type="button">Delete</button>
+				<button id="basic_cancel" class="btn default" data-dismiss="modal" type="button">Cancel</button>
+				<button id="basic_close" class="btn default" data-dismiss="modal" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- CUSTOM DIALOG -->
+<div id="dialog_custom">
+	<div id="custom_dialog" class="modal-dialog" >
+		<div class="modal-content" style="height:300px; width:500px;">
+			<div class="modal-header">
+				<button class="close" aria-hidden="true" data-dismiss="modal" type="button"></button>
+				<h4 id="mod_basic_title" class="modal-title">[SHORT-TEXT]</h4>
+			</div>
+			<div id="mod_custom_contents" class="modal-body">
+				[RICH-TEXT-EDITOR]
+			</div>
+			<div class="modal-footer">
+				<button id="custom_ok" class="btn green" type="button">OK</button>
+				<button id="custom_continue" class="btn btn-primary" data-dismiss="modal" type="button">Continue</button>
+				<button id="custom_delete" class="btn btn-danger" data-dismiss="modal" type="button">Delete</button>
+				<button id="custom_cancel" class="btn default" data-dismiss="modal" type="button">Cancel</button>
+				<button id="custom_close" class="btn default" data-dismiss="modal" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,337 @@
+﻿<!DOCTYPE HTML>
+<html lang="en" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<title>TDC Style Guide - Template Page</title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSS STYLESHEETS ------------------ -->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css"> 
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style_guide.css">
+	<link rel="stylesheet" type="text/css" href="css/colors_and_layouts.css">
+	<link rel="shortcut icon" href="images/logo+favicon/favicon.ico" type="image/x-icon" />
+	
+	<!-- JAVASCRIPT ----------------------- -->
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>		
+	<script src="js/jquery-ui.min-1.10.4.js" type="text/javascript"></script> 
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/lightbox.min.js" type="text/javascript"></script>
+	<script>
+		$(document).ready(function() {
+			//Start here
+			var checkElement = $('a[href="colors_and_layout.html#colors_and_layout"]').next();
+			$('a[href="colors_and_layout.html#colors_and_layout"]').closest('li').addClass('active');
+			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+					$('#side_menu ul ul:visible').slideUp('normal');
+					checkElement.slideDown('normal');
+					
+			}
+			//End here
+			$('#side_menu > ul > li:has(ul)').addClass("has-sub");
+			
+			$('#side_menu > ul > li > a').click(function() {
+			
+				var checkElement = $(this).next();
+	
+				$('#side_menu li').removeClass('active');
+				$(this).closest('li').addClass('active');	
+			
+				if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+					$(this).closest('li').removeClass('active');
+					checkElement.slideUp('normal');
+				}
+			
+				if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+					$('#side_menu ul ul:visible').slideUp('normal');
+					checkElement.slideDown('normal');
+				}
+			
+				if (checkElement.is('ul')) {
+					return false;
+				} else {
+					return true;	
+				}
+			});
+	
+		});
+		
+		function scrollTo(hash) {
+	 		location.hash = "#" + hash;
+		}
+	</script>
+</head>
+<body style="padding-top:75px;">
+	<div class="col-lg-12 hidden-xs" style="position:absolute; z-index:9999;">
+		<div id="navigation_bar">
+			<img id="logo" alt="TDC Styles logo" src="images/logo.png">
+			<nav id="main_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="templates.html">Templates</a></li>
+					<li id="active"><a href="style_guide.html">Style Guide</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<!-- MENU GOES HERE ------------------------------------------------------ -->
+		<div id="menu-wrapper" class="col-lg-2">
+			<nav id="side_menu" >
+				<!--<div id="accordion_menu"> ------------------------------------ -->
+				<ul>
+					<li><a href="buttons.html#buttons">Buttons<i></i></a>
+						<ul>
+							<li><a href="buttons.html#button_styles">Button Styles</a></li>
+							<li><a href="buttons.html#button_group">Button Group</a></li>
+						</ul>
+					</li>
+					<li><a href="colors_and_layout.html#colors_and_layout">Colors & Layouts<i></i></a>
+						<ul>
+							<li><a href="colors_and_layout.html#color_palette">Color Palette</a></li>
+							<li><a href="colors_and_layout.html#two_column_layout">Two Column Layout</a></li>
+							<li><a href="colors_and_layout.html#three_column_layout">Three Column Layout</a></li>
+						</ul>
+					</li>
+					<li><a href="containers_and_separators.html#containers_and_separators">Containers & Separators<i></i></a>
+						<ul>
+							<li><a href="containers_and_separators.html#containers">Containers</a></li>
+							<li><a href="containers_and_separators.html#horizontal_and_vertical _rules">Horizontal and Vertical Rules</a></li>
+						</ul>
+					</li>
+					<li><a href="forms_input_and_selections.html#forms_input_and_selections">Forms, Input & Selections<i></i></a>
+						<ul>
+							<li><a href="forms_input_and_selections.html#autofill_text_field">Autocomplete</a></li>
+							<li><a href="forms_input_and_selections.html#checkboxes">Checkboxes</a></li>
+							<li><a href="forms_input_and_selections.html#date_field">Date Field</a></li>
+							<li><a href="forms_input_and_selections.html#form_layout">Form Layout</a></li>
+							<li><a href="forms_input_and_selections.html#radio_buttons">Radio Buttons</a></li>
+							<li><a href="forms_input_and_selections.html#text_area">Text Area</a></li>
+							<li><a href="forms_input_and_selections.html#text_field">Text Field</a></li>
+							<li><a href="forms_input_and_selections.html#text_field_helper">Text Field Helper</a></li>
+							<li><a href="forms_input_and_selections.html#validation">Validation</a></li>	
+						</ul>
+					</li>
+					<li><a href="icons_and_images.html#icons_and_images">Icons & Images<i></i></a>
+						<ul>
+							<li><a href="icons_and_images.html#file_format">File Format</a></li>
+							<li><a href="icons_and_images.html#icons">Icons</a></li>
+							<li><a href="icons_and_images.html#logo">Logo</a></li>
+							<li><a href="icons_and_images.html#proportions">Proportions</a></li>
+						</ul>
+					</li>
+					<li><a href="iframes#iframes">IFrames<i></i></a>
+						<ul>
+							<li><a href="iframes.html#modularity">Modularity</a></li>
+							<li><a href="iframes.html#layouts">Layouts</a></li>
+						</ul>
+					</li>
+					<li><a href="lists.html#lists">Lists<i></i></a>
+						<ul>
+							<li><a href="lists.html#bulleted">Bulleted</a></li>
+							<li><a href="lists.html#description">Description</a></li>
+							<li><a href="lists.html#horizontal_description">Horizontal Description</a></li>
+							<li><a href="lists.html#numbered">Numbered</a></li>
+							<li><a href="lists.html#Unstyled">Unstyled</a></li>
+						</ul>
+					</li>
+					<li><a href="modals_dialogs_and_utilities.html#modals_dialogs_and_utilities">Modals, Dialogs & Utilities<i></i></a>
+						<ul>
+							<li><a href="modals_dialogs_and_utilities.html#help">Help</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#dialog_box">Dialog Box</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#notifications">Notifications</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#progress indicator">Progress Indicator</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#tooltips">Tooltips</a></li>
+						</ul>
+					</li>
+					<li><a href="navigation.html#navigation">Navigation<i></i></a>
+						<ul>
+							<li><a href="navigation.html#breadcrumbs">Breadcrumbs</a></li>
+							<li><a href="navigation.html#carousel">Carousel</a></li>
+							<li><a href="navigation.html#header">Header</a></li>
+							<li><a href="navigation.html#footer">Footer</a></li>
+							<li><a href="navigation.html#global_menu">Global Menu</a></li>
+							<li><a href="navigation.html#local_menu">Local Menu</a></li>
+							<li><a href="navigation.html#pager">Pager</a></li>
+							<li><a href="navigation.html#pagination">Pagination</a></li>
+							<li><a href="navigation.html#tree">Tree</a></li>		
+						</ul>
+					</li>
+					<li><a href="portlets.html#portlets">Portlets<i></i></a>
+						<ul>
+							<li><a href="portlets.html#portlet_layout">Layout</a></li>
+							<li><a href="portlets.html#interactions">Interactions</a></li>
+						</ul>
+					</li>
+					<li><a href="responsive_web_design.html#responsive_web_design">Responsive Web Design<i></i></a>
+						<ul>
+							<li><a href="responsive_web_design.html#mobile">Mobile</a></li>
+							<li><a href="responsive_web_design.html#tablet">Tablet</a></li>
+						</ul>
+					</li>
+					<li><a href="tabs_accordions_tables.html#tabs_accordions_tables">Tabs, Accordions & Tables<i></i></a>
+						<ul>
+							<li><a href="tabs_accordions_tables.html#accordion">Accordion</a></li>
+							<li><a href="tabs_accordions_tables.html#column_table">Table - Column Table</a></li>
+							<li><a href="tabs_accordions_tables.html#data_table">Table - Data Table</a></li>
+							<li><a href="tabs_accordions_tables.html#grid_style">Table - Grid Style</a></li>
+							<li><a href="tabs_accordions_tables.html#task_table">Table - Task Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tree_table">Table - Tree Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tabs">Tabs</a></li>							
+						</ul>						
+					</li>
+					<li><a href="text.html#text">Text<i></i></a>
+						<ul>
+							<li><a href="text.html#caption">Caption</a></li>
+							<li><a href="text.html#fonts">Fonts</a></li>
+							<li><a href="text.html#headings">Headings</a></li>
+							<li><a href="text.html#links">Links</a></li>
+							<li><a href="text.html#paragraph">Paragraph</a></li>
+							<li><a href="text.html#styling">Styling</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- CONTENT AREA ------------------------------------------------------------ -->
+		<div id="content-wrapper">
+			<h1>Colors & Layouts</h1>
+			<section>
+	    		<h2><a class="subtitle" name="color_palette">Color Palette</a></h2>
+	    		
+	    		<p>As a reference, these are the AT&T brand colors represented in hex and RGB values. The primary palette consists of three colors: AT&T Orange, AT&T Blue and white. White is used as a background color to provide good contrast against the vibrant colors in our palette. AT&T Gray Highlight may also be used as a background in a header or description box. Do not use any other brand colors for backgrounds within content areas, otherwise text legibility may be compromised.</p>
+	    		
+	    		<div class="wrap">
+	    			<div class="color_swatch" id="orange">
+	    				<p>#ff2700</p>
+	    				<p>255, 114, 0</p>
+	    				<p>AT&T Orange</p>
+	    			</div>
+	    			<div class="color_swatch" id="orange_highlight">
+		    			<p>#fcb314</p>
+		    			<p>252, 179, 20</p>
+		    			<p>AT&T Orange Highlight</p>
+		    		</div>
+	    		</div>
+	    		
+				<div class="wrap">
+					<div class="color_swatch" id="dark_blue">
+		    			<p>#0c2577</p>
+		    			<p>252, 179, 20</p>
+		    			<p>AT&T Dark Blue</p>
+		    		</div>
+		    		<div class="color_swatch" id="blue">
+		    			<p>#0574ac</p>
+		    			<p>5, 116, 172</p>
+		    			<p>AT&T Blue</p>
+		    		</div>
+		    		<div class="color_swatch" id="blue_highlight">
+		    			<p>#7cc6ff</p>
+		    			<p>5, 116, 172</p>
+		    			<p>AT&T Blue Highlight</p>
+		    		</div>
+				</div>
+				
+				<div class="wrap">
+		    		<div class="color_swatch" id="green">
+		    			<p>#4ca90c</p>
+		    			<p>76, 169, 12</p>
+		    			<p>AT&T Brand Green</p>
+		    		</div>
+		    		<div class="color_swatch" id="green_highlight">
+		    			<p>#c4d82d</p>
+		    			<p>196, 216, 45</p>
+		    			<p>AT&T Green Highlight</p>
+		    		</div>
+				</div>
+	    		
+	    		<div class="wrap">
+					<div class="color_swatch" id="purple">
+		    			<p>#81017e</p>
+		    			<p>129, 1, 126</p>
+		    			<p>AT&T Purple</p>
+		    		</div>
+		    		<div class="color_swatch" id="burgundy">
+		    			<p>#b30a3c</p>
+		    			<p>179, 10, 60</p>
+		    			<p>AT&T Burgundy</p>
+		    		</div>
+		    		<div class="color_swatch" id="magenta">
+		    			<p>#da0081</p>
+		    			<p>218, 0, 129</p>
+		    			<p>AT&T Magenta</p>
+		    		</div>
+				</div>
+				
+				<div class="wrap">
+		    		<div class="color_swatch" id="dark_gray">
+		    			<p>#333333</p>
+		    			<p>51, 51, 51</p>
+		    			<p>AT&T Dark Gray</p>
+		    		</div>
+		    		<div class="color_swatch" id="gray">
+		    			<p>#666666</p>
+		    			<p>102, 102, 102</p>
+		    			<p>AT&T Gray</p>
+		    		</div>
+		    		<div class="color_swatch" id="gray_highlight">
+		    			<p>#f2f2f2</p>
+		    			<p>242, 242, 242</p>
+		    			<p>AT&T Gray Highlight</p>
+		    		</div>
+				</div>
+	    		
+	    		
+	   			<p>Brand colors and guidelines should be followed when creating visual assets to support page content such as marquees, banners, videos and other content related graphics. Exceptions can be made if one must address accessibility and usability concerns such as acceptable contrast ratios. If you need to make an exception, use your best judgment and feel free to contact us.</p>
+	    		
+	    		<p>Visit the <a href="https://brandcenter.att.com/" target="_blank" title="Go to the AT&T Brand site">AT&T Brand site</a> for specific guidelines.</p>
+
+
+
+				<div class="well ltGray">
+					<div class="well_heading">Layout</div>
+					<p>A layout determines the arrangement of all the components or content types in a page. Users will find what they want quickly in a well-designed layout; consequently, a better user experience will be provided. A well-designed layout has: 
+					</p>
+					<ul class="lists">
+						<li>A focal point that users’ eyes are immediately drawn to</li>
+						<li>A natural path or arrangement the users’ eyes can follow</li>
+						<li>Logical grouping of elements</li>
+						<li>Consistent alignment of components to promote an organized view</li>
+						<li>Just the right amount of content and white space; it makes effective use of the screen real estate</li>
+					</ul>
+					<p>Some of the most common layouts used in TDC are two and three column layouts.</p>
+				</div>
+
+	    		<h2><a class="subtitle" name="two_column_layout">Two Column Layout</a></h2>
+				<p>This is a very simple layout typically used when you have two types of content. In TDC, you’ll generally see a column dedicated to announcements, news, or events, and another used for main content. If you have content that you can categorize into any of the aforementioned sections then you should use this layout.</p>
+								<div class="thumbnail">
+									<div class="thumbnail_container" >
+										<a href="images/layouts/layout_2_column.png" data-lightbox="image-1" data-title="Two column layout sample page"><img src="images/layouts/layout_2_column.png" alt="two column layout"></a>
+									</div>								
+								</div>
+				<p>Please note that it is acceptable to have more than one section in one column; so if you wanted to have a column with any and all kinds of news you could have one section for “Latest News” and another with “Announcements” beneath it. This kind of arrangement can be seen in the leftmost column in the TDC homepage.</p>
+				
+				
+				<h2><a class="subtitle" name="three_column_layout">Three Column Layout</a></h2>
+				<p>This layout is commonly seen in the CSI API pages. If you have several pages you want users to access, then you will need a menu. If the content within those pages is split in various sections then you will also need a table of contents. </p>
+				<p>TDC uses a three-column layout with a menu, main content section, and table of contents; this layout also includes two portlets in the middle column where you can add links to news or events, general quick links, and/or define terms you’ve used in the main content. </p>
+                
+								<div class="thumbnail">
+									<div class="thumbnail_container">
+										<a href="images/layouts/layout_3_column.png" data-lightbox="image-2" data-title="Three column layout sample page"><img src="images/layouts/layout_3_column.png" alt="three column layout"></a>
+									</div>								
+								</div>
+			</section>
+         
+		</div>
+	</div>
+    
+</body>
+
+</html>

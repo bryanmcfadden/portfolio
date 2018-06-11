@@ -1,0 +1,407 @@
+.hide { display:none; }
+.show { display:block; }
+/* ---- Alignment Styles ----------- */
+.txtLeft { text-align:left; }
+.txtRight { text-align:right; }
+.txtCenter { text-align:center; }
+/* ---- DIV Styles ------------------*/
+.lAlign { float:left; }
+.rAlign { float:right; }
+
+/* <<<<<<<<<<<<<<<<<<<<< GLOBAL STYLES >>>>>>>>>>>>>>>>>>>>>>>>> */
+input[type="text"], select {
+		padding-left:5px;
+		font-weight:normal; 
+		border:1px solid #ccc; 
+		background-color: #fff;
+		border-radius:6px; 
+		font-size:14px; 
+		height:32px; 
+}
+select:disabled , 
+input[type="text"]:disabled , 
+textarea:disabled { 
+	background-color:#fff;
+	border:1px solid #eee !important; 
+}
+
+input[type="text"].read-only, select.read-only { 
+	border:none !important; 
+	background: transparent;
+}
+textarea {
+	border:1px solid #ccc; 
+	border-radius:6px;  
+	font-size:14px;
+	font-weight:normal;
+}
+input[type="text"].date-picker {
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+}
+ul {
+	list-style-item:none; 
+	list-style-type:none;
+}
+
+table {
+	width:100%;
+}
+
+.dp-calendar{
+	background:url('images/ico_calendar.gif') no-repeat center center;
+	border-left:0;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	border-top-right-radius:6px;
+	border-bottom-right-radius:6px;
+	height:32px;
+	vertical-align:top;
+	width:32px;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<< EXPANDABLE STYLES >>>>>>>>>>>>>>>>>>>>>>>>> */
+.expand-details, .expand-me {
+	width:3%;
+	cursor:pointer;
+	background: url('../images/ico_arrow_down.gif') no-repeat center center;
+}
+.expand-details.open, .expand-me.open{ 
+	background: url('../images/ico_arrow_up.gif') no-repeat center center;
+}
+
+
+.project-search {
+	background-color:#fff;
+	height:50px;
+	text-align:left;
+	width:100%; 
+}
+.project-search td {
+	padding-left:15px; 
+	font-weight:bold;
+}
+
+.project-search-details {
+	background-color:#fff;
+	border-top:1px solid #ccc; 
+	display:none; 
+}
+	
+.project-search-details .container { 
+	height:235px; 
+	padding:20px;
+	width:100%;
+}
+
+ul.version-type {
+	height:165px; 
+	margin:0; 
+	padding:0; 
+	position:relative; 
+	right:-1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	.tbl-proj-qv {
+		height:50px;
+		text-align:left;
+		width:100%;  
+	}
+	.tbl-proj-qv td {
+		padding-left:15px; 
+		font-weight:bold;
+	}
+	.tbl-proj-qv span {
+		font-weight:normal;
+	}
+	
+	.project-title {
+		width:100%; 
+		padding-top:10px;
+	}
+	.project-title span {
+		font-size:20px;
+		/* color:#ef6f00; */
+		color:#fcb314;
+		font-weight:bold; 
+	}
+	.project-title hr {
+		height:3px;
+		width:98%; 
+	}
+	
+/* -- expanding datagrid images -- */
+td.details-control {
+	background: url('../images/details_open.png') no-repeat center center !important;
+	cursor: pointer;
+}
+tr.shown td.details-control {
+	background: url('../images/details_close.png') no-repeat center center !important;
+}
+
+table#example { font-size:0.8em; }
+table.dataTable tfoot th, table.dataTable tfoot td {
+	padding: 10px 18px 6px 18px;
+	border-top: 1px solid rgb(221,221,221);
+}
+table.dataTable thead th, table.dataTable thead td {
+	padding: 10px 18px;
+	border-bottom: 1px solid rgb(221,221,221);
+	
+}
+table.dataTable tbody tr { background-color: transparent;}
+table.dataTable th { background-color:#fff !important; }
+/* table.row-border.dataTable tbody th, table.row-border.dataTable tbody td, table.display.dataTable tbody th, table.display.dataTable tbody td { border-top:none; } */
+
+.hdr_divider { border-right: 1px solid rgb(221,221,221); }
+.cAlign { text-align:center; }
+.dgExampleRow th { text-align:left; }
+.txt_input{  background-color: #f7f7f7; border:1px solid #ccc; }
+.hide { display:none; }
+.btn {
+	display:inline-block;
+	padding:4px 12px !important;
+	font-weight:400;
+	text-align:center;
+	cursor:pointer;
+	border:1px solid transparent;
+	border-radius:4px;
+	white-space:no-wrap;
+    min-height:32px;
+}
+.btn-blue { 
+	background-color: #067ab4;
+	color:#fff;
+}
+.btn-orange { 
+	background-color: #ef6f00;
+	color:#fff;
+}
+.btn-gray { 
+	background-color: #ccc;
+	color:#fff;
+}
+.role-wrapper { padding:10px 20px 10px 75px; }
+.add-role-container { border:1px solid #ccc; }
+.add-role-container  .add-role { 
+	border-left:15px solid #ef6f00; 
+	background-color:#fff !important;
+}
+.add-role-container .display { 
+	border-bottom:none !important; 
+	text-align:left;
+	width:100% !important;
+}
+.add-role { padding:5px 0 10px 0; } /*text-align:right;  */
+/* .add-role .btn { margin-right:10px; } */
+.add-role .action-buttons {
+	text-align:left;
+	min-height:50px;
+}
+
+.add-new { 
+	background-color:#e7f5f9; 
+	display:none; 
+}
+.add-new div { padding:10px 0 0 15px; }
+.add-new table { 
+	width:100%;
+	
+	border-bottom:1px solid #ccc; 
+	padding:0; 
+	margin:0;
+}
+.add-new table tr.data { height:50px; } 
+.add-new table td.title { padding:10px 0 0 15px; }
+.add-new .role-name { width:30%; }
+.add-new .per-unit-hours { width:16.5%; }
+.add-new .due-date-minus { width:18%; }
+.add-new .capital-ratio { width:25.5%; }
+.add-new .action-btn { text-align:center; width:5%;}
+
+.add-new .data td {  border-top:none !important; }
+/* -------- VOLUME DATA STYLES --------------------- */
+
+.volume-data-wrapper {
+	border-left:15px solid #ef6f00; /* light - orange #fcb314; */
+	background-color:#fff !important;
+	min-height:290px; 
+}
+.volume-data-container { 
+	float:left; 
+	/* width:89%;  */
+}
+.volume-data { padding:20px 20px 20px 40px;  }
+.volume-data .units { 
+	float:left; 
+	width:30%;
+	padding-bottom:20px;
+	text-align:left;
+}
+.volume-data .units span, .volume-data .vol-year span  { padding-right:5px; }
+.volume-data .units input[type="text"] { 
+	background-color: #fff;
+	border:1px solid #ccc; 
+	min-height:30px;
+	font-size: 14px;
+	border-radius:6px;  
+	margin-right:10px;
+	width:150px;
+}
+.volume-data .vol-year { 
+	float:left;
+	text-align:right;	
+	width:70%;
+}
+.volume-data input[type="text"] { 
+	background: url('../images/transparent.gif'); /* e7f5f9 color: #000; */
+	border:none; 
+	cursor:pointer;
+	width:100%;
+	height:100%;
+}
+.volume-data table { 
+	border:1px solid #ccc; 
+	padding:10px; 
+	text-align:left;							 
+	width:100%; 
+}
+.volume-data .header { border-bottom:1px solid #ccc; }
+.volume-data table tr { min-height: 30px; background-color:#fff !important;}
+.volume-data table th { text-align:left; }
+.volume-data table td {}
+.volume-data-name { 
+	font-weight:bold;
+	padding-right:2% !important;
+	text-align:right;   
+}
+
+table#example { font-size:0.8em; }
+table.dataTable tfoot th, table.dataTable tfoot td {
+	padding: 10px 18px 6px 18px;
+	border-top: 1px solid rgb(221,221,221);
+}
+table.dataTable thead th, table.dataTable thead td {
+	padding: 10px 18px;
+	border-bottom: 1px solid rgb(221,221,221);	
+}
+
+.hdr_divider { border-right: 1px solid rgb(221,221,221); }
+.cAlign { text-align:center; }
+.dgExampleRow th { text-align:left; }
+.txt_input{  background-color: #f7f7f7; border:1px solid #ccc; }
+.hide { display:none; }
+.tabsLeft a { text-decoration:none; display:block; }
+
+/* -------------------------------------------- VERTICAL TABS -------------------------------------------*/
+div#vert-tab-menu {
+	border:none;
+	padding:0;
+}
+div#vert-tab-menu  ul {
+	max-width:4%;
+	position: relative;
+	top:-6px;
+	right:-1px;
+	float:left;
+	border:none !important;
+}
+div#vert-tab-menu .ui-tabs-panel{
+	border:none !important;
+	padding:0;
+}
+div#vert-tab-menu  li.ui-tabs-active {
+	border-right: 1px solid #fff !important;
+	
+}
+.ui-tabs.ui-tabs-vertical  .ui-tabs-nav li.ui-tabs-active{
+	 margin: 0.2em 0;
+}
+.ui-tabs.ui-tabs-vertical .ui-widget-header {
+    border: none !important;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav ul {
+	border:none !important;
+}
+.ui-tabs .ui-tabs-vertical .ui-tabs-nav li {
+    clear: left;
+    width: 100%;
+    margin: 0.2em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    overflow: hidden;
+	position:relative;
+	right:-2px;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav a {
+	transform: rotate(270deg);
+	margin: 40px 0;
+}
+/* -------------------------------------------- JQUERY TABS -------------------------------------------*/
+div#proj_tabs {
+	border:none !important;
+}
+div#proj_tabs .close-tab {
+	background:url('../images/ico_close.gif') no-repeat; 
+	cursor:pointer;
+	float:left;
+	margin: 0.3em 0.3em 0 0;
+	width:16px; 	
+	height:16px;   
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	background-color:#fff !important;
+}
+.ui-tabs-anchor {
+	font-weight:normal;
+}
+.ui-state-active {
+	border-color:#ccc !important;
+}
+.ui-state-active a{
+	color:#333;
+}
+.ui-tabs .ui-widget {
+	border:none !important;
+}
+.ui-tabs .ui-tabs-panel {
+	padding:0 !important;
+}
+div#proj_tabs .ui-widget-header {
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+div#proj_tabs .ui-tabs-panel {
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+
+	<title>DataTables example - Child rows (show extra / detailed information)</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/hc_main.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" language="javascript" src="js/headcount.js"></script>
+	<script type="text/javascript" language="javascript" src="js/volume.js"></script>
+	<script type="text/javascript" language="javascript" src="js/work_effort.js"></script>
+	<script type="text/javascript" language="javascript" class="init">
+	
+$(document).ready(function() {
+	$('.date-picker').datepicker();
+	$('#proj_tabs').tabs();
+	$('#vert-tab-menu').tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
+	
+	var table = $('#tbl_we_1').DataTable( {
+		"bFilter":  false,								//hides filtering and disables filter listeners 
+		"bSort": true,
+		"aoColumnDefs": [
+			{ "bSortable": false, "aTargets": [0]},
+			{ "bSortable": false, "aTargets": [6]},
+			{ "bSortable": false, "aTargets": [7]},
+		],
+		"ajax": "data/headcount.txt",
+		"sDom": "<'top'><'clear'>",						//hides the show entries selector alt = "sDom": "<'top'>rt<'bottom'flp><'clear'>"
+		"columns": [
+			{
+				"className":      'details-control',
+				"info": 		  true,
+				"orderable":      false,
+				"data":           null,
+				"defaultContent": ''
+			},
+			{ "data": "work effort" },
+			{ "data": "due date minus" },
+			{ "data": "total volume" },
+			{ "data": "total estimated cost" },
+			{ "data": "per unit total" },
+			{
+				"className":      'cAlign',
+				"bSortable": 	  false,
+				"info": 		  true,
+				"orderable":      false,
+				"data":           null,
+				"defaultContent": '&nbsp;' //<a href="javascript:void(0);">Edit</a>
+			},
+			{
+				"className":      'cAlign',
+				"bSortable": 	  false,
+				"info": 		  true,
+				"orderable":      false,
+				"data":           null,
+				"defaultContent": '<a href="javascript:void(0);" class="remove">Remove</a>'
+			}
+		],
+		"order": [[1, 'asc']]
+	} );
+} );
+	</script>
+</head>
+
+<body style="background-color:#f7f7f7;">
+<div style="padding:20px;">
+	<div style="border:1px solid #ccc; margin-bottom:10px;">
+		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ PROJECT SEARCH @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<table id="project_search" class="project-search">
+			<tr>
+				<td style="width:80%;">
+					<input type="button" class="btn btn-blue" value="Create New Project" />
+				</td>
+				<td class="txtRight" style="width:10%;">
+					Project Search
+				</td>
+				<td class="expand-details closed"></td>
+			</tr>
+		</table>
+		<div id="project_search_details" class="project-search-details">
+			<div class="container">
+				<table>
+					<tr>
+						<td style="width:8%; text-align:right; padding-right:5px;">
+							Project Search:
+						</td>
+						<td style="width:32%;">
+							<input id="txt_proj_name_1" type="text" style="width:75%;" value="GigaPower"/>
+							&nbsp;
+							<input type="button" value="Select" class="btn btn-blue" />
+						</td>
+						<td style="width:3%; vertical-align:top; padding:7px 10px 0 0;" rowspan="2">Versions</td>
+						<td style="width:57%;" rowspan="2">
+							<div style="float:left: width:95%; height:165px; border:1px solid #ccc; border-radius:4px;">
+								<div style="float:left; width:15%;">
+									<ul class="version-type">
+										<li style="border-bottom:1px solid #ccc; border-right:1px solid #fff; padding:10px;">
+											<a href="#ver-latest">Latest</a>
+										</li>
+										<li style="border-bottom:1px solid #ccc; padding:10px;">
+											<a href="#ver-bare-metal">Bare -Metal<span style="padding-left:5px;">(0)</span></a>
+										</li>
+										<li style="border-bottom:1px solid #ccc; padding:10px;">
+											<a href="#ver-operational">Operational<span style="padding-left:5px;">(0)</span></a>
+										</li>
+										<li style="border-bottom:1px solid #ccc; padding:10px;">
+											<a href="#ver-CFPM">CFPM<span style="padding-left:5px;">(0)</span></a>
+										</li>
+									</ul>									
+								</div>
+								<div style="float:left; width:85%; height:163px; border-left:1px solid #ccc;">
+									Test
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td style="width:32%;">
+							<div style="border-radius:4px; border:1px solid #ccc; height:150px; width:75%; overflow-y:auto; overflow-x:hidden; padding-left:5px;">
+								<table>
+									<tr style="height:30px;"><td>Project 1</td></tr>
+									<tr style="height:30px;"><td>Project 2</td></tr>
+									<tr style="height:30px;"><td>Project 3</td></tr>
+									<tr style="height:30px;"><td>Project 4</td></tr>
+									<tr style="height:30px;"><td>Project 5</td></tr>
+									<tr style="height:30px;"><td>Project 6</td></tr>
+									<tr style="height:30px;"><td>Project 7</td></tr>
+									<tr style="height:30px;"><td>Project 8</td></tr>
+									<tr style="height:30px;"><td>Project 9</td></tr>
+									<tr style="height:30px;"><td>Project 10</td></tr>
+									<tr style="height:30px;"><td>Project 11</td></tr>
+								</table>
+							</div>
+						</td>
+						<td style="width:3%;"></td>
+						<td style="width:57%;"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ PROJECT TABS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+	<div id="proj_tabs">
+		<ul>
+			<li>
+				<a href="#proj-resource-1">Resource Analysis<br>&nbsp;</a>
+			</li>
+			<li class="ui-tabs-active">
+				<a href="#proj-tabs-1">Gigapower<br>Bare Metal - v2.1
+				</a><span class="close-tab" title="Close project tab"></span>
+			</li>
+			<li>
+				<a href="#proj-tabs-3">Advanced Directives<br>Operational - v7.2
+				</a><span class="close-tab" title="Close project tab"></span>
+			</li>
+		</ul>
+		<div id="proj-resource-1">
+			Resource Reports Go Here
+		</div>
+		<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+		<!-- TAB 1 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+		<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+		<div id="proj-tabs-1">
+			<div style="padding:20px; background-color:#fff;">
+				<!-- TAB ACTION BUTTONS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+				<div id="proj_details_act_1" class="action-buttons">
+					<div class="lAlign">
+						<input type="button" class="btn btn-blue" value="Create New Version" />
+					</div>
+					<div class="rAlign">
+						<input type="button" class="btn" value="Save" disabled="true"/>
+					</div>
+					<div class="rAlign" style="padding-right:10px;">
+						<input type="button" class="btn" value="Cancel" />
+					</div>
+				</div>
+				<!-- PROJECT INFORMATION TOP LINE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+				<div style="float:left; width:100%; margin-top:20px; border:1px solid #d1d1d1;">
+					<table id="project_1" class="tbl-proj-qv">
+						<tr>
+							<td class="proj-code" style="width:8%;">
+								Code: <input type="text" id="txt_proj_code_1" style="width:65%;" value="123456abc" readonly="true"/>
+							</td>
+							<td style="width:25%;">
+								Name: <input id="txt_proj_name_1" type="text" style="width:85%;" value="GigaPower"/>
+							</td>
+							<td style="width:15%;">
+								Version Type: 
+								<select id="sel_ver_type_1" style="width:150px;">
+									<option value="bare metal" selected>Bare Metal</option>
+									<option value="cpfm">CPFM</option>
+									<option value="most likely">Most Likely</option>
+									<option value="operational">Operational</option>
+								</select>
+							</td>
+							<td style="width:7%;">
+								Version: <span id="spn_version_1">2.1</span>
+							</td>
+							<td style="width:15%;">
+								Est. Budget:  $  <input id="txt_est_budget_1" type="text" style="width:140px;" />
+							</td>
+							<td style="width:12%;">
+								Start Dt: <input id="txt_start_dt_1" class="date-picker" type="text" style="width:110px;" /><img src="images/ico_calendar.gif" class="dp-calendar" />
+							</td>
+							<td style="width:13%;">
+								End Dt: <input id="txt_end_dt_1" class="date-picker" type="text" style="width:110px;" /><img src="images/ico_calendar.gif" class="dp-calendar" />
+							</td>
+							<td class="expand-details closed"></td>
+						</tr>
+					</table>
+					<!--  EXPANDED PROJECT DETAILS ------------------------------------------------------------>
+					<div id="project_1_details" style="height:100px; display:none; border-top:1px solid #ccc;">
+						<div style="float:left; width:50%; padding:20px;">
+							<div class="project-title">
+								<span>Project</span>
+								<hr />
+							</div>
+							<!-- //////// PROJECT DETAILS //////////////// -->
+							<table style="width:100%;">
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Priority:</td>
+									<td style="padding-left:5px;">
+										<select id="sel_priority_code_1" class="ctrl" style="width:100px;">
+											<option value="1">High</option>
+											<option value="1" selected>Medium</option>
+											<option value="1">Low</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Author:</td>
+									<td style="padding-left:5px;">
+										<span>Jim Carrey</span>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right; vertical-align:top;">Description:</td>
+									<td style="padding-left:5px;">
+										<textarea rows="4" class="ctrl" style="width:98%;"></textarea>
+									</td>
+								</tr>
+							</table>
+							<!-- //////// STRATEGIC INTIATIVES /////////// -->
+							<div class="project-title">
+								<span>Strategic Initiatives</span>
+								<hr />
+							</div>
+							<table style="float:left; width:50%;">
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">SI 1:</td>	
+									<td style="padding-left:5px;">
+										<select id="si1_1" class="ctrl" style="width:80%;">
+											<option value="1">BUSINESS SOLUTIONS (ABS)</option>
+											<option value="1">Corporate</option>
+											<option value="1">EOY BV Not Mapped</option>
+											<option value="1">HOME SOLUTIONS (HS)</option>
+											<option value="1">Mobility</option>
+											<option value="1">WIRELINE / SHARED</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">SI 2C:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_si2c_1" class="ctrl" style="width:80%;">
+											<option value="1">4E RELATED (SHRD RM CHLD)</option>
+											<option value="1">ABS LEGACY (BUS RM CHLD)</option>
+											<option value="1">ABS SHARED (BUS RM CHLD)</option>
+											<option value="1">ADVANCED MOBILITY SERVICES (AMS) (MOB RM CHLD)</option>
+											<option value="1">API (BUS RM CHLD)</option>
+											<option value="1">API PROGRAM (MOB RM CHLD)</option>
+											<option value="1">AVPN/PNT (BUS RM CHLD)</option>
+											<option value="1">BIG DATA (BUS RM CHLD)</option>
+											<option value="1">BIG DATA (CORP RM CHLD)</option>
+											<option value="1">BREAKAGE (HS RM CHLD)</option>
+											<option value="1">BREAKAGE (MOB RM CHLD)</option>
+											<option value="1">BROADBAND OTHER (HS RM CHLD)</option>
+											<option value="1">BUSINESS MOBILITY CRU (MOB RM CHLD)</option>
+											<option value="1">CAPACITY (SHRD RM CHLD)</option>
+											<option value="1">CAPITAL MANAGEMENT (CORP RM CHLD)</option>
+											<option value="1">CAPITAL MGMT OTHER (SHRD RM CHLD)</option>
+											<option value="1">CC-MIPT (BUS RM CHLD)</option>
+											<option value="1">CLOUD OTHER (BUS RM CHLD)</option>
+											<option value="1">CLOUD SOLUTIONS (BUS RM CHLD)</option>
+											<option value="1">COMMON (HS RM CHLD)</option>
+											<option value="1">COMMON INFRASTRUCTURE (MOB RM CHLD)</option>
+											<option value="1">CONEXUS (SHRD RM CHLD)</option>
+											<option value="1">CONF-COLL (BUS RM CHLD)</option>
+											<option value="1">CONNECTED COMM/OTH (HS RM CHLD)</option>
+											<option value="1">CORE MOBILITY (MOB RM CHLD)</option>
+											<option value="1">COST REDUCTION (SHRD RM CHLD)</option>
+											<option value="1">CPE - RGS (HS RM CHLD)</option>
+											<option value="1">CPE - STB/DVR (HS RM CHLD)</option>
+											<option value="1">CREDIT AND COLLECTIONS (CORP RM CHLD)</option>
+											<option value="1">CRICKET (MOB RM CHLD)</option>
+											<option value="1">CSO (CORP RM CHLD)</option>
+											<option value="1">DATA CENTER INFRASTRUCTURE (SHRD RM CHLD)</option>
+											<option value="1">DATA SERVICES (MOB RM CHLD)</option>
+											<option value="1">DIGITAL FIRST (CORP RM CHLD)</option>
+											<option value="1">DIGITAL LIFE (MOB RM CHLD)</option>
+											<option value="1">EMERGING BUSINESS MARKETS (BUS RM CHLD)</option>
+											<option value="1">ENTERPRISE NETWORKING OTHER (BUS RM CHLD)</option>
+											<option value="1">EOY BV Not Mapped</option>
+											<option value="1">ETHERNET - ASE (BUS RM CHLD)</option>
+											<option value="1">ETHERNET - OTHER (BUS RM CHLD)</option>
+											<option value="1">ETTCS (MOB RM CHLD)</option>
+											<option value="1">EVOLVE MONETIZATION (MOB RM CHLD)</option>
+											<option value="1">FIBER HOUSING STARTS (HS RM CHLD)</option>
+											<option value="1">FIBER POR OTHER (HS RM CHLD)</option>
+											<option value="1">FINANCE (CORP RM CHLD)</option>
+											<option value="1">FINANCE (MOB RM CHLD)</option>
+											<option value="1">FLIGHT OPS (CORP RM CHLD)</option>
+											<option value="1">FTTB (BUS RM CHLD)</option>
+											<option value="1">FTTCS (MOB RM CHLD)</option>
+											<option value="1">FWLL (CORP RM CHLD)</option>
+											<option value="1">GIGAPOWER (HS RM CHLD)</option>
+											<option value="1">GIGAPOWER TOOLS (HS RM CHLD)</option>
+											<option value="1">GIGAPOWER/FTTP SE (HS RM CHLD)</option>
+											<option value="1">GLOBAL ACCESS MANAGEMENT (SHRD RM CHLD)</option>
+											<option value="1">GLOBAL MARKETING (CORP RM CHLD)</option>
+											<option value="1">GOVERNMENT (HS RM CHLD)</option>
+											<option value="1">HOSTING (BUS RM CHLD)</option>
+											<option value="1">HSPA+ CORE (MOB RM CHLD)</option>
+											<option value="1">HSPA+ OTHER (MOB RM CHLD)</option>
+											<option value="1">HSPA+ RAN CAPACITY (MOB RM CHLD)</option>
+											<option value="1">HSPA+ RAN DEPLOYMENT (MOB RM CHLD)</option>
+											<option value="1">HUMAN RESOURCES (CORP RM CHLD)</option>
+											<option value="1">IDC (CORP RM CHLD)</option>
+											<option value="1">INDUSTRIAL INTERNET OF THINGS (IIOT) (MOB RM CHLD)</option>
+											<option value="1">INFRASTRUCTURE MAINTENANCE (SHRD RM CHLD)</option>
+											<option value="1">INTERCITY INFRASTRUCTURE MAINT (SHRD RM CHLD)</option>
+											<option value="1">INTERNET OF THINGS (IOT) (MOB RM CHLD)</option>
+											<option value="1">IP FLEX (BUS RM CHLD)</option>
+											<option value="1">IPDSL SUBSCRIBER (HS RM CHLD)</option>
+											<option value="1">IPTF (BUS RM CHLD)</option>
+											<option value="1">IPV6 (SHRD RM CHLD)</option>
+											<option value="1">IUSACELL INTEGRATION (CORP RM CHLD)</option>
+											<option value="1">LABS (CORP RM CHLD)</option>
+											<option value="1">LEGAL MANDATES (CORP RM CHLD)</option>
+											<option value="1">LOCAL LOOP MANDATE/REGULATORY (SHRD RM CHLD)</option>
+											<option value="1">LTE CORE (MOB RM CHLD)</option>
+											<option value="1">LTE DEV/OTHER (MOB RM CHLD)</option>
+											<option value="1">LTE RAN CAPACITY (MOB RM CHLD)</option>
+											<option value="1">LTE RAN DEPLOYMENT (MOB RM CHLD)</option>
+											<option value="1">MAINTENANCE LOCAL LOOP (SHRD RM CHLD)</option>
+											<option value="1">MANAGED SERVICES (BUS RM CHLD)</option>
+											<option value="1">MANDATE/REGULATORY (MOB RM CHLD)</option>
+											<option value="1">MANDATORY (SHRD RM CHLD)</option>
+											<option value="1">MARKETING OPERATIONS (MOB RM CHLD)</option>
+											<option value="1">METRO INFRASTRUCTURE CAPACITY (SHRD RM CHLD)</option>
+											<option value="1">METRO INFRASTRUCTURE MAINTENANCE (SHRD RM CHLD)</option>
+											<option value="1">METRO INFRASTRUCTURE MANDATORY (SHRD RM CHLD)</option>
+											<option value="1">MICROWAVE/OTHER (MOB RM CHLD)</option>
+											<option value="1">MIS-IP (BUS RM CHLD)</option>
+											<option value="1">MOBILITY CENTERS (MOB RM CHLD)</option>
+											<option value="1">NETWORK INTERFACE - BUILDING & CAP (CORP RM CHLD)</option>
+											<option value="1">NEXTEL (CORP RM CHLD)</option>
+											<option value="1">NSB (MOB RM CHLD)</option>
+											<option value="1">OSP BACKBONE FEEDER (SHRD RM CHLD)</option>
+											<option value="1">OSP DISTRIBUTION (SHRD RM CHLD))</option>
+											<option value="1">OTHER (CORP RM CHLD)</option>
+											<option value="1">OTHER (SHRD RM CHLD)</option>
+											<option value="1">PARENT (CORP RM CHLD)</option>
+											<option value="1">PARTNERSHIP (MOB RM CHLD)</option>
+											<option value="1">PORTFOLIO MANAGEMENT (CORP RM CHLD)</option>
+											<option value="1">POWER & ENERGY (CORP RM CHLD)</option>
+											<option value="1">PRIVATE VENUES (MOB RM CHLD)</option>
+											<option value="1">PUBLIC SAFETY (BUS RM CHLD)</option>
+											<option value="1">PUBLIC SAFETY OTHER (BUS RM CHLD)</option>
+											<option value="1">PUBLIC VENUES (MOB RM CHLD)</option>
+											<option value="1">RETAIL (MOB RM CHLD)</option>
+											<option value="1">SALES ENABLEMENT (BUS RM CHLD)</option>
+											<option value="1">SALES NETWORK SOURCING (BUS RM CHLD)</option>
+											<option value="1">SECURITY (BUS RM CHLD)</option>
+											<option value="1">SHARED API PLATFORM (CORP RM CHLD)</option>
+											<option value="1">SHARED COMPUTE (SHRD RM CHLD)</option>
+											<option value="1">SMALL CELLS/ OTHER (MOB RM CHLD)</option>
+											<option value="1">SMB (BUS RM CHLD)</option>
+											<option value="1">SSOP (SHRD RM CHLD)</option>
+											<option value="1">STAR DTV INTEGRATION (CORP RM CHLD)</option>
+											<option value="1">SUPPLY CHAIN (CORP RM CHLD)</option>
+											<option value="1">TD CS&E OTHER (CORP RM CHLD)</option>
+											<option value="1">TD LEGACY TRANSFORMATION (CORP RM CHLD)</option>
+											<option value="1">TD MOBILITY (MOB RM CHLD)</option>
+											<option value="1">TECHNOLOGY & NETWORK OPERATIONS (CORP RM CHLD)</option>
+											<option value="1">TECHNOLOGY OPERATIONS (SHRD RM CHLD)</option>
+											<option value="1">TOOLS (CORP RM CHLD)</option>
+											<option value="1">TOOLS (MOB RM CHLD)</option>
+											<option value="1">VANGUARD/WMS/INTERNATIONAL ROAMING (MOB RM CHLD)</option>
+											<option value="1">VDNA (BUS RM CHLD), VDSL SUBSCRIBER (HS RM CHLD)</option>
+											<option value="1">VIDEO OTHER (HS RM CHLD)</option>
+											<option value="1">VIRTUALIZED INFRASTRUCTURE (SHRD RM CHLD)</option>
+											<option value="1">VOICE (HS RM CHLD)</option>
+											<option value="1">VOICE SERVICES (MOB RM CHLD)</option>
+											<option value="1">VOICE SVCS OTHER (SHRD RM CHLD)</option>
+											<option value="1">VOIP WHOLESALE & OTHER (BUS RM CHLD)</option>
+											<option value="1">WIFI (BUS RM CHLD)</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:100px; text-align:right;">SI 5:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_si5_1" class="ctrl" style="width:80%;">
+											<option value="1">Build - PQ Decisionable</option>
+											<option value="1">Dev - NPQ Capacity/Expansion</option>
+											<option value="1">Dev - NPQ Cost Savings</option>
+											<option value="1">Dev - NPQ Enhancement</option>
+											<option value="1">Dev - NPQ Escrow</option>
+											<option value="1">Dev - NPQ GBC Quality/Reliability</option>
+											<option value="1">Dev - NPQ Revenue Growth</option>
+											<option value="1">Dev - WLT</option>
+											<option value="1">EOY BV Not Mapped</option>
+											<option value="1">M&M - Corp/Admin/Acctng</option>
+											<option value="1">M&M - NPQ GBC</option>
+											<option value="1">M&M - NPQ Maintenance/Other</option>
+											<option value="1">M&M - NPQ Mandatory/Regulatory</option>
+											<option value="1">Volume - NPQ Capacity (Non-Sales)</option>
+											<option value="1">Volume - PQ Capacity (Non-Sales)</option>
+											<option value="1">Volume - PQ Sales</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Work Drivers:</td>	
+									<td style="padding-left:5px;">
+										<input id="txt_work_drivers_1" type="text" class="ctrl" style="width:80%;" />
+									</td>
+								</tr>
+							</table>
+							<table style="float:left; width:50%;">
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">SI 2:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_si2_1" class="ctrl" style="width:80%;">
+											<option value="1">ABS SHARED (BUS RM)</option>
+											<option value="1">AGILE (CORP RM)</option>
+											<option value="1">ALTERNATIVE CELLS (MOB RM)</option>
+											<option value="1">AT&T INTEGRATED CLOUD (SHARED RM)</option>
+											<option value="1">BIG DATA (CORP RM)</option>
+											<option value="1">BROADBAND (HS RM)</option>
+											<option value="1">BVOIP (BUS RM)</option>
+											<option value="1">CAPITAL MANAGEMENT (CORP RM)</option>
+											<option value="1">CAPITAL MANAGEMENT (SHARED RM)</option>
+											<option value="1">CELL SITE BACKHAUL (MOB RM)</option>
+											<option value="1">CLOUD (BUS RM)</option>
+											<option value="1">COLLABORATION (BUS RM)</option>
+											<option value="1">COMMON (HS RM)</option>
+											<option value="1">COMMON INFRASTRUCTURE (MOB RM)</option>
+											<option value="1">CORPORATE OTHER (CORP RM)</option>
+											<option value="1">CSO (CORP RM)</option>
+											<option value="1">EMERGING BUSINESS MARKETS (BUS RM)</option>
+											<option value="1">ENTERPRISE NETWORKING (BUS RM)</option>
+											<option value="1">EOY BV Not Mapped</option>
+											<option value="1">ETHERNET (BUS RM)</option>
+											<option value="1">FIBER POR (HS RM)</option>
+											<option value="1">FTTB (BUS RM)</option>
+											<option value="1">FWLL (CORP RM)</option>
+											<option value="1">GLOBAL ACCESS MANAGEMENT (SHARED RM)</option>
+											<option value="1">GROWTH PLATFORMS (BUS RM)</option>
+											<option value="1">HOME SOLUTIONS BREAKAGE (HS RM)</option>
+											<option value="1">HSPA+ (MOB RM)</option>
+											<option value="1">INFRASTRUCTURE (SHARED RM)</option>
+											<option value="1">INTERCITY INFRASTRUCTURE (SHARED RM)</option>
+											<option value="1">IPV6 (SHARED RM)</option>
+											<option value="1">IUSACELL INTEGRATION (CORP RM)</option>
+											<option value="1">LABS (CORP RM)</option>
+											<option value="1">LEGACY (BUS RM)</option>
+											<option value="1">LOCAL LOOP (SHARED RM)</option>
+											<option value="1">LTE (MOB RM)</option>
+											<option value="1">MANDATE/REGULATORY (MOB RM)</option>
+											<option value="1">METRO INFRASTRUCTURE (SHARED RM)</option>
+											<option value="1">MOBILITY BREAKAGE (MOB RM)</option>
+											<option value="1">MOBILITY DEVELOPMENT (MOB RM)</option>
+											<option value="1">MOBILITY TOOLS (MOB RM)</option>
+											<option value="1">NEXTEL (CORP RM)</option>
+											<option value="1">NSB (MOB RM)</option>
+											<option value="1">PUBLIC SAFETY (BUS RM)</option>
+											<option value="1">REAL ESTATE (CORP RM)</option>
+											<option value="1">SALES (BUS RM)</option>
+											<option value="1">STAR DTV INTEGRATION (CORP RM)</option>
+											<option value="1">TD COST SAVINGS & EFFICIENCIES (CORP RM)</option>
+											<option value="1">TD MOBILITY (MOB RM)</option>
+											<option value="1">TECHNOLOGY OPERATIONS (SHARED RM)</option>
+											<option value="1">VIDEO (HS RM)</option>
+											<option value="1">VOICE (HS RM)</option>
+											<option value="1">VOICE SERVICES (SHARED RM)</option>
+											<option value="1">WIFI (BUS RM)</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">SI 3:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_si3_1" class="ctrl" style="width:80%;">
+											<option value="1">Build</option>
+											<option value="1">Development</option>
+											<option value="1">EOY BV Not Mapped</option>
+											<option value="1">Maintenance/Mandatory</option>
+											<option value="1">Volume</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">SI 6:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_si6_1" class="ctrl" style="width:80%;">
+											<option value="1">ABS</option>
+											<option value="1">BIG DATA</option>
+											<option value="1">C&E </option>
+											<option value="1">CAP MGMT</option>
+											<option value="1">CRE</option>
+											<option value="1">CSO</option>
+											<option value="1">EOY BV Not Mapped</option>
+											<option value="1">FINANCE</option>
+											<option value="1">GLOBAL ACCESS MANAGEMENT</option>
+											<option value="1">HOME SOLUTIONS</option>
+											<option value="1">IPV6</option>
+											<option value="1">LABS</option>
+											<option value="1">MOBILITY</option>
+											<option value="1">SUPPLY CHAIN</option>
+											<option value="1">TD</option>
+											<option value="1">TECH OPS</option>
+											<option value="1">TP&E </option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Business Unit:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_business_unit_1" class="ctrl" style="width:80%">
+											<option value="1">EAST CONSTRUCTION & ENGR</option>
+											<option value="1">MIDWEST CONSTRUCTION & ENGR</option>
+											<option value="1">MOBILITY CONSTRUCTION & ENGR</option>
+											<option value="1">NATIONAL CONSTRUCTION & ENGR</option>
+											<option value="1">NETWORK METHODS AND SUPPORT</option>
+											<option value="1">SOUTHEAST CONSTRUCTION & ENGR</option>
+											<option value="1">SOUTHWEST CONSTRUCTION & ENGR</option>
+											<option value="1">WEST CONSTRUCTION & ENGR</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div style="float:left; width:50%; padding:20px;">
+							<div class="project-title">
+								<span>Version</span>
+								<hr />
+							</div>
+							<table style="width:100%;">
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right; vertical-align:top;">Description:</td>
+									<td style="padding-left:5px;">
+										<textarea rows="4" class="ctrl" style="width:98%;"></textarea>
+									</td>
+								</tr>
+							</table>
+							<div class="project-title">
+								<span>Budget</span>
+								<hr />
+							</div>
+							<table style="width:50%;">
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Version:</td>	
+									<td style="padding-left:5px;">
+										 <input id="txt_budget_ver_1" type="text" class="ctrl" style="width:100%;"/>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Status:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_status_1" class="ctrl" style="width:30%">
+											<option value="1">Funded</option>
+											<option value="1">Partially Funded</option>
+											<option value="1">Unfunded</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Funding Indicator:</td>	
+									<td style="padding-left:5px;">
+										<select id="sel_funding_ind_1" class="ctrl" style="width:30%">
+											<option value="1">Capital</option>
+											<option value="1">Expense</option>
+										</select>
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Submission Date:</td>	
+									<td style="padding-left:5px;">
+										 <input id="txt_submission_dt_1" type="text" class="ctrl" style="width:110px;" />
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Capital Cost:</td>	
+									<td style="padding-left:5px;">
+										 $ <input id="txt_cap_cost_1" type="text" class="ctrl" style="width:50%;" />
+									</td>
+								</tr>
+								<tr style="height:45px;">
+									<td style="width:125px; text-align:right;">Expense Cost:</td>	
+									<td style="padding-left:5px;">
+										 $ <input id="txt_expense_cost_01" type="text" class="ctrl" style="width:50%;" />
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+				<!-- ---------------------------- MAIN CONTAINER STARTS HERE ----------------------------------->
+				<div id="project_1_main" style="padding:20px; min-height:425px; border-left:1px solid #ccc; border-bottom:1px solid #ccc; border-right:1px solid #ccc;"> <!-- border:1px solid red; -->
+					<div class="txtRight" style="padding:0 55px 20px 0;">
+						<input type="button" class="btn btn-blue" value="Import" />
+					</div>
+					<div id="vert-tab-menu">
+						<ul>
+							<li>
+								<a href="#vert-tab-volume-1">Volume</a>
+							</li>
+							<li>
+								<a href="#vert-tab-cost-1">Cost</a>
+							</li>
+						</ul>
+						<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+						<!-- TAB - VOLUME DATA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+						<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+						<div id="vert-tab-volume-1">
+							<div style="float:left; width:96%; border:1px solid #ccc; background-color:#fff;"> 
+								<div style="padding:20px;">
+									<!-- ADD WORK EFFORT BUTTON -->
+									<div style="padding-top:10px;">
+										<div style="text-align:right;">
+											<span style="margin-right:10px;">Project Total Cost:</span><span style="font-weight:bold; margin-right:30px;">$2,000,000.00</span>
+											<input type="button" value="Cost Spread" class="btn btn-blue" id="btn_cost_spread" />
+										</div>
+									</div>
+									<!-- UNIT SPREAD BUTTON -->
+									<div style="padding:10px 0px 20px 0;" id="add_we_1">
+										<div class="action-buttons">
+											<input type="button" value="Add Work Effort" class="btn btn-blue" />
+										</div>
+									</div>
+									<!-- WORK EFFORT DATATABLE STARTS HERE ------------------------------------------->
+									<div class="container" style="padding:0; width:100%; ">
+										<div class="add-role-container">
+											<!-- ADD NEW WORK EFFORT SLIDE UP --------------------------------------->
+											<div id="add_new_we_1" class="add-new">
+												<table>
+													<tr>
+														<td class="title"  colspan="9">Add new work effort:</td>
+													</tr>
+													<tr class="data">
+														<td style="width:5%;"></td>
+														<td style="width:37%;">
+															<input id='txt_add_we_1' type='text' style="width:98%;" />
+														</td>
+														<td>
+															<input id='txt_due_date_minus_1' type='text' style="width:95%;" />
+														</td>
+														<td>
+															<input id='txt_total_volume_1' type='text' style="width:95%;" />
+														</td>
+														<td>
+															<input id='txt_total_est_cost_1' type='text' style="width:95%;" />
+														</td>
+														<td>
+															<input id='txt_per_unit_total_1' type='text' style="width:95%;" />
+														</td>
+														<td class="action-btn">
+															<a class="add work effort" href="javascript:void(0);">Add</a>
+														</td>
+														<td class="action-btn">
+															<a class="cancel work effort" href="javascript:void(0);">Cancel</a>
+														</td>
+													</tr>
+												</table>
+											</div>
+											<!-- ++++++++++++++++++++++++++++ WORK EFFORT TABLE +++++++++++++++++++++++++++++ -->
+											<table id="tbl_we_1" class="display child-table we" cellspacing="0">
+												<thead>
+													<tr>
+														<th class="hdr_divider"></th>
+														<th style="width:37% !important;" class="hdr_divider">Work Effort</th>
+														<th style="width:12%;" class="hdr_divider">Due Date Minus</th>
+														<th style="width:12%;" class="hdr_divider">Total Volume</th>
+														<th style="width:12%;" class="hdr_divider">Total Est. Cost</th>
+														<th style="width:12%;" class="hdr_divider">Per Unit Total</th>
+														<th style="width:5% !important;"></th>
+														<th style="width:5% !important;"></th>
+													</tr>
+												</thead>
+											</table>
+										</div>		
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="vert-tab-cost-1">
+							<div style="float:left; width:96%; border:1px solid #ccc; background-color:#fff;"> 
+								<div style="padding:20px;">
+									<!-- ADD WORK EFFORT BUTTON -->
+									<div style="padding:10px 0;">
+										<style>
+											.table-cost { 
+												padding:10px;
+												width:100%;  
+											}
+											.table-cost tr { min-height:32px; }
+											.table-cost td { font-weight: bold; }
+											.table-cost span { font-weight:normal; }
+											.cost-detail {
+												background-color:#fff; /* #0574ac; */
+												border:1px solid #ccc; 
+												border-top-right-radius:6px;
+												border-top-left-radius:6px;
+												margin-top:10px; 
+											}
+											.cost-detail .title-bar  {
+												color:#333;  /* #fff  #0574ac; */
+												height:50px; 
+												text-align:left; 
+												width:100%;
+											}
+											.title-bar td:first-child  {
+												font-weight:bold;
+												padding-left:10px;
+												width:95%;  
+											}
+											.detail-wrapper {
+												display:none;
+												background-color:#fff;
+												border-top:1px solid #ccc; 
+												padding:10px; 
+											}
+											.detail-container {
+												border:1px solid #ccc;
+											}
+											.detail-container table { width:100%; }
+											.detail-container table td, .detail-container table th, {
+												text-align:left;
+											}
+											.detail-container table td:first-child, .detail-container table th:first-child {
+												padding-left:10px;
+											}
+											.detail-container table tr { 
+												border-top:1px solid #ccc; 
+												min-height:50px; 
+											}
+											.detail-container table tr:first-child  { border-top: none; } 
+											.detail-container table tr.alt-row { 
+												background-color:#f7f7f7; 
+												border-top:1px solid #ccc;
+											}
+											.tid-summary-table {
+												border-left:1px solid #ccc;
+												width:100%;
+											}
+										</style>
+										<table class="table-cost">
+											<tr>
+												<td style="width:45%;">Year Forecasting: <span>2015</span>
+												<td style="width:45%;">Project Total Cost: $<span>4,000,000,000.00</span>
+												<td class="txtRight">
+													<input type="button" value="Recalculate" class="btn btn-blue" id="btn_cost_spread" />
+												</td>
+											</tr>
+											<tr>
+												<td>Range of dates used for rates: <span>01/2014 - 08/2014</span>
+												<td>FTE: <span>3,018</span>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Region: <span>Sample</span>
+												<td colspan="2"></td>
+											</tr>
+										</table>
+									</div>
+									<!-- GLOBAL VARIABLES ----------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="global_variables_1">
+											<tr>
+												<td>Global Variables</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="global_variables_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:20%;">H4/ASI/Non-Telco Wages</th>
+														<th style="width:20%;">Net Cross Charges</th>
+														<th style="width:20%;">Clearances From Others</th>
+														<th style="width:20%;">Nominal Percent Capitalization Output</th>
+														<th></th>
+													</tr>
+													<tr class="alt-row">
+														<td>
+															$ <input type="text" id="non_telco_wages_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="net_cross_charges_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="clear_from_others_1" style="width:40%;" />
+														</td>
+														<td>
+															<input type="text" id="nominal_cap_output_1" style="width:30%;" />%
+														</td>
+														<td><td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- MACRO VARIABLES ----------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="macro_variables_1">
+											<tr>
+												<td>Macro Variables</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="macro_variables_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:20%;">Output Description</th>
+														<th style="width:20%;">Original Value</th>
+														<th style="width:20%;">Input Value</th>
+														<th style="width:20%;">Export to Output</th>
+														<th>Output Variance</th>
+													</tr>
+													<tr class="alt-row">
+														<td>
+															Expense Target
+														</td>
+														<td>
+															$ <input type="text" id="exp_target_orig_val_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="exp_target_input_val_1" style="width:40%;" />
+														</td>
+														<td>
+															<span id="exp_target_export_output_1">$ 76,336</span>
+														</td>
+														<td>
+															<span id="exp_target_output_variance_1">$ 3,664</span>
+														<td>
+													</tr>
+													<tr>
+														<td>
+															DEG
+														</td>
+														<td>
+															$ <input type="text" id="deg_target_orig_val_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="deg_target_input_val_1" style="width:40%;" />
+														</td>
+														<td>
+															<span id="deg_target_export_output_1">$ 26,325</span>
+														</td>
+														<td>
+															<span id="deg_target_output_variance_1">($23,000)</span>
+														<td>
+													</tr>
+													<tr class="alt-row">
+														<td>
+															Eng
+														</td>
+														<td>
+															$ <input type="text" id="eng_target_orig_val_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="eng_target_input_val_1" style="width:40%;" />
+														</td>
+														<td>
+															<span id="eng_target_export_output_1">$ 14,049</span>
+														</td>
+														<td>
+															<span id="eng_target_output_variance_1">$ 951</span>
+														<td>
+													</tr>
+													<tr>
+														<td>
+															Const
+														</td>
+														<td>
+															$ <input type="text" id="const_target_orig_val_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="const_target_input_val_1" style="width:40%;" />
+														</td>
+														<td>
+															<span id="const_target_export_output_1">$ 20,906</span>
+														</td>
+														<td>
+															<span id="const_target_output_variance_1">($2,343)</span>
+														<td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- INPUT MODEL ----------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="input_model_1">
+											<tr>
+												<td>Input Model</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="input_model_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table cellspacing="0" cellpadding="0">
+													<tr>
+														<th style="width:33%;">CAPITAL</th>
+														<th style="width:33%;">EXPENSE ONLY</th>
+														<th>PROJECT % OF TOTAL</th>
+													</tr>
+													<tr>
+														<td>
+															<table style="border:1px solid #ccc;">
+																<tr>
+																	<td style="width:25%;"></td>
+																	<td style="width:25%;">Telco Eng<br>Cap Rate</td>
+																	<td style="width:25%;">Telco Labor<br>Cap Rate</td>
+																	<td style="width:25%;">Telco DEG<br>Cap Rate</td>
+																</tr>
+																<tr class="alt-row">
+																	<td>Original Value</td>
+																	<td>
+																		<input type="text" id="pt_ov_telco_eng_cap_rate_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="pt_ov_telco_labor_cap_rate_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="pt_ov_telco_deg_cap_rate_1" style="width:30%;" />%
+																	</td>
+																</tr>
+																<tr>
+																	<td>Input Value</td>
+																	<td>
+																		<input type="text" id="pt_iv_telco_eng_cap_rate_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="pt_iv_telco_labor_cap_rate_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="pt_iv_telco_deg_cap_rate_1" style="width:30%;" />%
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td>
+															<table style="border:1px solid #ccc;">
+																<tr>
+																	<td style="width:25%;"></td>
+																	<td style="width:25%;">Telco Eng</td>
+																	<td style="width:25%;">Telco Labor</td>
+																	<td style="width:25%;">Telco DEG</td>
+																</tr>
+																<tr class="alt-row">
+																	<td>Original Value</td>
+																	<td>
+																		<input type="text" id="eo_ov_telco_eng_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="eo_ov_telco_labor_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="eo_ov_telco_deg_1" style="width:30%;" />%
+																	</td>
+																</tr>
+																<tr>
+																	<td>Input Value</td>
+																	<td>
+																		<input type="text" id="eo_iv_telco_eng_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="eo_iv_telco_labor_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="eo_iv_telco_deg_1" style="width:30%;" />%
+																	</td>
+																</tr>
+															</table>
+														</td>
+														<td>
+															<table style="border:1px solid #ccc;">
+																<tr>
+																	<td style="width:25%;"></td>
+																	<td style="width:25%;">Telco Eng</td>
+																	<td style="width:25%;">Telco Labor</td>
+																	<td style="width:25%;">Telco DEG</td>
+																</tr>
+																<tr class="alt-row">
+																	<td>Original Value</td>
+																	<td>
+																		<input type="text" id="ov_pt_telco_eng_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="ov_pt_telco_labor_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="ov_pt_telco_deg_1" style="width:30%;" />%
+																	</td>
+																</tr>
+																<tr>
+																	<td>Input Value</td>
+																	<td>
+																		<input type="text" id="iv_pt_telco_eng_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="iv_pt_telco_labor_1" style="width:30%;" />%
+																	</td>
+																	<td>
+																		<input type="text" id="iv_pt_telco_deg_1" style="width:30%;" />%
+																	</td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- AVERAGE ANNUAL LABOR RATE --------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="annual_avg_labor_1">
+											<tr>
+												<td>Global Variables</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="annual_avg_labor_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:20%;">Telco Labor</th>
+														<th style="width:20%;">ASI</th>
+														<th style="width:20%;">Telco Eng</th>
+														<th style="width:20%;">Net Cross Charge Out/In</th>
+														<th>Telco DEG</th>
+													</tr>
+													<tr class="alt-row">
+														<td>
+															$ <input type="text" id="aalr_telco_labor_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="aalr_asi_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="aalr_telco_eng_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="aalr_net_cross_charge_1" style="width:40%;" />
+														</td>
+														<td>
+															$ <input type="text" id="aalr_telco_deg_1" style="width:40%;" />
+														<td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- PERCENTAGE DATA -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="percentage_data_1">
+											<tr>
+												<td>Percentage Data</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="percentage_data_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:25%;">Engineering Shift from Telco to Contractor</th>
+														<th style="width:25%;">Labor Shift from Telco to Contract Labor</th>
+														<th style="width:25%;">DEG Shift from Telco to Contract DEG</th>
+														<th></th>
+													</tr>
+													<tr class="alt-row">
+														<td>
+															<input type="text" id="pd_eng_shift_telco_to_contract_1" style="width:25%;" /> %
+														</td>
+														<td>
+															<input type="text" id="pd_labor_shift_telco_to_contract_1" style="width:25%;" /> %
+														</td>
+														<td>
+															<input type="text" id="pd_deg_shift_telco_to_contract_1" style="width:25%;" /> %
+														</td>
+														<td><td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- C&E BUSINESS UNITS -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="ce_business_units_1">
+											<tr>
+												<td>C&E Business Units</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="ce_business_units_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:11%;">Telco Eng % of Total</th>
+														<th style="width:11%;">Telco Labor % of Total</th>
+														<th style="width:11%;">Telco DEG % of Total</th>
+														<th style="width:11%;">Supp/Cont Eng Dollars</th>
+														<th style="width:15%;">Supp/Cont Labor & DEG Dollars</th>
+														<th style="width:11%;">Supp/Cont Other</th>
+														<th style="width:11%;">Materials</th>
+														<th style="width:11%;">Other</th>
+														<th>Amt Billed</th>
+													</tr>
+													<tr class="alt-row">
+														<td>
+															<span id="cebu_telco_eng_total_1">5.1%</span>
+														</td>
+														<td>
+															<span id="cebu_telco_labor_total_1">6.6%</span>
+														</td>
+														<td>
+															<span id="cebu_telco_deg_total_1">1.5%</span>
+														</td>
+														<td>
+															<span id="cebu_supp_cont_eng_dollars_1">2.5%</span>
+														</td>
+														<td>
+															<span id="cebu_supp_cont_labor_deg_dollars_1">59.1%</span>
+														</td>
+														<td>
+															<span id="cebu_supp_cont_other_1">9.0%</span>
+														</td>
+														<td>
+															<span id="cebu_materials_1">6.7%</span>
+														</td>
+														<td>
+															<span id="cebu_other_1">8.7%</span>
+														</td>
+														<td>
+															<span id="cebu_amount_billed_1">0.0%</span>
+														</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- PERCENTAGE DATA (NON C&E BUSINESS UNITS )-------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="percentage_data_non_ce_1">
+											<tr>
+												<td>Percentage Data (Non C&E Business Units)</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="percentage_data_non_ce_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:25%;">Non C&E BU Engineering</th>
+														<th style="width:25%;">Non C&E BU Labor</th>
+														<th></th>
+													</tr>
+													<tr class="alt-row">
+														<td>
+															<span id="pdnce_bu_engineering_1" style="width:25%;">0.3%</span>
+														</td>
+														<td>
+															<span id="pdnce_bu_labor_1" style="width:25%;">0.5%</span>
+														</td>
+														<td><td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- TRAILING EXPENSE ON CAPITAL PROJECTS -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="te_capital_projects_1">
+											<tr>
+												<td>Trailing Expense On Capital Projects</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="te_capital_projects_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:20%;">Telco Eng Exp Dollars</th>
+														<th style="width:20%;">Telco Labor Exp Dollars</th>
+														<th style="width:20%;">Telco DEG Exp Dollars</th>
+														<th>TOTAL</th>
+													</tr>
+													<tr class="alt-row">
+														<td><span id="tecp_telco_eng_eng_dollars_1">$ 23</span></td>
+														<td><span id="tecp_telco_labor_exp_dollars_1">$ 46</span></td>
+														<td><span id="tecp_telco_deg_exp_dollars_1">$ 4</span></td>
+														<td><span id="tecp_total_1">$ 73</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- CAPITAL EXPENSE -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="capital_expense_1">
+											<tr>
+												<td>Capital Expense</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="capital_expense_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:7%;">Telco Eng<br>Cap $</th>
+														<th style="width:5%;">Telco Eng<br>Exp $</th>
+														<th style="width:4%;">Eng Cap Rate</th>
+														<th style="width:5%;">Telco Labor<br>Cap $</th>
+														<th style="width:7%;">Telco Labor<br>Exp $</th>
+														<th style="width:5%;">Labor Cap Rate</th>
+														<th style="width:5%;">Telco DEG Cap $</th>
+														<th style="width:5%;">Telco DEG Exp $</th>
+														<th style="width:5%;">DEG Cap Rate</th>
+														<th style="width:5%;">Supp/Cont Eng $</th>
+														<th style="width:5%;">Supp/Cont Labor $</th>
+														<th style="width:5%;">Supp/Cont Other $</th>
+														<th style="width:5%;">Materials</th>
+														<th style="width:5%;">Other</th>
+														<th style="width:5%;">Amount Billed</th>
+														<th style="width:7%;">YTD C&E BU Subtotal</th>
+														<th style="width:5%;">Non C&E<br>BU Eng</th>
+														<th style="width:5%;">Non C&E<br>BU Labor</th>
+														<th style="width:5%;">YTD LNO<br>C&E Total</th>
+													</tr>
+													<tr class="alt-row">
+														<td><span id="ce_telco_eng_cap_dollars_1">$ 415</span></td>
+														<td><span id="ce_telco_eng_exp_dollars_1">$ 23</span></td>
+														<td><span id="ce_eng_cap_rate_1">94.8%</span></td>
+														<td><span id="ce_telco_labor_cap_dollars_1">$ 536</span></td>
+														<td><span id="ce_telco_labor_exp_dollars_1">$ 46</span></td>
+														<td><span id="ce_labor_cap_rate_1">92.1%</span></td>
+														<td><span id="ce_telco_deg_cap_dollars_1">$ 125</span></td>
+														<td><span id="ce_telco_deg_exp_dollars_1">$ 4</span></td>
+														<td><span id="ce_deg_cap_rate_1">96.5</span>%</td>
+														<td><span id="ce_supp_cont_eng_dollars_1">$ 199</span></td>
+														<td><span id="ce_supp_cont_labor_dollars_1">$ 4792</span></td>
+														<td><span id="ce_supp_cont_other_dollars_1">$ 733</span></td>
+														<td><span id="ce_materials_1">$ 541</span></td>
+														<td><span id="ce_other_1">$ 701</span></td>
+														<td><span id="ce_amount_billed_1">($1)</span></td>
+														<td><span id="ce_ytd_ce_bu_subtotal_1">$ 8042</span></td>
+														<td><span id="ce_non_ce_bu_eng_1">$ 42</span></td>
+														<td><span id="ce_non_ce_bu_labor_1">$ 42</span></td>
+														<td><span id="ce_ytd_lno_ce_total_1">$ 8105</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- EXPENSE ONLY ----------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="expense_only_1">
+											<tr>
+												<td>Expense Only</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="expense_only_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:10%;">Output Description</th>
+														<th style="width:5%;">Telco Eng<br>Cap $</th>
+														<th style="width:5%;">Telco Eng<br>Exp $</th>
+														<th style="width:5%;">Eng Cap<br>Rate</th>
+														<th style="width:6%;">Telco Labor<br>Cap $</th>
+														<th style="width:5%;">Telco Labor<br>Exp $</th>
+														<th style="width:5%;">Labor Cap<br>Rate</th>
+														<th style="width:5%;">Telco DEG<br>Cap $</th>
+														<th style="width:5%;">Telco DEG<br>Exp $</th>
+														<th style="width:5%;">DEG Cap Rate</th>
+														<th style="width:5%;">Supp/Cont<br>Eng $</th>
+														<th style="width:5%;">Supp/Cont<br>Labor $</th>
+														<th style="width:5%;">Supp/Cont<br>Other $</th>
+														<th style="width:4%;">Materials</th>
+														<th style="width:4%;">Other</th>
+														<th style="width:4%;">Amount Billed</th>
+														<th style="width:5%;">YTD C&E<br>BU Subtotal</th>
+													</tr>
+													<tr class="alt-row">
+														<td>Expense Only Projects</td>
+														<td><span id="eo_eop_telco_eng_cap_dollars_1">-</span></td>
+														<td><span id="eo_eop_telco_eng_exp_dollars_1">$ 7,289</span></td>
+														<td><span id="eo_eop_eng_cap_rate_1">0.0%</span></td>
+														<td><span id="eo_eop_telco_labor_cap_1">-</span></td>
+														<td><span id="eo_eop_telco_labor_exp_1">$ 10,665</span></td>
+														<td><span id="eo_eop_labor_cap_rate_1">0.0%</span></td>
+														<td><span id="eo_eop_telco_deg_cap_dollars_1">-</span></td>
+														<td><span id="eo_eop_telco_deg_exp_dollars_1">$ 2,861</span></td>
+														<td><span id="eo_eop_deg_cap_rate_1">0.0%</span></td>
+														<td><span id="eo_eop_supp_cont_eng_dollars_1">-</span></td>
+														<td><span id="eo_eop_supp_cont_labor_dollars_1">-</span></td>
+														<td><span id="eo_eop_supp_cont_other_dollars_1">-</span></td>
+														<td><span id="eo_eop_materials_1">-</span></td>
+														<td><span id="eo_eop_other_1">-</span></td>
+														<td><span id="eo_eop_amt_billed_1">-</span></td>
+														<td><span id="eo_eop_ytd_ce_bu_subtotal_1">-</span></td>
+													</tr>
+													<tr>
+														<td>Projects w/ Capital/Exps</td>
+														<td><span id="eo_pce_telco_eng_cap_dollars_1">$ 65,506</span></td>
+														<td><span id="eo_pce_telco_eng_exp_dollars_1">$ 11,535</span></td>
+														<td><span id="eo_pce_eng_cap_rate_1">85.0%</span></td>
+														<td><span id="eo_pce_telco_labor_cap_1">$ 75,888</span></td>
+														<td><span id="eo_pce_telco_labor_exp_1">$ 17,436</span></td>
+														<td><span id="eo_pce_labor_cap_rate_1">81.3%</span></td>
+														<td><span id="eo_pce_telco_deg_cap_dollars_1">$ 8,025</span></td>
+														<td><span id="eo_pce_telco_deg_exp_dollars_1">$ 450</span></td>
+														<td><span id="eo_pce_deg_cap_rate_1">94.7%</span></td>
+														<td><span id="eo_pce_supp_cont_eng_dollars_1">$ 335</span></td>
+														<td><span id="eo_pce_supp_cont_labor_dollars_1">$ 158,523</span></td>
+														<td><span id="eo_pce_supp_cont_other_dollars_1">$ 138,523</span></td>
+														<td><span id="eo_pce_materials_1">$ 67,635</span></td>
+														<td><span id="eo_pce_other_1">$ 77,567</span></td>
+														<td><span id="eo_pce_amt_billed_1">($5,443)</span></td>
+														<td><span id="eo_pce_ytd_ce_bu_subtotal_1">$ 586,586</span></td>
+													</tr>
+													<tr class="alt-row">
+														<td>Total Projects</td>
+														<td><span id="eo_tp_telco_eng_cap_dollars_1">$ 65,506</span></td>
+														<td><span id="eo_tp_telco_eng_exp_dollars_1">$ 18,824</span></td>
+														<td><span id="eo_tp_eng_cap_rate_1">77.7%</span></td>
+														<td><span id="eo_tp_telco_labor_cap_1">$ 75,888</span></td>
+														<td><span id="eo_tp_telco_labor_exp_1">$ 28,101</span></td>
+														<td><span id="eo_tp_labor_cap_rate_1">73.0%</span></td>
+														<td><span id="eo_tp_telco_deg_cap_dollars_1">$ 8,025</span></td>
+														<td><span id="eo_tp_telco_deg_exp_dollars_1">$ 3,311</span></td>
+														<td><span id="eo_tp_deg_cap_rate_1">70.8%</span></td>
+														<td><span id="eo_tp_supp_cont_eng_dollars_1">$ 335</span></td>
+														<td><span id="eo_tp_supp_cont_labor_dollars_1">$ 158,552</span></td>
+														<td><span id="eo_tp_supp_cont_other_dollars_1">$ 138,523</span></td>
+														<td><span id="eo_tp_materials_1">$ 67,635</span></td>
+														<td><span id="eo_tp_other_1">$ 77,567</span></td>
+														<td><span id="eo_tp_amt_billed_1">($5,443)</span></td>
+														<td><span id="eo_tp_ytd_ce_bu_subtotal_1">$ 149,418</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- NON-PROJECT DOLLARS -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="non_proj_dollars_1">
+											<tr>
+												<td>Non-Project Dollars</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="non_proj_dollars_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:15%;">Output Description</th>
+														<th style="width:15%;">Telco Eng Dollars</th>
+														<th style="width:15%;">Telco Labor Dollars</th>
+														<th colspan="2">Telco DEG Dollars</th>
+													</tr>
+													<tr class="alt-row">
+														<th>Total Project Dollars</th>
+														<td><span id="npd_tpd_telco_eng_dollars_1">$ 84,330</span></td>
+														<td><span id="npd_tpd_telco_labor_dollars_1">$ 103,989</span></td>
+														<td colspan="2"><span id="npd_tpd_telco_deg_dollars_1">$ 11,336</span></td>
+													</tr>
+													<tr>
+														<th>Percent Project Time</th>
+														<td><span id="npd_ppt_telco_eng_dollars_1">92.6</span>%</td>
+														<td><span id="npd_ppt_telco_labor_dollars_1">91.0</span>%</td>
+														<td colspan="2"><span id="npd_ppt_telco_deg_dollars_1">32.6</span>%</td>
+													</tr>
+													<tr class="alt-row">
+														<th>Totsl Incurred Dollars</th>
+														<td><span id="npd_tid_telco_eng_dollars_1">$ 91,090</span></td>
+														<td><span id="npd_tid_telco_labor_dollars_1">$ 114,230</span></td>
+														<td colspan="2"><span id="npd_ppt_telco_deg_dollars_1">$ 34,800</span></td>
+													</tr>
+													<tr>
+														<th>Non-Project Percentage</th>
+														<td><span id="npd_npp_telco_eng_dollars_1">7.4</span>%</td>
+														<td><span id="npd_npp_telco_labor_dollars_1">9.0</span>%</td>
+														<td colspan="2"><span id="npd_npp_telco_deg_dollars_1">67.4</span>%</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- OTHER C&E DOLLARS -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="other_ce_dollars_1">
+											<tr>
+												<td>Other C&E Dollars</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="other_ce_dollars_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:15%;">Output Description</th>
+														<th style="width:15%;">Telco Eng Dollars</th>
+														<th style="width:15%;">Telco Labor Dollars</th>
+														<th style="width:15%;">Telco DEG Dollars</th>
+														<th></th>
+													</tr>
+													<tr class="alt-row">
+														<td>Capital</td>
+														<td>$ <input type="text" id="oce_capital_telco_eng_dollars_1" style="width:35%;" /></td>
+														<td>$ <input type="text" id="oce_capital_telco_labor_dollars_1" style="width:35%;" /></td>
+														<td>$ <input type="text" id="oce_capital_telco_deg_dollars_1" style="width:35%;" /></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>Expense</td>
+														<td>$ <input type="text" id="oce_exp_telco_eng_dollars_1" style="width:35%;" /></td>
+														<td>$ <input type="text" id="oce_exp_telco_labor_dollars_1" style="width:35%;" /></td>
+														<td>$ <input type="text" id="oce_exp_telco_deg_dollars_1" style="width:35%;" /></td>
+														<td></td>
+													</tr>
+													<tr class="alt-row">
+														<td>Total Project Dollars</td>
+														<td>$ <span id="oce_tpd_telco_deg_dollars_1">888</span></td>
+														<td>$ <span id="oce_tpd_telco_deg_dollars_1">3,355</span></td>
+														<td>$ <span id="oce_tpd_telco_deg_dollars_1">470</span></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>Percent Project Time</td>
+														<td><span id="oce_ppt_telco_deg_dollars_1">92.6</span> %</td>
+														<td><span id="oce_ppt_telco_deg_dollars_1">91.0</span> %</td>
+														<td><span id="oce_ppt_telco_deg_dollars_1">32.6</span> %</td>
+														<td></td>
+													</tr>
+													<tr class="alt-row">
+														<td>Total Incurred Dollars</td>
+														<td>$ <span id="oce_tid_telco_deg_dollars_1">6,760</span></td>
+														<td>$ <span id="oce_tid_telco_deg_dollars_1">10,240</span></td>
+														<td>$ <span id="oce_tid_telco_deg_dollars_1">23,464</span></td>
+														<td></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- TOTAL INCURRED DOLLARS -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="total_incurred_dollars_1">
+											<tr>
+												<td>Total Incurred Dollars</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="total_incurred_dollars_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:28%;">Output Description</th>
+														<th style="width:8%;">Telco Eng<br>Cap Dollars</th>
+														<th style="width:8%;">Telco Eng<br>Exp Dollars</th>
+														<th style="width:8%;">Eng Cap Rate</th>
+														<th style="width:8%;">Telco Labor<br>Cap Dollars</th>
+														<th style="width:8%;">Telco Labor<br>Exp Dollars</th>
+														<th style="width:8%;">Labor Cap Rate</th>
+														<th style="width:8%;">Telco DEG<br>Cap Dollars</th>
+														<th style="width:8%;">Telco DEG<br>Exp Dollars</th>
+														<th style="width:7%;">DEG Cap Rate</th>
+													</tr>
+													<tr class="alt-row">
+														<th>Total Incurred Dollars</th>
+														<td><span id="tid_tid_telco_eng_cap dollars_1">$ 66,022</span></td>
+														<td><span id="tid_tid_telco_eng_exp dollars_1">$ 25,957</span></td>
+														<td><span id="tid_tid_eng_cap rate_1">71.8%</span></td>
+														<td><span id="tid_tid_telco_labor_cap dollars_1">$ 76,490</span></td>
+														<td><span id="tid_tid_telco_labor_exp dollars_1">$ 41,094</span></td>
+														<td><span id="tid_tid_labor_cap_rate_1">65.1%</span></td>
+														<td><span id="tid_tid_telco_deg_cap_dollars_1">$ 8,141</span></td>
+														<td><span id="tid_tid_telco_deg_exp_dollars_1">$ 27,128</span></td>
+														<td><span id="tid_tid_deg_cap_rate_1">23.1%</span></td>
+													</tr>
+													<tr>
+														<td colspan="3"></td>
+														<td colspan="7">
+															<table class="tid-summary-table">
+																<tr>
+																	<th style="width:32%;">MODEL SUMMARY</th>
+																	<td colspan="6"></td>
+																</tr>
+																<tr>
+																	<td></td>
+																	<th style="width:10%;">Eng</th>
+																	<th style="width:10%;">Const.</th>
+																	<th style="width:10%;">DEG</th>
+																	<th style="width:15%;">Cons. & DEG</th>
+																	<th style="width:10%;">Total</th>
+																	<td>$ <span id="tid_ms_tcd_end_total_1">(5346)</span></td>
+																</tr>
+																<tr class="alt-row">
+																	<th>Total Capital Dollars</th>
+																	<td><span id="tid_ms_tcd_eng_1">$ 666</span></th>
+																	<td><span id="tid_ms_tcd_const_1">$ 666</span></td>
+																	<td><span id="tid_ms_tcd_deg_1">$ 666</span></td>
+																	<td><span id="tid_ms_tcd_cons_and_deg_1">$ 666</span></td>
+																	<td><span id="tid_ms_tcd_total">$ 666</span></td>
+																	<td><span id="tid_ms_tcd_end_total_1">$ 150,653</span></td>
+																</tr>
+																<tr>
+																	<th>Total Expense Dollars</th>
+																	<td><span id="tid_ms_ted_const_1"></span></td>
+																	<td><span id="tid_ms_ted_const_1"></span></td>
+																	<td><span id="tid_ms_ted_deg_1"></span></td>
+																	<td><span id="tid_ms_ted_cons_and_deg_1"></span></td>
+																	<td><span id="tid_ms_ted_total"></span></td>
+																	<td><span id="tid_ms_ted_end_total_1">$ 94,179</span></td>
+																</tr>
+																<tr class="alt-row">
+																	<th>Total Excl. Non-Telco<br>Wages & X Chgs</th>
+																	<td><span id="tid_ms_tentw_const_1"></span></td>
+																	<td><span id="tid_ms_tentw_const_1"></span></td>
+																	<td><span id="tid_ms_tentw_deg_1"></span></td>
+																	<td><span id="tid_ms_tentw_cons_and_deg_1"></span></td>
+																	<td><span id="tid_ms_tentw_total"></span></td>
+																	<td><span id="tid_ms_tentw_end_total_1">$ 239,485</span></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+													<tr>
+														<th>H4/A SI/Non-Telco Wages</th>
+														<td><span id="tid_h4ntw_telco_eng_cap dollars_1"></span></td>
+														<td><span id="tid_h4ntw_telco_eng_exp dollars_1"></span></td>
+														<td><span id="tid_h4ntw_eng_cap rate_1"></span></td>
+														<td><span id="tid_h4ntw_telco_labor_cap dollars_1"></span></td>
+														<td><span id="tid_h4ntw_telco_labor_exp dollars_1"></span></td>
+														<td><span id="tid_h4ntw_labor_cap_rate_1"></span></td>
+														<td><span id="tid_h4ntw_telco_deg_cap_dollars_1"></span></td>
+														<td><span id="tid_h4ntw_telco_deg_exp_dollars_1"></span></td>
+														<td><span id="tid_h4ntw_end_total_1">$ 15,507</span></td>
+													</tr>
+													<tr class="alt-row">
+														<th>Net Cross Charges Out/In</th>
+														<td><span id="tid_nccoi_telco_eng_cap dollars_1"></span></td>
+														<td><span id="tid_nccoi_telco_eng_exp dollars_1"></span></td>
+														<td><span id="tid_nccoi_eng_cap rate_1"></span></td>
+														<td><span id="tid_nccoi_telco_labor_cap dollars_1"></span></td>
+														<td><span id="tid_nccoi_telco_labor_exp dollars_1"></span></td>
+														<td><span id="tid_nccoi_labor_cap_rate_1"></span></td>
+														<td><span id="tid_nccoi_telco_deg_cap_dollars_1"></span></td>
+														<td><span id="tid_nccoi_telco_deg_exp_dollars_1"></span></td>
+														<td><span id="tid_nccoi_end_total_1">$-</span></td>
+													</tr>
+													<tr>
+														<th>TOTAL WAGES</th>
+														<td><span id="tid_tw_telco_eng_cap dollars_1"></span></td>
+														<td><span id="tid_tw_telco_eng_exp dollars_1"></span></td>
+														<td><span id="tid_tw_eng_cap rate_1"></span></td>
+														<td><span id="tid_tw_telco_labor_cap dollars_1"></span></td>
+														<td><span id="tid_tw_telco_labor_exp dollars_1"></span></td>
+														<td><span id="tid_tw_labor_cap_rate_1"></span></td>
+														<td><span id="tid_tw_telco_deg_cap_dollars_1"></span></td>
+														<td><span id="tid_tw_telco_deg_exp_dollars_1"></span></td>
+														<td><span id="tid_tw_end_total_1">$ 254,542</span></td>
+													</tr>
+													<tr class="alt-row">
+														<th>Clearance From Others</th>
+														<td><span id="tid_cfo_telco_eng_cap dollars_1"></span></td>
+														<td><span id="tid_cfo_telco_eng_exp dollars_1"></span></td>
+														<td><span id="tid_cfo_eng_cap rate_1"></span></td>
+														<td><span id="tid_cfo_telco_labor_cap dollars_1"></span></td>
+														<td><span id="tid_cfo_telco_labor_exp dollars_1"></span></td>
+														<td><span id="tid_cfo_labor_cap_rate_1"></span></td>
+														<td><span id="tid_cfo_telco_deg_cap_dollars_1"></span></td>
+														<td><span id="tid_cfo_telco_deg_exp_dollars_1"></span></td>
+														<td><span id="tid_cfo_end_total_1">$ 5,346</span></td>
+													</tr>
+													<tr>
+														<th>Total Clearances</th>
+														<td><span id="tid_tc_telco_eng_cap dollars_1"></span></td>
+														<td><span id="tid_tc_telco_eng_exp dollars_1"></span></td>
+														<td><span id="tid_tc_eng_cap rate_1"></span></td>
+														<td><span id="tid_tc_telco_labor_cap dollars_1"></span></td>
+														<td><span id="tid_tc_telco_labor_exp dollars_1"></span></td>
+														<td><span id="tid_tc_labor_cap_rate_1"></span></td>
+														<td><span id="tid_tc_telco_deg_cap_dollars_1"></span></td>
+														<td><span id="tid_tc_telco_deg_exp_dollars_1"></span></td>
+														<td><span id="tid_tc_end_total_1">$ 155,999</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- TOTAL FORCE ALL -------------------------------------------- -->
+									<div class="cost-detail">
+										<table class="title-bar" id="total_force_all_1">
+											<tr>
+												<td>Total Force All</td>
+												<td class="expand-me closed"></td>
+											</tr>
+										</table>
+										<div id="total_force_all_1_details" class="detail-wrapper">
+											<div class="detail-container">
+												<table>
+													<tr>
+														<th style="width:15%;">Output Description</th>
+														<th style="width:15%;">Telco Eng Dollars</th>
+														<th style="width:15%;">ASI/Non-Telco</th>
+														<th style="width:15%;">Telco Labor Dollars</th>
+														<th style="width:15%;">Net Cross Charge Out/In</th>
+														<th style="width:15%;">Telco DEG Dollars</th>
+														<th>Total Force</th>
+													</tr>
+													<tr class="alt-row">
+														<th>Average Annual Rate</th>
+														<td><span id="tfa_aar_telco_eng_dollars_1">$ 80.67</span></td>
+														<td><span id="tfa_aar_asi_non_telco_1">$ 110.49</span></td>
+														<td><span id="tfa_aar_telco_labor_dollars_1">$ 84.58</span></td>
+														<td><span id="tfa_aar_net_cross_charge_1">$ 84.58</span></td>
+														<td><span id="tfa_aar_telco_deg_dollars_1">$ 84.46</span></td>
+														<td><span id="tfa_aar_total_force_1">$ 84.34</span></td>
+													</tr>
+													<tr>
+														<th>Project Force</th>
+														<td><span id="tfa_pf_telco_eng_dollars_1">$ 990</span></td>
+														<td><span id="tfa_pf_asi_non_telco_1">-</span></td>
+														<td><span id="tfa_pf_telco_labor_dollars_1">$ 1269</span></td>
+														<td><span id="tfa_pf_net_cross_charge_1">-</span></td>
+														<td><span id="tfa_pf_telco_deg_dollars_1">$ 140</span></td>
+														<td><span id="tfa_pf_total_force_1">$ 2399</span></td>
+													</tr>
+													<tr class="alt-row">
+														<th>Non-Project Force</th>
+														<td><span id="tfa_npf_telco_eng_dollars_1">$ 84</span></td>
+														<td><span id="tfa_npf_asi_non_telco_1">$ 136</span></td>
+														<td><span id="tfa_npf_telco_labor_dollars_1">$ 121</span></td>
+														<td><span id="tfa_npf_net_cross_charge_1">-</span></td>
+														<td><span id="tfa_npf_telco_deg_dollars_1">$ 278</span></td>
+														<td><span id="tfa_npf_total_force_1">$ 619</span></td>
+													</tr>
+													<tr>
+														<th>Total</th>
+														<td><span id="tfa_total_telco_eng_dollars_1">$ 1,074</span></td>
+														<td><span id="tfa_total_asi_non_telco_1">$ 136</span></td>
+														<td><span id="tfa_total_telco_labor_dollars_1">$ 1390</span></td>
+														<td><span id="tfa_total_net_cross_charge_1">-</span></td>
+														<td><span id="tfa_total_telco_deg_dollars_1">$ 418</span></td>
+														<td><span id="tfa_total_total_force_1">$ 3,018</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- MODAL DIALOG STARTS HERE ------------------------------------------------ -->
+	<div style="clear:both;"></div>
+	<div class="modal notifications" style="width:100%; height:100%; background-color:#000; display:none; overflow:auto; position:fixed; top:0; right:0; left:0; bottom:0; z-index:1050;"></div>
+	<div class="hide modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="min-height:35px;">Test</div>
+			<div class="modal-body"  style="min-height:90px;">Another Body test</div>
+			<div class="modal-footer" style="min-height:35px;">Modal footer</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

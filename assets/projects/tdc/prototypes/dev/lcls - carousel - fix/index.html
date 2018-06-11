@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta charset=utf-8/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+	<script type="text/javascript" src="js/jquery.easing.jcarousellite.1.1.js"></script>
+	<script type="text/javascript" src="js/jcarousellite_1.0.1.js"></script>
+	<script language="javascript">
+		 $(function() {
+			$(".main .jCarouselLite").jCarouselLite({
+				 btnNext: ".main .next",
+				 btnPrev: ".main .prev",
+				 start: 1, //Set this to array index start item
+				 speed: 500,
+				 easing: "easeinout",
+				 visible:4
+			});  
+
+			$('.jCarouselLite li').mouseover(function(){
+				$(this).css('background','#f3f3f3');
+			});
+			
+			$('.jCarouselLite li').mouseout(function(){
+				$(this).css('background','#fff');
+			});
+	});
+	</script>
+	<style>
+		* { margin:0; padding:0; }
+		
+		#sfMenu a { outline:none; }
+		#sfMenu a:hover { outline:none; }
+		#sfMenu a:focus { outline:none; }
+
+		#sfMenu .carousel  { padding:0; margin:0; position: relative; }
+		#sfMenu .main { margin-left: 10px; }
+		#sfMenu .demo em { color: #FF3300; font-weight: bold; font-size: 60%; font-style: normal; }
+		#sfMenu .carousel button { /*Don't remove this. we still use this for individual demos. only the front pages use images as of now*/ float: left; }           
+		#sfMenu .carousel a.prev, #sfMenu .carousel a.next {
+			display: block;
+			float: left;
+			height: 35px;
+			margin-top:22px;
+			text-decoration: none;
+			background: url('img/arrow_left.png') left no-repeat;
+		}
+		#sfMenu .carousel a.prev{ width: 35px; }
+		#sfMenu .carousel a.next { width: 35px; margin-left: 5px; }
+		#sfMenu .carousel a.next { background: url('img/arrow_right.png') left no-repeat; }
+		#sfMenu .carousel a.next:hover { background-image: url('img/arrow_right_hover.png'); }
+		#sfMenu .carousel a.prev:hover { background-image: url('img/arrow_left_hover.png'); }    
+		#sfMenu .carousel a:hover, #sfMenu .carousel a:active {
+			border: none;
+			outline: none;
+		}                 
+		#sfMenu .carousel .jCarouselLite {
+			width:500px;
+			height:90px;
+			left:0px;
+			border: none;
+			float: left;
+			/* Needed for rendering without flicker */
+			position: relative;
+			visibility: hidden;
+			left: -5000px;
+		}
+		#sfMenu .carousel ul {  margin: 0; }
+		#sfMenu .carousel li{
+			position:relative;
+			list-style:none;
+			margin:0 10px;
+			height:80px;
+			width:160px;
+			cursor:hand;
+			line-spacing:none;
+			line-height:1em;
+			/* FOR DEBUG - border:1px solid #ff0000; */
+		}
+		#sfMenu .carousel li a { 
+			font-family: Calibri; 
+			text-decoration: none;
+			font-size:.8em; 
+			color:#404040;
+		}
+		
+		#sfMenu .carousel li.selected { background:#fe7200!important; color:#fff; text-decoration:none;}
+		#sfMenu .carousel li.selected a { color:#fff; text-decoration:none; }
+		#sfMenu .carousel .item { height:100%; }
+		#sfMenu .carousel .item div { float:left; }
+		
+		/* initiate ---------------- */
+		#sfMenu .carousel .learn { width:60px; height:60px; background: url('img/ico_car_mnu_ideate.png') 12px 22px no-repeat; }
+		#sfMenu .carousel li.selected .learn { width:60px; height:60px; background: url('img/ico_car_mnu_ideate_white.png') 12px 22px no-repeat; }
+		/* manage ------------------ */
+		#sfMenu .carousel .manage { width:60px; height:60px; background: url('img/ico_car_mnu_collaborate.png') 12px 22px no-repeat; }
+		#sfMenu .carousel li.selected .manage { width:60px; height:60px; background: url('img/ico_car_mnu_collaborate_white.png') 12px 22px no-repeat; }
+		/* analyze ----------------- */
+		#sfMenu .carousel .analyze { width:60px; height:60px; background: url('img/ico_car_mnu_analyze.png') 12px 22px no-repeat; }
+		#sfMenu .carousel li.selected .analyze { width:60px; height:60px; background: url('img/ico_car_mnu_analyze_white.png') 12px 22px no-repeat; }
+		/* develop ----------------- */
+		#sfMenu .carousel .develop { width:60px; height:60px; background: url('img/ico_car_mnu_develop.png') 12px 22px no-repeat; }
+		#sfMenu .carousel li.selected .develop { width:60px; height:60px; background: url('img/ico_car_mnu_develop_white.png') 12px 22px no-repeat; }
+		/* service ----------------- */
+		#sfMenu .carousel .service{ width:60px; height:60px; background: url('img/ico_car_mnu_service.png') 12px 22px no-repeat; }
+		#sfMenu .carousel li.selected .service{ width:60px; height:60px; background: url('img/ico_car_mnu_service_white.png') 12px 22px no-repeat; }
+		#sfMenu .carousel .title { float:left; text-align:left; width:85px; margin-top:20px; }      
+	</style>
+</head>
+<body>
+	<!--   START - jCarousellite Menu Item Design ------------------->
+	<div class="body">
+		<div style="text-align:center;"> 
+			<div style="margin-top:10px;"> 
+				<div id="sfMenu">
+					<div class="main carousel">
+						<a title="View previous item" href="#" class="prev">&nbsp;</a>
+							<div class="jCarouselLite">
+								<ul>
+									<li id='1' >
+										<a title="" href='#'>
+											 <div class="item"> 
+												<div class="learn"></div>
+												<div class="title">Ideate &amp; Initiate</div>
+											 </div>
+										</a>
+									</li>	
+									<!-- --- END - jCarousellite Menu Item Design ------------------->
+									<!--   START - jCarousellite Menu Item Design ------------------->
+									<li id='2'>
+										<a title="" href='#'>
+											<div class="item"> 
+												<div class="manage"></div>
+												<div class="title">Communicate, Manage &amp; Collaborate</div>					
+											</div>
+										</a>
+									</li>	
+									<!-- --- END - jCarousellite Menu Item Design ------------------->
+									<!--   START - jCarousellite Menu Item Design ------------------->
+									<li id='3'>
+										<a title="" href='#'>
+											 <div class="item"> 
+												<div class="analyze"></div>
+												<div class="title">Analyze &amp; Design</div>
+											 </div>
+										</a>
+									</li>	
+									<!-- --- END - jCarousellite Menu Item Design ------------------->
+									<!--   START - jCarousellite Menu Item Design ------------------->
+									<li id='4'>
+										<a title="" href='#'>
+											 <div class="item"> 
+												<div class="develop"></div>
+												<div class="title">Develop, Test &amp; Deploy</div>	
+											 </div>
+										</a>
+									</li>
+									<!-- --- END - jCarousellite Menu Item Design ------------------->
+									<!--   START - jCarousellite Menu Item Design ------------------->
+									<li id='5' class="selected">
+										<a title="" href='#'>
+											 <div class="item">                                    
+												<div class="service"></div>
+												<div class="title">Service / Operate</div>
+											 </div>
+										</a>
+									</li>	 
+								</ul>
+							</div>
+						<a title="View next item" href="#" class="next">&nbsp;</a>
+						<div class="clear"></div>   
+					</div> 
+				</div> 
+			</div>
+		</div>
+		<!-- --- END - jCarousellite Menu Item Design ------------------->
+	</div>
+</body>
+</html>
+    
+    	
+
+
+
+
+
+    	
+
+
+

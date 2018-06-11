@@ -1,0 +1,133 @@
+function ShowVolumeData (rowid) {
+	// var rowid = 1;
+	// `d` is the original data object for the row
+	return  '<div class="volume-data-wrapper">'+
+		'<div class="volume-data-container">'+
+		'<div id="vol_data_' + rowid +'" class="volume-data">'+
+		'<div class="units">'+
+		'<span>Number of units:</span>'+
+		'<input type="text"  />'+
+		'<input type="button" value="Monthly Spread" class="btn btn-blue" />'+
+		'</div>'+
+		'<div class="vol-year">'+
+		'<span>Year:</span>'+
+		'<select>'+
+		'<option value="2017">2017</option>'+
+		'<option value="2016">2016</option>'+
+		'<option value="2015" selected>2015</option>'+
+		'<option value="2014">2014</option>'+
+		'</select>'+
+		'</div>'+
+		'<div id="vol_data_table_' + rowid + '">'+
+		'<table cellpadding="0" cellspacing="0">'+
+		'<tr class="header">'+
+		'<th style="width:22%;"></th>'+
+		'<th style="width:6%;">Jan</th>'+
+		'<th style="width:6%;">Feb</th>'+
+		'<th style="width:6%;">Mar</th>'+
+		'<th style="width:6%;">Apr</th>'+
+		'<th style="width:6%;">May</th>'+
+		'<th style="width:6%;">Jun</th>'+
+		'<th style="width:6%;">Jul</th>'+
+		'<th style="width:6%;">Aug</th>'+
+		'<th style="width:6%;">Sep</th>'+
+		'<th style="width:6%;">Oct</th>'+
+		'<th style="width:6%;">Nov</th>'+
+		'<th style="width:6%;">Dec</th>'+
+		'<th style="width:6%;">Total</th>'+
+		'</tr>'+
+		'<tr><td class="volume-data-name">Volume</td>'+
+		'<td><input id="vol_jan_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_feb_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_mar_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_apr_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_may_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_jun_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_jul_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_aug_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_sep_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_oct_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_nov_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><input id="vol_dec_' + rowid + '" type="text" value="0" /></td>'+
+		'<td><span id="vol_total_' + rowid + '">[AUTO]</span></td>'+
+		'</tr>'+
+		'<tr>'+
+		'<td class="volume-data-name">Volume %</td>'+
+		'<td><span id="vol_per_jan_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_feb_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_mar_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_apr_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_may_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_jun_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_jul_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_aug_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_sep_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_oct_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_nov_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_dec_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_total_' + rowid + '">[AUTO]</span></td>'+
+		'</tr>'+
+		'<tr>'+
+		'<td class="volume-data-name">Estimated Cost</td>'+
+		'<td>'+
+		'<input id="est_cost_jan_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_feb_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_mar_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_apr_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_may_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_jun_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_jul_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_aug_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost__sep_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_oct_' + rowid + '" type="text" value="0" "/></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_nov_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<input id="est_cost_dec_' + rowid + '" type="text" value="0" /></td>'+
+		'</td>'+
+		'<td>'+
+		'<span id="est_cost_total_' + rowid + '">[AUTO]</span>'+
+		'</td>'+
+		'</tr>'+
+		'<tr>'+
+		'<td class="volume-data-name">Estimated Cost %</td>'+
+		'<td><span id="vol_est_cost_jan_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_feb_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_mar_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_apr_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_may_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_jun_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_jul_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_aug_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_sep_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_oct_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_nov_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_est_cost_dec_' + rowid + '">[val]</span></td>'+
+		'<td><span id="vol_per_total_' + rowid + '">[AUTO]</span></td>'+
+		'</tr>'+
+		'</table>'+
+		'</div>'+
+		'</div>'+
+		'</div>'+
+		'</div>';
+	}

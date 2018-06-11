@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Technology Delivery Center - Framework</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="description" content="Reduce API development cycles for SDC end users by average of 18 days.">
+    <link href='css/bootstrap.min.css' rel='stylesheet' type="text/css">
+    <link href='css/icons.css' rel='stylesheet' type="text/css">
+    <link href='css/styles.css' rel='stylesheet' type="text/css"><!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></sc\
+    ript>
+    <![endif]-->
+</head>
+<body>
+    <div class='container-fluid'>
+	<!-- start header -->
+	<header class='row'>
+		<div class='hamburgertoggle hidden-lg hidden-md col-sm-1 col-xs-2'>
+			<img src='images/hamburger.png' alt='toggle activity menu'>
+		</div>
+		<div class='logo col-lg-4 col-md-4 col-sm-9 col-xs-6'>
+			<a href="home.html"><img src='images/sdc_logo_full.png' class='hidden-sm hidden-xs' alt='AT&amp;T Software Deliver Center'> 
+				<img src='images/sdc_logo_mobile.png' class='hidden-lg hidden-md' alt='AT&amp;T Software Deliver Center'>
+			</a>
+		</div>
+		<div class='global-search col-lg-4 col-md-3 hidden-sm hidden-xs'>
+			<div>
+				<form class='form-search form-inline'>
+					<input type='text' class='form-control search-query ' placeholder='Search' />
+					<div class='search-button'>
+						<dl class='dropdown'>
+							<dt>
+								<a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down">
+									<span class="hidden-md">Software Delivery Center</span>
+									<span class="hidden-lg">SDC</span>
+								</a>
+							</dt>
+							<dd>
+							  <ul>
+								<li><a href='javascript:void(0);'><span class="hidden-md">Software Delivery Center</span><span class="hidden-lg">SDC</span></a></li>
+								<li><a href='javascript:void(0);'><span class="hidden-md">AAAA BBBB CCCC</span><span class="hidden-lg">ABC</span></a></li>
+								<li><a href='javascript:void(0);'><span class="hidden-md">EEEE FFFF GGGG</span><span class="hidden-lg">EFG</span></a></li>
+							  </ul>
+							</dd>
+						</dl>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class='global-search col-lg-4 col-md-5 hidden-sm hidden-xs'>
+			<div class='profile-name hidden-sm hidden-xs'>
+				<div class='pname'>Thomas</div>
+			</div>
+			<div class='profile-pic hidden-sm hidden-xs'>
+				<div class="img-cont hidden-sm hidden-xs">
+					<img src='images/profile_img2.png' class='profile-img' alt='profile image' />
+				</div>
+			</div>
+			<div class='notify hidden-sm hidden-xs' data-toggle="modal" data-target="#modal3">
+				<img src='images/notification_tick.png' class='active' alt='notified' />
+				<a href='javascript:void(0);'>
+					<span class='icon-notification ico-nav'></span>
+				</a>
+			</div>    
+			<div class='favorites hidden-sm hidden-xs' data-toggle="modal" data-target="#modal4">
+				<span class='icon-favorite ico-nav'></span>
+			</div>
+		</div>
+		<div class='search-min hidden-lg hidden-md col-sm-1 col-xs-2'>
+			<a href='javascript:void(0);'><span class='icon-search ico-nav'></span></a>
+		</div>
+		<div class='illustrated-profile-pic hidden-lg hidden-md col-sm-1 col-xs-2'>
+			<a href='javascript:void(0);'>
+				<span class='icon-profile ico-nav'></span>
+			</a>
+		</div>
+	</header>
+	<!-- MOBILE GLOBAL MENU -->
+	<div class="globalnav-dropdown hidden-lg hidden-md hidden-xs-12 col-xs-12 dropdown-hidden">
+		<ul>
+			<li><a href='home.html'>Home</a></li>
+			<li><a href='activity_list.html'>Activity List</a></li>
+			<li><a href='resource_center.html'>Resource Center</a></li>
+			<li><a href='favorites.html'>Favorites</a></li>
+			<li><a href='alerts.html'>Alerts</a></li>
+		</ul>
+    </div>
+	<!-- MOBILE SEARCH -->
+    <div class="search-dropdown hidden-lg hidden-md hidden-xs-12 col-xs-12 dropdown-hidden">
+      <form class="form-search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search...">
+        </div>
+      </form>
+      <dl class='dropdown'>
+        <dt>
+          <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>Software Delivery Center</span></a>
+        </dt>
+        <dd>
+        <ul>
+          <li>
+            <a href='javascript:void(0);'><span>Software Delivery Center</span></a>
+          </li>
+          <li>
+            <a href='javascript:void(0);'><span>ABC</span></a>
+          </li>
+          <li>
+            <a href='javascript:void(0);'><span>EFG</span></a>
+          </li>
+        </ul>
+        </dd>
+        </dl><a role='button' href='home.html' class='btn btn-md btn-blue' id='search-dropdown-btn'>View</a>
+      </div>
+      <div class="date-bookmark">
+        <div class='current-date' id='current-date'>mm/dd/yyyy</div>
+        <div class='bookmark-it'>Bookmark It <span class='icon-favorite ico-favorite inactive startoggle'></span></div>
+      </div>
+    <div class='clearfix'></div>
+    <div class='container-fluid'> <!-- start container-fluid -->
+      
+
+
+    <div class='globalnav'>
+  <ul class='nav nav-tabs'>
+
+
+    <li class="active" ><a href='home.html'>Home</a></li>
+    <li  ><a href='activity_list.html'>Activity List</a></li>
+    <li  ><a href='activity_detail.html'>Activity Detail</a></li>
+	<li  ><a href='api_catalog.html'>API Catalog</a></li>
+    <li  ><a href='resource_center/home.html'>Resource Center</a></li>
+  </ul>
+</div>
+	<STYLE>
+		.wpthemeOverflowAuto {overflow:hidden;}
+		.sdc-hero-nav .nav-pills li {height:45px;line-height:45px;}
+	</STYLE>
+
+	<SCRIPT>
+		$(document).ready(function(){
+			$('#leftHeroimages').find('div:first').addClass('active');
+			$('#sdcHomeheronav').find('li:first-child').addClass('active');
+		});
+	</SCRIPT>
+	<!-- start content -->
+    <div class="content">
+		<div class="row">
+			<DIV class="row">
+				<DIV class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+					<DIV class="tab-content sdc-hero-images" id="leftHeroimages">
+						<DIV class="tab-pane active" id="slide1" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+							<P dir="ltr">
+								<A href="http://deliverycenter.web.att.com/wps/myportal/SDC/Platform%20and%20API-COE">
+									<IMG width="100%" height="100%" title="" src="Home_files/API_COE.png" border="0">
+								</A>
+							</P>
+						</DIV>
+						<DIV class="tab-pane" id="slide2" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+							<P dir="ltr">
+								<A href="http://deliverycenter.web.att.com/wps/myportal/SDC/Cloud-COE">
+									<IMG width="100%" height="100%" title="" src="Home_files/cloud2.png" border="0">
+								</A>
+							</P>
+						</DIV>
+						<DIV class="tab-pane" id="slide3" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+							<P dir="ltr">
+								<A href="http://deliverycenter.web.att.com/wps/myportal/SDC/Collaboration-COE">
+									<IMG width="100%" height="100%" title="" src="Home_files/collaboration2.png" border="0">
+								</A>
+							</P>
+						</DIV>
+						<DIV class="tab-pane" id="slide4" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+							<P dir="ltr">
+								<A href="http://deliverycenter.web.att.com/wps/myportal/SDC/Data-COE">
+									<IMG width="100%" height="100%" title="" src="Home_files/data2.png" border="0">
+								</A>
+							</P>
+						</DIV>
+						<DIV class="tab-pane" id="slide5" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+							<P dir="ltr">
+								<A title="/wps/myportal/SDC/Development%20Ops%20Delivery-COE/" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Development%20Ops%20Delivery-COE/">
+									<IMG width="100%" height="100%" title="" src="Home_files/Dev+Ops2.png" border="0">
+								</A>
+							</P>
+						</DIV>
+						<DIV class="tab-pane" id="slide6" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+							<P dir="ltr">
+								<A href="http://intranet.att.com/itmcoe" target="_blank"><IMG 
+						width="100%" height="100%" title="" src="Home_files/Mobile.png" 
+						border="0"></A></P></DIV>
+<DIV class="tab-pane" id="slide7" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+<P dir="ltr"><A href="http://deliverycenter.web.att.com/wps/myportal/SDC/RTE-COE"><IMG 
+width="100%" height="100%" title="" src="Home_files/Resilient+Technology2.png" 
+border="0"></A></P></DIV>
+<DIV class="tab-pane" id="slide8" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+<P dir="ltr"><A href="http://deliverycenter.web.att.com/wps/myportal/SDC/SecurityFirst-COE"><IMG 
+width="100%" height="100%" title="" src="Home_files/Security+First2.png" border="0"></A></P></DIV>
+<DIV class="tab-pane" id="slide9" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+<P dir="ltr"><A href="http://deliverycenter.web.att.com/wps/myportal/SDC/SoftwareDelivery-COE"><IMG 
+width="100%" height="100%" title="" src="Home_files/SD.png" 
+border="0"></A></P></DIV>
+<DIV class="tab-pane" id="slide10" style="border: 1px solid rgb(204, 204, 204); border-image: none;">
+<P dir="ltr"><A href="http://deliverycenter.web.att.com/wps/myportal/SDC/UserExperience-COE"><IMG 
+width="100%" title="" src="Home_files/UX.png" 
+border="0"></A></P></DIV></DIV></DIV>
+<DIV class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+<DIV class="sdc-hero-nav" id="sdcHomeheronav" style="border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; min-height: 450px; max-height: 450px;">
+<DIV class="hidden-lg hidden-md mobile-menu row">
+<DIV class="active-window col-sm-11 col-xs-10"><A class="prev" href="javascript:void(0);"><SPAN 
+class="left-arrow glyphicon glyphicon-chevron-left"></SPAN></A>                  
+               <SPAN class="active-title">Mobile First Capabilities</SPAN>       
+                          <A class="next" href="javascript:void(0);"><SPAN 
+class="right-arrow glyphicon glyphicon-chevron-right"></SPAN></A>                
+             </DIV>
+<DIV class="menu-button col-sm-1 col-xs-2"><A href="javascript:void(0);"><IMG 
+alt="toggle hero menu" src="">                                 </A>              
+               </DIV></DIV>
+<UL class="nav nav-pills nav-stacked" role="tablist" style="display: block;">
+  <LI class="active" style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide1" 
+  data-toggle="pill">API COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide2" 
+  data-toggle="pill">Cloud COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide3" 
+  data-toggle="pill">Collaboration COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide4" 
+  data-toggle="pill">Data COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide5" 
+  data-toggle="pill">Development Operations Delivery COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide6" 
+  data-toggle="pill">Mobile COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide7" 
+  data-toggle="pill">Resilient Technology Engineering COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide8" 
+  data-toggle="pill">Security First COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide9" 
+  data-toggle="pill">Software Delivery COE</A></LI>
+  <LI style="border-right-color: currentColor; border-right-width: medium; border-right-style: none;"><A 
+  role="tab" href="http://deliverycenter.web.att.com/wps/myportal/SDC/Home/!ut/p/a1/04_Sj9CPykssy0xPLMnMz0vMAfGjzOLNHI3MjDxMjDwtQswcDRyDTcy9XTwsDAzcDYAKIoEKDHAARwNC-r3wKjAwBFlgVOTr7JuuH1WQWJKhm5mXlq8fEezirOtbqRueX5St65Gfm6ofrh9FyCSIAjxOLciNqPJJC_YEAM-Jyk0!/dl5/d5/L2dBISEvZ0FBIS9nQSEh/#slide10" 
+  data-toggle="pill">User Experience COE</A></LI></UL></DIV></DIV></DIV>
+<DIV class="wpthemeClear"></DIV></DIV></SECTION></DIV></DIV><!-- Top Row --> 
+</DIV>
+<DIV class="row">
+<DIV class="col-lg-8 col-lg-push-4 col-md-8 col-md-push-4 col-sm-12 col-xs-12"><!-- end wide column --> 
+           
+          
+                   
+                       
+                    
+          
+
+            <h4 class='tab-h4'>
+                What's New
+            </h4>
+
+            <div class="tab-sdc">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#st1" data-toggle="tab">Recent News</a>
+                    </li>
+                    <li class="">
+                        <a href="#st2" data-toggle="tab">Top Posts</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="st1">
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="st2">
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newsitem">
+                            <div class="pic col-lg-3"></div>
+                            <div class="headline col-lg-9">
+                                <h4>
+                                    Headline - Lorem Ipsum
+                                </h4>
+                                <p class='descrip'>
+                                    Item by John Jacobs, 2 min ago
+                                </p>
+                            </div>
+                            <div class="detail">
+                                <p>
+                                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                                    <a role='button' href='javascript:void(0);' class='btn btn-blue btn-sm'>Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <div class="introPanel">
+                <h4>
+                    Welcome to your SDC resources. How can I help?
+                </h4>
+                <div class="summary">
+                    <div class="summary-cont">
+                        <div class="row">
+                            <div class='col-lg-4'>
+                                What is your role?
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>Developer</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Developer</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Scrum Master</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Application Owner</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>API Insurance Agent</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>N/A</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class='col-lg-4'>
+                                What do you want to do?
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>Developer</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Developer</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Scrum Master</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Application Owner</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>API Insurance Agent</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>N/A</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="col-lg-4">
+                                <a role="button" herf="javascript:void(0)" class="btn btn-default btn-blue summary-btn">Go</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class='footer'>
+                        <div class='title'>
+                            Summary
+                        </div>
+                        <div class="descrip">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus facere et minima, expedita excepturi provident.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <a role='button' href='javascript:void(0);' class='btn btn-md btn-blue' id='btn-csi'>CSI API Resource Library</a></span>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>
+                            Resources for your work
+                        </h4><!-- MOBILE RESOURCE TAB -->
+                        <div class="panel-alt hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a href='resource.html'>
+                            <div>
+                                <span class="icon-tools ico-default"></span>
+                                <span class="heading-text">Tools</span>
+                                <span class="arrow glyphicon glyphicon-chevron-right"></span>
+                              </div>
+                            </a>
+                        </div><!-- DESKTOP RESOURCE TAB -->
+                        <div class="panel panel-sdc col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="icon-tools ico-default"></span>
+                                    <span class="heading-text">Tools</span>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>All</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>All</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 1</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 2</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>...</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl><a href='javascript:void(0);'><span class="icon-download ico-default"></span>  Tool 1 (application link)</a>
+                                <p class='with-icon'>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'><span class="icon-download_document ico-default"></span>  Tool 1 (application link)</a>
+                                <p class='with-icon'>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'><span class="icon-download_document ico-default"></span>  Tool 1 (application link)</a>
+                                <p class='with-icon'>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <span class="results">3 of 123 results found</span> <button class="btn btn-blue btn-sm" data-toggle="modal" data-target="#modal1">View All</button>
+                            </div>
+                        </div><!-- MOBILE RESOURCE TAB -->
+                        <div class="panel-alt hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a href='resource.html'>
+                            <div>
+                                <span class="icon-reference_guides ico-default"></span>
+                                <span class="heading-text">Reference Guides</span>
+                                <span class="arrow glyphicon glyphicon-chevron-right"></span>
+                            </div>
+                            </a>
+                        </div><!-- DESKTOP RESOURCE TAB -->
+                        <div class="panel panel-sdc col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="icon-reference_guides ico-default"></span>
+                                    <span class="heading-text">Reference Guides &amp; Mandates</span>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>All</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>All</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 1</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 2</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>...</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl><a href='javascript:void(0);'>Guide Link</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Mandate Link</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Guide Link</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <span class="results">3 of 123 results found</span> <button class="btn btn-blue btn-sm" data-toggle="modal" data-target="#modal1">View All</button>
+                            </div>
+                        </div><!-- MOBILE RESOURCE TAB -->
+                        <div class="panel-alt hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a href='resource.html'>
+                            <div>
+                                <span class="icon-reusable_components ico-default"></span>
+                                <span class="heading-text">Reusable Components</span>
+                                <span class="arrow glyphicon glyphicon-chevron-right"></span>
+                            </div>
+                            </a>
+                        </div><!-- DESKTOP RESOURCE TAB -->
+                        <div class="panel panel-sdc col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="icon-reusable_components ico-default"></span>
+                                    <span class="heading-text">Reusable Components</span>
+                                    
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>All</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>All</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 1</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 2</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>...</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl><a href='javascript:void(0);'>Component 1</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Component 2</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Component 3</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <span class="results">3 of 123 results found</span> <button class="btn btn-blue btn-sm" data-toggle="modal" data-target="#modal1">View All</button>
+                            </div>
+                        </div><!-- MOBILE RESOURCE TAB -->
+                        <div class="panel-alt hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a href='resource.html'>
+                            <div>
+                                <span class="icon-reporting ico-default"></span>
+                                <span class="heading-text">Reporting</span>
+                                <span class="arrow glyphicon glyphicon-chevron-right"></span>
+                            </div>
+                            </a>
+                        </div><!-- DESKTOP RESOURCE TAB -->
+                        <div class="panel panel-sdc col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="icon-reporting ico-default"></span>
+                                    <span class="heading-text">Reporting</span>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>All</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>All</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 1</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 2</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>...</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl><a href='javascript:void(0);'>Reporting Link 1</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Reporting Link 2</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Reporting Link 3</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <span class="results">3 of 123 results found</span> <button class="btn btn-blue btn-sm" data-toggle="modal" data-target="#modal1">View All</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h4>
+                            Resources for you
+                        </h4><!-- MOBILE RESOURCE TAB -->
+                        <div class="panel-alt hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a href='resource.html'>
+                            <div>
+                                <span class="icon-training ico-default"></span>
+                                <span class="heading-text">Training</span>
+                                <span class="arrow glyphicon glyphicon-chevron-right"></span>
+                            </div>
+                            </a>
+                        </div><!-- DESKTOP RESOURCE TAB -->
+                        <div class="panel panel-sdc col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="icon-training ico-default"></span>
+                                    <span class="heading-text">Training</span>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>All</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>All</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 1</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 2</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>...</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl><a href='javascript:void(0);'>Training Link 1</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Training Link 2</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Training Link 3</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <span class="results">3 of 123 results found</span> <button class="btn btn-blue btn-sm" data-toggle="modal" data-target="#modal1">View All</button>
+                            </div>
+                        </div><!-- MOBILE RESOURCE TAB -->
+                        <div class="panel-alt hidden-lg hidden-md hidden-sm col-xs-12">
+                            <a href='resource.html'>
+                            <div>
+                                <span class="icon-collaborate ico-default"></span>
+                                <span class="heading-text">Collaborate</span>
+                                <span class="arrow glyphicon glyphicon-chevron-right"></span>
+                            </div>
+                            </a>
+                        </div><!-- DESKTOP RESOURCE TAB -->
+                        <div class="panel panel-sdc col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                            <div class="panel-heading">
+                                <div>
+                                    <span class="icon-collaborate ico-default"></span>
+                                    <span class="heading-text">Collaborate</span>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <dl class='dropdown'>
+                                    <dt>
+                                        <a href='javascript:void(0);' class="dropdown-glyphicon-chevron-down"><span>All</span></a>
+                                    </dt>
+                                    <dd>
+                                        <ul>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>All</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 1</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>Sub Category 2</span></a>
+                                            </li>
+                                            <li>
+                                                <a href='javascript:void(0);'><span>...</span></a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl><a href='javascript:void(0);'>Training Link 1</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Training Link 2</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p><a href='javascript:void(0);'>Training Link 3</a>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <span class="results">3 of 123 results found</span> <button class="btn btn-blue btn-sm" data-toggle="modal" data-target="#modal1">View All</button>
+                            </div>
+                        </div>
+                    </div><!-- end resources for your work -->
+                </div>
+        </div>
+
+    </div>
+
+      
+    </div>
+
+    <div class="midCol">
+
+    </div><!-- end mid column -->
+    <div class="rightCol">
+
+</div><!-- end right column -->
+
+    </div><!-- end container -->
+<div class='clearfix'></div>
+<footer>
+    <div class='container-fluid'>
+        <a href="#0"><img src='images/return_to_top_icon.png' class='returntotop pull-right' alt='return to top'></a>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class='footerlinks'>
+                        <img src='images/globe.png' class='globe' alt='AT&amp;T globe'> <a href='javascript:void(0);' data-toggle="modal" data-target="#modal5">Give Feedback</a>
+                    </div>
+                    <div class='footerlegal'>
+                        <p>
+                            ©2014 AT&amp;T Software Delivery Center<br>
+                            Private proprietary statement - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentes risus in enim porta aliquam aenean at felis
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end container -->
+</footer>
+
+        <div class="notifications modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="modal1Label">
+                    <span class="icon-tools ico-default"></span> Modal Title
+                    </h4>
+                </div>
+                <div class="modal-dd-bg">
+                    <dl class='dropdown'>
+                        <dt>
+                        <a href='' style='width:250px'><span>All<span class='glyphicon glyphicon-chevron-down'></span></span></a>
+                        </dt>
+                        <dd>
+                        <ul style='width:250px'>
+                            <li>
+                                <a href='javascript:void(0);'>All</a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);'>Sub Category 1</a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);'>Sub Category 2</a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);'>...</a>
+                            </li>
+                        </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="modal-body">
+                    <div class="notifications-list">
+                        <a href='javascript:void(0);'>Component 1</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 2</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 3</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 4</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 5</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 6</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 7</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 8</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 9</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 10</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 11</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 12</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>
+                    <strong><span>1</span>-<span>10</span></strong> of <strong><span>10</span></strong> Results Found
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notifications modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="modal2Label">
+                    Modal Title
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="notifications-list">
+                        <a href='javascript:void(0);'>Component 1</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 2</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 3</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>
+                    <strong><span>1</span>-<span>3</span></strong> of <strong><span>3</span></strong> Results Found
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notifications modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="modal3Label">
+                    <span class='icon-notification ico-tab'></span>Notifications (4)
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="notifications-list">
+                        <div class="row">
+                            <div class="row-inner clearfix">
+                                <div class="row-content">
+                                    <a href='javascript:void(0);'>Component 1</a>
+                                    <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    </p>
+                                </div><button class="btn btn-blue">View</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row-inner clearfix">
+                                <div class="row-content">
+                                    <a href='javascript:void(0);'>Component 2</a>
+                                    <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    </p>
+                                </div><button class="btn btn-blue">View</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row-inner clearfix">
+                                <div class="row-content">
+                                    <a href='javascript:void(0);'>Component 3</a>
+                                    <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    </p>
+                                </div><button class="btn btn-blue">View</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row-inner clearfix">
+                                <div class="row-content">
+                                    <a href='javascript:void(0);'>Component 4</a>
+                                    <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    </p>
+                                </div><button class="btn btn-blue">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>
+                    <strong><span>1</span>-<span>3</span></strong> of <strong><span>3</span></strong> Results Found
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notifications modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="modal4Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="modal4Label"><span class='icon-favorite ico-tab'></span>Bookmarks (12)</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="notifications-list">
+                        <a href='javascript:void(0);'>Component 1</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 2</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 3</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 4</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 5</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 6</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 7</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 8</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 9</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 10</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 11</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p><a href='javascript:void(0);'>Component 12</a>
+                        <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>
+                    <strong><span>1</span>-<span>12</span></strong> of <strong><span>12</span></strong> Results Found
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="modal5Label">
+                    We'd love to hear from you.
+                    </h4>
+                    <h5>
+                    Please keep in mind that this is not a customer service support request tool.
+                    </h5><a href="#"><span class='icon-launch ico-tab'></span><span>Go to our tSpace site</span></a>
+                    <a href="#"><span class='icon-launch ico-tab'></span><span>Go to online help</span></a>
+                </div>
+                <div class="modal-body">
+                    <form class="feedback-form">
+                        <div class="row">
+                            <div class="row-inner clearfix">
+                                <div class="row-content">
+                                    <label>What type of feedback do you have for us?</label>
+                                    <dl class="dropdown">
+                                        <dt>
+                                        <a href=""><span>All<span class='glyphicon glyphicon-chevron-down'></span></span></a>
+                                        </dt>
+                                        <dd>
+                                        <ul style="display: block;">
+                                            <li>
+                                                <a href="">ALL</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Option 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Option 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="">...</a>
+                                            </li>
+                                        </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row-inner clearfix">
+                                <div class="row-content">
+                                    <h5>
+                                    What's on your mind?
+                                    </h5><label>Subject</label> <input class="form-control" type="text" placeholder=""> <label>Comment</label>
+                                    <textarea>
+                                    </textarea> <label>How would you rate your experience of Software Delivery Center</label>
+                                    <dl class="dropdown">
+                                        <dt>
+                                        <a href=""><span>Please select<span class='glyphicon glyphicon-chevron-down'></span></span></a>
+                                        </dt>
+                                        <dd>
+                                        <ul style="display: block;">
+                                            <li>
+                                                <a href="">ALL</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Option 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="">Option 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="">...</a>
+                                            </li>
+                                        </ul>
+                                        </dd>
+                                        </dl><span class="optional"><em>optional</em></span> <label>Would you recommend Software Delivery Center to your colleagues?</label>
+                                        <dl class="dropdown">
+                                            <dt>
+                                            <a href=""><span>All<span class='glyphicon glyphicon-chevron-down'></span></span></a>
+                                            </dt>
+                                            <dd>
+                                            <ul style="display: block;">
+                                                <li>
+                                                    <a href="">Please select</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Option 1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Option 2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">...</a>
+                                                </li>
+                                            </ul>
+                                            </dd>
+                                        </dl><span class="optional"><em>optional</em></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row-inner clearfix">
+                                    <div class="row-content optional-info">
+                                        <h5>
+                                        Tell us about yourself so we can get back to you if needed
+                                        </h5><label>AT&amp;T ID</label> <input class="form-control" type="text" placeholder=""><span class="optional"><em>optional</em></span><br>
+                                        <br>
+                                        <label>Email</label> <input class="form-control" type="text" placeholder=""><span class="optional"><em>optional</em></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">Cancel</button> <button class="btn btn-md btn-orange">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+  	<script src='http://code.jquery.com/jquery.js' type="text/javascript"></script>
+    <script src='js/bootstrap.min.js' type="text/javascript"></script>
+    <script src='js/application.js' type="text/javascript"></script>
+
+    
+<!-- addd/remove linkage -->
+<script>
+    $(document).ready(function() {
+      var addRemoveLinkage = function() {
+
+        if ( $(window).width() < 880) {
+          
+          $(".activity-list .activityrow .act-name .title a[href='activity_detail.html']").removeAttr("href");
+          $(".activity-list .activityrow .act-name .title a[href='javascript:void(0);']").removeAttr("href");
+          $(".activity-list .activityrow .act-name .title a").css("color","#ef6f00");
+              $(".activity-list .activityrow .act-name .title a").mouseenter(function() {
+                $(this).css("color", "#ef6f00");
+              }).mouseleave(function() {
+                $(this).css("color", "#ef6f00");
+              });
+
+          $(".my-activities .row .projectcont .activity .project a[href='javascript:void(0);']").removeAttr("href").css("color","#ef6f00");
+          $(".my-activities .row .projectcont .activity .project a").mouseenter(function() {
+              $(this).css("color", "#ef6f00");
+          }).mouseleave(function() {
+               $(this).css("color", "#ef6f00");
+          });
+
+        }
+        else if ( $(window).width() >= 880) {
+
+          $(".activity-list .activityrow .act-name .title a").attr("href", 'javascript:void(0);').css('color','#067ab4');
+          $(".activity-list .activityrow .act-name .title a").mouseenter(function() {
+              $(this).css("color", "#44c8f5");
+          }).mouseleave(function() {
+               $(this).css("color", "#067ab4");
+          });
+
+
+          $(".my-activities .row .projectcont .activity .project a").attr("href", 'javascript:void(0);').css('color','#067ab4');
+          $(".my-activities .row .projectcont .activity .project a").mouseenter(function() {
+              $(this).css("color", "#44c8f5");
+          }).mouseleave(function() {
+               $(this).css("color", "#067ab4");
+          });
+
+
+        }
+      };
+      addRemoveLinkage();
+      $(window).resize(addRemoveLinkage);
+    });
+</script>
+
+
+
+    </body>
+</html>

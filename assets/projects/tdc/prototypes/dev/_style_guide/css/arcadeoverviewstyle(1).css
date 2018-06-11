@@ -1,0 +1,438 @@
+.main-menu {
+	background: rgb(0, 0, 0); width: 34px; height: auto; margin-top: -20px; border-top-color: rgb(255, 255, 255); border-top-width: 1px; border-top-style: solid; float: left; position: absolute;
+}
+.wpthemeUnequal.wptheme2Col .wpthemePrimaryContainer {
+	width: 990px;
+}
+.wpthemeUnequal.wptheme2Col .wpthemeSecondaryContainer {
+	width: 140px;
+}
+.wpthemeOverflowAuto {
+	overflow: visible;
+}
+.ITOSmiddleCol {
+	width: 140px;
+}
+.ITOSrightCol {
+	width: 990px; padding-left: 0px; margin-left: 0px;
+}
+#arcadeOverview body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#arcadeOverview html {
+	font-family: sans-serif;
+}
+#arcadeOverview img {
+	outline: 0px; border: 0px currentColor; border-image: none;
+}
+#arcadeOverview ul ol li {
+	margin: 0px; padding: 0px;
+}
+#arcadeOverview .tabbable::before {
+	line-height: 0; display: table; content: "";
+}
+.tabbable::after {
+	line-height: 0; display: table; content: "";
+}
+#arcadeOverview .tabs-left > .nav-tabs {
+	float: left;
+}
+#arcadeOverview .tabs-below > .nav-tabs {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.tabs-right > .nav-tabs {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.tabs-left > .nav-tabs {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+#arcadeOverview .nav-tabs {
+	
+}
+.nav-pills {
+	
+}
+#arcadeOverview .nav {
+	list-style: none; margin-bottom: 20px; margin-left: 0px;
+}
+#arcadeOverview .tabs-left > .nav-tabs > li {
+	float: none;
+}
+.tabs-right > .nav-tabs > li {
+	float: none;
+}
+#arcadeOverview .nav {
+	list-style: none;
+}
+#arcadeOverview ul {
+	list-style: none;
+}
+#arcadeOverview .tabs-left > .nav-tabs .active > a {
+	border-color: rgb(204, 204, 204) transparent rgb(204, 204, 204) rgb(204, 204, 204); background-color: rgb(230, 241, 247);
+}
+.tabs-left > .nav-tabs .active > a:hover {
+	border-color: rgb(204, 204, 204) transparent rgb(204, 204, 204) rgb(204, 204, 204); background-color: rgb(230, 241, 247);
+}
+.tabs-left > .nav-tabs .active > a:focus {
+	border-color: rgb(204, 204, 204) transparent rgb(204, 204, 204) rgb(204, 204, 204); background-color: rgb(230, 241, 247);
+}
+#arcadeOverview .tabs-left > .nav-tabs > li > a {
+	border-radius: 4px 0px 0px 4px; margin-right: -1px; -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px 0 0 4px;
+}
+#arcadeOverview .tabs-left > .nav-tabs > li > a {
+	margin-bottom: 3px; min-width: 74px;
+}
+.tabs-right > .nav-tabs > li > a {
+	margin-bottom: 3px; min-width: 74px;
+}
+#arcadeOverview .nav-tabs > .active > a {
+	border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(221, 221, 221) transparent; border-image: none; color: rgb(85, 85, 85); cursor: default; background-color: rgb(255, 255, 255);
+}
+.nav-tabs > .active > a:hover {
+	border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(221, 221, 221) transparent; border-image: none; color: rgb(85, 85, 85); cursor: default; background-color: rgb(255, 255, 255);
+}
+.nav-tabs > .active > a:focus {
+	border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(221, 221, 221) transparent; border-image: none; color: rgb(85, 85, 85); cursor: default; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .nav-tabs > li > a {
+	border-radius: 4px 4px 0px 0px; border: 1px solid transparent; border-image: none; line-height: 20px; padding-top: 8px; padding-bottom: 8px; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0;
+}
+#arcadeOverview .nav-tabs > li > a {
+	line-height: 14px; padding-right: 12px; padding-left: 12px; margin-right: 2px;
+}
+.nav-pills > li > a {
+	line-height: 14px; padding-right: 12px; padding-left: 12px; margin-right: 2px;
+}
+#arcadeOverview .nav > li > a {
+	display: block;
+}
+#arcadeOverview a {
+	color: rgb(0, 136, 204); text-decoration: none;
+}
+#arcadeOverview .tab-content {
+	border: 1px solid rgb(204, 204, 204); overflow: auto; background-color: rgb(230, 241, 247);
+}
+#arcadeOverview .tab-content > .active {
+	display: block;
+}
+.pill-content > .active {
+	display: block;
+}
+#arcadeOverview .tab-content > .tab-pane {
+	display: none;
+}
+.pill-content > .pill-pane {
+	display: none;
+}
+#arcadeOverview .tab-content > .active {
+	display: block;
+}
+#arcadeOverview p {
+	margin: 0px 0px 8px;
+}
+#arcadeOverview .btn {
+	border-width: 1px; border-style: solid; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgb(179, 179, 179); padding: 4px 16px; border-radius: 4px; border-image: none; text-align: center; color: rgb(51, 51, 51); line-height: 20px; font-size: 14px; margin-bottom: 0px; vertical-align: middle; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05); text-shadow: 0px 1px 1px rgba(255,255,255,0.75); background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230)); background-repeat: repeat-x; background-color: rgb(245, 245, 245); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+#arcadeOverview iframe {
+	border: 0px currentColor; border-image: none; width: 100%;
+}
+#arcadeOverview .TopProject {
+	margin-top: -20px;
+}
+#arcadeOverview .TopProject img {
+	border: 1px solid rgb(204, 204, 204); border-image: none; width: 127px; height: 124px; margin-top: 20px; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .TopProject p {
+	
+}
+#arcadeOverview .arc_textarea {
+	border: 1px solid rgb(192, 192, 192); border-image: none; width: 384px; height: 126px; color: rgb(101, 101, 101); overflow: auto; font-size: 12px;
+}
+#arcadeOverview .inputTextOwner {
+	width: 65%; height: 20px; margin-top: 20px; margin-left: 20px;
+}
+#arcadeOverview .TopProject .text1 {
+	color: rgb(76, 76, 76); padding-left: 20px; font-size: 24px; margin-top: 20px; display: inline-block;
+}
+#arcadeOverview .TopProject .text2 {
+	margin-top: 20px; float: left;
+}
+#arcadeOverview .TopProject .text2 > .statusbtn {
+	margin: 0px 20px; padding: 7px; border-radius: 0px; width: 120px !important; height: 35px; color: rgb(255, 255, 255); font-size: 18px; text-shadow: none; background-image: none; background-color: rgb(76, 76, 76);
+}
+#arcadeOverview .TopProject .text2 .status select {
+	background-position: 90px 6px; width: 105px; color: rgb(7, 122, 179); font-size: 11px; font-weight: bold; display: inline-block; cursor: pointer; background-image: url("img/arrowBlue.png"); background-repeat: no-repeat;
+}
+#arcadeOverview .clear {
+	clear: both;
+}
+#arcadeOverview .arcadeProgressbox1 {
+	border: 1px solid rgb(255, 185, 126); border-image: none; width: 99%; margin-top: 10px; float: left;
+}
+#arcadeOverview .arcadeProgressbox1 h1 {
+	margin: 0px; width: 100%; height: 35px; font-size: small; background-color: rgb(255, 114, 0);
+}
+#arcadeOverview .arcadeProgressbox1 .top {
+	width: 550px; color: rgb(255, 255, 255); margin-top: 5px; float: right; background-color: rgb(255, 114, 0);
+}
+#arcadeOverview .arcadeProgressbox1 .top .progress {
+	margin: 8px; border-radius: 0px; border: 1px solid rgb(241, 202, 137); border-image: none; width: 70px; height: 10px; overflow: hidden; box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1); background-color: transparent; -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+#arcadeOverview .arcadeProgressbox1 .top .one {
+	margin: 5px; float: right;
+}
+#arcadeOverview .btm {
+	width: 100%; height: 63px; float: left; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .btm ul li {
+	padding: 5px 0px 0px 10px; font-size: 12px; margin-top: 5px; float: left;
+}
+#arcadeOverview .btm ul {
+	margin: 0px; padding: 0px;
+}
+#arcadeOverview .btm ul li span {
+	padding-top: 0px; float: left;
+}
+#arcadeOverview .left {
+	width: 47%; margin-top: 10px; margin-right: 10px; float: left; display: block;
+}
+#arcadeOverview .right {
+	width: 47%; margin-top: 10px; margin-right: 10px; float: right; display: block;
+}
+#arcadeOverview .summary {
+	border: 1px solid rgb(202, 202, 200); border-image: none; height: 215px; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .summary span {
+	padding: 5px; text-align: left; float: left; display: block;
+}
+#arcadeOverview .description {
+	border: 1px solid rgb(202, 202, 200); border-image: none; height: 215px; margin-top: 10px; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .description span {
+	margin: 0px auto; padding: 5px; width: 100%; text-align: left; clear: left; float: left;
+}
+#arcadeOverview header {
+	height: 35px; padding-top: 8px; padding-left: 5px; font-size: 12px; font-weight: bold; border-bottom-color: rgb(202, 202, 200); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(243, 243, 243);
+}
+#arcadeOverview aside .left {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 48%; height: 150px; margin-top: 10px; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview aside .right {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 48%; height: 150px; margin-top: 10px; margin-right: 0px; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .tag {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 99%; height: 140px; margin-top: 10px; float: left; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .link {
+	text-align: center; padding-top: 10%; padding-left: 30%; float: left;
+}
+#arcadeOverview .seeking {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 99%; margin-top: 10px; float: left; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .arcadeHeaderborder {
+	width: 98%; padding-bottom: 10px; padding-left: 10px; margin-top: 30px;
+}
+#arcadeOverview .Owner {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 100%; height: 300px; float: left; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .arcadehead {
+	border: 0px currentColor; border-image: none; margin-top: 10px; margin-left: 10px; background-color: transparent;
+}
+#arcadeOverview .Comty_big {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 100%; float: left; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .Comty_big header {
+	
+}
+#arcadeOverview .Comty_big footer {
+	margin: 5px; padding: 8px; float: right;
+}
+#arcadeOverview .Misc_link {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 100%; margin-top: 10px; float: left; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .Misc_link header {
+	
+}
+#arcadeOverview .Misc_link ul {
+	
+}
+#arcadeOverview .Misc_link ul li {
+	padding: 5px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#arcadeOverview .Misc_link ul li .link1 {
+	width: 40%; float: left; display: block;
+}
+#arcadeOverview .Misc_link ul li .link2 {
+	
+}
+#arcadeOverview .Misc_link ul li .linkIcon {
+	width: 10%; float: right; display: inline-block; cursor: pointer;
+}
+#arcadeOverview .Misc_link ul li .linkIcon img {
+	margin-right: 5px;
+}
+#arcadeOverview .Misc_link header .addlink {
+	margin-right: 10px; float: right;
+}
+#arcadeOverview .GrayScrollbar {
+	border: 0px currentColor; border-image: none; -ms-scrollbar-base-color: rgb(162, 162, 162); -ms-scrollbar-face-color: white; -ms-scrollbar-arrow-color: rgb(162, 162, 162); -ms-scrollbar-track-color: rgb(162, 162, 162);
+}
+#arcadeOverview .smalldiv {
+	width: 100%; margin-top: 10px; float: left;
+}
+#arcadeOverview .smalldiv .left {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 49%; height: 150px; margin-top: 0px; margin-right: 0px; float: left; display: block; background-color: rgb(255, 255, 255);
+}
+#arcadeOverview .smalldiv .right {
+	border: 1px solid rgb(202, 202, 200); border-image: none; width: 49%; height: 150px; margin-top: 0px; float: right; display: block; background-color: rgb(255, 255, 255);
+}
+#cancel_confirm_popup {
+	background: rgb(255, 255, 255); padding: 15px; border: 2px solid rgb(0, 153, 255); border-image: none; left: 525px; top: 250px; width: 300px; height: auto; font-size: 15px; margin-left: 15px; display: none; position: fixed; z-index: 100; box-shadow: 0px 0px 5px #0099ff; -webkit-box-shadow: 0 0 5px #0099FF; -moz-box-shadow: 0 0 5px #0099FF; _position: absolute;
+}
+#arcadeOverview .draftState {
+	color: rgb(255, 255, 255);
+}
+#arcadeOverview .draftState:hover div {
+	margin-left: 0px; position: absolute; z-index: 99999;
+}
+#arcadeOverview .arcadeDraftNote {
+	background: rgb(255, 255, 255); padding: 10px; border: 2px solid rgb(255, 114, 0); border-image: none; left: 50px; top: 30px; width: 275px; height: auto; text-align: left; color: rgb(6, 122, 181); font-size: 12px; margin-left: -999em; position: absolute; z-index: 0; box-shadow: 0px 0px 5px #ff7200; -webkit-box-shadow: 0 0 5px #ff7200; -moz-box-shadow: 0 0 5px #ff7200;
+}
+#arcadeleftmenu .almtabbable::before {
+	line-height: 0; display: table; content: "";
+}
+.almtabbable::after {
+	line-height: 0; display: table; content: "";
+}
+#arcadeleftmenu .almtabbable::after {
+	clear: both;
+}
+#arcadeleftmenu .almalmtabs-left > .almnav-tabs {
+	float: left;
+}
+#arcadeleftmenu .tabs-below > .almnav-tabs {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.tabs-right > .almnav-tabs {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.almtabs-left > .almnav-tabs {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+#arcadeleftmenu .almnav-tabs {
+	
+}
+.almnav-pills {
+	
+}
+#arcadeleftmenu .almnav {
+	list-style: none; margin-bottom: 20px; margin-left: 0px;
+}
+#arcadeleftmenu .almtabs-left > .almnav-tabs > li {
+	float: none;
+}
+.tabs-right > .almnav-tabs > li {
+	float: none;
+}
+#arcadeleftmenu .almnav {
+	list-style: none;
+}
+#arcadeleftmenu ul {
+	list-style: none;
+}
+#arcadeleftmenu .almtabs-left > .almnav-tabs .active > a {
+	border-color: rgb(204, 204, 204) transparent rgb(204, 204, 204) rgb(204, 204, 204); background-color: rgb(230, 241, 247);
+}
+.almtabs-left > .almnav-tabs .active > a:hover {
+	border-color: rgb(204, 204, 204) transparent rgb(204, 204, 204) rgb(204, 204, 204); background-color: rgb(230, 241, 247);
+}
+.almtabs-left > .almnav-tabs .active > a:focus {
+	border-color: rgb(204, 204, 204) transparent rgb(204, 204, 204) rgb(204, 204, 204); background-color: rgb(230, 241, 247);
+}
+#arcadeleftmenu .almtabs-left > .almnav-tabs > li > a {
+	border-radius: 4px 0px 0px 4px; margin-right: -1px; -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px 0 0 4px;
+}
+#arcadeleftmenu .almtabs-left > .almnav-tabs > li > a {
+	margin-bottom: 3px; min-width: 74px;
+}
+.tabs-right > .almnav-tabs > li > a {
+	margin-bottom: 3px; min-width: 74px;
+}
+#arcadeleftmenu .almnav-tabs > .active > a {
+	border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(221, 221, 221) transparent; border-image: none; color: rgb(85, 85, 85); cursor: default; background-color: rgb(255, 255, 255);
+}
+.almnav-tabs > .active > a:hover {
+	border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(221, 221, 221) transparent; border-image: none; color: rgb(85, 85, 85); cursor: default; background-color: rgb(255, 255, 255);
+}
+.almnav-tabs > .active > a:focus {
+	border-width: 1px; border-style: solid; border-color: rgb(221, 221, 221) rgb(221, 221, 221) transparent; border-image: none; color: rgb(85, 85, 85); cursor: default; background-color: rgb(255, 255, 255);
+}
+#arcadeleftmenu .almnav-tabs > li > a {
+	border-radius: 4px 4px 0px 0px; border: 1px solid transparent; border-image: none; line-height: 20px; padding-top: 8px; padding-bottom: 8px; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0;
+}
+#arcadeleftmenu .almnav-tabs > li > a {
+	line-height: 14px; padding-right: 12px; padding-left: 12px; margin-right: 2px;
+}
+.almnav-pills > li > a {
+	line-height: 14px; padding-right: 12px; padding-left: 12px; margin-right: 2px;
+}
+#arcadeleftmenu .almnav > li > a {
+	display: block;
+}
+#arcadeleftmenu a {
+	color: rgb(0, 136, 204); text-decoration: none;
+}
+#arcadeleftmenu .almnav li {
+	-ms-word-break: break-all;
+}
+#arcadeOverview .collaboratorAct {
+	margin-left: 10px;
+}
+#arcadeOverview .collaboratorAct ul {
+	list-style: none;
+}
+#arcadeOverview .collaboratorAct li {
+	padding-top: 10px;
+}
+#arcadeOverview .expand {
+	width: 15px; height: 15px; display: none;
+}
+#arcadeOverview .collapse {
+	width: 15px; height: 15px; display: block;
+}
+#arcadeOverview .expandAll {
+	width: 15px; height: 15px;
+}
+#arcadeOverview .collapseAll {
+	width: 15px; height: 15px; display: none;
+}
+#arcadeOverview .tableBorder {
+	text-align: left; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 2px; border-bottom-style: solid;
+}
+#arcadeOverview .leftAlign {
+	text-align: left;
+}
+#arcadeOverview input[type='radio'] {
+	margin-left: 6px !important; float: left; opacity: 1;
+}
+#arcadeOverview input[type='checkbox'] {
+	opacity: 1; -moz-appearance: checkbox;
+}
+@media screen and (max-width:900px) and (min-width:600px)
+{
+#arcadeOverview .arcadeHeaderborder .left {
+	width: 98%; margin-top: 10px; margin-right: 10px; float: left; display: block;
+}
+#arcadeOverview .arcadeHeaderborder .right {
+	width: 98%; margin-top: 10px; margin-right: 10px; float: right; display: block;
+}
+}
+@media screen and (max-width:600px)
+{
+#arcadeOverview .arcadeHeaderborder .left {
+	width: 98%; margin-top: 10px; margin-right: 10px; float: left; display: block;
+}
+#arcadeOverview .arcadeHeaderborder .right {
+	width: 98%; margin-top: 10px; margin-right: 10px; float: right; display: block;
+}
+}

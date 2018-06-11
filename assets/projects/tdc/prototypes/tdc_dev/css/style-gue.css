@@ -1,0 +1,222 @@
+@font-face {
+	font-family: Glyphicons Halflings;
+	src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"), url(../fonts/glyphicons-halflings-regular.woff) format("woff"), url(../fonts/glyphicons-halflings-regular.ttf) format("truetype"), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg");
+}
+@font-face {
+	font-family: Omnes ATT Regular;
+	src: url(../fonts/omnesatt-regular-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/omnesatt-regular-webfont.woff) format("woff"), url(../../fonts/omnesatt-regular-webfont.ttf) format("truetype"), url(../fonts/omnesatt-regular-webfont.svg#omnes_att_regular) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Omnes ATT Regular Italic;
+	src: url(../fonts/omnesatt-regularitalic-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/omnesatt-regularitalic-webfont.woff) format("woff"), url(../fonts/omnesatt-regularitalic-webfont.ttf) format("truetype"), url(../fonts/omnesatt-regularitalic-webfont.svg#omnes_att_regularitalic) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Omnes ATT Medium;
+	src: url(../fonts/omnesatt-medium-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/omnesatt-medium-webfont.woff) format("woff"), url(../fonts/omnesatt-medium-webfont.ttf) format("truetype"), url(../fonts/omnesatt-medium-webfont.svg#omnes_att_medium) format("svg");
+	font-weight: bold;
+}
+.caretup {
+	width: 0px; height: 0px; margin-left: 2px; vertical-align: middle; border-right-color: transparent; border-bottom-color: currentColor; border-left-color: transparent; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; display: inline-block;
+}
+.my-activities .row .activityhead .caretup {
+	margin-top: -6px;
+}
+.activity-list .sort .caretup {
+	margin-top: -7px; margin-left: 5px;
+}
+dl {
+	margin-bottom: 0px !important;
+}
+.dropdown_sourceFilter {
+	font-family: "Omnes ATT Regular", Arial, Serif; margin-top: 10px;
+}
+.dropdown_sourceFilter a {
+	color: rgb(6, 122, 180); text-decoration: none;
+}
+.dropdown_sourceFilter a:visited {
+	color: rgb(6, 122, 180); text-decoration: none;
+}
+.dropdown_sourceFilter dt {
+	height: 37px;
+}
+.dropdown_sourceFilter dt a {
+	background: white; border-radius: 4px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 100%; overflow: visible; display: block; z-index: 9999;
+}
+.dropdown_sourceFilter dt a span {
+	padding: 6px 5px 5px !important; height: 32px; display: block; cursor: pointer;
+}
+.dropdown_sourceFilter dt a span .glyphicon-chevron-down {
+	color: rgb(102, 102, 102); margin-top: -5px; float: right;
+}
+.dropdown_sourceFilter dd {
+	overflow: visible; position: relative; z-index: 1;
+}
+.dropdown_sourceFilter dd ul {
+	background: rgb(255, 255, 255); list-style: none; border-radius: 0px 0px 4px 4px; border: 1px solid rgb(187, 187, 187); border-image: none; left: 0px; width: 100%; color: rgb(68, 68, 68); overflow: hidden; margin-top: -5px; display: none; position: absolute;
+}
+.dropdown_sourceFilter dd ul li {
+	border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.dropdown_sourceFilter dd ul li a {
+	padding: 7px; display: block;
+}
+.dropdown_sourceFilter dd ul li a:hover {
+	background: rgb(239, 111, 0); color: white;
+}
+.dropdown_sourceFilter dd ul li:last-child {
+	border-bottom-color: currentColor; border-bottom-width: 0px; border-bottom-style: none;
+}
+.dropdown_sourceFilter dd {
+	margin: 0px; padding: 0px;
+}
+.dropdown_sourceFilter dt {
+	margin: 0px; padding: 0px;
+}
+.dropdown_sourceFilter ul {
+	margin: 0px; padding: 0px;
+}
+.dropdown_sourceFilter span.value {
+	display: none;
+}
+body.modal-open {
+	overflow: auto !important;
+}
+header .profile-name .pname {
+	line-height: 25px !important;
+}
+.claimed-activities .pt-heading-image {
+	margin: 15px 20px; border-radius: 5px; border: 1px solid rgb(204, 204, 204); border-image: none; overflow: hidden; background-color: rgb(243, 243, 243);
+}
+.claimed-activities .pt-heading-image-initial {
+	border-radius: 0px; border: 1px solid rgb(255, 255, 255); border-image: none; padding-bottom: 10px; background-color: rgb(255, 255, 255);
+}
+.claimed-activities .progress-timeline .pt-heading {
+	margin: 3px 20px;
+}
+.claimed-activities .pt-prism-content {
+	margin: 0px 20px; padding: 3px; border-radius: 5px; border: 1px solid rgb(204, 204, 204); border-image: none; color: rgb(6, 122, 180); background-color: rgb(243, 243, 243);
+}
+.claimed-activities .pt-prism-content span {
+	color: rgb(6, 122, 180);
+}
+.claimed-activities .pt-prism-content a:visited {
+	text-decoration: none;
+}
+.claimed-activities .pt-prism-content a:hover {
+	text-decoration: none;
+}
+.claimed-activities .pt-prism-content a:focus {
+	text-decoration: none;
+}
+.claimed-activities .pt-application-content {
+	margin: 0px 20px; padding: 3px; color: rgb(76, 76, 76);
+}
+.tab-sdc .tab-content .newsitem > div {
+	padding-top: 10px;
+}
+.tab-sdc .tab-content .headline {
+	overflow: hidden;
+}
+.tab-sdc .tab-content .headline h4 {
+	white-space: nowrap;
+}
+.tab-sdc .tab-content .pic {
+	padding-left: 0px; background-color: rgb(255, 255, 255) !important;
+}
+#modalDisclaimer .modal-body .row-content p {
+	padding: 5px;
+}
+footer {
+	margin-top: 30px;
+}
+@media all and (max-width:768px)
+{
+#modalDisclaimer {
+	overflow: hidden;
+}
+#modalDisclaimer .modal-dialog {
+	width: 50%;
+}
+#modalDisclaimer .modal-body .row-content p {
+	padding: 5px;
+}
+}
+.activity-detail-link-warning {
+	color: red; padding-left: 10px; display: none;
+}
+#divLightbox {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; display: none; position: absolute; z-index: 1000; background-image: url("../sdcImages/1x1blk50.png");
+}
+#divLightboxContent {
+	margin: auto; padding: 10px; border: 1px solid black; border-image: none; left: 0px; text-align: center; right: 0px; overflow: hidden; display: none; position: absolute; z-index: 1100; background-color: white;
+}
+#divLightboxInstall {
+	display: none;
+}
+#divLightboxUpdate {
+	display: none;
+}
+#arcadeOverview .left input {
+	border: 1px solid rgb(128, 128, 128); border-image: none;
+}
+#arcadeOverview .left textarea {
+	border: 1px solid rgb(128, 128, 128); border-image: none;
+}
+#arcadeOverview .right input {
+	border: 1px solid rgb(128, 128, 128); border-image: none;
+}
+#arcadeOverview .right textarea {
+	border: 1px solid rgb(128, 128, 128); border-image: none;
+}
+.unsuppored-browser {
+	overflow: hidden; background-color: rgb(255, 255, 255) !important;
+}
+.unsuppored-browser .browswer-support-help-text h2 {
+	text-align: left; margin-bottom: 0px !important;
+}
+.unsuppored-browser .browswer-support-help-text p {
+	text-align: left; padding-top: 10px;
+}
+.unsuppored-browser .browswer-support-help-text h2:first-child {
+	text-align: left; margin-bottom: -15px !important;
+}
+.unsuppored-browser .browswer-support-help-text {
+	display: inline-block;
+}
+.unsuppored-browser .unsupported-image-bg {
+	padding-bottom: 15px; margin-top: 75px; background-color: rgb(243, 243, 243);
+}
+.unsuppored-browser .container-fluid .unsupported-image-align {
+	text-align: center;
+}
+.modal.notifications #notifications_list_div_id .modal-dialog .modal-body .row button {
+	margin-top: 5px !important; margin-bottom: 10px !important;
+}
+.logo .att-globe-perm {
+	padding-right: 15px; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;
+}
+.select2-container {
+	top: 5px; display: block !important;
+}
+.select2-container .select2-choice {
+	height: 33px; color: rgb(6, 122, 180) !important; font-weight: bold !important; background-image: none !important;
+}
+.select2-container .dropdown-glyphicon-chevron-down::before {
+	color: rgb(6, 122, 180) !important;
+}
+.select2-container .select2-choice .select2-arrow {
+	background: none !important; border: currentColor !important; border-image: none !important;
+}
+.select2-dropdown-open .select2-choice {
+	background-color: rgb(255, 255, 255) !important;
+}
+.select2-results {
+	color: rgb(6, 122, 180) !important;
+}
+.select2-results .select2-highlighted {
+	background-color: rgb(239, 111, 0) !important;
+}

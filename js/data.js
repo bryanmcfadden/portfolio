@@ -99,7 +99,8 @@ var tspace = new Array(
   new Array("wireframes", "style guide"),
   new Array(
     new Array(imgPath + "tspace/tspace_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor"),
-    new Array(imgPath + "tspace/tspace_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
+    new Array(imgPath + "tspace/tspace_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla  Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. sollicitudin leo sit amet suscipit euismod. nunc et sapien rutrum, ut porttitor"),
+    new Array(imgPath + "tspace/tspace_03.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor adipiscing elit. Curabitur feugiat in eros in hendrerit. ")
   )
 );
 
@@ -113,8 +114,7 @@ var tdc = new Array(
   "Director of User Experience",
   new Array("information architecture", "contextual interviews", "wireframes", "personas", "visual comps", "competitive analysis", "front-end development"),
   new Array(
-    new Array(imgPath + "tdc/tdc_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor"),
-    new Array(imgPath + "tdc/tdc_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
+    new Array(imgPath + "tdc/tdc_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor")
   )
 );
 

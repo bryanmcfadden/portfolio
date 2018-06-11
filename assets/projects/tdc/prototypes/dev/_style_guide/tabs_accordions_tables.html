@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="en" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<title>TDC Style Guide - Template Page</title>
+<head>
+<META name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- JAVASCRIPT ----------------------- -->
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>		
+<script src="js/jquery-ui.min-1.10.4.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/lightbox.min.js" type="text/javascript"></script>
+    	<script>
+			$(document).ready(function() {
+				//Start here
+				var checkElement = $('a[href="tabs_accordions_tables.html#tabs_accordions_tables"]').next();
+				$('a[href="tabs_accordions_tables.html#tabs_accordions_tables"]').closest('li').addClass('active');
+				if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+						
+				}
+				//End here
+				$('#side_menu > ul > li:has(ul)').addClass("has-sub");
+				
+				$('#side_menu > ul > li > a').click(function() {
+				
+					var checkElement = $(this).next();
+
+					$('#side_menu li').removeClass('active');
+					$(this).closest('li').addClass('active');	
+				
+					if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+						$(this).closest('li').removeClass('active');
+						checkElement.slideUp('normal');
+					}
+				
+					if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+					}
+				
+					if (checkElement.is('ul')) {
+						return false;
+					} else {
+						return true;	
+					}
+				});
+
+			});
+			
+			function scrollTo(hash) {
+   		 		location.hash = "#" + hash;
+			}
+		</script>
+<!-- CSS STYLESHEETS ------------------ -->
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+<link rel="stylesheet" type="text/css" href="css/icons.css"> 
+<link rel="stylesheet" type="text/css" href="css/styles.css"> 
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/style_guide.css">
+<link rel="shortcut icon" href="images/logo+favicon/favicon.ico" type="image/x-icon" />
+<style>
+	.ltGray { background-color:#f7f7f7; }
+</style>
+</head>
+<body style="padding-top:75px;">
+	<div class="col-lg-12 hidden-xs" style="position:absolute; z-index:9999;">
+		<div id="navigation_bar">
+			<img id="logo" alt="TDC Styles logo" src="images/logo.png">
+			<nav id="main_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="templates.html">Templates</a></li>
+					<li id="active"><a href="style_guide.html">Style Guide</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<!-- MENU GOES HERE ------------------------------------------------------ -->
+		<div id="menu-wrapper" class="col-lg-2">
+			<nav id="side_menu" >
+				<!--<div id="accordion_menu"> ------------------------------------ -->
+				<ul>
+					<li><a href="buttons.html#buttons">Buttons<i></i></a>
+						<ul>
+							<li><a href="buttons.html#button_styles">Button Styles</a></li>
+							<li><a href="buttons.html#button_group">Button Group</a></li>
+						</ul>
+					</li>
+					<li><a href="colors_and_layout.html#colors_and_layout">Colors & Layouts<i></i></a>
+						<ul>
+							<li><a href="colors_and_layout.html#color_palette">Color Palette</a></li>
+							<li><a href="colors_and_layout.html#two_column_layout">Two Column Layout</a></li>
+							<li><a href="colors_and_layout.html#three_column_layout">Three Column Layout</a></li>
+						</ul>
+					</li>
+					<li><a href="containers_and_separators.html#containers_and_separators">Containers & Separators<i></i></a>
+						<ul>
+							<li><a href="containers_and_separators.html#containers">Containers</a></li>
+							<li><a href="containers_and_separators.html#horizontal_and_vertical _rules">Horizontal and Vertical Rules</a></li>
+						</ul>
+					</li>
+					<li><a href="forms_input_and_selections.html#forms_input_and_selections">Forms, Input & Selections<i></i></a>
+						<ul>
+							<li><a href="forms_input_and_selections.html#autofill_text_field">Autocomplete</a></li>
+							<li><a href="forms_input_and_selections.html#checkboxes">Checkboxes</a></li>
+							<li><a href="forms_input_and_selections.html#date_field">Date Field</a></li>
+							<li><a href="forms_input_and_selections.html#form_layout">Form Layout</a></li>
+							<li><a href="forms_input_and_selections.html#radio_buttons">Radio Buttons</a></li>
+							<li><a href="forms_input_and_selections.html#text_area">Text Area</a></li>
+							<li><a href="forms_input_and_selections.html#text_field">Text Field</a></li>
+							<li><a href="forms_input_and_selections.html#text_field_helper">Text Field Helper</a></li>
+							<li><a href="forms_input_and_selections.html#validation">Validation</a></li>	
+						</ul>
+					</li>
+					<li><a href="icons_and_images.html#icons_and_images">Icons & Images<i></i></a>
+						<ul>
+							<li><a href="icons_and_images.html#file_format">File Format</a></li>
+							<li><a href="icons_and_images.html#icons">Icons</a></li>
+							<li><a href="icons_and_images.html#logo">Logo</a></li>
+							<li><a href="icons_and_images.html#proportions">Proportions</a></li>
+						</ul>
+					</li>
+					<li><a href="lists.html#lists">Lists<i></i></a>
+						<ul>
+							<li><a href="lists.html#bulleted">Bulleted</a></li>
+							<li><a href="lists.html#description">Description</a></li>
+							<li><a href="lists.html#horizontal_description">Horizontal Description</a></li>
+							<li><a href="lists.html#numbered">Numbered</a></li>
+							<li><a href="lists.html#Unstyled">Unstyled</a></li>
+						</ul>
+					</li>
+					<li><a href="modals_dialogs_and_utilities.html#modals_dialogs_and_utilities">Modals, Dialogs & Utilities<i></i></a>
+						<ul>
+							<li><a href="modals_dialogs_and_utilities.html#help">Help</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#dialog_box">Dialog Box</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#notifications">Notifications</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#progress indicator">Progress Indicator</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#tooltips">Tooltips</a></li>
+						</ul>
+					</li>
+					<li><a href="navigation.html#navigation">Navigation<i></i></a>
+						<ul>
+							<li><a href="navigation.html#breadcrumbs">Breadcrumbs</a></li>
+							<li><a href="navigation.html#carousel">Carousel</a></li>
+							<li><a href="navigation.html#header">Header</a></li>
+							<li><a href="navigation.html#footer">Footer</a></li>
+							<li><a href="navigation.html#global_menu">Global Menu</a></li>
+							<li><a href="navigation.html#local_menu">Local Menu</a></li>
+							<li><a href="navigation.html#pager">Pager</a></li>
+							<li><a href="navigation.html#pagination">Pagination</a></li>
+							<li><a href="navigation.html#tree">Tree</a></li>		
+						</ul>
+					</li>
+					<li><a href="portlets.html#portlets">Portlets<i></i></a>
+						<ul>
+							<li><a href="portlets.html#portlet_layout">Layout</a></li>
+							<li><a href="portlets.html#interactions">Interactions</a></li>
+						</ul>
+					</li>
+					<li><a href="responsive_web_design.html#responsive_web_design">Responsive Web Design<i></i></a>
+						<ul>
+							<li><a href="responsive_web_design.html#mobile">Mobile</a></li>
+							<li><a href="responsive_web_design.html#tablet">Tablet</a></li>
+						</ul>
+					</li>
+					<li><a href="tabs_accordions_tables.html#tabs_accordions_tables">Tabs, Accordions & Tables<i></i></a>
+						<ul>
+							<li><a href="tabs_accordions_tables.html#accordion">Accordion</a></li>
+							<li><a href="tabs_accordions_tables.html#column_table">Table - Column Table</a></li>
+							<li><a href="tabs_accordions_tables.html#data_table">Table - Data Table</a></li>
+							<li><a href="tabs_accordions_tables.html#grid_style">Table - Grid Style</a></li>
+							<li><a href="tabs_accordions_tables.html#task_table">Table - Task Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tree_table">Table - Tree Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tabs">Tabs</a></li>							
+						</ul>						
+					</li>
+					<li><a href="text.html#text">Text<i></i></a>
+						<ul>
+							<li><a href="text.html#caption">Caption</a></li>
+							<li><a href="text.html#fonts">Fonts</a></li>
+							<li><a href="text.html#headings">Headings</a></li>
+							<li><a href="text.html#links">Links</a></li>
+							<li><a href="text.html#paragraph">Paragraph</a></li>
+							<li><a href="text.html#styling">Styling</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- CONTENT AREA ------------------------------------------------------------ -->
+		<div id="content-wrapper">
+			<h1>Tabs, Accordions & Tables</h1>
+			<div>
+				<div class="well ltGray">Test Test Test Test Test Test Test Test Test Test Test Test</div>
+			</div>
+<section>
+    			<h2><a class="subtitle" name="accordion">Accordion</a></h2>
+                
+				<div class="round_corner">
+                <img id="button_sizing" class="center framed" src="images/tabs_accordions_tables/accordions.jpg" alt="accordions" style="width:100%;">
+                </div>
+                
+                <h3>Overview</h3>
+                <p>Accordion menus are used with content pages. This is used to navigate to pages and subpages (when necessary). There are three types of pages varying levels on what the content needs.</p>
+                	<h3>Design Breakdown</h3>
+							<h4>Placement</h4>
+								<div class="placement">
+ 	               					<p>These menus are left of the main content.</p>
+		  </div><br>
+
+                <h3>Single Level Accordion (accordion with 1 level)</h3>
+         		<p>This menu is used when there are no subpages with the content.  The selected page is set to a lighter blue (#0795DD) the rest of the menu is set to the default AT&T Blue.</p>
+
+                <h3>Dual Level Accordion (accordion with 2 levels)</h3>
+         		<p>This menu is used when there’s one level of subpages.  When selected both the first menu level is set to a lighter blue (#0795DD) the rest of the first menu level is set to the default AT&T Blue.  The second level is highlighted in AT&T Orange and the rest of the second menu level links are set to AT&T Blue.</p>
+
+                <h3>Tertiary Level Accordion (accordion with 3 levels)</h3>
+         		<p>This menu is used when there’s two levels of subpages.  When selected the first menu level is set to a lighter blue (#0795DD) the rest of the first menu level is set to the default AT&T Blue.  The second menu level the selected is set to a Gray Highlight the rest of the second menu level is set to a slightly darker gray (#e5e5e5).   The third level is highlighted in AT&T Orange and the rest of the second menu level links are set to AT&T Blue.</p>
+    		
+    			<h2>Tables</h2>
+                <p>Tables are used to display data in a tabular format.  Data is arranged in a logical manner from most valuable data in the left column.  The striped style alternates shading by row which is ideal for records with many columns for easier legibility. </p>
+                <h2><a name="column_table">Table - Column Table</a></h2>
+                
+				<div class="round_corner">
+                <img id="button_sizing" class="center framed" src="images/tabs_accordions_tables/table_column-table.PNG" alt="column table" style="width:100%;">
+                </div>
+                
+    			<p>Column Table allows for column selection.  When users need to select columns to show or hide.  Do not double the attributes into one column or cell.</p>
+                <p>Initially show the most valuable columns for the end user.  Whenever possible shorten attribute information to keep column width to a minimum (i.e. for date show 1/2/15 instead of January 2, 2015)
+If certain table attributes only apply to certain groups of users or certain circumstances, consider providing the users with alternative table views.
+				</p>
+                <p>The table view selected can become the default view for future application sessions. If horizontal table scrolling is absolutely necessary, keep the primary record column fixed to the left as user scrolls through other columns. You may wish to title your table to improve data context. If so, we recommend that you include a title within a table header, left aligned.</p>
+                       
+    			<h2><a class="subtitle" name="data_table">Table - Data Table</a></h2>
+                
+								<div class="thumbnail">
+									<div class="thumbnail_container">
+										<a href="images/tabs_accordions_tables/table_data-table-PRISM.png" data-lightbox="image-1" data-title="Data Table"><img class="center framed" src="images/tabs_accordions_tables/table_data-table-PRISM.png" alt="Data Table"></a>
+									</div>								
+								</div>
+                
+    			<p>In general tables should be filterable, sortable and include pagination. Allow users to select the number of results to select the number of results be shown per page.  When sorting the column header is highlighted indicating that it is the item that is defining the sort order.</p>
+                <p>If table scrolls vertically within its container, keep the column headers fixed in the scroll so that users can contextualize data.</p>
+                <p>Group rows into categories when convenient for the user (use accordion module).</p>
+                <p>Upon mouse hover, highlight the row if the table is in grid-outline style.</p>
+                <p>Use tooltips upon long hover to show column heading. You may wish to title your table to improve data context. If so, we recommend that you include a title within a table header, left aligned. An example of how to style this table component can be found in the Task-Oriented Table module.</p>
+
+    			<h2><a class="subtitle" name="grid_style">Table - Grid Style</a></h2>
+                
+				<div class="round_corner">
+                <img id="button_sizing" class="center framed" src="images/tabs_accordions_tables/table_grid-style.PNG" alt="grid style" style="width:100%;">
+                </div>
+
+    			<h2><a class="subtitle" name="task_table">Table - Task Table</a></h2>
+                
+				<div class="round_corner">
+                <img id="button_sizing" class="center framed" src="images/tabs_accordions_tables/table_task-table.PNG" alt="task table" style="width:100%;">
+                </div>
+                              
+    			<h2><a class="subtitle" name="tree_table">Table - Tree Table</a></h2>
+                <div class="round_corner"><img id="button_sizing" class="center framed" src="images/tabs_accordions_tables/table_tree-table.PNG"></div>
+    			<p>Tree tables are used for displaying tabular data that has a consistent hierarchical pattern.  Plus and minus icons are used to expand and collapse the child rows.</p>
+                <p>Include an expand all button at top where expandable information is available.</p>
+
+    			<h2><a class="subtitle" name="tabs">Tabs</a></h2>
+                <p>Tabs allow the user to navigate among alternate views within the same context. The selected tab is highlighted visually. Tabs may appear within any container on a page.</p>
+                <p>Using more than 3 tabs to divide content on mobile device is not user-friendly.</p>
+                <p>An accordion navigation structure or drop down menu is preferred to show or conceal content views on a mobile device.</p>
+                <h3>Tabs - Horizontal</h3>
+              <div class="round_corner"> <img id="button_sizing" class="center framed" src="images/tabs_accordions_tables/tabs.png"></div>
+                
+                <h3>Tabs - Vertical</h3>
+                
+								<div class="thumbnail">
+									<div class="thumbnail_container">
+										<a href="images/tabs_accordions_tables/tabs-verticle.png" data-lightbox="image-2" data-title="Data Table"><img src="images/tabs_accordions_tables/tabs-verticle.png" alt="Data Table"></a>
+									</div>								
+								</div>
+                
+         </section>                
+         
+		</div>
+	</div>
+</body>
+
+</html>

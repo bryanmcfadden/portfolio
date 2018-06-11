@@ -1,0 +1,2013 @@
+.portlet-dlg-icon-label {
+	color: rgb(0, 0, 0); font-weight: bold; white-space: nowrap;
+}
+.portlet-icon-label {
+	color: rgb(0, 0, 0);
+}
+.portlet-section-header {
+	color: rgb(51, 51, 51); font-weight: bold;
+}
+.portlet-section-header-highlight {
+	background-color: rgb(240, 240, 240);
+}
+.portlet-font {
+	color: rgb(51, 51, 51); font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+}
+.portlet-section-subheader {
+	color: rgb(51, 51, 51);
+}
+.portlet-table-selected {
+	color: rgb(51, 51, 51); background-color: rgb(197, 209, 222);
+}
+.portlet-table-alternate {
+	color: rgb(51, 51, 51);
+}
+.portlet-table-header {
+	border: 0px rgb(170, 170, 170); text-align: left; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.portlet-table-body {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: left;
+}
+.portlet-table-subheader {
+	text-align: left; color: rgb(0, 0, 0); font-weight: bold;
+}
+.portlet-form-input-field {
+	border: 1px solid rgb(153, 153, 153); border-image: none;
+}
+.portlet-form-button {
+	background-position: left; margin: 0px; padding: 0px 2px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; color: rgb(0, 0, 0); overflow: visible; font-weight: normal; text-decoration: none; cursor: pointer; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/ButtonBackground.gif"); background-repeat: repeat-x;
+}
+.portlet-form-field {
+	color: rgb(51, 51, 51);
+}
+.portlet-form-field-label {
+	color: rgb(51, 51, 51);
+}
+.portlet-font-dim {
+	color: rgb(128, 128, 128);
+}
+.portlet-form-label {
+	color: rgb(51, 51, 51);
+}
+.portlet-msg-error {
+	color: rgb(0, 0, 0);
+}
+.portlet-msg-alert {
+	color: rgb(0, 0, 0);
+}
+.portlet-msg-success {
+	color: rgb(0, 0, 0);
+}
+.portlet-msg-info {
+	color: rgb(0, 0, 0);
+}
+.portlet-section-text {
+	color: rgb(102, 102, 102);
+}
+.portlet-msg-status {
+	color: rgb(51, 51, 51);
+}
+.portlet-menu {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(238, 238, 238);
+}
+.portlet-menu-cascade {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(238, 238, 238);
+}
+.portlet-menu-item {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(238, 238, 238);
+}
+.portlet-menu-item-selected {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(170, 170, 170);
+}
+.portlet-menu-item-hover {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(204, 204, 204);
+}
+.portlet-menu-cascade-item-hover {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(204, 204, 204);
+}
+.portlet-menu-item-hover-selected {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(204, 204, 204);
+}
+.portlet-menu-cascade-item-hover-selected {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(204, 204, 204);
+}
+.portlet-menu-cascade-item {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(238, 238, 238);
+}
+.portlet-menu-cascade-item-selected {
+	padding: 3px; border: 1px solid rgb(51, 51, 51); background-color: rgb(204, 204, 204);
+}
+.portlet-menu-separator {
+	background-color: rgb(153, 153, 153);
+}
+.portlet-menu-cascade-separator {
+	background-color: rgb(153, 153, 153);
+}
+.portlet-menu-content {
+	background-color: rgb(238, 238, 238);
+}
+.portlet-menu-content-selected {
+	background-color: rgb(238, 238, 238);
+}
+.portlet-menu-content-hover {
+	background-color: rgb(204, 204, 204);
+}
+.portlet-menu-content-hover-selected {
+	background-color: rgb(204, 204, 204);
+}
+.portlet-menu-caption {
+	border: 1px solid rgb(51, 51, 51);
+}
+.portlet-separator {
+	height: 1px; background-color: rgb(153, 153, 153);
+}
+div.portlet-separator {
+	margin: 2px 0px; background-color: rgb(153, 153, 153);
+}
+.help {
+	color: rgb(0, 0, 0); font-size: 1em;
+}
+.help_indent {
+	color: rgb(0, 0, 0); font-size: 1em; background-color: rgb(255, 255, 255);
+}
+a.help {
+	color: rgb(51, 102, 204); font-size: 1em;
+}
+a.help:visited {
+	color: rgb(102, 102, 153); font-size: 1em;
+}
+a.help:active {
+	color: rgb(51, 102, 204); font-size: 1em;
+}
+a.help:hover {
+	color: rgb(51, 102, 204); font-size: 1em;
+}
+h2.help {
+	text-align: left; color: rgb(0, 0, 0); padding-top: 22px; padding-left: 8px; font-size: 1.16em; font-weight: bold; border-bottom-color: rgb(176, 176, 176); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(240, 240, 240);
+}
+h3.help {
+	padding-top: 3px; padding-left: 8px; font-size: 1.16em; font-weight: bold; background-color: rgb(240, 240, 240);
+}
+h3 a.help {
+	color: rgb(0, 0, 0); font-size: 1.16em; text-decoration: none; background-color: rgb(240, 240, 240);
+}
+h4.help {
+	margin: 16px 20px 0px; text-align: left; color: rgb(0, 0, 0); padding-top: 3px; padding-left: 8px; background-color: rgb(240, 240, 240);
+}
+h4 a.help {
+	color: rgb(0, 0, 0); font-size: 1em; font-style: italic; font-weight: normal; background-color: rgb(240, 240, 240);
+}
+p.help {
+	margin: 2px 20px 0px 30px; padding-top: 4px; padding-bottom: 0px;
+}
+p.help_indent {
+	margin: 2px 20px 0px 0px; padding-top: 4px; padding-bottom: 0px;
+}
+ul.help {
+	margin-right: 20px; margin-left: 56px;
+}
+ol.help {
+	margin-right: 20px; margin-left: 56px;
+}
+dl.help {
+	margin-right: 20px; margin-left: 56px;
+}
+pre.help {
+	font-family: monospace; font-size: 1.16em; margin-left: 30px;
+}
+dt a.help {
+	color: rgb(0, 0, 0); font-weight: 900;
+}
+dd.help {
+	padding-top: 2px; padding-bottom: 20px;
+}
+li.help {
+	padding-top: 2px; padding-bottom: 2px;
+}
+table.help {
+	padding-right: 20px; padding-left: 30px; margin-left: 28px;
+}
+th.help {
+	text-align: center; padding-top: 5px; padding-bottom: 5px; vertical-align: top;
+}
+td.help {
+	text-align: left; padding-top: 3px; padding-bottom: 3px; vertical-align: top;
+}
+samp {
+	font-family: monospace; font-size: 1.16em;
+}
+samp.help {
+	font-family: monospace; font-size: 1.16em;
+}
+table.dataTable {
+	border-color: black; width: 90%; color: black; margin-left: 28px; border-collapse: collapse; background-color: white;
+}
+.dataTable th {
+	color: black; font-size: 0.8em; font-weight: bold; background-color: rgb(240, 240, 240);
+}
+.wpsTableAdminHead {
+	color: rgb(51, 51, 51); background-color: rgb(204, 204, 204);
+}
+.wpsAdminHeadSeparator {
+	height: 1px; background-color: rgb(153, 153, 153);
+}
+.wpsStatusMsg {
+	margin: 10px 0px; padding: 5px; border: 2px solid rgb(171, 202, 202); border-image: none; color: rgb(0, 0, 0); background-color: rgb(231, 239, 247); -moz-border-radius: 8px;
+}
+.wpsStatusMsg img {
+	vertical-align: middle;
+}
+.wpsInstructionText {
+	margin: 0.6em 0px 0px; color: rgb(107, 107, 107);
+}
+.wpsInstructionText em {
+	color: rgb(138, 89, 166); font-style: normal; font-weight: bold;
+}
+.wpsInstructionHeadText {
+	color: rgb(64, 83, 128); font-size: 1em; font-weight: bold;
+}
+.wpsIndentXSmall {
+	padding-left: 4px;
+}
+.wpsIndentSmall {
+	padding-left: 8px;
+}
+.wpsIndentMedium {
+	padding-left: 16px;
+}
+.wpsIndentLarge {
+	padding-left: 32px;
+}
+.wpsIndentXLarge {
+	padding-left: 48px;
+}
+.wpsTaskIconText {
+	color: rgb(0, 0, 0); font-weight: bold; white-space: nowrap;
+}
+.wpsTaskDisabledIconText {
+	color: rgb(136, 136, 136); font-weight: bold; white-space: nowrap;
+}
+.wpsTaskIconBorderTable {
+	border: 0px currentColor; border-image: none;
+}
+.wpsTaskDisabledIconBorderTable {
+	border: 0px currentColor; border-image: none;
+}
+.wpsTaskIconTextBackground {
+	background-position: left; margin: 0px; padding: 2px 4px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; vertical-align: middle; white-space: nowrap; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/ButtonBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsTaskDisabledIconTextBackground {
+	background-position: left; margin: 0px; padding: 2px 4px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; vertical-align: middle; white-space: nowrap; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/ButtonBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsDialogIconText {
+	color: rgb(0, 0, 0); padding-left: 5px;
+}
+.wpsDialogDisabledIconText {
+	color: rgb(136, 136, 136);
+}
+.wpsDialogIconBackground {
+	background-position: left; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(145, 145, 145); margin: 0px; padding: 0px; text-align: center; vertical-align: middle; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/DialogIconBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsDialogIconTextBackground {
+	background-position: left; border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(145, 145, 145); margin: 0px; padding: 2px 4px; text-align: center; vertical-align: middle; white-space: nowrap; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/DialogIconTextBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsDialogDisabledIconBackground {
+	background-position: left; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(145, 145, 145); margin: 0px; padding: 0px; text-align: center; vertical-align: middle; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/DialogIconBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsDialogDisabledIconTextBackground {
+	background-position: left; border-width: 1px 1px 1px 0px; border-style: solid solid solid none; border-color: rgb(145, 145, 145); margin: 0px; padding: 2px 4px; text-align: center; vertical-align: middle; white-space: nowrap; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/DialogIconTextBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsDialogIcon {
+	width: 16px; height: 16px;
+}
+.wpsButtonBarTop {
+	background-color: rgb(223, 223, 223);
+}
+.wpsButtonBarBottom {
+	background-color: rgb(223, 223, 223);
+}
+.wpsPortletBack {
+	background-color: rgb(255, 255, 255);
+}
+.wpsEditBack {
+	background-color: rgb(255, 255, 255);
+}
+.wpsConfigureBack {
+	background-color: rgb(255, 255, 255);
+}
+.wpsAdvancedOptions {
+	border: 1px solid rgb(74, 74, 74); border-image: none; margin-left: 10px; background-color: rgb(228, 228, 228);
+}
+.wpsPortletColorBack {
+	background-color: rgb(204, 204, 204);
+}
+.wpsPortletHead {
+	color: rgb(51, 51, 51); font-weight: bold;
+}
+.wpsEditHead {
+	color: rgb(51, 51, 51); font-weight: bold;
+}
+.wpsPortletText {
+	color: rgb(51, 51, 51); font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+}
+.wpsEditText {
+	color: rgb(51, 51, 51); font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+}
+.wpsPortletSmText {
+	color: rgb(51, 51, 51); font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+}
+.wpsEditSmText {
+	color: rgb(51, 51, 51); font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+}
+.wpsPortletTinyText {
+	color: rgb(51, 51, 51); font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+}
+.wpsCopyrightText {
+	color: rgb(153, 153, 153); font-size: 0.91em;
+}
+.wpsTableHead {
+	text-align: left; color: rgb(152, 152, 152); font-weight: bold;
+}
+.wpsTableHead th {
+	padding: 3px;
+}
+.wpsTableRow {
+	color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);
+}
+.wpsTableNrmRow {
+	color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);
+}
+.wpsTableSelectedRow {
+	color: rgb(51, 51, 51); background-color: rgb(197, 209, 222);
+}
+.wpsTableShdRow {
+	color: rgb(51, 51, 51);
+}
+.wpsTableRow td {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(170, 170, 170); padding: 3px;
+}
+.wpsTableNrmRow td {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(170, 170, 170); padding: 3px;
+}
+.wpsTableShdRow td {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(170, 170, 170); padding: 3px;
+}
+.wpsTableHeadLink {
+	color: rgb(0, 0, 0); font-weight: normal;
+}
+.wpsTableHeadLink:visited {
+	color: rgb(0, 0, 0); font-weight: normal;
+}
+.wpsTableHeadLink:hover {
+	color: rgb(0, 0, 0); font-weight: normal;
+}
+.wpsTableHeadLink:active {
+	color: rgb(0, 0, 0); font-weight: normal;
+}
+.wpsTable {
+	border: 1px solid rgb(170, 170, 170);
+}
+.wpsTable td {
+	vertical-align: top;
+}
+.wpsTable a:focus {
+	outline-width: 2px; outline-style: dotted;
+}
+.wpsTable .wpsLink:focus {
+	outline-width: 2px; outline-style: dotted;
+}
+.wpsTableHeadStart {
+	border: 0px rgb(170, 170, 170); text-align: left; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadMiddle {
+	border: 0px rgb(170, 170, 170); text-align: left; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadEnd {
+	border: 0px rgb(170, 170, 170); text-align: left; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadStartAlignCenter {
+	border: 0px rgb(170, 170, 170); text-align: center; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadMiddleAlignCenter {
+	border: 0px rgb(170, 170, 170); text-align: center; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadEndAlignCenter {
+	border: 0px rgb(170, 170, 170); text-align: center; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadStartNumeric {
+	border: 0px rgb(170, 170, 170); text-align: right; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadMiddleNumeric {
+	border: 0px rgb(170, 170, 170); text-align: right; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableHeadEndNumeric {
+	border: 0px rgb(170, 170, 170); text-align: right; color: rgb(0, 0, 0); font-weight: normal; background-color: rgb(255, 255, 255);
+}
+.wpsTableDataStart {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: left;
+}
+.wpsTableDataMiddle {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: left;
+}
+.wpsTableDataEnd {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: left;
+}
+.wpsTableDataStartAlignCenter {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: center;
+}
+.wpsTableDataMiddleAlignCenter {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: center;
+}
+.wpsTableDataEndAlignCenter {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: center;
+}
+.wpsTableDataStartNumeric {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: right;
+}
+.wpsTableDataMiddleNumeric {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: right;
+}
+.wpsTableDataEndNumeric {
+	border-width: 1px 0px 0px !important; border-style: solid !important; border-color: rgb(170, 170, 170) !important; text-align: right;
+}
+.wpsPagingTable {
+	margin: 10px 0px; border: 0px currentColor; border-image: none;
+}
+.wpsPagingTableHeader {
+	margin: 10px 0px; border: 0px currentColor; border-image: none;
+}
+.wpsPagingTableFooter {
+	margin: 10px 0px; border: 0px currentColor; border-image: none;
+}
+.wpsPagingTableBody {
+	margin: 10px 0px; border: 0px currentColor; border-image: none;
+}
+.wpsPagingTableHeaderIcon {
+	width: 16px; height: 16px;
+}
+.wpsPagingTableFooterIcon {
+	width: 16px; height: 16px;
+}
+.wpsPagingTableHeaderStart {
+	border-width: 1px 0px 0px 1px; border-style: solid none none solid; border-color: rgb(170, 170, 170); background-color: rgb(240, 240, 240);
+}
+.wpsPagingTableHeaderMiddle {
+	border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(170, 170, 170); background-color: rgb(240, 240, 240);
+}
+.wpsPagingTableHeaderEnd {
+	background-position: right top; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PagingTableTopRight.gif"); background-repeat: no-repeat; background-color: transparent;
+}
+.wpsPagingTableFooterStart {
+	border-width: 0px 0px 1px 1px; border-style: none none solid solid; border-color: rgb(170, 170, 170); background-color: rgb(240, 240, 240);
+}
+.wpsPagingTableFooterMiddle {
+	border-width: 0px 0px 1px; border-style: none none solid; border-color: rgb(170, 170, 170); background-color: rgb(240, 240, 240);
+}
+.wpsPagingTableFooterEnd {
+	background-position: right bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PagingTableBottomRight.gif"); background-repeat: no-repeat; background-color: transparent;
+}
+.wpsPagingTableHeaderEmpty {
+	width: 7px; height: 7px; line-height: 1px;
+}
+.wpsTableRowDetail td {
+	border-width: 0px !important; padding: 2px 3px 5px; text-align: left;
+}
+.wpsTableSectionHead {
+	text-align: left; color: rgb(0, 0, 0); font-weight: bold;
+}
+.wpsTableSectionHead th {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(170, 170, 170); padding: 3px 0px 3px 5px;
+}
+.wpsTableTopRow td {
+	border-color: rgb(170, 170, 170) !important;
+}
+.wpsPagingTableHeaderEmpty {
+	width: 7px; height: 7px; line-height: 1px;
+}
+.wpsTableRowDetail td {
+	border-width: 0px !important; padding: 2px 3px 5px; text-align: left;
+}
+.wpsCompactCheckBox {
+	height: 16px; margin-top: 0px; margin-bottom: 0px;
+}
+.wpsCompactRadioButton {
+	height: 16px; margin-top: 0px; margin-bottom: 0px;
+}
+.wpsEditField {
+	border: 1px solid rgb(153, 153, 153); border-image: none;
+}
+.wpsButtonText {
+	background-position: left; margin: 0px; padding: 2px 4px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; color: rgb(0, 0, 0); font-weight: bold; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/ButtonBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsButtonDisabledText {
+	background-position: left; margin: 0px; padding: 2px 4px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; color: rgb(136, 136, 136); font-weight: bold; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/ButtonBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.wpsLabelText {
+	color: rgb(51, 51, 51);
+}
+wpsRequiredLabelText {
+	color: rgb(51, 51, 51);
+}
+.wpsRequiredLabelText strong {
+	color: rgb(255, 0, 0);
+}
+.wpsDescriptionText {
+	color: rgb(128, 128, 128);
+}
+.wpsFieldErrorText {
+	color: rgb(0, 0, 0);
+}
+.wpsFieldWarningText {
+	color: rgb(0, 0, 0);
+}
+.wpsFieldSuccessText {
+	color: rgb(0, 0, 0);
+}
+.wpsFieldInfoText {
+	color: rgb(0, 0, 0);
+}
+.wpsInlineHelpText {
+	color: rgb(102, 102, 102);
+}
+.wpsFieldMonospaced {
+	font-family: monospace; font-size: 1.16em;
+}
+.wpsFlagText {
+	color: rgb(255, 0, 0); font-size: 0.91em;
+}
+.wpsPortletTabBarSeparator {
+	background: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/portletTabSeparator.gif") repeat-x rgb(149, 165, 185); margin: 0px; padding: 0px; height: 3px;
+}
+.wpsPortletTabSet {
+	border: 0px currentColor; border-image: none; background-color: transparent;
+}
+.wpsPortletTab {
+	border: 0px currentColor; border-image: none; background-color: transparent;
+}
+.wpsPortletSelectedTab {
+	border: 0px currentColor; border-image: none; background-color: transparent;
+}
+.wpsPortletTabTopStart {
+	background-position: left bottom; padding: 0px 2px; width: 5px; height: 5px; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabTopLeft.jpg"); background-repeat: no-repeat;
+}
+.wpsPortletTabTopCenter {
+	background-position: bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabTopMiddle.jpg"); background-repeat: repeat-x;
+}
+.wpsPortletTabTopEnd {
+	background-position: right bottom; padding: 0px 2px; width: 5px; height: 5px; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabTopRight.jpg"); background-repeat: no-repeat; background-color: transparent;
+}
+.wpsPortletTabMiddleStart {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid; border-color: rgb(192, 192, 192); background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabCenter.jpg"); background-repeat: repeat-x; background-color: rgb(255, 255, 255);
+}
+.wpsPortletTabMiddleCenter {
+	white-space: nowrap; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabCenter.jpg"); background-repeat: repeat-x; background-color: rgb(255, 255, 255);
+}
+.wpsPortletTabMiddleEnd {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none; border-color: rgb(192, 192, 192); background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabCenter.jpg"); background-repeat: repeat-x; background-color: rgb(255, 255, 255);
+}
+.wpsPortletTabBottomStart {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid; border-color: rgb(192, 192, 192); width: 5px; height: 5px; background-color: rgb(255, 255, 255);
+}
+.wpsPortletTabBottomCenter {
+	background-color: rgb(255, 255, 255);
+}
+.wpsPortletTabBottomEnd {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none; border-color: rgb(192, 192, 192); width: 5px; height: 5px; background-color: rgb(255, 255, 255);
+}
+.wpsPortletSelectedTabTopStart {
+	background-position: left bottom; padding: 0px 2px; width: 5px; height: 5px; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabTopLeft.jpg"); background-repeat: no-repeat;
+}
+.wpsPortletSelectedTabTopCenter {
+	background-position: bottom; border-width: 0px; border-style: solid none none; border-color: rgb(170, 194, 230); background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabTopMiddle.jpg"); background-repeat: repeat-x;
+}
+.wpsPortletSelectedTabTopEnd {
+	background-position: right bottom; padding: 0px 2px; width: 5px; height: 5px; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabTopRight.jpg"); background-repeat: no-repeat; background-color: transparent;
+}
+.wpsPortletSelectedTabMiddleStart {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid; border-color: rgb(170, 194, 230); background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabCenterMid.jpg"); background-repeat: repeat-x;
+}
+.wpsPortletSelectedTabMiddleCenter {
+	white-space: nowrap; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabCenterMid.jpg"); background-repeat: repeat-x;
+}
+.wpsPortletSelectedTabMiddleEnd {
+	border-width: 0px 1px 0px 0px; border-style: none solid; border-color: rgb(170, 194, 230); background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabCenterMid.jpg"); background-repeat: repeat-x;
+}
+.wpsPortletSelectedTabBottomStart {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid; border-color: rgb(170, 194, 230); width: 5px; height: 5px; background-color: rgb(255, 255, 255);
+}
+.wpsPortletSelectedTabBottomCenter {
+	background-color: rgb(255, 255, 255);
+}
+.wpsPortletSelectedTabBottomEnd {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none; border-color: rgb(170, 194, 230); width: 5px; height: 5px; background-color: rgb(255, 255, 255);
+}
+.wpsPortletTabLink {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletTabLink:visited {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletTabLink:active {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletTabLink:hover {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletSelectedTabLink {
+	color: rgb(32, 86, 160); font-weight: bold;
+}
+.wpsPortletSelectedTabLink:hover {
+	color: rgb(32, 86, 160); font-weight: bold;
+}
+.wpsPortletSelectedTabLink:visited {
+	color: rgb(32, 86, 160); font-weight: bold;
+}
+.wpsPortletSelectedTabLink:active {
+	color: rgb(32, 86, 160); font-weight: bold;
+}
+.wpsPortletToolbar {
+	border-width: 1px; border-style: solid; border-color: rgb(228, 237, 245) rgb(149, 165, 185) rgb(149, 165, 185) rgb(228, 237, 245); background-color: rgb(197, 209, 222);
+}
+.wpsPortletToolbarSection {
+	border-width: 0px;
+}
+.wpsPortletToolbarButton {
+	padding: 3px; border: 1px solid rgb(197, 209, 222); background-color: rgb(197, 209, 222);
+}
+.wpsPortletToolbarButtonRollover {
+	border-width: 1px; border-style: solid; border-color: rgb(228, 237, 245) rgb(149, 165, 185) rgb(149, 165, 185) rgb(228, 237, 245); padding: 3px; background-color: rgb(197, 209, 222);
+}
+.wpsPortletToolbarButtonPressed {
+	border-width: 1px; border-style: solid; border-color: rgb(149, 165, 185) rgb(228, 237, 245) rgb(228, 237, 245) rgb(149, 165, 185); padding: 3px; background-color: rgb(218, 223, 229);
+}
+.wpsPortletToolbarButtonSelected {
+	border-width: 1px; border-style: solid; border-color: rgb(149, 165, 185) rgb(228, 237, 245) rgb(228, 237, 245) rgb(149, 165, 185); padding: 3px; background-color: rgb(174, 184, 196);
+}
+.wpsPortletToolbarButtonSelectedRollover {
+	border-width: 1px; border-style: solid; border-color: rgb(228, 237, 245) rgb(149, 165, 185) rgb(149, 165, 185) rgb(228, 237, 245); padding: 3px; background-color: rgb(174, 184, 196);
+}
+.wpsPortletToolbarButtonIcon {
+	width: 16px; height: 16px;
+}
+.wpsPortletToolbarControl {
+	padding: 3px;
+}
+.wpsPortletToolbarText {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletToolbarDisabledText {
+	color: rgb(153, 153, 153);
+}
+.wpsPortletToolbarLink {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletToolbarLink:hover {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletToolbarLink:visited {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletToolbarLink:active {
+	color: rgb(51, 51, 51);
+}
+.wpsPortletToolbarSeparator {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none; border-color: rgb(149, 165, 185) rgb(228, 237, 245) rgb(228, 237, 245) rgb(149, 165, 185); margin: 0px; padding: 0px; width: 1px; background-color: rgb(149, 165, 185);
+}
+.wpsPortletToolbarSpacer {
+	padding: 0px 2px;
+}
+.wpsPortletToolbarHandle {
+	border-width: 1px; border-style: solid; border-color: rgb(228, 237, 245) rgb(149, 165, 185) rgb(149, 165, 185) rgb(228, 237, 245); margin: 0px; padding: 0px; width: 1px; background-color: rgb(197, 209, 222);
+}
+.wpsBreadcrumbTrail {
+	font-weight: bold;
+}
+.wpsBreadcrumbTrailLink {
+	color: rgb(51, 102, 204); font-weight: bold; text-decoration: underline;
+}
+.wpsBreadcrumbTrailLink:hover {
+	color: rgb(51, 102, 204); font-weight: bold; text-decoration: underline;
+}
+.wpsBreadcrumbTrailLink:visited {
+	color: rgb(51, 102, 204); font-weight: bold; text-decoration: underline;
+}
+.wpsBreadcrumbTrailLink:active {
+	color: rgb(51, 102, 204); font-weight: bold; text-decoration: underline;
+}
+.wpsPortletAccentArea {
+	color: rgb(51, 51, 51); background-color: rgb(197, 209, 222);
+}
+.wpsPortletAccentArea3DHighlight {
+	color: rgb(51, 51, 51); background-color: rgb(228, 237, 245);
+}
+.wpsPortletAccentArea3DShadow {
+	color: rgb(51, 51, 51); background-color: rgb(149, 165, 185);
+}
+.wpsWizardTitle {
+	color: black; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; font-weight: bold; background-color: rgb(193, 193, 193);
+}
+.wpsWizardStepNotification {
+	color: black; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; background-color: rgb(223, 223, 223);
+}
+.wpsWizardBottomSubmit {
+	color: black; padding-top: 5px; padding-bottom: 25px; padding-left: 5px; background-color: rgb(193, 193, 193);
+}
+.wpsCursorPointer {
+	cursor: pointer;
+}
+a.wpsPersonName {
+	color: rgb(51, 102, 204); text-decoration: none; white-space: nowrap;
+}
+a.wpsPersonName:visited {
+	color: rgb(102, 102, 153); text-decoration: none; white-space: nowrap;
+}
+a.wpsPersonName:hover {
+	color: rgb(102, 102, 153); text-decoration: underline; white-space: nowrap;
+}
+.wpsGettingStartedTitle {
+	color: rgb(32, 85, 163); font-size: 1.16em; font-weight: normal;
+}
+.wpsGettingStartedHeader {
+	color: rgb(32, 85, 163); font-size: 1em; font-weight: normal;
+}
+.wpsGettingStartedBody {
+	color: rgb(97, 97, 97); padding-top: 10px; font-size: 0.91em;
+}
+.wpsSearchInfoBar {
+	color: rgb(51, 51, 51); font-family: Helvetica, Arial, sans-serif; font-size: 1em; background-color: rgb(199, 217, 241);
+}
+.wpsSearchUrl {
+	font-weight: bold;
+}
+a.wpsSearchUrl {
+	font-weight: bold;
+}
+.wpsSearchUrlAddressText {
+	color: rgb(0, 128, 0); font-style: italic;
+}
+.wpsSearchAttributeText {
+	color: rgb(193, 193, 193); font-style: italic;
+}
+.wpsEditorToolbar {
+	border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(53, 87, 135) rgb(53, 87, 135) rgb(174, 188, 207); max-height: 24px; background-color: rgb(216, 216, 216);
+}
+.wpsEditorToolbarSection {
+	border-width: 0px;
+}
+tr.wpsEditorToolbar {
+	padding: 0px 2px;
+}
+table.wpsEditorToolbar {
+	background-position: 0px 0px; border-width: 1px 1px 0px; border-style: solid; border-color: rgb(204, 204, 204); padding: 0px; width: 100%; height: 24px; background-image: url("/wps/DocEditor/images/editor_toolbar_gradient.gif"); background-repeat: repeat-x; background-color: white;
+}
+.wpsEditorToolbarButton {
+	border-width: 1px; margin: 0px; padding: 3px;
+}
+.wpsEditorToolbarButtonRollover {
+	margin: 0px; padding: 2px; border: 1px solid white; background-color: white;
+}
+.wpsEditorToolbarButtonPressed {
+	border-width: 1px; border-style: solid; border-color: rgb(136, 136, 136) rgb(216, 216, 216) rgb(216, 216, 216) rgb(136, 136, 136); margin: 0px; padding: 2px; background-color: rgb(216, 216, 216);
+}
+.wpsEditorToolbarButtonSelected {
+	border-width: 1px; border-style: solid; border-color: rgb(149, 165, 185) rgb(228, 237, 245) rgb(228, 237, 245) rgb(149, 165, 185); margin: 0px; padding: 2px; background-color: rgb(174, 184, 196);
+}
+.wpsEditorToolbarButtonSelectedRollover {
+	border-width: 1px; border-style: solid; border-color: rgb(228, 237, 245) rgb(149, 165, 185) rgb(149, 165, 185) rgb(228, 237, 245); margin: 0px; padding: 2px; background-color: rgb(174, 184, 196);
+}
+.wpsEditorToolbarButtonIcon {
+	margin: 0px; padding: 0px; width: 18px; height: 18px;
+}
+.wpsEditorToolbarControl {
+	padding: 1px;
+}
+select.wpsEditorToolbarControl {
+	border: 1px solid rgb(204, 204, 204);
+}
+.wpsEditorToolbarText {
+	color: rgb(51, 51, 51);
+}
+.wpsEditorToolbarLink {
+	color: rgb(51, 51, 51);
+}
+.wpsEditorToolbarLink:hover {
+	color: rgb(51, 51, 51);
+}
+.wpsEditorToolbarLink:visited {
+	color: rgb(51, 51, 51);
+}
+.wpsEditorToolbarLink:active {
+	color: rgb(51, 51, 51);
+}
+.wpsEditorToolbarSeparatorNew {
+	margin: 0px; padding: 0px; width: 5px; height: 18px; border-top-color: rgb(48, 80, 128); border-bottom-color: rgb(48, 80, 128); border-left-color: rgb(174, 188, 207); border-top-width: 0px; border-bottom-width: 0px; border-left-width: 1px; border-top-style: none; border-bottom-style: none; border-left-style: none; background-color: rgb(53, 87, 135);
+}
+.wpsEditorToolbarSeparator {
+	margin: 0px; padding: 0px 7px; background-image: url("/wps/DocEditor/images/separator.gif");
+}
+.wpsEditorToolbarSpacer {
+	padding: 0px 2px;
+}
+.wpsEditorToolbarHandle {
+	border-width: 1px; border-style: solid; border-color: rgb(228, 237, 245) rgb(149, 165, 185) rgb(149, 165, 185) rgb(228, 237, 245); margin: 0px; padding: 0px; width: 1px; background-color: rgb(197, 209, 222);
+}
+.wpsEditorTextArea {
+	margin: 0px; padding: 0px; border: 1px solid rgb(204, 204, 204); border-image: none; background-color: rgb(255, 255, 255);
+}
+.wpsEditorTextAreaText {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+.clearing {
+	clear: both;
+}
+.layoutRow {
+	width: 99%;
+}
+.layoutColumn {
+	width: 100%;
+}
+.generalErrorText {
+	color: red;
+}
+.portlet-separator {
+	margin: 0px; line-height: 1px; background-color: rgb(153, 153, 153);
+}
+.ibm-portlet-section-header {
+	border-bottom-color: rgb(224, 224, 224); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.information {
+	color: rgb(136, 136, 136); margin-bottom: 0.4em;
+}
+.ibm-portlet-section-body {
+	width: 100%; clear: both;
+}
+.ibm-portlet-item-summary-list {
+	margin: 0px; padding: 0px;
+}
+.ibm-portlet-item-summary-list ul {
+	margin: 0px; padding: 0px;
+}
+.ibm-portlet-item-summary-list li {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.ibm-portlet-item-summary-list .ibm-portlet-item-summary {
+	margin-bottom: 2em;
+}
+.centered-div-outer {
+	width: 100%; overflow: hidden; position: relative;
+}
+[class].centered-div-outer {
+	display: table; position: static;
+}
+.centered-div-outer .centered-div-middle {
+	top: 50%; width: 100%; text-align: center; position: absolute;
+}
+.centered-div-outer [class].centered-div-middle {
+	vertical-align: middle; display: table-cell; position: static;
+}
+.centered-div-outer .centered-div-middle .centered-div-inner {
+	top: -50%; position: relative;
+}
+.ibm-portlet-item-summary-list .ibm-portlet-item-summary {
+	margin-bottom: 2em;
+}
+.ibm-portlet-item-summary h3 {
+	margin: 0px; padding: 0px; font-weight: normal; display: inline;
+}
+.ibm-portlet-item-summary ul.property-list {
+	margin: 0.05em 0px; padding: 0px; width: 100%;
+}
+.ibm-portlet-item-summary ul.property-list li {
+	margin: 0px 0.5em 0px 0px; padding: 0px; color: gray; float: left; display: inline; list-style-type: none;
+}
+.ibm-portlet-item-summary pre.text {
+	margin: 0px; padding: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 1em;
+}
+.ibm-portlet-item-summary .abstract {
+	padding: 0px; margin-top: 0.75em;
+}
+.ibm-portlet-item-summary .abstract p {
+	padding-top: 0px; margin-top: 0px;
+}
+.ibm-portlet-item-summary .item-affordance td {
+	padding-top: 0.7em; padding-bottom: 0.7em;
+}
+.ibm-portlet-item-summary .item-affordance td.locked-icon {
+	padding: 0px; text-align: right; vertical-align: top;
+}
+.ibm-portlet-item-summary .item-affordance td.icon {
+	padding-right: 1.5em; padding-left: 1.5em; vertical-align: middle;
+}
+.ibm-portlet-item-summary .item-affordance ul.property-list {
+	padding-left: 0.7em;
+}
+.ibm-portlet-item-summary .item-affordance td.folder .abstract {
+	padding: 0px 0.6em; margin-top: 0.75em;
+}
+.ibm-portlet-item-summary .item-affordance td.document .abstract {
+	padding: 0px 0.6em; margin-top: 0.75em;
+}
+* html .ibm-portlet-item-summary .item-affordance td .drag-image {
+	margin-right: 10px;
+}
+*:first-child + html .ibm-portlet-item-summary .item-affordance td .drag-image {
+	margin-right: 10px;
+}
+table.ibm-portlet-table-summary .ibm-portlet-item-summary div.name-indent {
+	padding: 0px 0.6em;
+}
+table.ibm-portlet-table-summary .ibm-portlet-item-summary h3 a.folder-link {
+	color: rgb(0, 99, 220);
+}
+table.ibm-portlet-table-summary .ibm-portlet-item-summary h3 a.folder-link:visited {
+	color: rgb(0, 99, 220);
+}
+table.ibm-portlet-table-summary .ibm-portlet-item-summary h3 a.document-link {
+	color: rgb(0, 99, 220);
+}
+table.ibm-portlet-table-summary .ibm-portlet-item-summary h3 a.document-link:visited {
+	color: rgb(0, 99, 220);
+}
+a.document-link {
+	color: rgb(0, 99, 220); text-decoration: none;
+}
+a.document-link:visited {
+	color: rgb(0, 99, 220);
+}
+a.document-link:hover {
+	text-decoration: underline;
+}
+.ibm-portlet-sidebar .info-section ul.property-list {
+	margin: 0px; padding: 0px;
+}
+.ibm-portlet-sidebar .info-section ul.property-list li {
+	list-style: none; margin: 0px 0px 0.5em; padding: 0px;
+}
+.ibm-portlet-sidebar .info-section ul.property-list li label {
+	color: rgb(136, 136, 136);
+}
+.palette h5 {
+	background: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/toolbar_background.gif") repeat-x rgb(87, 138, 219); border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(151, 169, 193); border-image: none; height: 48px; color: rgb(255, 255, 255) !important; font-size: 1.33em; margin-top: 0px; margin-bottom: 0px;
+}
+.palette h5 div {
+	margin-top: 18px; margin-left: 10px;
+}
+.palette form {
+	display: inline;
+}
+.contentTypeSearch {
+	color: rgb(122, 147, 187); margin-top: 0px; margin-bottom: 0px; background-color: rgb(232, 235, 241);
+}
+.contentTypeSearch table {
+	margin-left: 10px;
+}
+.categoryTitleExpanded {
+	background: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/palette_selected_cat.gif") repeat-x top rgb(232, 235, 241); padding: 5px 10px; color: rgb(122, 147, 187); font-family: arial; font-size: 0.91em; margin-bottom: 0px;
+}
+.categoryTitleCollapsed {
+	background: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/palette_unselected_cat.gif") repeat-x top rgb(232, 235, 241); padding: 5px 10px; color: rgb(122, 147, 187); font-family: arial; font-size: 0.91em; margin-bottom: 0px;
+}
+.contentItemListCollapsed {
+	display: none;
+}
+.contentItem {
+	color: rgb(78, 78, 78); font-family: arial; font-size: 0.91em; font-weight: normal;
+}
+.contentItemGrayed {
+	color: rgb(198, 198, 198); font-family: arial; font-size: 0.91em; font-weight: normal;
+}
+.contentItemHover {
+	color: rgb(78, 78, 78); font-family: arial; font-size: 0.91em; font-weight: normal;
+}
+.contentItemGrayedHover {
+	color: rgb(198, 198, 198); font-family: arial; font-size: 0.91em; font-weight: normal;
+}
+.contentItemIcon {
+	border: 0px currentColor; border-image: none; vertical-align: middle;
+}
+.contentItem button {
+	visibility: hidden;
+}
+.contentItemHover button {
+	visibility: visible;
+}
+.contextMenu {
+	border: 0px currentColor; border-image: none; background-color: transparent;
+}
+.actionMainArea {
+	margin: 4px;
+}
+.actionFooter {
+	margin-top: 4px;
+}
+.dropActive {
+	border: 1px solid rgb(255, 144, 0); border-image: none;
+}
+.dropAware {
+	border: 1px solid rgb(255, 235, 197); border-image: none;
+}
+.personMenu {
+	margin: 0px; padding: 0px; border: 1px solid rgb(224, 224, 224); border-image: none; font-family: Helvetica, Arial, sans-serif; font-style: normal; background-color: rgb(245, 248, 255); -moz-border-radius: 7px;
+}
+.personMenu a {
+	color: rgb(0, 99, 220); text-decoration: underline;
+}
+.semtag_header {
+	
+}
+.photoCard {
+	margin: 10px 5px 10px 10px; padding: 0px; float: left;
+}
+.photoCard img {
+	padding: 2px !important; border: 1px solid rgb(192, 192, 192); border-image: none; width: 115px; height: 115px; background-color: white;
+}
+.businessCard {
+	margin: 11px 3px; line-height: 1.7em; padding-top: 0px; float: right;
+}
+.businessCard ul {
+	margin: 0px; padding-left: 0px; list-style-type: none;
+}
+.businessCard .cardName {
+	color: black; font-size: 1.3em; font-weight: bold;
+}
+.businessCard li {
+	color: black; font-size: 1.2em;
+}
+.businessCard a {
+	text-decoration: underline;
+}
+.personMenuActions {
+	padding: 0px; width: 100%; clear: both; margin-bottom: 0px; border-top-color: rgb(172, 185, 205); border-top-width: 1px; border-top-style: solid; background-color: white;
+}
+.personMenuActions ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+.menu_drop_icon {
+	padding: 3px 5px; border: 1px solid rgb(172, 185, 205); border-image: none; color: black; font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif; font-size: 1em; background-color: rgb(226, 238, 255); -moz-border-radius: 7px;
+}
+.menu_drop_icon img {
+	border: currentColor; border-image: none;
+}
+a.menu_drop_icon {
+	background: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/menu_dropdown.gif") no-repeat center;
+}
+a.menu_drop_icon:link {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.menu_drop_icon:visited {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.menu_drop_icon:hover {
+	background: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/menu_dropdown.gif") no-repeat center;
+}
+.hasHover {
+	border-bottom-color: rgb(48, 107, 196); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.personMenu {
+	width: 400px;
+}
+.personMenu .personMenuActions a {
+	padding: 1px 2px 1px 5px; border: 1px solid currentColor; border-image: none; color: black; font-size: 1.2em; text-decoration: none; display: block; -moz-border-radius: 7px;
+}
+.personMenu .personMenuActions a:link {
+	border-color: white;
+}
+.personMenu .personMenuActions a:visited {
+	border-color: white;
+}
+.personMenu .personMenuActions a:hover {
+	border-color: rgb(139, 181, 232); background-color: rgb(226, 238, 255);
+}
+.personMenu .personMenuActions a:active {
+	border-color: rgb(139, 181, 232); background-color: rgb(226, 238, 255);
+}
+.personMenu .personMenuActions a:focus {
+	border-color: rgb(139, 181, 232); background-color: rgb(226, 238, 255);
+}
+.personMenu .personMenuActions a:active {
+	border-color: rgb(139, 181, 232); background-color: rgb(226, 238, 255);
+}
+.businessCardExtended {
+	margin: 3px; border: 1px solid rgb(241, 241, 241); border-image: none; line-height: 1.2em; padding-top: 0px; float: left;
+}
+.businessCardExtended ul {
+	margin: 0px; padding-left: 0px; list-style-type: none;
+}
+.businessCardExtended .cardName {
+	color: black; font-size: 1.1em; font-weight: bold;
+}
+.businessCardExtended li {
+	color: black; font-size: 1em;
+}
+.businessCardExtended a {
+	text-decoration: underline;
+}
+.hyperLink {
+	color: black; text-decoration: none;
+}
+.dijitRtl .wpsPagingTableHeaderEnd {
+	background-position: left top; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PagingTableTopRight_rtl.gif");
+}
+.dijitRtl .wpsPagingTableFooterEnd {
+	background-position: left bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PagingTableBottomRight_rtl.gif");
+}
+.dijitRtl .wpsPagingTableHeaderStart {
+	border-width: 1px 1px 0px 0px; border-style: solid solid none none;
+}
+.dijitRtl .wpsPagingTableFooterStart {
+	border-width: 0px 1px 1px 0px; border-style: none solid solid none;
+}
+.dijitRtl .wpsPortletSelectedTabTopStart {
+	background-position: right bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabTopRight.jpg");
+}
+.dijitRtl .wpsPortletTabTopStart {
+	background-position: right bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabTopRight.jpg");
+}
+.dijitRtl .wpsPortletSelectedTabMiddleStart {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none;
+}
+.dijitRtl .wpsPortletTabMiddleStart {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none;
+}
+.dijitRtl .wpsPortletSelectedTabBottomStart {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none;
+}
+.dijitRtl .wpsPortletTabBottomStart {
+	border-width: 0px 1px 0px 0px; border-style: none solid none none;
+}
+.dijitRtl .wpsPortletSelectedTabTopEnd {
+	background-position: left bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletSelectedTabTopLeft.jpg");
+}
+.dijitRtl .wpsPortletTabTopEnd {
+	background-position: left bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/PortletTabTopLeft.jpg");
+}
+.dijitRtl .wpsPortletSelectedTabMiddleEnd {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid;
+}
+.dijitRtl .wpsPortletTabMiddleEnd {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid;
+}
+.dijitRtl .wpsPortletSelectedTabBottomEnd {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid;
+}
+.dijitRtl .wpsPortletTabBottomEnd {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid;
+}
+.dijitRtl .wpsTableDataStart {
+	text-align: right;
+}
+.dijitRtl .wpsTableDataMiddle {
+	text-align: right;
+}
+.dijitRtl .wpsTableDataEnd {
+	text-align: right;
+}
+.dijitRtl .wpsTableHeadStart {
+	text-align: right;
+}
+.dijitRtl .wpsTableHeadMiddle {
+	text-align: right;
+}
+.dijitRtl .wpsTableHeadEnd {
+	text-align: right;
+}
+.dijitRtl h2.help {
+	text-align: right;
+}
+#mainSitemContainer .dijitContentPane {
+	width: 50% !important;
+}
+#mainSitemContainer #dijit_layout_ContentPane_1 {
+	left: 50% !important; right: 50% !important;
+}
+#mainSitemContainer .dijitSplitContainerSizerH {
+	left: 49% !important; right: 49% !important; cursor: default;
+}
+.lwpMenuItem {
+	color: rgb(0, 0, 0); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+a.lwpMenuItem {
+	color: rgb(0, 0, 0); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+a.lwpMenuItem:visited {
+	color: rgb(0, 0, 0); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+a.lwpMenuItem:hover a.lwpMenuItem:active {
+	color: rgb(0, 0, 0); text-decoration: none; background-color: rgb(255, 255, 255);
+}
+.lwpSelectedMenuItem {
+	color: rgb(255, 255, 255) !important; text-decoration: none; cursor: pointer; background-color: rgb(40, 72, 136);
+}
+a.lwpSelectedMenuItem:visited {
+	color: rgb(255, 255, 255) !important; text-decoration: none; cursor: pointer; background-color: rgb(40, 72, 136);
+}
+a.lwpSelectedMenuItem:hover {
+	color: rgb(255, 255, 255) !important; text-decoration: none; cursor: pointer; background-color: rgb(40, 72, 136);
+}
+a.lwpSelectedMenuItem:active {
+	color: rgb(255, 255, 255) !important; text-decoration: none; cursor: pointer; background-color: rgb(40, 72, 136);
+}
+.lwpMenuItemDisabled {
+	color: rgb(136, 136, 136) !important; font-style: italic; text-decoration: none; background-color: rgb(255, 255, 255);
+}
+a.lwpMenuItemDisabled {
+	color: rgb(136, 136, 136) !important; font-style: italic; text-decoration: none; background-color: rgb(255, 255, 255);
+}
+a.lwpMenuItemDisabled:visited {
+	color: rgb(136, 136, 136) !important; font-style: italic; text-decoration: none; background-color: rgb(255, 255, 255);
+}
+a.lwpMenuItemDisabled:hover {
+	color: rgb(136, 136, 136) !important; font-style: italic; text-decoration: none; background-color: rgb(255, 255, 255);
+}
+a.lwpMenuItemDisabled:active {
+	color: rgb(136, 136, 136) !important; font-style: italic; text-decoration: none; background-color: rgb(255, 255, 255);
+}
+.lwpBorderAll {
+	border: 1px solid rgb(220, 220, 220);
+}
+.lwpShadowBorder {
+	border-right-color: rgb(136, 136, 136); border-bottom-color: rgb(136, 136, 136); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.lwpPpkList {
+	border-width: 1px; border-style: solid; border-color: black rgb(192, 192, 192) rgb(192, 192, 192) black; width: 250px; height: 200px; overflow: auto;
+}
+.lwpPpkListBorder {
+	width: 250px; height: 200px; border-top-color: rgb(160, 160, 160); border-bottom-color: rgb(192, 192, 192); border-left-color: rgb(160, 160, 160); border-top-width: 1px; border-bottom-width: 2px; border-left-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid;
+}
+.lwpPpkNormalText {
+	color: black; background-color: white;
+}
+.lwpPpkSelectedText {
+	color: white; background-color: rgb(40, 72, 136);
+}
+.lotusLoginRememberMe label {
+	display: inline;
+}
+.lotusLoginBoxOpenID {
+	width: 940px !important;
+}
+.lotusLoginContentOpenID {
+	padding: 20px !important;
+}
+.lotusLoginDividerContainer {
+	background-position: top; margin: 0px 10px; height: 25em; overflow: hidden; display: table; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/loginSeparatorBg.jpg"); background-repeat: repeat-y;
+}
+.lotusui_ie7 .lotusLoginDividerContainer {
+	display: block;
+}
+.lotusLoginDivider {
+	vertical-align: middle; display: table-cell;
+}
+.lotusui_ie7 .lotusLoginDivider {
+	display: block;
+}
+.lotusLoginDividerText {
+	padding: 15px; text-align: center; font-size: 2.5em; background-color: rgb(255, 255, 255);
+}
+.lotusLoginFormContainer {
+	max-width: 400px;
+}
+.lotusLogin2 .lotusLoginBox {
+	-moz-box-shadow: 0 2px 8px #EEEEEE;
+}
+@media all and (max-width:1024px)
+{
+.lotusLogin2 .lotusui30_layout .lotusFormField label {
+	font-size: 1.2em;
+}
+}
+@media all and (max-width:600px)
+{
+.lotusLogin2 .lotusui30_layout .lotusLoginBox {
+	width: 373px !important;
+}
+.lotusLoginDividerContainer {
+	display: none;
+}
+.lotusLogin2 .lotusui30_layout .lotusLoginForm .lotusText {
+	width: 97%;
+}
+}
+@media all and (max-width:480px)
+{
+.lotusLogin2 .lotusui30_layout .lotusLoginBox {
+	margin: 20px auto; border: 0px currentColor; border-image: none; width: 95% !important; box-shadow: none;
+}
+.lotusLogin2 .lotusui30_layout .lotusLoginContent {
+	padding: 0px !important;
+}
+.lotusLogin2 .lotusui30_layout .lotusLoginForm {
+	padding: 0px !important;
+}
+.lotusLogin2 .lotusui30_layout .lotusLoginBox .lotusHeading {
+	font-size: 1.4em; font-weight: bold;
+}
+.lotusLoginContent .clearing {
+	clear: none;
+}
+.lotusLeft.lotusLoginFormContainer {
+	float: none;
+}
+.lotusLoginFormContainer {
+	margin: 0px auto; padding-bottom: 30px; max-width: 100%;
+}
+.lotusui30 input.lotusFormButton {
+	width: 100%; height: 35px; clear: both; font-size: 13.92px; margin-bottom: 20px;
+}
+.lotusui30 .lotusBtnContainer {
+	width: 100% !important; white-space: normal;
+}
+.lotusLoginFormContainer .lotusLoginForm p.lotusSignUpText {
+	margin: 0px auto; width: 136px;
+}
+}
+.lotusSelfCareBoxOpenID .lotusHeading {
+	padding-left: 0px; background-color: transparent !important; -moz-box-shadow: 0 0 0 0;
+}
+.lotusSelfCareBoxOpenID form {
+	background-color: transparent !important;
+}
+.lotusSelfCareBoxOpenID {
+	width: auto; min-height: 60px;
+}
+.lotusLogin2 .lotusLoginForm img {
+	margin-top: 0px;
+}
+.lotusLoginBoxOpenID .lotusBtnImg img {
+	width: auto; height: auto;
+}
+.lotusSelfCareBoxOpenID .lotusBtnImg img {
+	width: auto; height: auto;
+}
+.wpthemeImagesOff .portlet-form-input-field {
+	border-style: outset;
+}
+.wpthemeImagesOff .portlet-menu {
+	border-style: outset;
+}
+.wpthemeImagesOff .wpsButtonText {
+	border-style: outset;
+}
+.wpthemeImagesOff .wpsEditField {
+	border-style: outset;
+}
+.weekday_header {
+	color: rgb(51, 51, 51); font-size: 1em; background-color: rgb(153, 153, 153);
+}
+.other_month_header {
+	height: 20px; color: rgb(126, 112, 1); background-color: rgb(228, 227, 227);
+}
+.current_month_header {
+	height: 20px; color: rgb(51, 51, 51); background-color: rgb(203, 219, 243);
+}
+.other_month_cell {
+	background-color: rgb(240, 240, 240);
+}
+.current_month_cell {
+	color: black; background-color: rgb(255, 255, 255);
+}
+.current_day_header {
+	height: 20px; color: rgb(51, 51, 51); font-size: 1em; background-color: rgb(146, 181, 230);
+}
+a.current_day_header:link {
+	color: rgb(51, 51, 51); background-color: transparent;
+}
+a.other_month_header:link {
+	color: rgb(0, 0, 255); background-color: transparent;
+}
+a.current_month_header:link {
+	color: rgb(0, 80, 201); background-color: transparent;
+}
+.lwp-teamSpace-title {
+	color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(92, 92, 92);
+}
+.lwp-webConference-title {
+	color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(92, 92, 92);
+}
+.popup-background {
+	background-color: rgb(238, 238, 238);
+}
+.lwp-middleToolbar {
+	margin: 0px; padding: 4px; color: rgb(115, 115, 115); font-size: 1em; border-bottom-color: rgb(216, 216, 224); border-bottom-width: 0px; border-bottom-style: solid; background-color: rgb(255, 255, 255);
+}
+.lwpAdminButton {
+	margin: 0px; padding: 0px 5px; color: rgb(255, 255, 255); font-size: 1em; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+.lwpAdminButtonLink {
+	margin: 0px; color: rgb(255, 255, 255); font-size: 1em; font-weight: normal; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+.lwpAdminButtonLink:hover {
+	margin: 0px; color: rgb(255, 255, 255); font-size: 1em; font-weight: normal; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+.lwpAdminButtonLink:active {
+	margin: 0px; color: rgb(255, 255, 255); font-size: 1em; font-weight: normal; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+.lwpAdminButtonLink:visited {
+	margin: 0px; color: rgb(255, 255, 255); font-size: 1em; font-weight: normal; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+.lwpNavButton {
+	margin: 0px; padding: 0px 5px; color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(112, 168, 240);
+}
+.lwpNavButtonLink {
+	margin: 0px; color: rgb(255, 255, 255); font-weight: normal; text-decoration: none; background-color: rgb(112, 168, 240);
+}
+.lwpNavButtonLink:hover {
+	margin: 0px; color: rgb(255, 255, 255); font-weight: normal; text-decoration: none; background-color: rgb(112, 168, 240);
+}
+.lwpNavButtonLink:active {
+	margin: 0px; color: rgb(255, 255, 255); font-weight: normal; text-decoration: none; background-color: rgb(112, 168, 240);
+}
+.lwpNavButtonLink:visited {
+	margin: 0px; color: rgb(255, 255, 255); font-weight: normal; text-decoration: none; background-color: rgb(112, 168, 240);
+}
+.button-link {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.button-link {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.button-link:hover {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.button-link:visited {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+.lwpIconOnly {
+	border: 0px currentColor; border-image: none; background-color: white;
+}
+.lwpIconOnlyDisabled {
+	border: 0px currentColor; border-image: none; background-color: white;
+}
+.lwpDialogDisabledIconBackground {
+	background-position: left; margin: 0px; padding: 0px 2px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; color: rgb(136, 136, 136); overflow: visible; font-weight: normal; text-decoration: none; vertical-align: top; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/DialogIconTextBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.lwpDialogIconBackgroundDisabled {
+	background-position: left; margin: 0px; padding: 0px 2px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; color: rgb(136, 136, 136); overflow: visible; font-weight: normal; text-decoration: none; vertical-align: top; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/DialogIconTextBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.lwpSeparatorBg {
+	height: 1px; background-color: rgb(153, 153, 153);
+}
+div.lwpSeparatorBg {
+	margin: 2px 0px; background-color: rgb(153, 153, 153);
+}
+.borderNone {
+	border-width: 0px !important;
+}
+.lwpPortletTitleBorder {
+	background-position: bottom; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/skin_border.gif"); background-repeat: repeat-x;
+}
+.lwpSearchBar {
+	margin: 5px 0px; text-align: right; background-color: rgb(236, 236, 236);
+}
+.lwpSearchBar table {
+	margin-right: 0px; margin-left: auto;
+}
+.lwpSearchBar td {
+	padding: 5px 3px 5px 2px;
+}
+.lwpSearchBar .portlet-form-field-label {
+	padding-left: 10px;
+}
+.lwpInlineHelp td {
+	padding: 5px 10px 5px 1px; vertical-align: top;
+}
+.lwpMenuHeader {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: none; cursor: pointer; background-color: rgb(240, 240, 240);
+}
+a.lwpMenuHeader {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: none; cursor: pointer; background-color: rgb(240, 240, 240);
+}
+a.lwpMenuHeader:visited {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: none; cursor: pointer; background-color: rgb(240, 240, 240);
+}
+a.lwpMenuHeader:hover {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: none; cursor: pointer; background-color: rgb(240, 240, 240);
+}
+.lwpMenuBackground {
+	background-color: rgb(255, 255, 255);
+}
+.lwpLastReadMark {
+	padding: 3px 0px; text-align: center; color: rgb(255, 255, 255); font-weight: bold; background-color: rgb(102, 102, 102);
+}
+.lwpDateStampMark {
+	padding: 3px 0px; text-align: center; color: rgb(102, 102, 102); font-weight: bold; background-color: rgb(153, 153, 153);
+}
+a.lwpCalLinkText {
+	text-decoration: none;
+}
+a.lwpCalLinkText:hover {
+	text-decoration: underline;
+}
+a.lwpCalDateLinkText {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.lwpCalDateLinkText:visited {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.lwpCalDateLinkText:hover {
+	color: rgb(102, 102, 153); text-decoration: underline;
+}
+a.lwpCalInactiveDateLinkText {
+	color: rgb(160, 160, 160); text-decoration: none;
+}
+a.lwpCalInactiveDateLinkText:visited {
+	color: rgb(160, 160, 160); text-decoration: none;
+}
+a.lwpCalInactiveDateLinkText:hover {
+	color: rgb(102, 102, 153); text-decoration: underline;
+}
+.lwpCal1WeekCellRow {
+	height: 6em; font-weight: normal;
+}
+.lwpCalCellRow {
+	height: 2.2em; font-weight: normal;
+}
+.lwpCalLDivider {
+	border-left-color: rgb(170, 170, 170); border-left-width: 1px; border-left-style: solid;
+}
+.lwpCalNoBottom {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.lwpCalHeaderImage {
+	padding: 12px 3px 2px 0px; margin-bottom: 5px;
+}
+.lwpCalAttendeeHeading {
+	color: rgb(137, 137, 137);
+}
+.lwpCalSectionHeader {
+	color: black; padding-top: 12px; padding-bottom: 2px; font-weight: bold; margin-bottom: 5px; display: block;
+}
+.lwpCalInviteeSection {
+	padding-left: 2px;
+}
+.lwpCalWeekNumber {
+	color: rgb(128, 128, 128);
+}
+.lwpCalEntryHoverDetail {
+	border: 1px solid rgb(0, 0, 0); border-image: none; width: 400px; overflow: hidden; visibility: hidden; position: absolute;
+}
+.lwpCalEventField {
+	padding: 5px 0px 3px;
+}
+.lwpCalEntryHoverPosition {
+	padding-left: 5px;
+}
+.lwpCalBgMeeting {
+	background-color: rgb(195, 211, 230);
+}
+.lwpCalBgWebConf {
+	background-color: rgb(195, 211, 230);
+}
+.lwpCalBgAppointment {
+	background-color: rgb(216, 248, 216);
+}
+.lwpCalBgAnniversary {
+	background-color: rgb(248, 232, 208);
+}
+.lwpCalBgReminder {
+	background-color: rgb(248, 248, 208);
+}
+.lwpCalBgAllDayEvent {
+	background-color: rgb(248, 224, 224);
+}
+.lwpCalTodayCell {
+	border: 1px solid rgb(0, 0, 0); border-image: none;
+}
+.lwpCalMonthDayCell {
+	width: 14%; height: 6.4em; border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+.lwpCalInactiveDayCell {
+	background-color: rgb(239, 239, 239);
+}
+.lwpCalInactiveDay {
+	color: rgb(160, 160, 160);
+}
+.lwpCalSeperator {
+	border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.lwpCalConflict {
+	border-left-color: rgb(0, 0, 0); border-left-width: 2px; border-left-style: solid;
+}
+.lwpCalTimeText {
+	text-align: right;
+}
+.lwpCalEntryPosition {
+	padding-top: 2px;
+}
+.lwpCalBDivider {
+	border-bottom-color: rgb(170, 170, 170); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.chat_background {
+	background-color: rgb(255, 255, 255);
+}
+.chat_partner_presence {
+	border-color: rgb(170, 170, 170); padding: 3px; border-top-width: 1px; border-left-width: 1px; border-top-style: solid; border-left-style: solid; background-color: rgb(238, 238, 238);
+}
+.chat_partner_presence_corner {
+	background-position: top; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/chat_presence_corner.gif"); background-repeat: no-repeat; background-color: rgb(255, 255, 255);
+}
+.chat_partner_alert {
+	border-color: rgb(170, 170, 170); padding: 3px; color: rgb(102, 102, 102); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; background-color: rgb(255, 255, 255);
+}
+.chat_transcript {
+	border: 1px solid rgb(170, 170, 170);
+}
+.chat_transcript_nway {
+	border: 1px solid rgb(69, 106, 139);
+}
+.chat_message_input {
+	border: 1px solid rgb(170, 170, 170); background-color: rgb(255, 255, 255);
+}
+.chat_statusbar {
+	border-color: rgb(170, 170, 170); color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid; background-color: rgb(238, 238, 238);
+}
+.chat_participants {
+	border-color: rgb(216, 216, 216); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.lwp-agendaItemDocument {
+	color: rgb(88, 88, 88); padding-top: 3px; padding-bottom: 3px;
+}
+.lwp-agendaItem-ul {
+	padding-top: 3px; padding-bottom: 0px; margin-right: 20px; margin-left: 0px; list-style-type: none;
+}
+.lwp-agendaItem-li {
+	padding-top: 0px; padding-bottom: 0px;
+}
+.lwp-agendaItem {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+.lwp-agendaItem:visited {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+a.lwp-agendaItem {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+a.lwp-agendaItem:active {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+a.lwp-agendaItem:visited {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+.lwp-agendaItemPage {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+a.lwp-agendaItemPage {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+.lwp-agendaItemSlide {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+.lwp-agendaItemPage:visited {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+.lwp-agendaItemSlide:visited {
+	color: rgb(112, 128, 168); padding-top: 1px; padding-bottom: 1px; font-weight: normal; text-decoration: none; background-color: rgb(246, 246, 246);
+}
+a.lwp-agendaItem:hover {
+	color: rgb(99, 154, 206); font-weight: normal; text-decoration: underline;
+}
+.lwp-agendaItemPage:hover {
+	color: rgb(99, 154, 206); font-weight: normal; text-decoration: underline;
+}
+.lwp-agendaItemSlide:hover {
+	color: rgb(99, 154, 206); font-weight: normal; text-decoration: underline;
+}
+.lwp-selectedAgendaItem {
+	color: rgb(255, 255, 255); line-height: 150%; padding-top: 1px; padding-bottom: 1px; font-weight: bold; text-decoration: none; background-color: rgb(49, 106, 197);
+}
+a.lwp-selectedAgendaItem {
+	color: rgb(255, 255, 255); line-height: 150%; padding-top: 1px; padding-bottom: 1px; font-weight: bold; text-decoration: none; background-color: rgb(49, 106, 197);
+}
+.lwp-selectedAgendaItem:visited {
+	color: rgb(255, 255, 255);
+}
+a.lwp-selectedAgendaItem:visited {
+	color: rgb(255, 255, 255);
+}
+a.lwp-selectedAgendaItem:hover {
+	color: rgb(255, 255, 255); line-height: 150%; padding-top: 1px; padding-bottom: 1px; font-weight: bold; text-decoration: underline; background-color: rgb(49, 106, 197);
+}
+.lwpProjectorHeaderStart {
+	border-width: 1px 0px 0px 1px; border-style: solid none none solid; border-color: rgb(119, 119, 119); background-color: rgb(112, 168, 240);
+}
+.lwpProjectorHeaderMiddle {
+	border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(119, 119, 119); color: rgb(52, 52, 52); font-weight: bold; background-color: rgb(112, 168, 240);
+}
+.lwpProjectorHeaderEnd {
+	background-position: right top; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/projectorTableTopRight.gif"); background-repeat: no-repeat; background-color: transparent;
+}
+.lwpSlideTable {
+	border: 1px solid rgb(0, 0, 0);
+}
+.lwpSlideTableHeadStart {
+	border: 0px solid rgb(0, 0, 0); text-align: left; color: rgb(152, 152, 152); font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.lwpSlideTableHeadMiddle {
+	border: 0px solid rgb(0, 0, 0); text-align: left; color: rgb(152, 152, 152); font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.lwpSlideTableHeadEnd {
+	border: 0px solid rgb(0, 0, 0); text-align: left; color: rgb(152, 152, 152); font-weight: bold; background-color: rgb(255, 255, 255);
+}
+.lwpSlideBorder {
+	border: 1px solid rgb(176, 176, 192);
+}
+.lwpAgendaFrameDiv {
+	border: 1px solid rgb(233, 233, 233); border-image: none; top: 80px; width: 100%; bottom: 0px; visibility: hidden; position: absolute; background-color: rgb(246, 246, 246);
+}
+.lwpAttendeesFrameDiv {
+	border: 1px solid rgb(233, 233, 233); border-image: none; top: 26px; width: 100%; bottom: 0px; overflow: auto; visibility: hidden; position: absolute; background-color: rgb(246, 246, 246);
+}
+.lwpDownloadsFrameDiv {
+	top: 26px; width: 100%; bottom: 2px; visibility: hidden; position: absolute;
+}
+.lwpHostingStarted {
+	color: rgb(255, 255, 255); font-size: 1.16em; font-weight: bold;
+}
+.lwpHostingStartedLarge {
+	color: rgb(255, 255, 255); font-size: 1.16em; font-weight: bold;
+}
+.lwp_labelNormalStyle {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.lwp_labelNormalStyle {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.lwp_labelNormalStyle:visited {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+a.lwp_labelNormalStyle:active {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+.lwp_labelHighlightStyle {
+	color: rgb(255, 255, 255); padding-right: 5px; font-weight: bold; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+a.lwp_labelHighlightStyle {
+	color: rgb(255, 255, 255); padding-right: 5px; font-weight: bold; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+a.lwp_labelHighlightStyle:active {
+	color: rgb(255, 255, 255); padding-right: 5px; font-weight: bold; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+a.lwp_labelHighlightStyle:visited {
+	color: rgb(255, 255, 255); padding-right: 5px; font-weight: bold; text-decoration: none; background-color: rgb(160, 160, 160);
+}
+.lwp_labelMouseoverStyle {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: underline;
+}
+a.lwp_labelMouseoverStyle:hover {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: underline;
+}
+a.lwp_labelMouseoverStyle:active {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: underline;
+}
+.lwp_labelDragoverStyle {
+	color: rgb(0, 0, 0); font-weight: normal; text-decoration: underline;
+}
+.lwpFldNodeLableSpacing {
+	padding-left: 5px;
+}
+.lwpFldNodeLabelSpacing {
+	padding-left: 5px;
+}
+.lwpPeopleFlyoutExpanded {
+	border-width: 0px 0px 1px 1px; border-style: none none solid solid; border-color: currentColor currentColor rgb(222, 222, 222) rgb(154, 154, 154); background-color: rgb(222, 222, 222);
+}
+.lwpPeopleFlyoutCollapsed {
+	border-width: 0px 0px 1px 1px; border-style: none none solid solid; border-color: currentColor currentColor rgb(222, 222, 222) rgb(104, 104, 104); background-color: rgb(222, 222, 222);
+}
+.lwpPeopleFlyoutFrame {
+	border: 1px solid rgb(104, 104, 104); background-color: rgb(222, 222, 222);
+}
+.lwpTimeDateBorder {
+	border: 0px currentColor; border-image: none;
+}
+.lwpTimeDateCalBorder {
+	border-width: 1px; border-style: none solid solid; border-color: rgb(170, 170, 170); background-color: white;
+}
+.lwpTimeDateCalText {
+	font-weight: bold;
+}
+.lwpTimeDateDayName {
+	border-width: 1px; border-style: none none solid; border-color: rgb(170, 170, 170); text-align: center; font-weight: normal; vertical-align: middle; background-color: white;
+}
+.lwpTimeDateDay {
+	border: 0px solid rgb(170, 170, 170); text-align: center; vertical-align: middle; background-color: white;
+}
+.lwpTimeDateWeekendDay {
+	border: 0px solid rgb(170, 170, 170); text-align: center; vertical-align: middle; background-color: white;
+}
+.lwpTimeDateDayLink {
+	text-decoration: none;
+}
+.lwpTimeDateCalTop {
+	border: 1px solid rgb(170, 170, 170); border-image: none; background-color: rgb(238, 238, 238);
+}
+.lwpTimeDateSelectedCalTop {
+	border: 1px solid rgb(96, 96, 152); border-image: none; background-color: rgb(208, 208, 208);
+}
+.lwpTimeDateSelectedDay {
+	text-align: center; vertical-align: middle; background-color: rgb(255, 255, 255);
+}
+.lwpTimeDateSelectedDayLink {
+	text-align: center; text-decoration: none; vertical-align: middle; background-color: rgb(208, 208, 208);
+}
+.lwpTimeDateSelectedWeek {
+	text-align: center; text-decoration: none; vertical-align: middle; background-color: rgb(208, 208, 208);
+}
+.lwpTimeDateSelectedAllWeeks {
+	text-align: center; text-decoration: none; vertical-align: middle; background-color: rgb(232, 232, 232);
+}
+.lwpTimeDateWeek {
+	border: 1px solid rgb(170, 170, 170); border-image: none; text-align: center; text-decoration: none; vertical-align: middle; background-color: rgb(255, 255, 255);
+}
+.lwpTimeDateMonthRadio {
+	width: 15px; text-align: center; text-decoration: none; vertical-align: middle; border-right-color: rgb(170, 170, 170); border-right-width: 1px; border-right-style: solid;
+}
+.lwpTimeDateWeekRadioOn {
+	border-color: rgb(170, 170, 170); width: 15px; text-align: center; text-decoration: none; vertical-align: middle; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; background-color: rgb(208, 208, 208);
+}
+.lwpTimeDateWeekRadioOff {
+	border-color: rgb(170, 170, 170); width: 15px; text-align: center; text-decoration: none; vertical-align: middle; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; background-color: rgb(255, 255, 255);
+}
+.lwpTimeDateEmptyDayName {
+	width: 15px; text-align: center; font-weight: normal; vertical-align: middle; border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: none; background-color: rgb(255, 255, 255);
+}
+.outerTreeStyle {
+	border-width: 0px; padding: 0px; color: windowtext; font-weight: 400;
+}
+.nodeStyle {
+	padding: 0px; letter-spacing: 0px; border-collapse: collapse;
+}
+.scrollStyle {
+	width: 200px; overflow: auto;
+}
+.tdStyle {
+	padding: 0px; width: 200px;
+}
+.labelDragoverStyle {
+	color: rgb(0, 0, 0); font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px; font-style: italic;
+}
+.linkTextStyle {
+	text-decoration: none;
+}
+.classForTreeSysIcons {
+	
+}
+.tdTreeTabStyle {
+	margin: 0px; padding: 0px; width: 200px;
+}
+.tdTableStyle {
+	margin: 0px; padding: 0px; width: 200px;
+}
+.headerStyle {
+	margin: 0px; padding: 0px; border: 1px solid threedshadow; width: 200px; color: windowtext; background-color: threedface;
+}
+.tree_outerTreeStyle {
+	border-width: 0px; padding: 0px; color: windowtext; font-weight: 400;
+}
+.tree_nodeStyle {
+	margin: 0px; padding: 0px; letter-spacing: 0px; border-collapse: collapse;
+}
+.tree_scrollStyle {
+	width: 200px; overflow: auto;
+}
+.tree_tdStyle {
+	padding: 0px; width: 200px;
+}
+.tree_labelNormalStyle {
+	color: rgb(0, 0, 0); font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px;
+}
+.tree_nodeImageStyle {
+	border: 0px currentColor; width: 19px; height: 16px;
+}
+.tree_labelHighlightStyle {
+	color: rgb(0, 0, 0); font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold;
+}
+.tree_labelMouseoverStyle {
+	color: rgb(0, 0, 0); font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px; font-style: italic;
+}
+.tree_labelDragoverStyle {
+	color: rgb(0, 0, 0); font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px; font-style: italic; background-color: rgb(187, 187, 187);
+}
+.tree_linkTextStyle {
+	text-decoration: none;
+}
+.tree_classForTreeSysIcons {
+	
+}
+.tree_tdTreeTabStyle {
+	margin: 0px; padding: 0px; width: 200px;
+}
+.tree_tdTableStyle {
+	margin: 0px; padding: 0px; width: 200px;
+}
+.tree_headerStyle {
+	margin: 0px; padding: 0px; border: 1px solid threedshadow; width: 200px; color: windowtext; background-color: threedface;
+}
+.personMenu .personMenuActions {
+	-moz-border-radius: 7px;
+}
+.personMenu .personMenuActions tr {
+	margin: 1px; padding: 0px; float: right;
+}
+.personMenu .toggle.personMenuActions {
+	margin: 1px; padding: 0px; float: right;
+}
+.toggle img {
+	float: right;
+}
+.personMenu .businessCardExtended {
+	width: 390px;
+}
+.personMenu .toggle {
+	width: 390px;
+}
+.personMenu .toggle img {
+	float: right;
+}
+.X-person-display-inline .personMenu .personMenuActions a:link {
+	
+}
+.X-person-display-inline .personMenuActions a:visited {
+	
+}
+.lwpDialogIconBackground {
+	margin: 0px; padding: 0px 2px; border: 1px solid rgb(145, 145, 145); border-image: none; text-align: center; color: rgb(0, 0, 0); overflow: visible; font-weight: normal; text-decoration: none; vertical-align: top; cursor: pointer; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/DialogIconTextBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.lwpCalHeader {
+	color: rgb(51, 102, 204); font-weight: bold; vertical-align: top;
+}
+.lwpCalTDivider {
+	border-top-color: rgb(170, 170, 170); border-top-width: 1px; border-top-style: solid;
+}
+.lwpCalViewMenuPosition {
+	padding-top: 8px; padding-bottom: 8px; padding-left: 2px;
+}
+.lwpCalFsizeX {
+	font-size: 1.16em;
+}
+.lwpButtonText {
+	background-position: left; margin: 0px; padding: 0px 2px; border: 1px solid rgb(145, 145, 145); text-align: center; color: rgb(0, 0, 0); overflow: visible; font-weight: bold; text-decoration: none; vertical-align: middle; cursor: pointer; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/ButtonBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.lwpButtonTextDisabled {
+	background-position: left; margin: 0px; padding: 0px 2px; border: 1px solid rgb(145, 145, 145); text-align: center; color: rgb(136, 136, 136); overflow: visible; font-weight: bold; text-decoration: none; vertical-align: middle; background-image: url("/wps/mycontenthandler/!ut/p/digest!9QWR6WTBu0tolSG3llHhfg/dav/fs-type1/common-resources/ibm/css/portal/images/ButtonBackground.gif"); background-repeat: repeat-x; background-color: rgb(221, 221, 221);
+}
+.lwpButtonSpacer {
+	margin-right: 2px;
+}
+.lwpButtonGroup {
+	margin: 0.25em 4px;
+}
+.lwpTreePanel {
+	width: 18em; height: 100%; overflow: auto;
+}
+.lwpTreePanelBody {
+	border-width: 0px 0px 0px 1px; border-style: none none none solid; border-color: currentColor currentColor currentColor rgb(170, 170, 170);
+}
+.lwpTreePanelHeader {
+	border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(170, 170, 170) currentColor rgb(170, 170, 170) rgb(170, 170, 170); background-color: rgb(240, 240, 240);
+}
+.lwpTreePanelFooter {
+	border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(170, 170, 170) currentColor rgb(170, 170, 170) rgb(170, 170, 170); background-color: rgb(240, 240, 240);
+}
+.lwpAlignRight {
+	text-align: right;
+}
+.lwpMailboxRecipientAnchor {
+	color: black; text-decoration: underline; cursor: pointer;
+}
+a.lwpMailboxRecipientAnchor {
+	color: black; text-decoration: underline; cursor: pointer;
+}
+.lwpMailboxRecipientAnchor:hover {
+	color: black; text-decoration: underline; cursor: pointer;
+}
+a.lwpMailboxRecipientAnchor:hover {
+	color: black; text-decoration: underline; cursor: pointer;
+}
+.lwpMailboxRecipientAnchor:visited {
+	color: black;
+}
+a.lwpMailboxRecipientAnchor:visited {
+	color: black;
+}
+.unreadMailText {
+	color: rgb(51, 102, 204); font-weight: bold; text-decoration: underline;
+}
+a.unreadMailText {
+	color: rgb(51, 102, 204); font-weight: bold; text-decoration: underline;
+}
+.lwp_nodeStyle {
+	border-collapse: collapse; border-spacing: 0px;
+}
+.lwp_tdStyle {
+	padding: 0px; white-space: nowrap;
+}
+.lwp_nodeImageStyle {
+	border: 0px currentColor;
+}
+.lwp_linkTextStyle {
+	text-decoration: none;
+}
+.wpthemeImagesOff .lwpButtonText {
+	border-style: outset;
+}

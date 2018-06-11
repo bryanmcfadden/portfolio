@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="en" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<title>TDC Style Guide - Template Page</title>
+<head>
+<META name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- JAVASCRIPT ----------------------- -->
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>		
+<script src="js/jquery-ui.min-1.10.4.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    	<script>
+			$(document).ready(function() {
+				//Start here
+				var checkElement = $('a[href="lists.html#lists"]').next();
+				$('a[href="lists.html#lists"]').closest('li').addClass('active');
+				if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+						
+				}
+				//End here
+				$('#side_menu > ul > li:has(ul)').addClass("has-sub");
+				
+				$('#side_menu > ul > li > a').click(function() {
+				
+					var checkElement = $(this).next();
+
+					$('#side_menu li').removeClass('active');
+					$(this).closest('li').addClass('active');	
+				
+					if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+						$(this).closest('li').removeClass('active');
+						checkElement.slideUp('normal');
+					}
+				
+					if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+					}
+				
+					if (checkElement.is('ul')) {
+						return false;
+					} else {
+						return true;	
+					}
+				});
+
+			});
+			
+			function scrollTo(hash) {
+   		 		location.hash = "#" + hash;
+			}
+		</script>
+<!-- CSS STYLESHEETS ------------------ -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="css/icons.css"> 
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style_guide.css">
+    <link rel="shortcut icon" href="images/logo+favicon/favicon.ico" type="image/x-icon" />
+<style>
+	.ltGray { background-color:#f7f7f7; }
+</style>
+</head>
+<body style="padding-top:75px;">
+	<div class="col-lg-12 hidden-xs" style="position:absolute; z-index:9999;">
+		<div id="navigation_bar">
+			<img id="logo" alt="TDC Styles logo" src="images/logo.png">
+			<nav id="main_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="templates.html">Templates</a></li>
+					<li id="active"><a href="style_guide.html">Style Guide</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<!-- MENU GOES HERE ------------------------------------------------------ -->
+		<div id="menu-wrapper" class="col-lg-2">
+			<nav id="side_menu" >
+				<!--<div id="accordion_menu"> ------------------------------------ -->
+				<ul>
+					<li><a href="buttons.html#buttons">Buttons<i></i></a>
+						<ul>
+							<li><a href="buttons.html#button_styles">Button Styles</a></li>
+							<li><a href="buttons.html#button_group">Button Group</a></li>
+						</ul>
+					</li>
+					<li><a href="colors_and_layout.html#colors_and_layout">Colors & Layouts<i></i></a>
+						<ul>
+							<li><a href="colors_and_layout.html#color_palette">Color Palette</a></li>
+							<li><a href="colors_and_layout.html#two_column_layout">Two Column Layout</a></li>
+							<li><a href="colors_and_layout.html#three_column_layout">Three Column Layout</a></li>
+						</ul>
+					</li>
+					<li><a href="containers_and_separators.html#containers_and_separators">Containers & Separators<i></i></a>
+						<ul>
+							<li><a href="containers_and_separators.html#containers">Containers</a></li>
+							<li><a href="containers_and_separators.html#horizontal_and_vertical _rules">Horizontal and Vertical Rules</a></li>
+						</ul>
+					</li>
+					<li><a href="forms_input_and_selections.html#forms_input_and_selections">Forms, Input & Selections<i></i></a>
+						<ul>
+							<li><a href="forms_input_and_selections.html#autofill_text_field">Autocomplete</a></li>
+							<li><a href="forms_input_and_selections.html#checkboxes">Checkboxes</a></li>
+							<li><a href="forms_input_and_selections.html#date_field">Date Field</a></li>
+							<li><a href="forms_input_and_selections.html#form_layout">Form Layout</a></li>
+							<li><a href="forms_input_and_selections.html#radio_buttons">Radio Buttons</a></li>
+							<li><a href="forms_input_and_selections.html#text_area">Text Area</a></li>
+							<li><a href="forms_input_and_selections.html#text_field">Text Field</a></li>
+							<li><a href="forms_input_and_selections.html#text_field_helper">Text Field Helper</a></li>
+							<li><a href="forms_input_and_selections.html#validation">Validation</a></li>	
+						</ul>
+					</li>
+					<li><a href="icons_and_images.html#icons_and_images">Icons & Images<i></i></a>
+						<ul>
+							<li><a href="icons_and_images.html#file_format">File Format</a></li>
+							<li><a href="icons_and_images.html#icons">Icons</a></li>
+							<li><a href="icons_and_images.html#logo">Logo</a></li>
+							<li><a href="icons_and_images.html#proportions">Proportions</a></li>
+						</ul>
+					</li>
+					<li><a href="lists.html#lists">Lists<i></i></a>
+						<ul>
+							<li><a href="lists.html#bulleted">Bulleted</a></li>
+							<li><a href="lists.html#description">Description</a></li>
+							<li><a href="lists.html#horizontal_description">Horizontal Description</a></li>
+							<li><a href="lists.html#numbered">Numbered</a></li>
+							<li><a href="lists.html#Unstyled">Unstyled</a></li>
+						</ul>
+					</li>
+					<li><a href="modals_dialogs_and_utilities.html#modals_dialogs_and_utilities">Modals, Dialogs & Utilities<i></i></a>
+						<ul>
+							<li><a href="modals_dialogs_and_utilities.html#help">Help</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#dialog_box">Dialog Box</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#notifications">Notifications</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#progress indicator">Progress Indicator</a></li>
+							<li><a href="modals_dialogs_and_utilities.html#tooltips">Tooltips</a></li>
+						</ul>
+					</li>
+					<li><a href="navigation.html#navigation">Navigation<i></i></a>
+						<ul>
+							<li><a href="navigation.html#breadcrumbs">Breadcrumbs</a></li>
+							<li><a href="navigation.html#carousel">Carousel</a></li>
+							<li><a href="navigation.html#header">Header</a></li>
+							<li><a href="navigation.html#footer">Footer</a></li>
+							<li><a href="navigation.html#global_menu">Global Menu</a></li>
+							<li><a href="navigation.html#local_menu">Local Menu</a></li>
+							<li><a href="navigation.html#pager">Pager</a></li>
+							<li><a href="navigation.html#pagination">Pagination</a></li>
+							<li><a href="navigation.html#tree">Tree</a></li>		
+						</ul>
+					</li>
+					<li><a href="portlets.html#portlets">Portlets<i></i></a>
+						<ul>
+							<li><a href="portlets.html#portlet_layout">Layout</a></li>
+							<li><a href="portlets.html#interactions">Interactions</a></li>
+						</ul>
+					</li>
+					<li><a href="responsive_web_design.html#responsive_web_design">Responsive Web Design<i></i></a>
+						<ul>
+							<li><a href="responsive_web_design.html#mobile">Mobile</a></li>
+							<li><a href="responsive_web_design.html#tablet">Tablet</a></li>
+						</ul>
+					</li>
+					<li><a href="tabs_accordions_tables.html#tabs_accordions_tables">Tabs, Accordions & Tables<i></i></a>
+						<ul>
+							<li><a href="tabs_accordions_tables.html#accordion">Accordion</a></li>
+							<li><a href="tabs_accordions_tables.html#column_table">Table - Column Table</a></li>
+							<li><a href="tabs_accordions_tables.html#data_table">Table - Data Table</a></li>
+							<li><a href="tabs_accordions_tables.html#grid_style">Table - Grid Style</a></li>
+							<li><a href="tabs_accordions_tables.html#task_table">Table - Task Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tree_table">Table - Tree Table</a></li>
+							<li><a href="tabs_accordions_tables.html#tabs">Tabs</a></li>							
+						</ul>						
+					</li>
+					<li><a href="text.html#text">Text<i></i></a>
+						<ul>
+							<li><a href="text.html#caption">Caption</a></li>
+							<li><a href="text.html#fonts">Fonts</a></li>
+							<li><a href="text.html#headings">Headings</a></li>
+							<li><a href="text.html#links">Links</a></li>
+							<li><a href="text.html#paragraph">Paragraph</a></li>
+							<li><a href="text.html#styling">Styling</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- CONTENT AREA ------------------------------------------------------------ -->
+		<div id="content-wrapper">
+			<h1>Lists</h1>
+			<div>
+				<div class="well ltGray">Test Test Test Test Test Test Test Test Test Test Test Test</div>
+			</div>
+<section>
+    			<h2><a class="subtitle" name="bulleted">Bulleted</a></h2>
+                <div class="round_corner"><img id="button_sizing" class="center framed" src="images/lists/bulleted_list.png" width="286" height="162" alt="bullet list"></div>
+<h3>Overview</h3>
+					<p>Bulleted lists can be effective in helping the reader understand the organization of key points, but be sure to use them judiciously. Use bulleted lists to draw attention to key information that would get lost with a paragraph of text.
+                    </p>
+
+					<h3>Content</h3>
+						<ul style="padding-left:40px;">
+							<li>Limit the number of bulleted items to those that are completely necessary.</li>
+							<li>Although there is not specific character limit, bulleted items should be concise. Avoid paragraphs of text.</li>
+                        </ul>
+
+				<h3>Special Considerations</h3>
+					<p>Avoid making bulleted list items overly complex - such as including images or tables or other formatted elements nested within a bullet item.<br>
+					<p>Limit the use of nested bullet items.</p>
+    			
+    			<h2><a class="subtitle" name="description">Description</a></h2>
+                <h4>Description List</h4>
+                A discription list is great for defining terms.<br><br>
+                <h4>Lorem Ipsum</h4>
+                Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br><br>
+                <h4>Epsum Factoria</h4>
+                Non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum.<br><br>
+    			<p>Omnes_ATT II Medium 13px, 17px, #666666<br> 
+                Omnes_ATT II Regular 13px, 17px, #666666</p>
+                <h3>Overview</h3>
+					<p>Description lists (also known as definition lists) should be used primarily for terms and definitions. They can also be used to tie together any items that have a direct relationship with each other (name/value sets).  Please note that when using this type of a list the bolded term is in a title case.  While the definition is in a sentence case.
+                    </p>
+                <h3>Appropriate Use</h3>
+					<p>Use within the main content area utilizing full screen width.</p> 
+                                
+                <h2><a class="subtitle" name="hierarchical_indention">Hierarchical Indention</a></h2>          
+	    		<p> Example<br>
+    		    	Omnes_ATT II Regular Italic 13px, #666666</p>
+				<h3>Overview</h3>
+					<p>Use this style with</p>
+                
+                <h2><a class="subtitle" name="horizontal_description">Horizontal Description</a></h2>
+                	<h4>Description List</h4>
+                	A discription list is great for defining terms.<br><br>
+                	<h4>Lorem Ipsum</h4>
+                	Dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br><br>
+                	<h4>Epsum Factorial</h4>
+                	Non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum.<br><br>
+    			Omnes_ATT II Medium 13px, 17px, #666666<br> 
+                Omnes_ATT II Regular 13px, 17px, #666666<br><br>
+                <h3>Overview</h3>
+					<p>A variation of the basic description list (also know as definition list) should be used primarily for terms and definitions. They can also be used to tie together any items that have a direct relationship with each other (name/value sets).</p>
+                <h3>Appropriate Use</h3>
+					<p>Use within the main content area utilizing full screen width.</p> 
+                
+               <h2><a class="subtitle" name="numbered">Numbered</a></h2>
+                <div class="round_corner"><img id="button_sizing" class="center framed" src="images/lists/numbered_list.png" width="254" height="146" alt="number list"></div>
+				<h3>Overview</h3>
+					<p>Numbered lists can be used within the body to denote items in a series, such as procedural steps. Numbered lists stand out from the regular text and can add clarity to the text.  <br>
+                    Numbered lists can be useful to show the relationship between items: a chronology of events, each item’s relative importance, and so on.<br>
+                   The items can be sentences, phrases or full paragraphs. The first words of the sentences are capitalized and appropriate end punctuation should be used.</p>
+
+				<h3>Content</h3>
+                <ul style="padding-left:40px;">
+                	<li>Use at least two items within a numbered list.</li>
+					<li>For a single step, use a bullet.</li>
+					<li>Limit the number items to those that are completely necessary.</li>
+					<li>Although there is not a specific character limit, numbered items should be concise. Avoid paragraphs of text.</li></ul>
+
+				<p><h3>Special Considerations</h3>
+				Avoid making numbered list items overly complex - such as including images, tables or other formatted elements nested within a numbered item.</p>
+                
+                <h2><a class="subtitle" name="Unstyled">Unstyled</a></h2>
+                <div class="round_corner"><img id="button_sizing" class="center framed" src="images/lists/unstyled_list.png" width="253" height="161" alt="unstyle list"></div>
+				<h3>Overview</h3>
+                <p>The unstyled list is a variation of an unordered list that does not include bullets.</p>
+                
+         </section>
+         
+		</div>
+	</div>
+</body>
+
+</html>

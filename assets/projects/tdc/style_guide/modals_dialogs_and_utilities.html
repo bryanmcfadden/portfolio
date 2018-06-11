@@ -1,0 +1,823 @@
+<!DOCTYPE HTML>
+<html lang="en" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<title>TDC Style Guide - Template Page</title>
+<head>
+<META name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- JAVASCRIPT ----------------------- -->
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>		
+<script src="js/jquery-ui.min-1.10.4.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+    	<script>
+			$(document).ready(function() {
+				// dynamically load menu
+				$('#side_menu').load("incl_menu.html");
+				
+				// set active styles 
+				
+				
+				//Start here
+				var checkElement = $('a[href="modals_dialogs_and_utilities.html#modals_dialogs_and_utilities"]').next();
+				$('a[href="modals_dialogs_and_utilities.html#modals_dialogs_and_utilities"]').closest('li').addClass('active');
+				if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+						
+				}
+				//End here
+				$('#side_menu > ul > li:has(ul)').addClass("has-sub");
+				
+				$('#side_menu > ul > li > a').click(function() {
+				
+					var checkElement = $(this).next();
+
+					$('#side_menu li').removeClass('active');
+					$(this).closest('li').addClass('active');	
+				
+					if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+						$(this).closest('li').removeClass('active');
+						checkElement.slideUp('normal');
+					}
+				
+					if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+						$('#side_menu ul ul:visible').slideUp('normal');
+						checkElement.slideDown('normal');
+					}
+				
+					if(checkElement.is('ul')){
+						return false;
+					}else{
+						return true;	
+					}
+				});
+
+			});
+			
+			function scrollTo(hash) {
+   		 		location.hash = "#" + hash;
+			}
+		</script>
+<!-- CSS STYLESHEETS ------------------ -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="css/icons.css"> 
+    <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style_guide.css">
+    <link rel="shortcut icon" href="images/logo+favicon/favicon.ico" type="image/x-icon" />
+<style>
+	.ltGray { background-color:#f7f7f7; }
+</style>
+</head>
+<body>
+	<div class="col-lg-12 hidden-xs" style="position:absolute; z-index:500; margin-bottom:10px;">
+		<div id="navigation_bar">
+			<img id="logo" alt="TDC Styles logo" src="images/logo.png">
+			<nav id="main_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="templates.html">Templates</a></li>
+					<li id="active"><a href="style_guide.html">Style Guide</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div style="margin-top:75px; padding:0 15px;">
+	<div class="row">
+		<!-- MENU GOES HERE ------------------------------------------------------ -->
+		<div id="menu-wrapper" class="col-lg-2 hidden-xs hidden-sm">
+			<nav id="side_menu">
+				
+			</nav>
+		</div>
+		<!-- CONTENT AREA ------------------------------------------------------------ -->
+		<div id="content-wrapper">
+			<h1>Modals, Dialogs & Utilities</h1>
+			<div>
+				<div class="sgWellLightBlue">
+					Modal windows are often called heavy windows or modal dialogs because the window is 
+					often used to display a dialog box. Modal windows are commonly used to obtain user
+					confirmation, input, display and emergency states. They are often used when a user is
+					forced to make an important decision. <br><br>
+					The dialog window itself is an overlay that is directly positioned over the users viewport. This
+					prevents the user from interacting with elements underneath until interaction has occurred. The most
+					common types of modal dialogs are the alert, input, confirmation and custom dialogs which are explained
+					in the sections below.
+				</div>
+			</div>
+			<section>
+				<!---------------------------------------------------------->
+				<!--- ALERTS  ---------------------------------------------->
+				<!---------------------------------------------------------->
+    			<h2><a class="subtitle" name="alerts">Alerts</a></h2>
+				<!-- SAMPLE GOES HERE -------------------------------------->
+				 <div class="round_corner">
+					<div class="wrapper">
+						<a class="btn btn-md btn-blue" id="btn_alert" role="button">Show Alert</a>
+					</div>
+				</div>
+				<script>
+					$(document).ready(function() {
+						$( ".tabs" ).tabs();
+						//set example buttons
+						$('#btn_alert').click(function(){ $('#modal_alert').modal(); });
+						$('#btn_confirmation').click(function(){ $('#modal_confirmation').modal(); });
+						$('#btn_input').click(function(){ $('#modal_input').modal(); });
+						$('#btn_cdialog').click(function(){ $('#modal_cdialog').modal(); });
+					});
+				</script>
+				<!-- STYLES TO BE ADDED TO STYLEGUIDE ###################### -->
+				<style>
+					body.modal-open { overflow:inherit; padding-right:inherit !important; }
+					.bold {font-weight:bold; }
+					.modal {
+						overflow:hidden; 
+						overflow-y:hidden; 
+					}
+					.grouping-component .grouping-title {
+						color:#5e5c5c;
+						font-weight:bold;
+						padding-bottom:10px;
+						border-bottom:1px solid silver;
+					}
+					.btn-cancel { border:1px solid #0574ac; color:#0574ac; }
+					.btn-cancel:hover { color:#fff; background-color: #7cc6ff; border:1px solid #7cc6ff; }
+					.tabs { 
+						font-family: ClearviewATT, helvetica, arial; 
+					}
+					.tabs .indent{ 
+						margin-left:20px; 
+						background-color:#f7f7f7; 
+						padding:10px; 
+					}
+					.tabs .indent .details { 
+						font-size:14px; 
+						margin:5px;
+					}
+					.tabs h3 { color:#067ab4; margin-top: 20px; }
+					.tabs h4 { color:#4ca90c; }
+					.txt-input-dialog { 
+						height:25px; 
+						margin-left:10px; 
+						border:1px solid #ccc; 
+						border-radius:4px; 
+					}
+					.txt-dialog-code-container {
+						font-size:12px !important; 
+						width:100%; 
+						height:350px; 
+						border:1px solid #ccc; 
+						padding:10px; 
+						margin:0; 
+						overflow:auto; 
+						border-radius:6px;
+					}
+					.ui-widget-header { background:none;}
+					.ui-widget-content { 
+						background:none;
+						box-shadow:none;
+					}
+					.ui-tabs .ui-tabs-panel { 
+						border:1px solid #aaaaaa; 
+						border-top-right-radius: 10px;
+						border-bottom-right-radius:10px;
+						border-bottom-left-radius:10px;
+					}
+					.ui-tabs .ui-tabs-nav { padding:0; }
+					.modal-dialog { position: relative; top:20%; }
+					.modal-header { height:35px; }
+					.modal-body { 
+						margin:10px; 
+						min-height:100px;
+					}
+					.modal-title { color:#ff2700 !important; }
+					.modal-content { padding:5px; }
+					.notifications.modal .modal-dialog .modal-footer { 
+						clear: both;
+						height:55px; 
+						padding:10px 5px; 
+					}
+					.fa-exclamation-triangle.alert { 
+						font-size:60px; 
+						color:#ff2700;
+					}
+					.modal-text { padding:5px 0; }
+					.modal-alert-icon { 
+						text-align:center;
+						min-height:90px; 
+					}
+					.modal-alert-content {
+						padding-bottom:10px;
+						min-height:90px; 
+					}
+					.round_corner.wrapper { padding:10px;}
+					.round_corner { z-index:1; }
+					.dropdown-toggle-text { padding-right:20px; }
+				</style>
+				<!-- TABBING STARTS HERE ############################### -->
+				<div class="tabs" style="border:none;">
+					<ul style="background-color:none; border:none;">
+						<li><a href="#tabs-alerts">About</a></li>
+						<li><a href="#tabs-alerts-01">Guidelines</a></li>
+						<li><a href="#tabs-alerts-02">HTML & CSS</a></li>
+						<li><a href="#tabs-alerts-03">Notes</a></li>
+					</ul>
+					<div id="tabs-alerts">
+					<h3>Overview</h3>
+						<p>Used primarily to warn or tell the user something after an action has occurred.<br> 
+						Sometimes they can be used to inform the user whether the system was successful in completing a task or when the 
+						system runs into an error which prevents it from completing a task. Alerts cannot be used to generate any dynamic output or customize output since they cannot accept user input.<br>
+						They provide a single "OK" button for interaction with the user.</p>
+					</div>
+					<div id="tabs-alerts-01">
+						<h3>Appropriate Use</h3>
+						<p>Some uses for an alert would be:<br>
+						<ul>
+							<li>Incorrect information entered in a form (client side validation)</li>
+							<li>An invalid result from a calculation </li>
+							<li>A warning that a service is not available at a certain date</li>
+						</ul>
+						</p>
+						<h4>Design Breakdown</h4>
+						<p>Alerts are predefined within TDC allowing allowing only a single variable:</p>
+						<ul>
+							<li>Content</li>
+						</ul>
+						<p>
+						An overlay will cover the entire users screen, while placing the alert dialog within the center of the overlay. <br>
+						Alerts are auto-generated and cannot be positioned.</p>
+					</div>
+					<div id="tabs-alerts-02">
+						<textarea readonly="" class="txt-dialog-code-container"><!-- ALERT DIALOG ------------------------->
+<div class="notifications modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true"> 
+	<div class="modal-dialog">
+		<div class="modal-content alert">
+			<div class="modal-header">
+				<h4 class="modal-title">Alert</h4>
+			</div>
+			<div class="modal-body row">
+				<div class="modal-alert-icon col-md-2">
+					<i class="fa fa-exclamation-triangle alert"></i>
+				</div>
+				<div class="modal-alert-content col-md-10">
+					[ALERT DESCRIPTION GOES HERE] 
+				</div>
+			</div>
+			<div class="modal-footer"> 
+				<a class="btn btn-md btn-blue" role="button" data-dismiss="modal" aria-hidden="true">OK</a>
+			</div>
+		</div>
+	</div>
+</div>
+</textarea>
+					</div>
+					<div id="tabs-alerts-03">
+						<br>
+						<p>There are currently no notes for the Alert dialog.</p>
+					</div>
+				</div>
+				<!---------------------------------------------------------->
+				<!-- CONFIRMATIONS ----------------------------------------->
+				<!---------------------------------------------------------->
+    			<h2><a class="subtitle" name="alerts">Confirmation</a></h2>
+				<!-- SAMPLE GOES HERE -------------------------------------->
+				 <div class="round_corner">
+					<div class="wrapper">
+						<a class="btn btn-md btn-blue" id="btn_confirmation" role="button">Show Confirmation</a>
+					</div>
+				</div>
+				<!-- TABBING STARTS HERE ############################### -->
+				<div class="tabs" style="border:none;">
+					<ul style="background-color:none; border:none;">
+						<li><a href="#tabs-confirmations">About</a></li>
+						<li><a href="#tabs-confirmations-01">Guidelines</a></li>
+						<li><a href="#tabs-confirmations-02">HTML & CSS</a></li>
+						<li><a href="#tabs-confirmations-03">Notes</a></li>
+					</ul>
+					<div id="tabs-confirmations">
+						<h3>Overview</h3>
+						<p>Confirmations allow the user to confirm an action which has been initiated by the user.  
+						Examples of using this can be but are not limited to confirming deletion of an item 
+						or confirming that the information filled is correct. This is used when a confirmation 
+						is needed to prevent an error or to confirm that this is the course of action the user 
+						wants to take.</p>
+					</div>
+					<div id="tabs-confirmations-01">
+						<h3>Appropriate Use</h3>
+						<p>Some uses for an Confirmation would be:</p><br>
+						<ul>
+							<li>User validation of a file deletion</li>
+							<li>Continued advancement into next step within a multi-step process</li>
+							<li>Validation of a custom user action within a web application</li>
+						</ul>
+						<h4>Design Breakdown</h4>
+						<p>Confirmations are predefined within TDC allowing allowing these variables:</p>
+						<ul>
+							<li>Dialog Title</li>
+							<li>Content</li>
+							<li>Button definitions (OK, Cancel, Continue)</li>
+						</ul>
+						<p>
+							An overlay will cover the entire users screen, while placing the confirmation dialog within the center of the overlay.</p>
+						</p>
+					</div>
+					<div id="tabs-confirmations-02">
+						<textarea readonly="" class="txt-dialog-code-container"><!-- CONFIRMATION DIALOG ------------------------->
+	<div class="notifications modal fade" id="modal-confirmation" tabindex="-1"  role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button> -->
+					<h4 class="modal-title">[CONFIRMATION TITLE]</h4>
+				</div>
+				<div class="modal-body row">
+					<div class="col-md-12">
+						[CONFIRMATION DESCRIPTION OR INSTRUCTION]
+						<br><br>
+						[CONFIRMATION QUESTION]
+					</div>
+				</div>
+				<div class="modal-footer"> 
+					<a class="btn btn-md btn-cancel" role="button" data-dismiss="modal" aria-hidden="true">Cancel</a>
+					<a class="btn btn-md btn-blue" role="button" data-dismiss="modal" aria-hidden="true">OK</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</textarea>
+					</div>
+					<div id="tabs-confirmations-03">
+						<p>No notes are available for the confirmation dialog at this time.</p>
+					</div>
+				</div>
+				<!---------------------------------------------------------->
+				<!-- INPUTS ------------------------------------------------>
+				<!---------------------------------------------------------->
+    			<h2><a class="subtitle" name="alerts">Input</a></h2>
+				<!-- SAMPLE GOES HERE -------------------------------------->
+				 <div class="round_corner">
+					<div class="wrapper">
+						<a class="btn btn-md btn-blue" id="btn_input" role="button">Show Input</a>
+					</div>
+				</div>
+				<!-- TABBING STARTS HERE ############################### -->
+				<div class="tabs" style="border:none;">
+					<ul style="background-color:none; border:none;">
+						<li><a href="#tabs-input">About</a></li>
+						<li><a href="#tabs-input-01">Guidelines</a></li>
+						<li><a href="#tabs-input-02">HTML & CSS</a></li>
+						<li><a href="#tabs-input-03">Notes</a></li>
+					</ul>
+					<div id="tabs-input">
+						<h3>Overview</h3>
+						<p>This message allows the user to confirm the action that the user has initiated.  
+						Examples of using this can be but are not limited to confirming deletion of an item 
+						or confirming that the information filled is correct.  This is used when a confirmation 
+						is needed to prevent an error or to confirm that this is the course of action the user 
+						wants to take.</p>
+					</div>
+					<div id="tabs-input-01">
+						<h3>Appropriate Use</h3>
+						<p>Alerts pop up after an action is completed or if an error occurs.  This is 
+						used to inform the user whether the system was successful in completing a task 
+						or when the system runs into an error which prevents it from completing task.</p>
+						<h4>Design Breakdown</h4>
+						<p>Alerts pop up after an action is completed or if an error occurs.  This is 
+						used to inform the user whether the system was successful in completing a task 
+						or when the system runs into an error which prevents it from completing task.</p>
+					</div>
+					<div id="tabs-input-02">
+						<textarea readonly="" class="txt-dialog-code-container"><!-- INPUT DIALOG ------------------------->
+<div class="notifications modal fade" id="modal-input" tabindex="-1"  role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Input</h4>
+			</div>
+			<div class="modal-body row">
+				<div class="col-md-12">
+					[INPUT DIALOG DESCRIPTION OR INSTRUCTON TEXT GOES HERE] 
+					<br><br>
+					[TEXT INPUT LABEL]: <input type="textbox" class="txt-input-dialog" style="width: [INPUT WIDTH];"/>
+				</div>
+			</div>
+			<div class="modal-footer"> 
+				<a class="btn btn-md btn-cancel" role="button" data-dismiss="modal" aria-hidden="true">Cancel</a>
+				<a class="btn btn-md btn-orange" role="button" data-dismiss="modal" aria-hidden="true">Submit</a>
+			</div>
+		</div>
+	</div>
+</div></textarea>
+					</div>
+					<div id="tabs-input-03">
+						<p>Use this component when the user needs to provide information required to complete a task.</p>
+					</div>
+				</div>
+				<!---------------------------------------------------------->
+				<!-- CUSTOM DIALOG ----------------------------------------->
+				<!---------------------------------------------------------->
+    			<h2><a class="subtitle" name="alerts">Custom Dialog</a></h2>
+				<!-- SAMPLE GOES HERE -------------------------------------->
+				 <div class="round_corner">
+					<div class="wrapper">
+						<a class="btn btn-md btn-blue" id="btn_cdialog" role="button">Show Custom Dialog</a>
+					</div>
+				</div>
+				<!-- TABBING STARTS HERE ############################### -->
+				<div class="tabs" style="border:none;">
+					<ul style="background-color:none; border:none;">
+						<li><a href="#tabs-cdialog">About</a></li>
+						<li><a href="#tabs-cdialog-01">Guidelines</a></li>
+						<li><a href="#tabs-cdialog-02">HTML & CSS</a></li>
+						<li><a href="#tabs-cdialog-03">Notes</a></li>
+					</ul>
+					<div id="tabs-cdialog">
+						<h3>Overview</h3>
+						<p>Use this component when the user needs to provide information required to complete a task.</p>
+					</div>
+					<div id="tabs-cdialog-01">
+						<h3>Appropriate Use</h3>
+						<p>Alerts pop up after an action is completed or if an error occurs.  This is 
+						used to inform the user whether the system was successful in completing a task 
+						or when the system runs into an error which prevents it from completing task.</p>
+						<h4>Design Breakdown</h4>
+						<p>Alerts pop up after an action is completed or if an error occurs.  This is 
+						used to inform the user whether the system was successful in completing a task 
+						or when the system runs into an error which prevents it from completing task.</p>
+					</div>
+					<div id="tabs-cdialog-02">
+						<p>This provides the user with helpful information.</p>
+					</div>
+					<div id="tabs-cdialog-03">
+						<p>Use this component when the user needs to provide information required to complete a task.</p>
+					</div>
+				</div>
+				<!---------------------------------------------------------->
+				<!-- NOTIFICATIONS ----------------------------------------->
+				<!---------------------------------------------------------->
+				<style> 
+				.left { float:left; }
+				.btn-group.open .dropdown-toggle { border-top:1px solid #ccc;  border-left:1px solid #ccc;  border-right:1px solid #ccc; background-color: #edf7fe; }
+				.dropdown-menu { padding:0; margin:0; z-index:10; }
+				.dropdown-menu-label { display:inline-block; padding:15px 10px; width:100%; margin:0; }
+				.dropdown-menu-label:hover { color:#fff; background-color: #ff7200; }
+				
+				.notify-image { width:16px; height:16px; border:none; }
+				/* Message Core Styles ----------------------*/
+				.message-component { 
+					color:#fff; 
+					padding-top: 5px ;
+				}
+				.message-image .image { 
+					 border:none; 
+					 height: 32px;  
+					 width:32px;
+				}
+				.message-component div {
+					border: 1px solid transparent;
+					display: inline-block;
+				}
+				.message-component .message-image {
+					vertical-align: top;
+				} 
+				.message-component .message-text {
+					padding: 10px 10px 0 0px; 
+					 width: 80%;
+				} 
+				.message-component .close {
+					float: right;
+					text-indent:0px;
+				}
+				.message-component .close img{
+					border:none;
+					height:14px;
+					margin-top:15px;
+					width:14px;
+				}
+				/* SUCCESS ----------------------*/
+				.message-component.success { background-color: #6ebb1f; }
+				.message-component.success .image { background: url("images/ico_32x32_confirmation_white.png") transparent no-repeat; }
+				/* ERROR ----------------------*/
+				.message-component.error { background-color: #fe0000; }
+				.message-component.error .image { background: url("images/ico_32x32_error_white.png") transparent no-repeat; }
+				/* INFORMATION ----------------------*/
+				.message-component.information { background-color: #067ab4; }
+				.message-component.information .image { background: url("images/ico_32x32_information_white.png") transparent no-repeat; }
+				.message-component.information .close div, .message-component.error .close div, .message-component.success .close div { 
+					background: url("images/ico_32x32_warning_black.png") transparent no-repeat;
+				}
+				/* WARNING MESSAGE STYLES ----------------------*/
+				.message-component.warning { background-color: #fcf901; }
+				.message-component.warning .image { background: url("images/ico_32x32_warning_black.png") transparent no-repeat; }
+				.warning.image { background: url("images/ico_32x32_warning_black.png") transparent no-repeat; border:none; height: 32px; width:32px; margin-left:30%; margin-top:15px; }
+				.message-component.warning .message-text { color:#000; }
+				.round_corner.container { width:100%; }
+				
+				.container-fluid.notification { padding-top:7px; }
+				.row.warning{ background-color:yellow; min-height:65px;}
+				
+				a#notification_close { position:absolute; right:10px; top:5px;}
+				</style>
+				<script>
+					$(document).ready(function() {
+						//show notification type
+						$('.dropdown-menu label').click(function(){
+							alert($(this).html());
+							
+						});
+					});
+				</script>
+    			<h2><a class="subtitle" name="alerts">Notifications</a></h2>
+				<!-- SAMPLE GOES HERE -------------------------------------->
+				<div style="padding-bottom:20px;">
+					<div class="btn-group dropdown-group">
+						<button id="dd_menu_select" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<span class="dropdown-toggle-text">Show Notification</span>
+							<span class="glyphicon glyphicon-chevron-down"></span>
+						</button>
+						<div class="dropdown-menu" role="menu">
+							<label class="dropdown-menu-label" for="confirmation">Confirmation</label>
+							<label class="dropdown-menu-label" for="error">Error</label>
+							<label class="dropdown-menu-label" for="information">Information</label>
+							<label class="dropdown-menu-label" for="warning">Warning</label>
+						</div>
+					</div>
+				</div>
+				<div class="round_corner">
+					<div class="container-fluid notification">
+						<div id="notification_" class="row warning">
+							<div class="col-sm-1">
+								<div>
+									<i class="fa fa-exclamation-triangle" style="padding-left:20%; margin-top:12px; font-size:36px; color:#000;"></i>
+
+									<!-- <div class="warning image"></div> -->
+								</div>
+							</div>
+							<div class="col-sm-11">
+								<div style="padding-top:10px;">
+									<p style="line-height:1.5; color:#000;">This is a warning message  This is a warning message  This is a warning message  This is a warning message  This is a warning message
+									<!-- This is a warning message  This is a warning message  This is a warning message  This is a warning message  This is a warning message --></p>
+								</div>
+								<a id="notification_close" onclick="closeWarning()" href="javascript:void(0);">
+									<img class="notify_image" src="images/ico_16x16_close_black.png" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- TABBING STARTS HERE ############################### -->
+				<div class="tabs" style="border:none;">
+					<ul style="background-color:none; border:none;">
+						<li><a href="#tabs-notifications">About</a></li>
+						<li><a href="#tabs-notifications-01">Guidelines</a></li>
+						<li><a href="#tabs-notifications-02">HTML & CSS</a></li>
+						<li><a href="#tabs-notifications-03">Notes</a></li>
+					</ul>
+					<div id="tabs-notifications">
+						<h3>Overview</h3>
+						<p>These are often used with forms.  Notifications can be used to highlight something
+						important, like important information, warnings, errors and confirmations.  Each 
+						type of notification is attached with a color.  Text is restricted to one line of 
+						text, roughly 75 characters including spaces.</p>
+					</div>
+					<div id="tabs-notifications-01">
+						<h3>Appropriate Use</h3>
+						<p>Alerts pop up after an action is completed or if an error occurs.  This is 
+						used to inform the user whether the system was successful in completing a task 
+						or when the system runs into an error which prevents it from completing task.</p>
+						<h4>Design Breakdown</h4>
+						<p>Alerts pop up after an action is completed or if an error occurs.  This is 
+						used to inform the user whether the system was successful in completing a task 
+						or when the system runs into an error which prevents it from completing task.</p>
+						<h3 class="relLinks">Related Links</h3>
+						<p><a href="forms_input_and_selections.html#form_layout">Form Layout</a></p>
+					</div>
+					<div id="tabs-notifications-02">
+						<p>HTML & Code goes here</p>
+					</div>
+					<div id="tabs-notifications-03">
+						<p>Issues goes here</p>
+					</div>
+				</div>
+                <!---------------------------------------------------------->
+				<!-- PROGRESS INDICATOR ------------------------------------>
+				<!---------------------------------------------------------->
+    			<h2><a class="subtitle" name="alerts">Progress Indicators</a></h2>
+				<!-- SAMPLE GOES HERE -------------------------------------->
+				 <div class="round_corner">
+					<div class="wrapper">
+						
+					</div>
+				</div>
+				<!-- TABBING STARTS HERE ############################### -->
+				<div class="tabs" style="border:none;">
+					<ul style="background-color:none; border:none;">
+						<li><a href="#tabs-progress">About</a></li>
+						<li><a href="#tabs-progress-01">Guidelines</a></li>
+						<li><a href="#tabs-progress-02">HTML & CSS</a></li>
+						<li><a href="#tabs-progress-03">Notes</a></li>
+					</ul>
+					<div id="tabs-progress">
+						<h3>Overview</h3>
+						<p>This type of component should be used when the user has to wait for something 
+						to load; for example, if the user is downloading/uploading a large file.</p>
+					</div>
+					<div id="tabs-progress-01">
+						<h3>Overview</h3>
+						<p>This type of component should be used when the user has to wait for something 
+						to load; for example, if the user is downloading/uploading a large file.</p>
+						<h3>Appropriate Use</h3>
+						<p>Appropriate use description goes here</p>
+						<h4>Design Breakdown</h4>
+						<p>Breakdown description goes here</p>
+						<h3 class="relLinks">Related Links</h3>
+						<p><a href="forms_input_and_selections.html#form_layout">Form Layout</a></p>
+					</div>
+					<div id="tabs-progress-02">
+						<p>HTML & CODE goes here</p>
+					</div>
+					<div id="tabs-progress-03">
+						<p>Issues goes here</p>
+					</div>
+				</div>
+                <!---------------------------------------------------------->
+				<!-- TOOLTIPS ---------------------------------------------->
+				<style>
+					.popover { min-width:250px; max-width:500px; top:160px; }
+					.popover-title { color:#ff2700; font-variant:small-caps;}
+					.popover-content { padding: 9px 14px; }
+					.close { font-size:15px; margin-left:30px; font-weight:normal; }
+				</style>
+				<script>
+					$(document).ready(function() {
+						$('[data-toggle="popover"]').popover({
+							html:"true",
+							container:"body",
+							placement:"right"
+						});
+						
+					});
+				</script>
+				<!---------------------------------------------------------->
+    			<h2><a class="subtitle" name="alerts">Tooltips</a></h2>
+				<!-- SAMPLE GOES HERE -------------------------------------->
+				 <div class="round_corner">
+					<div class="wrapper">
+						<a class="btn btn-md btn-blue" id="btn_tooltip" role="button" data-toggle="popover" 
+						title="Tooltip Title <button type='button' id='close' class='close'>x</button>" 
+						data-placement="left" data-content="<script language='javascript'>$(document).ready(function(){ 
+						$('#close').click(function(){ $('#btn_tooltip').popover('hide');  });});</script><div>[TOOLTIP CONTENT GOES HERE]</div>">Click For Tooltip</a>
+					</div>
+				</div>
+				<!-- TABBING STARTS HERE ############################### -->
+				<div class="tabs" style="border:none;">
+					<ul style="background-color:none; border:none;">
+						<li><a href="#tabs-tooltips">About</a><li>
+						<li><a href="#tabs-tooltips-01">Guidelines</a></li>
+						<li><a href="#tabs-tooltips-02">HTML & CSS</a></li>
+						<li><a href="#tabs-tooltips-03">Notes</a></li>
+					</ul>
+					<div id="tabs-tooltips">
+						<h3>Overview</h3>
+						<p>Tool tips provide additional contextual information about a page elements or control and are activated on tap.
+						The help tooltip appears when information could be confusing to some users and requires clarification. When pressed, an overlay appears with the additional information. To dismiss the overlay users can either press anywhere outside the overlay, or press the help button again.
+						Tooltips of this type may be positioned to open above or below. The default position is to open below.</p>
+					</div>
+					<div id="tabs-tooltips-01">
+						<h3>Appropriate Use</h3>
+							<p>The tooltip control may be used inline with controls such as toggle, slider, radio and checkbox. This control should not be used with input fields (see Text input field helpers).</p>
+						<h4>Design Breakdown</h4>
+						<div class="indent">
+							<h3 class="details">Placement</h3>
+								<p>The placement of a tooltip can vary based on the location of the icon that it’s triggered from. It will appear either above or below the icon, pushing down other content that may exist on the page.</p>
+							<h3 class="details">Size</h3>
+								<p>The height of a field helper varies based on the content that it contains, but the width is fixed to the viewport, with no padding on either side.</p>
+							<h3 class="details">Content</h3>
+								<p>Tooltip text should be as concise as possible while providing benefit to the user. Character count: 150-175 characters max (with spaces)</p>
+							<h3 class="details">Interactions</h3>
+								<p>When open, a tool tip pushes other content down the page. A user can tap anywhere on the screen to dismiss the tool tip.</p>
+						</div>
+						<h3 class="relLinks">Related Links</h3>
+						<p><a href="forms_input_and_selections.html#form_layout">Form Layout</a></p>
+					</div>
+					<div id="tabs-tooltips-02">
+						<p>HTML & CODE goes here</p>
+					</div>
+					<div id="tabs-tooltips-03">
+						<p>Issues goes here</p>
+					</div>
+				</div>			
+			</section>         
+		</div>
+	</div>
+</body>
+<!-- MODAL DIALOG EXAMPLES ----------->
+	<div class="notifications modal fade" id="modal_alert" tabindex="-1"  role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content alert">
+				<div class="modal-header">
+					<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button> -->
+					<h4 class="modal-title">Alert</h4>
+				</div>
+				<div class="modal-body row">
+					<div class="modal-alert-icon col-md-2">
+						<i class="fa fa-exclamation-triangle alert"></i>
+					</div>
+					<div class="modal-alert-content col-md-10">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum a eros 
+						vitae mattis. Morbi pulvinar est enim, non laoreet urna accumsan vitae. Morbi 
+						ullamcorper sollicitudin luctus. Integer ac nunc id dolor varius scelerisque. 
+					</div>
+				</div>
+				<div class="modal-footer"> 
+					<a class="btn btn-md btn-blue" role="button" data-dismiss="modal" aria-hidden="true">OK</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONFIRMATION DIALOG ------------------------->
+	<div class="notifications modal fade" id="modal_confirmation" tabindex="-1"  role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Confirmation</h4>
+				</div>
+				<div class="modal-body row">
+					<div class="col-md-12">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum a eros 
+						vitae mattis. Morbi pulvinar est enim, non laoreet urna accumsan vitae. Morbi 
+						ullamcorper sollicitudin luctus. Integer ac nunc id dolor varius scelerisque. 
+						<br><br>
+						Would you like to continue?
+					</div>
+				</div>
+				<div class="modal-footer"> 
+					<a class="btn btn-md btn-cancel" role="button" data-dismiss="modal" aria-hidden="true">Cancel</a>
+					<a class="btn btn-md btn-blue" role="button" data-dismiss="modal" aria-hidden="true">OK</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- INPUT DIALOG ------------------------->
+	<div class="notifications modal fade" id="modal_input" tabindex="-1"  role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Input</h4>
+				</div>
+				<div class="modal-body row">
+					<div class="col-md-12">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum a eros 
+						vitae mattis. Morbi pulvinar est enim, non laoreet urna accumsan vitae. Morbi 
+						ullamcorper sollicitudin luctus. Integer ac nunc id dolor varius scelerisque. 
+						<br><br>
+						Input requested data here: <input type="textbox" class="txt-input-dialog" style="width:40%;" />
+					</div>
+				</div>
+				<div class="modal-footer"> 
+					<a class="btn btn-md btn-cancel" role="button" data-dismiss="modal" aria-hidden="true">Cancel</a>
+					<a class="btn btn-md btn-orange" role="button" data-dismiss="modal" aria-hidden="true">Submit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CUSTOM DIALOG ------------------------->
+	<div class="notifications modal fade" id="modal_cdialog" tabindex="-1"  role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Custom Dialog Title</h4>
+				</div>
+				<div class="modal-body row">
+					<div class="col-md-12">
+						<div class="grouping-component">
+							<h5 class="grouping-title"> Time Value</h5>
+						</div>
+						<div class="modal-text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum a eros 
+							vitae mattis. Morbi pulvinar est enim, non laoreet urna accumsan vitae. Morbi 
+							ullamcorper sollicitudin luctus. Integer ac nunc id dolor varius scelerisque. 
+						</div>
+						<input type="radio" name="rdoButtonCDialog" value="Radio_01" checked="true" /> Option 1
+						<br>
+						<input type="radio" name="rdoButtonCDialog" value="Radio_02"/> Option 2
+						<br>
+						<br>
+						<span class="bold">Please check all that apply:</span>
+						<br>
+						<input type="checkbox" name="new"> This will be checkbox 1
+						<br>
+						<input type="checkbox" name="new"> This will be checkbox 2
+					</div>
+				</div>
+				<div class="modal-footer"> 
+					<a class="btn btn-md btn-cancel" role="button" data-dismiss="modal" aria-hidden="true">Cancel</a>
+					<a class="btn btn-md btn-blue" role="button" data-dismiss="modal" aria-hidden="true">Save</a>
+					<a class="btn btn-md btn-orange" role="button" data-dismiss="modal" aria-hidden="true">Submit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>

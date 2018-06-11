@@ -5,8 +5,9 @@ Bryan McFadden
 All functionality required for my portfolio pages
 ============================================================================= */
 var skillsShown;
-var project, projectSlide;
+var project, projectSlide, projSlideTotal;
 var projTotal = projectsList.length;
+var speed = 800;
 
 //Custom Scrollbar Creation
 $(window).load(function(){
@@ -95,13 +96,16 @@ $(document).ready(function(){
 
 
 	/* ========= My Projects =================================================== */
-	//$("body").on("click", '.openWorkDetails', function(){
+	/* ========================================================================= */
+
 	$('.current-project-list li').on('click', function(){
 		LoadSelectedProject($(this).index()); //array based - starts at 0
 		//alert(projectsList[selProj][0]);
 		 DisplayProjectView();
 	});
 
+
+	//this function loads a selected project from the project selector into view
 	function LoadSelectedProject(pid) {
 		project = pid;
 		//check to see if project exists...then fetch Data
@@ -116,6 +120,7 @@ $(document).ready(function(){
 		/*Grab first image within array */
 		$('.project-slides img').attr("src", projectsList[pid][7][0][0]); //image source (aka img/mm_img_tspace.jpg)
 		$('.project-slides .title').html(projectsList[pid][7][0][1]); //image caption
+		projSlideTotal = projectsList[pid][7].length;
 
 		//load images
 		/*
@@ -133,12 +138,13 @@ $(document).ready(function(){
 		}else if(pid == 0){
 			DisableProjectNavigation('previous', true);
 		}
-
+		//always default to disabling the previous project slide since we are loading
+		//the project for the first time
 		$('.prev-slide').prop("disabled", true);
 		projectSlide=0;
 	}
 
-	//this function loads all ux deliverables from project into the header
+	//this function loads all ux deliverables from a project into the header as tags
 	function LoadProjectUXDeliverables(){
 	var i;
 		$('.project-details .deliverables ul').html('');
@@ -147,8 +153,8 @@ $(document).ready(function(){
 		}
 	}
 
+ //this function enables/disables the prev/next buttons to view projects
   function DisableProjectNavigation(btn, val){
-		//enable/disable previous 7 next project button
 		if(val){
 			$('.'+btn+'-project').addClass("disabled");
 			$('.'+btn+'-project').prop("disabled", true);
@@ -159,8 +165,6 @@ $(document).ready(function(){
 	}
 
 	function LoadProjectView(){
-	var speed = 800;
-
 		//project name
 		$('.project-details header h2').fadeOut(speed, function(){
 			$('.project-details header h2').html(projectsList[project][0]).fadeIn(speed);
@@ -189,17 +193,52 @@ $(document).ready(function(){
 		$('.project-summary .deliverables').fadeOut(speed, function(){
 		 LoadProjectUXDeliverables();
 		 $('.project-summary .deliverables').fadeIn(speed);
-	 });
-		//slide description (slide 0)
-		$('.proj-slides .summary').fadeOut(speed, function(){
-			$('.proj-slides .summary').html(projectsList[project][7][0][0]).fadeIn(speed);
-		});
-		//slide title (slide 0)
-		$('.proj-slides .title').fadeOut(speed, function(){
-			$('.proj-slides .title').html(projectsList[project][7][0][2]).fadeIn(speed);
-		});
+	 	});
+
+		projSlideTotal = projectsList[project][7].length;
+		//reset project slides to 0 since we are loading a new project into view
+		projectSlide=0;
+		LoadProjectSlides();
 	}
 
+	function LoadProjectSlides(){
+		$('.project-slides img').fadeOut(speed, function(){
+			$('.project-slides img').attr("src", projectsList[project][7][(projectSlide)][0]).fadeIn(speed);
+		});
+
+		$('.project-slides .title').fadeOut(speed, function(){
+			$('.project-slides .title').html(projectsList[project][7][(projectSlide)][1]).fadeIn(speed);
+		});
+
+	  //disable next slide button if we are at the end of the list count
+		if(projectSlide<(projSlideTotal-1)){
+			if((projSlideTotal-1)==0){
+				DisableProjectSlideNavigation("next", true);
+			}
+			DisableProjectSlideNavigation("next", false);
+		}else{
+			DisableProjectSlideNavigation("next", true);
+		}
+		//disable the previous slide button if we are at the first slide in list
+		if(projectSlide==0){
+			DisableProjectSlideNavigation("prev", true);
+		}else{
+			DisableProjectSlideNavigation("prev", false);
+		}
+	}
+
+	//this function enables/disables the prev/next buttons to view project slides
+   function DisableProjectSlideNavigation(btn, val){
+ 		if(val){
+ 			$('.'+btn+'-slide').addClass("disabled");
+ 			$('.'+btn+'-slide').prop("disabled", true);
+ 		}else{
+ 			$('.'+btn+'-slide').removeClass("disabled");
+ 			$('.'+btn+'-slide').prop("disabled", false);
+ 		}
+ 	}
+
+	//((((((((((((((((((((((((( PREVIOUS PROJECT BUTTON )))))))))))))))))))))))))
 	$("body").on("click", ".previous-project", function(){
 		project--;
 		//alert((project+1) + ' ' + projectsList.length);
@@ -211,6 +250,7 @@ $(document).ready(function(){
 		DisableProjectNavigation('next', false);
 	});
 
+	//((((((((((((((((((((((((((( NEXT PROJECT BUTTON ))))))))))))))))))))))))))))
 	$("body").on("click", ".next-project", function(){
 		project++;
 		//alert((project+1) + ' ' + projectsList.length);
@@ -222,7 +262,33 @@ $(document).ready(function(){
 		DisableProjectNavigation('previous', false);
 	});
 
+	//((((((((((((((((((((( PREVIOUS SLIDE (PROJECT) BUTTON ))))))))))))))))))))))
+	$("body").on("click", ".prev-slide", function(){
+		projectSlide--;
+		LoadProjectSlides();
+
+		/*
+		if(project == 0){
+			DisableProjectNavigation('previous', true);
+		}
+		DisableProjectNavigation('next', false);
+		*/
+	});
+
+	//((((((((((((((((((((( PREVIOUS SLIDE (PROJECT) BUTTON ))))))))))))))))))))))
+	$("body").on("click", ".next-slide", function(){
+		projectSlide++;
+		LoadProjectSlides();
+		/*
+		if(project == 0){
+			DisableProjectNavigation('previous', true);
+		}
+		DisableProjectNavigation('next', false);
+		*/
+	});
+
   /* ========= About Me ====================================================== */
+	/* ========================================================================= */
   var timerResumeButtons = {
     start: function(){
       if (typeof this.timeoutID === 'number'){

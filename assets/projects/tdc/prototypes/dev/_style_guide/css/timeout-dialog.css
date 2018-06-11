@@ -1,0 +1,69 @@
+button {
+	margin: 0px; font-size: 100%; vertical-align: baseline;
+}
+button {
+	line-height: normal;
+}
+button {
+	cursor: pointer; -webkit-appearance: button;
+}
+button {
+	border-width: 1px; border-style: solid; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); padding: 5px 10px; border-radius: 4px; border-image: none; color: rgb(51, 51, 51); line-height: normal; font-size: 14px; display: inline-block; cursor: pointer; box-shadow: 0px 1px 0px rgba(255,255,255,0.5), inset 0px 1px 1px rgba(0,0,0,0.1); text-shadow: 0px 1px 1px rgba(255,255,255,0.75); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 1px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 1px rgba(0, 0, 0, 0.1); -moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+.button:hover {
+	background-position: 0px -15px; text-decoration: none;
+}
+button:hover {
+	background-position: 0px -15px; text-decoration: none;
+}
+.button:focus {
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.4); -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+}
+button:focus {
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.4); -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+}
+.timeout-dialog {
+	background: no-repeat rgb(255, 255, 255); border-radius: 5px; border: 1px solid rgb(255, 255, 255); border-image: none; text-align: left; color: rgb(0, 0, 0); position: absolute; z-index: 10020; box-shadow: 0px 0px 5px rgba(0,0,0,0.5); -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.timeout-dialog .ui-dialog-title {
+	padding: 8px; color: grey; font-family: " sans-serif",arial; font-size: 16px; border-bottom-color: rgb(239, 239, 239); border-bottom-width: 1px; border-bottom-style: solid; display: block; background-color: rgb(255, 255, 255);
+}
+.borderBottom {
+	border-bottom-color: rgb(239, 239, 239); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.padTop {
+	padding-top: 5px;
+}
+.timeout-dialog .ui-dialog-titlebar-close {
+	display: none;
+}
+.timeout-dialog .ui-dialog-buttonpane {
+	text-align: right; padding-top: 0px;
+}
+.timeout-dialog p {
+	padding: 0px 4px 0px 8px; color: rgb(72, 72, 72); font-size: 13px; background-color: rgb(255, 255, 255);
+}
+#timeout-keep-signin-btn {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); margin: 5px 10px 5px 0px; text-align: right; color: rgb(255, 255, 255); text-shadow: none; background-image: -ms-linear-gradient(rgb(55, 123, 178), rgb(15, 88, 149)); background-repeat: repeat-x; background-color: rgb(15, 88, 149);
+}
+#timeout-sign-out-button {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); margin: 5px 0px; color: rgb(0, 0, 0); text-shadow: none; background-image: -ms-linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230)); background-repeat: repeat-x; background-color: rgb(230, 230, 230);
+}
+#timeout-countdown {
+	font-weight: bold;
+}
+.ui-widget-overlay {
+	background: rgb(0, 0, 0); left: 0px; top: 0px; width: 100%; height: 100%; position: fixed; z-index: 10000; opacity: 0.5;
+}
+.idle-timeout-opacity {
+	opacity: 1 !important;
+}
+.session-header-title {
+	color: rgb(244, 123, 32) !important; float: none !important;
+}
+.session-titlebar {
+	background: none; border: currentColor !important; border-image: none !important;
+}
+.session-footer-content {
+	background: none; border: currentColor !important; border-image: none !important;
+}

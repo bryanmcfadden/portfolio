@@ -1,0 +1,51 @@
+h1 {
+	font-weight: normal;
+}
+h2 {
+	font-weight: normal;
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-weight: normal;
+}
+h5 {
+	font-weight: normal;
+}
+h6 {
+	font-weight: normal;
+}
+a {
+	color: rgb(8, 140, 206); text-decoration: none;
+}
+a:visited {
+	color: rgb(8, 140, 206); text-decoration: none;
+}
+.container {
+	padding: 0px 10px; width: 650px;
+}
+.container > p {
+	margin-bottom: 20px;
+}
+.code {
+	margin: 0px 0px 15px; padding: 10px; border-radius: 3px; border: 1px solid rgb(204, 204, 204); border-image: none; line-height: 20px; font-size: 12px; font-weight: normal; display: block; white-space: pre-wrap; -ms-word-wrap: break-word; box-shadow: 0px 1px 3px rgba(0,0,0,0.25); background-color: rgb(244, 244, 244); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+td {
+	padding: 5px; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: none;
+}
+thead th {
+	border-width: 1px 0px; border-style: solid; border-color: rgb(222, 222, 222); padding: 10px 5px; text-align: left; color: rgb(102, 102, 102); font-size: 15px; background-color: rgb(249, 249, 249);
+}
+thead th:first-child {
+	border-left-width: 1px;
+}
+thead th:last-child {
+	border-right-width: 1px;
+}
+tbody {
+	padding-top: 10px;
+}

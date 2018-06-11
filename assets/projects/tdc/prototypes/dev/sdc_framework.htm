@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> 
+<html class="no-js" lang="en"> 
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Software Delivery Center - Framework</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="MobileOptimized" content="320">
+
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/uniform.default.css" rel="stylesheet" type="text/css">
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="css/style-metronic.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/style-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/plugins.css" rel="stylesheet" type="text/css">
+<link href="css/tasks.css" rel="stylesheet" type="text/css">
+<link href="css/default.css" rel="stylesheet" type="text/css" id="style_color">
+<!-- CUSTOM STYLES MUST BE ADDED LAST ---------------------->
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<!-- END THEME STYLES -->
+<style id="ex_canvas_">
+.canvas {
+	width:300px;
+	height:150px;
+	text-align:left;
+	overflow:hidden;
+	display:inline-block;
+}
+</style>
+<!-- BEGIN CORE JS -->
+<script src="js/core/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script>
+// Set jQuery into noConflict() mode to avoid issues with dojo
+				jQuery.noConflict();
+</script>
+<script src="js/core/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<!-- DYNAMIC BREADCRUMBS -------------------------------------------------------->
+<script language="javascript">
+jQuery(document).ready(function($){
+
+	var path = "<i class=\"fa fa-home\"></i>&nbsp;&nbsp;&nbsp;";
+	var href = document.location.href;
+	var s = href.split("/");
+	for (var i=2;i<(s.length-1);i++) {
+		path+="<A HREF=\""+href.substring(0,href.indexOf("/"+s[i])+s[i].length+1)+"/\">"+s[i]+"</A><span style=\"color:#ccc;padding:0 5px;\">|</span> ";
+	}
+	i=s.length-1;
+	path+="<A HREF=\""+href.substring(0,href.indexOf(s[i])+s[i].length)+"\">"+s[i]+"</A>";
+	var url = window.location.protocol + "//" + path;
+	$('#test_breadcrumb').html(path);
+});
+<!-- ---------------------------------------------------------------------------->
+</script>
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><script src="js/excanvas.min.js"></script> <![endif]-->
+</head>
+<body class="page-header-fixed">
+	<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  THEME_EN CONTENT  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+	<div id="div_lightbox" class="lightbox"></div>
+	<div style="height:40px;" class="hidden-xs hidden-sm"><!-- THIS PLACED HERE TO COMPENSATE FOR THE TOP NAVBAR IN PORTAL SERVER --></div>
+	<!-- /////////////////////////////////// HEADER STARTS HERE //////////////////////////////////////// -->
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<!-- BEGIN TOP NAVIGATION BAR -->
+		<div class="header-inner">
+			<a class="navbar-brand" href="#">
+				<img src="img/img_logo_sdc_beta.png" alt="logo" class="img-responsive">
+			</a>
+			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+			<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<img src="img/menu-toggler.png" alt="">
+			</a>
+			<!-- END RESPONSIVE MENU TOGGLER -->
+			<div class="hidden-xs">
+				<ul class="nav navbar-nav pull-right">
+					<!-- BEGIN APPROVALS DROPDOWNS ************************************************************************** -->
+					<li class="dropdown" id="header_notification_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="fa fa-check-square ico-header-large ico-white"></i>
+							<span id="approvals_not_count" class="badge notification-count">99+</span>
+						</a>
+						<ul class="dropdown-menu extended notification">
+							<li>
+								<p>
+									Recent Approvals
+								</p>
+							</li>
+							<li>
+								<div class="notification-container">
+									<ul class="dropdown-menu-list scroller">
+										<li>
+											<a href="#">
+												<span>
+													<img src="img/ico_notif_32x32_attcr.png"/>
+													<!-- <i class="fa fa-check-square"></i> -->
+												</span> 
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>
+													<img src="img/ico_notif_32x32_itrr.png"/>
+													<!-- <i class="fa fa-check-square"></i> -->
+												</span> 
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-approval">
+													<i class="fa fa-check-square"></i>
+												</span>
+												<span class="notification-description">
+													APPROVAL GOES HERE ...
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="external">
+								<a href="#">See all approvals <i class="m-icon-swapright"></i></a>
+							</li>
+						</ul>
+					</li>
+					<!-- BEGIN TASKS DROPDOWN ******************************************************************************* -->
+					<li class="dropdown" id="header_notification_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="fa fa-bell ico-header-large"></i>
+							<span id="task_not_count" class="badge notification-count">99+</span>
+						</a>
+						<ul class="dropdown-menu extended notification">
+							<li>
+								<p>
+									Recent Tasks
+								</p>
+							</li>
+							<li>
+								<div class="notification-container">
+									<ul class="dropdown-menu-list scroller">
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-task">
+													<i class="fa fa-bell"></i>
+												</span>
+												<span class="notification-description">
+													TASK GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-task">
+													<i class="fa fa-bell"></i>
+												</span>
+												<span class="notification-description">
+													TASK GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-task">
+													<i class="fa fa-bell"></i>
+												</span>
+												<span class="notification-description">
+													TASK GOES HERE ...
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="external">
+								<a href="#">See all tasks <i class="m-icon-swapright"></i></a>
+							</li>
+						</ul>
+					</li>
+					<!-- BEGIN EVENTS DROPDOWN ****************************************************************************** -->
+					<li class="dropdown" id="header_notification_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="fa fa-calendar ico-header-large"></i>
+							<span id="event_not_count" class="badge notification-count">99+</span>
+						</a>
+						<ul class="dropdown-menu extended notification">
+							<li>
+								<p>
+									Recent Events
+								</p>
+							</li>
+							<li>
+								<div class="notification-container">
+									<ul class="dropdown-menu-list scroller">
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-event">
+													<i class="fa fa-calendar"></i>
+												</span>
+												<span class="notification-description">
+													EVENT GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-event">
+													<i class="fa fa-calendar"></i>
+												</span>
+												<span class="notification-description">
+													EVENT GOES HERE ...
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="label label-sm label-icon label-event">
+													<i class="fa fa-calendar"></i>
+												</span>
+												<span class="notification-description">
+													EVENT GOES HERE ...
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="external">
+								<a href="#">See all events <i class="m-icon-swapright"></i></a>
+							</li>
+						</ul>
+					</li>
+					<!-- BEGIN USER SETTINGS DROPDOWN *********************************************************************** -->
+					<li class="dropdown user">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<img id="img_user_name_avatar" alt="Bryan McFadden" class="user-avatar" src="img/avatar1_small.jpg">
+							<span id="user_name" class="username">Bryan McFadden</span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#"><i class="fa fa-gear"></i> Settings</a>
+							</li>
+							<li class="divider">
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-star"></i> Link #1
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-star"></i> Link #2
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- SEARCH BAR -->
+				<div class="hidden-xs hidden-sm hidden-md">
+					<div class="header-search-bar">
+						<form id="frm_header_search" class="search-form" action="#" role="form">
+							<div class="btn-group header-search">
+								<button class="btn dropdown-toggle header-search-source" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+									<span id="spn_search_source">All Sources</span> 
+									<i class="fa fa-angle-down"></i>
+								</button>
+								<ul id="search_source_list" class="dropdown-menu opens-left">
+									<li class="active">
+										<a href="#" title="All Sources">All Sources</a>
+									</li>
+									<li>
+										<a href="#" title="AT&T Insider">Insider</a>
+									</li>
+									<li>
+										<a href="#" title="Software Delivery Center">Software Delivery Center</a>
+									</li>
+									<li>
+										<a href="#" title="MOTS">MOTS</a>
+									</li>
+									<li>
+										<a href="#" title="tSpace">tSpace</a>
+									</li>
+									<li>
+										<a href="#" title="TSS">TSS</a>
+									</li>
+								</ul>
+							</div>
+							<input class="form-control header-search-bar-input input-sm left" type="text" placeholder="Search..." name="query"/> <!-- input-medium -->
+							<input class="submit search_submit" type="button" value=" " />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="page-container">
+		<!-- ///// SIDEBAR MENU STARTS HERE ////// -->
+		<div class="page-sidebar-wrapper">
+			<div class="page-sidebar navbar-collapse collapse">
+				<ul class="page-sidebar-menu">
+					<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+					<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^  SDC LEFT MENU CONTENT  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+					<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+					<li class="sidebar-toggler-wrapper">
+						<!-- BEGIN SIDEBAR TOGGLER BUTTON - DO NOT EVER REMOVE -->
+						<div class="sidebar-toggler hidden-phone"></div>
+					</li>
+					<li class="menu-spacer-top">
+						<div class="visible-xs visible-sm visible-md sidebar-search-wrapper">
+							<!-- MENU LOCATED SEARCH FORM -->
+							<form id="frm_sidebar_search" class="search-form" action="#" role="form">
+								<!--
+								<div class="btn-group header-search">
+									<button class="btn dropdown-toggle header-search-source" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+										<span id="spn_search_source">All Sources</span> 
+										<i class="fa fa-angle-down"></i>
+									</button>
+									<ul id="search_source_list" class="dropdown-menu opens-left">
+										<li class="active">
+											<a href="#" title="All Sources">All Sources</a>
+										</li>
+										<li>
+											<a href="#" title="AT&T Insider">Insider</a>
+										</li>
+										<li>
+											<a href="#" title="Software Delivery Center">Software Delivery Center</a>
+										</li>
+										<li>
+											<a href="#" title="MOTS">MOTS</a>
+										</li>
+										<li>
+											<a href="#" title="tSpace">tSpace</a>
+										</li>
+										<li>
+											<a href="#" title="TSS">TSS</a>
+										</li>
+									</ul>
+								</div>
+								-->
+								<input class="form-control input-medium input-sm left" type="text" placeholder="Search..." name="query"/>
+								<input class="submit search_submit" type="button" value=" " />
+							</form>
+						</div>
+					</li>
+					<li>
+						<a href="#" title="Software Delivery Center Home Page">
+							<i class="fa fa-home"></i>
+							<span class="title">Home</span>
+							<span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="My Work">
+							<i class="fa fa-briefcase"></i>
+							<span class="title">My Work</span>
+							<span class="arrow"></span>
+							<span></span>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#" title="Developers Digital Experience">Developers Digital Experience</a>
+							</li>
+							<li>
+								<a href="#" title="Requests">Requests</a>
+							</li>
+							<li>
+								<a href="#" title="Projects">Projects</a>
+							</li>
+							<li>
+								<a href="#" title="Releases">Releases</a>
+							</li>
+							<li>
+								<a href="#" title="Applications">Applications</a>
+							</li>
+							<li>
+								<a href="#" title="Strategic Initiatives">Strategic Initiatives</a>
+							</li>
+							<li>
+								<a href="#" title="tSpace">tSpace</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-spacer"></li>
+					<li>
+						<a href="#" title="Visit the Learn page">
+							<i class="fa fa-sitemap"></i>
+							<span class="title">Learn</span>
+							<span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Visit the Create page">
+							<i class="fa fa-sitemap"></i>
+							<span class="title">Create</span>
+							<span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Visit the Launch page">
+							<i class="fa fa-sitemap"></i>
+							<span class="title">Launch</span>
+							<span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Visit the Support page">
+							<i class="fa fa-sitemap"></i>
+							<span class="title">Support</span>
+							<span></span>
+						</a>
+					</li>
+					<li class="menu-spacer"></li>
+					<li>
+						<a href="#" title="Organization">
+							<i class="fa fa-group"></i>
+							<span class="title">Organization</span>
+							<span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" title="Administration">
+							<i class="fa fa-gavel"></i>
+							<span class="title">Administration</span>
+							<span id="test" class="arrow"></span>
+							<span></span>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#" title="Awards & Recognition">
+									<i class="fa fa-trophy mnu-icon"></i>
+									Awards & Recognition
+								</a>
+								<ul class="sub-menu">
+									<li>
+										<a href="#" title="Developers Digital Experience">Developers Digital Experience</a>
+										<!-- TESTING PURPOSES ------>
+										<ul class="sub-menu">
+											<li>
+												<a href="#" title="Employee Product Education Forum Archive">Employee Product Education Forum Archive</a>
+											</li>
+											<li>
+												<a href="#" title="Employee Product Education Sessions">Employee Product Education Sessions</a>
+											</li>
+											<li>
+												<a href="#" title="My Training">My Training</a>
+											</li>
+											<li>
+												<a href="#" title="tSpace">tSpace</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" title="Requests">Requests</a>
+									</li>
+									<li>
+										<a href="#" title="Projects">Projects</a>
+									</li>
+									<li>
+										<a href="#" title="Releases">Releases</a>
+									</li>
+									<li>
+										<a href="#" title="Applications">Applications</a>
+									</li>
+									<li>
+										<a href="#" title="Strategic Initiatives">Strategic Initiatives</a>
+									</li>
+									<li>
+										<a href="#" title="tSpace">tSpace</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" title="Badges & Access">
+									<i class="fa fa-shield mnu-icon"></i>
+									Badges & Access
+								</a>
+							</li>
+							<li>
+								<a href="#" title="CM/PM (WEBSTR)">CM/PM (WEBSTR)</a>
+							</li>
+							<li>
+								<a href="#" title="Employee Giving">Employee Giving</a>
+							</li>
+							<li>
+								<a href="#" title="Meeting & Cube Reservations">Meeting & Cube Reservations</a>
+							</li>
+							<li>
+								<a href="#" title="Telepresence Reservations">Telepresence Reservations</a>
+							</li>
+							<li>
+								<a href="#" title="Travel Request">Travel Request</a>
+							</li>
+							<li>
+								<a href="#" title="AOTS">AOTS</a>
+							</li>
+							<li>
+								<a href="#" title="Contingency Planning & Business Continuity">Contingency Planning & Business Continuity</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" title="Collaboration">
+							<i class="fa fa-retweet"></i>
+							<span class="title">Collaboration</span>
+							<span class="arrow"></span>
+							<span></span>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#" title="AT&T Connect">AT&T Connect</a>
+							</li>
+							<li>
+								<a href="#" title="Collaboration Connection">Collaboration Connection</a>
+							</li>
+							<li>
+								<a href="#" title="Filedrop">
+									<i class="fa fa-archive mnu-icon"></i>
+									Filedrop
+								</a>
+							</li>
+							<li>
+								<a href="#" title="Q Messenger">Q Messenger</a>
+							</li>
+							<li>
+								<a href="#" title="TIP - Idea Sharing">TIP - Idea Sharing</a>
+							</li>
+							<li>
+								<a href="#" title="tSpace">tSpace</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" title="Training" class="end-item">
+							<i class="fa fa-bullhorn"></i>
+							<span class="title">Training</span>
+							<span class="arrow"></span>
+							<span></span>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#" title="Employee Product Education Forum Archive">Employee Product Education Forum Archive</a>
+							</li>
+							<li>
+								<a href="#" title="Employee Product Education Sessions">Employee Product Education Sessions</a>
+							</li>
+							<li>
+								<a href="#" title="My Training">My Training</a>
+							</li>
+							<li>
+								<a href="#" title="tSpace">tSpace</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-spacer">
+						<div style="width:35px; border-bottom:1px solid #ff0000;"></div></li>
+					<li>
+						<a href="#" title="Feedback">
+							<i class="fa fa-comments"></i>
+							<span class="title">Feedback</span>
+							<span class="arrow"></span>
+							<span></span>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#" title="Report Feedback">
+									<i class="fa fa-comment mnu-icon"></i>
+									Report Feedback
+								</a>
+							</li>
+							<li>
+								<a href="#" title="Suggest Enhancement">
+									<i class="fa fa-code mnu-icon"></i>
+									Suggest Enhancement
+								</a>
+							</li>
+							<li>
+								<a href="#" title="Report Bug">
+									<i class="fa fa-bug mnu-icon"></i>
+									Report Bug
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" title="Help">
+							<i class="fa fa-question"></i>
+							<span class="title">Help</span>
+							<span class="arrow"></span>
+							<span></span>
+						</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="#" title="Screen Guide Overlay">Screen Guide Overlay</a>
+							</li>
+							<li>
+								<a href="#" title="Home Help">Home Help</a>
+							</li>
+							<li>
+								<a href="#" title="My Work Help">My Work Help</a>
+							</li>
+							<li>
+								<a href="#" title="Developers Digital Experience Help">Developers Digital Experience Help</a>
+							</li>
+							<li>
+								<a href="#" title="Mnaged Content Help">Managed Content Help</a>
+							</li>
+							<li>
+								<a href="#" title="FAQ's">FAQ's</a>
+							</li>
+							<li>
+								<a href="#" title="Site Map">
+									<i class="fa fa-sitemap mnu-icon"></i>
+									Site Map
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- <li class="menu-spacer"></li> -->
+				</ul>
+				<!-- ///// SIDEBAR MENU ENDS HERE ////// -->
+			</div>
+		</div>
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- /////////////////////////////////// CONTENT BEGINS HERE ///////////////////////////////////////////// -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<!-- ------------------------------------- HELP DIALOG --------------------------------------------------- -->
+				<div id="help_dialog" class="modal fade" aria-hidden="true" role="basic" tabindex="-1" style="display:none;"></div>
+				<!-- ------------------------------------- BASIC MODAL DIALOG -------------------------------------------- -->
+				<div id="basic_dialog" class="modal fade" aria-hidden="true" role="basic" tabindex="-1" style="display:none;"></div>
+				<!-- ------------------------------------- CUSTOM DIALOG ------------------------------------------------- -->
+				<div id="custom_dialog" class="modal fade" aria-hidden="true" role="basic" tabindex="-1" style="display:none;"></div>
+				<!-- ----------------------------------- RESPONSIVE MODAL DIALOG ----------------------------------------- -->
+				<div id="responsive_dialog" class="modal fade" tabindex="-1" aria-hidden="true" role="dialog" style="display:none;">
+					<div class="modal-dialog-responsive" style="width:600px; height:400px;">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button class="close" aria-hidden="true" data-dismiss="modal" type="button"></button>
+								<h4 id="mod_resp_title" class="modal-title">[CUSTOM TITLE GOES HERE]</h4>
+							</div>
+							<div class="modal-body">
+								<div id="mod_resp_contents" class="scroller" data-rail-visible1="1" data-always-visible="1" style="position:relative; height: 250px; overflow:hidden; width:auto;">
+									<div class="row">
+										<div class="col-md-6 col-sm-12">
+											<h4>Some Input</h4>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+										</div>
+										<div class="col-md-6 col-sm-12">
+											<h4>Some Input</h4>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+											<p><input class="col-md-12 form-control" type="text"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button id="responsive_ok" class="btn green btn-ok" type="button">OK</button>
+								<button id="responsive_continue" class="btn default btn-continue" type="button">Continue</button>
+								<button id="responsive_cancel" class="btn default cancel" data-dismiss="modal" type="button">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ----------------------------------------------------------------------------------------------------- -->
+				<div class="theme-panel hidden-xs hidden-sm toggler-toolkits-container">
+					<div id='togToolkits' class="toggler-toolkits" style="display:block" title="View Tool Kits"></div>
+				</div>
+				<!-- PAGE TITLE & BREADCRUMBS-->
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="page-title">
+							<span id="sdc_page_title">My Work</span> &nbsp;<small><span id="sdc_page_title_desc">Everything required for my daily activities</span></small>
+						</h3>
+						<ul class="page-breadcrumb breadcrumb">
+							<li id="test_breadcrumb">
+								<!-- <i class="fa fa-home"></i> -->
+								<!-- <div id="test_breadcrumb"></div> -->
+								<!--
+								<a href="#" title="Software Delivery Center Home">Home</a>
+								<i class="fa fa-angle-right"></i>
+							</li>
+							<li>
+								<a href="#" title="My Work">My Work</a>
+								-->
+							</li>
+							<!-- START PAGE ACTIONS HERE ------------------ -->
+							<li class="btn-group" data-intro="Click here to bookmark, email or print" data-position="bottom">
+								<button class="btn blue dropdown-toggle" data-close-others="true" data-delay="1000" data-toggle="dropdown" type="button"> <!-- data-hover="dropdown"  -->
+									<span>Page Actions</span>
+									<i class="fa fa-angle-down"></i>
+								</button>
+								<ul class="dropdown-menu pull-right" role="menu">
+									<li>
+										<a href="#">
+											<i class="fa fa-bookmark"></i>
+											Bookmark
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-print"></i>
+											Print
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-envelope"></i>
+											Email
+									</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">
+											<i class="fa fa-envelope"></i>
+											Send via Q
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- TOOLKITS DROPDOWN -->
+				<div class="div_toolkit" id="div_toolkit_dd" title="View Tool Kits"></div>
+				<!-- CONTENT -->
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<a class="btn default" href="#" onclick="javascript:DisplayDialog('basic','custom_dialog.html');" data-toggle="modal" aria-labelledby="Show Basic Dialog">show basic dialog</a>
+						<a class="btn blue" href="#responsive_dialog" data-toggle="modal">show responsive dialog</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<a class="btn default" href="#" onclick="javascript:DisplayDialog('custom','custom_dialog.html');" data-toggle="modal">custom dialog</a>
+						<a class="btn default" href="#" onclick="ShowGRITTER('test.html');" data-toggle="modal">show GRITTER</a>
+						<a class="btn default" href="#" onclick="javascript:test('custom_dialog.html');" data-toggle="modal">test</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<a class="btn default" href="#" onclick="ShowGRITTER('test2.html');" data-toggle="modal">show another GRITTER</a>
+						<a class="btn default" href="#" onclick="HelpScreenOverlay('show', 'help/hlp_my_work.html');" data-toggle="modal">show screen guide</a>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						tooltip: 
+						<button id="btn_hlp_my_comm" title="Tooltip Example" data-original-title="Communities" data-content="The Activity Center portlet shows, in the My Approvals view, any PRISM approvals,ITRR approvals, and One AT&T CR Tool approvals that are waiting on your action, and gives you access to any approvals you took action on in the previous 30 days." data-placement="left" data-trigger="click" class="btn popovers sdc-help-popup">?</button>
+						&nbsp;&nbsp;
+						help:
+						<span id="spn_help_example" title="Help Example" onclick="javascript:ShowDialog('help','custom_dialog.html', this);" style="padding:4px; cursor:pointer; color:#fe7200;">?</span>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6"></div>
+					<div class="col-md-6 col-sm-6">
+						<!-- IBM COL GOES HERE ------------------->
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6">
+						<a class="btn default editable editable-click editable-empty" href="#" data-original-title="Please type a name or ATTUID..." data-placement="right" data-pk="1" data-type="typeahead" id="ATTUID" >
+							<i class="fa fa-search"></i>
+						</a>
+					</div>
+					<div class="col-md-6 col-sm-6"></div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6"></div>
+					<div class="col-md-6 col-sm-6"></div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6"></div>
+					<div class="col-md-6 col-sm-6"></div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6"></div>
+					<div class="col-md-6 col-sm-6"></div>
+				</div>
+				<div style="height:1000px;"></div>
+			</div>
+		</div>
+	</div>
+	<!-- FOOTER -->
+	<div class="footer">
+		<div class="footer-tools">
+			<span class="go-top" title="Top of Page Return">
+				<i class="fa fa-angle-up"></i>
+			</span>
+		</div>
+	</div>
+	<!-- IMPORTANT! ----------------------------------------------------------------------------------------------------
+	Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip 
+	-------------------------------------------------------------------------------------------------------------------- -->
+	<script src="js/core/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+	<script src="js/core/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/core/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+	<script src="js/core/jquery.blockui.min.js" type="text/javascript"></script>
+	<script src="js/core/jquery.cokie.min.js" type="text/javascript"></script>
+	<script src="js/core/jquery.uniform.min.js" type="text/javascript"></script>
+	<script src="js/core/moment.min.js" type="text/javascript"></script>
+	<script src="js/core/bootbox.min.js" type="text/javascript"></script>
+	<!-- BEGIN PLUGIN JS -->
+	<script src="js/plugins/jquery.slimscroll.min.js" type="text/javascript"></script>
+	<script src="js/plugins/jquery.pulsate.min.js" type="text/javascript"></script>
+	<script src="js/plugins/daterangepicker.js" type="text/javascript"></script>
+	<script src="js/plugins/jquery.gritter.1.7.4.js" type="text/javascript"></script>
+	<!-- IMPORTANT! fullcalendar depends on jquery-ui-1.10.3.custom.min.js for drag & drop support -->
+	<script src="js/plugins/fullcalendar.1.6.1.js" type="text/javascript"></script>
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+	<script src="js/core/app.js" type="text/javascript"></script>
+	<script src="js/core/index.js" type="text/javascript"></script>
+	<script src="js/core/tasks.js" type="text/javascript"></script>
+	<script src="js/sdc_v1.js" type="text/javascript"></script>
+	<!-- CHARDIN - OVERLAY HELP 
+	<script src="js/chardinjs.min.js"></script> -->
+	<script language="javascript">
+		jQuery(document).ready(function($) {    
+			App.init(); // initlayout and core plugins
+			Index.init();
+		});
+		
+		function DisplayDialog(type,url,e){
+			if(url!=null&&url!=''){
+				jQuery('#'+type+'_dialog').load(url + ' #dialog_' + type);
+				jQuery('#'+type+'_dialog').modal('show');
+				/*
+				$('#'+type+'_dialog').on('hidden.bs.modal', function(result){
+					//alert($(e).attr('id'));
+					alert(result);
+				});
+				*/
+			}
+			
+		}
+		
+		function test(url){
+			var text = '<span style="font-size:26px;">This is a bootbox test</span>';
+			
+			//bootbox.alert(text);
+			/*
+			bootbox.confirm(text, function(result) {
+					alert("Confirm result: "+result);
+			}); 
+			*/
+			
+			bootbox.dialog({
+				message:text,
+				buttons: {
+					success: {
+						label: "Success!",
+						icon: "ok",
+						className: "btn-success",
+						callback: function() {
+							alert("great success");
+						}
+					},
+					danger: {
+							label: "Danger!",
+							className: "btn-danger",
+							callback: function() {
+								alert("uh oh, look out!");
+							}
+					}
+				}
+			});
+			
+			/*
+			bootbox.dialog({
+						message: text, 
+						title: "Custom title",
+						buttons: {
+						success: {
+							label: "Success!",
+							className: "btn-success",
+							callback: function() {
+								alert("great success");
+							}
+						},
+				danger: {
+						label: "Danger!",
+						className: "btn-danger",
+						callback: function() {
+							alert("uh oh, look out!");
+						}
+				},
+					main: {
+						label: "Click ME!",
+						className: "btn-primary",
+						callback: function() {
+							alert("Primary button");
+						}
+					}
+				}
+			});
+			*/
+		}
+		
+		function ShowGRITTER(url){
+			if(url!=null){
+				var f = jQuery.getJSON(url, function(data){
+					//alert(data[0].time==null);
+					jQuery.extend(jQuery.gritter.options, {
+						position: 'bottom-right',
+						fade_in_speed: 'medium',
+						fade_out_speed: 1000
+					});
+					if(data[0].time!=null){
+						//if(data[0].clear_all){ $.gritter.removeAll(); }
+						jQuery.gritter.add({
+							title: data[0].title,
+							image: data[0].image,
+							text: data[0].text,
+							sticky: false,
+							time: data[0].time
+						});
+					}else{
+						jQuery.gritter.add({
+							title: data[0].title,
+							image: data[0].image,
+							text: data[0].text,
+							sticky: true
+						});
+					}
+				});
+			}
+		}
+		
+		//show hide help screen overlay
+		function HelpScreenOverlay(mode,url){
+			if(url!=null){
+				jQuery('#div_lightbox').load(url);
+				jQuery('#div_lightbox').innerHTML = '';
+			}
+			if(mode=='show'){
+				jQuery('#div_lightbox').show();
+			}else{
+				jQuery('#div_lightbox').innerHTML = '';
+				jQuery('#div_lightbox').hide();
+			}
+		}
+		
+	</script>
+</body>
+</html>
