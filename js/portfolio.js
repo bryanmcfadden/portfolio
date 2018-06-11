@@ -121,6 +121,7 @@ $(document).ready(function(){
 		$('.project-slides img').attr("src", projectsList[pid][7][0][0]); //image source (aka img/mm_img_tspace.jpg)
 		$('.project-slides .title').html(projectsList[pid][7][0][1]); //image caption
 		projSlideTotal = projectsList[pid][7].length;
+		BuildProjectSlideNavigation();
 
 		//load images
 		/*
@@ -199,6 +200,7 @@ $(document).ready(function(){
 		//reset project slides to 0 since we are loading a new project into view
 		projectSlide=0;
 		LoadProjectSlides();
+		BuildProjectSlideNavigation();
 	}
 
 	function LoadProjectSlides(){
@@ -227,6 +229,14 @@ $(document).ready(function(){
 		}
 	}
 
+	//set project slide navigation
+	function SetProjectSlideNavigation(){
+		$('.proj-slides-nav ul li span').each(function(index){
+			$(this).removeClass("active");
+		});
+		$('.proj-slides-nav ul li:nth-child('+ (projectSlide+1) +') span').addClass('active');
+	}
+
 	//this function enables/disables the prev/next buttons to view project slides
    function DisableProjectSlideNavigation(btn, val){
  		if(val){
@@ -237,6 +247,21 @@ $(document).ready(function(){
  			$('.'+btn+'-slide').prop("disabled", false);
  		}
  	}
+
+	function BuildProjectSlideNavigation(){
+		$('.proj-slides-nav ul').html('');
+		//todo: need to add unique titles to data and then insert into each list item title
+		for(var i=0;i<projectsList[project][7].length;i++){
+			$('.proj-slides-nav ul').append('<li><button title="Project view '+(i+1)+'"><span></span></button></li>');
+		}
+			$('.proj-slides-nav ul li:first-child span').addClass("active");
+	}
+
+	$("body").on("click", ".proj-slides-nav ul li", function() {
+		projectSlide = $(this).index();
+		LoadProjectSlides();
+		SetProjectSlideNavigation();
+	})
 
 	//((((((((((((((((((((((((( PREVIOUS PROJECT BUTTON )))))))))))))))))))))))))
 	$("body").on("click", ".previous-project", function(){
@@ -266,7 +291,7 @@ $(document).ready(function(){
 	$("body").on("click", ".prev-slide", function(){
 		projectSlide--;
 		LoadProjectSlides();
-
+		SetProjectSlideNavigation();
 		/*
 		if(project == 0){
 			DisableProjectNavigation('previous', true);
@@ -279,6 +304,7 @@ $(document).ready(function(){
 	$("body").on("click", ".next-slide", function(){
 		projectSlide++;
 		LoadProjectSlides();
+		SetProjectSlideNavigation();
 		/*
 		if(project == 0){
 			DisableProjectNavigation('previous', true);
