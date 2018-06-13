@@ -69,7 +69,8 @@ var raft = new Array(
   new Array("contextual interviews", "wireframes", "UI library", "style guide", "prototypes", "visual comps", "front-end development"),
   new Array(
     new Array(imgPath + "raft/raft_01.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat in eros in hendrerit. Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis nunc et sapien rutrum, ut porttitor"),
-    new Array(imgPath + "raft/raft_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
+    new Array(imgPath + "raft/raft_02.jpg", "Something here about the UI elements created for raft. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
+    new Array(imgPath + "raft/raft_03.jpg", "This would be something about how the elements had been crafted into a style guide.")
   )
 );
 
@@ -78,12 +79,11 @@ var noticeToMariners = new Array(
   "National Geospatial-Intelligence Agency (NGA)",
   "Internal web app",
   "UX / IxD / Front-end",
-  "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis "+
-  "adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor. Lorem ipsum dolor sit amet, consectetur",
+  "The US (NTM) Notice to Mariners is a weekly publication that renders marine safety information in the interest of ocean-going vessels. Collected from foreign and domestic sources (including nine US Coast Guard districts), they are designed to provide updates and corrections of unclassified US nautical charts. With a manual process currently in place, the 400,000+ corrections require experience and process knowledge which is difficult to transfer between employees.",
   "Full Stack UX",
   new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
   new Array(
-    new Array(imgPath + "ntm/ntm_01.jpg", "The US (NTM) Notice to Mariners is a weekly publication that renders marine safety information in the interest of ocean-going vessels. Collected from foreign and domestic sources (including nine US Coast Guard districts), they are designed to provide updates and corrections of unclassified US nautical charts. With a manual process currently in place, the 400,000+ corrections require experience and process knowledge which is difficult to transfer between employees."),
+    new Array(imgPath + "ntm/ntm_01.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
     new Array(imgPath + "ntm/ntm_02.jpg", "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor"),
   )
 );

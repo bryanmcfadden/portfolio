@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "role": "Placer",
+			"activity": "Tech",
+            "per unit hours": "10",
+            "due date minus": "-5",
+            "capital ratio": "200",
+			"":""
+        },
+        {
+            "role": "Some Other Role",
+			"activity": "Testing",
+            "per unit hours": "50",
+            "due date minus": "-10",
+            "capital ratio": "1400",
+			"":""
+        },
+		 {
+            "role": "Splicer",
+			"activity": "Testing",
+            "per unit hours": "21",
+            "due date minus": "-20",
+            "capital ratio": "201",
+			"":""
+        }
+    ]
+}

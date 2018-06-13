@@ -1,0 +1,3190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="css/shCore.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/hc_main.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+	<!-- ********* Loading screen ******************** -->
+	<div class="action-loader">
+		<div class="al-panel">
+			<img class="img-loader" src="images/loading/loading_orange.gif" />
+			<br>
+			<div>Working ...</div>
+		</div>
+	</div>
+	<!-- ************ Header starts here  ************ -->
+	<div class="container-fluid">
+		<header class="row">
+			<div class="logo col-lg-4 col-md-4 col-sm-9 col-xs-6">
+			  <a href="#">
+				<img src="images/globe.png" class="att-globe-perm" alt="AT&amp;T" style="float:left;">
+				<img src="images/rff_logo_full.png" class="hidden-sm hidden-xs" alt="AT&amp;T Resource and Financial Forecasting">
+				<img src="images/rff_logo_mobile.png" class="hidden-lg hidden-md" alt="AT&amp;T Resource and Financial Forecasting">
+			  </a>
+			</div>
+			 <div class="global-search col-lg-4 col-md-3 hidden-sm hidden-xs">
+				<!-- removed by BM 9/1/2015 
+				<input type="text" class="form-control search-query" placeholder="Search" />
+				<button class="btn btn-blue btn-search search-button">
+					<i class="fa fa-lg fa-search"></i>
+				</button>
+				-->
+			 </div>
+			 <div class="global-search col-lg-4 col-md-5 hidden-sm hidden-xs">
+				<div class="profile-name hidden-sm hidden-xs">
+					<div class="profile-name hidden-sm hidden-xs">
+						<div class="pname" id="user-name-modal">
+							<a href="javascript:void(0);">Bryan<br>McFadden</a>
+						</div>
+					</div>
+				</div>
+				<div class="profile-pic hidden-sm hidden-xs">
+					<div class="img-cont hidden-sm hidden-xs">
+						<img src="images/user_generic.png" width="63px" class="profile-img" alt="profile image" />
+					</div>
+				</div>
+				<div class="notify hidden-sm hidden-xs">
+					<i class="fa fa-2x fa-bell" title="View my notifications"></i>
+				</div>
+				<div class="favorites hidden-sm hidden-xs">
+					<i class="fa fa-2x fa-star" title="View my favorites"></i>
+				</div>
+			 </div>
+		</header>
+	</div>
+	<!-- ************ Notifications ****************** -->
+	<div id="notification-display" class="container-fluid" style="display:none;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="container-fluid;">
+					<div class="notify-wrapper">
+						<div class="row notify-container">
+							<div class="col-md-11">
+								<div class="icon">
+									<i class="fa fa-2x"></i>
+								</div>
+								<div class="message">
+									Information message goes here
+								</div>
+							</div>
+							<div class="col-md-1">
+								<div class="close-notify">
+									<i class="fa fa-lg fa-times"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="padding:20px;">
+		<div style="border:1px solid #ccc; margin-bottom:10px;">
+			<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ PROJECT SEARCH @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+			<div class="container-fluid">
+				<div id="project_search" class="row" style="background-color:#fff;">
+					<div class="col-xs-11 col-sm-11 col-md-11">
+						<div class="row-expansion">
+							<span>Master Project Selector</span>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-1 col-md-1 expandable"> 
+						<div class="expand-details closed"></div>
+					</div>
+				</div>
+			</div>
+			<div id="project_search_details" class="project-search-details">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-1" style="text-align:right;">
+							Project:
+						</div>
+						<div class="col-md-6">
+							<input id="txt_proj_search" type="text" style="width:100%;" value=""/>
+						</div>
+						<div class="col-md-5" style="text-align:left; padding-left:0;">
+							<input type="button" value="Select" class="btn btn-blue" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-1" style="text-align:right;">
+							Versions:
+						</div>
+						<div class="col-md-11">
+							<div style="float:left: width:95%; height:233px; border-right:1px solid #ccc; border-top:1px solid #ccc; border-radius:4px;">
+								<div style="float:left; width:12%;">
+									<ul class="version-type">
+										<li class="selected">
+											<a href="#ver-latest">Latest</a>
+										</li>
+										<li>
+											<a href="#ver-bare-metal">Bare-Metal<span>(13)</span></a>
+										</li>
+										<li>
+											<a href="#ver-most-likely">Most Likely<span>(6)</span></a>
+										</li>
+										<li>
+											<a href="#ver-operational">Operational<span>(9)</span></a>
+										</li>
+									</ul>									
+								</div>
+								<div id="ver-latest" class="version-data selected">
+									<div class="container-fluid">
+										<div class="row header">
+											<div class="col-md-2">
+												Type
+											</div>
+											<div class="col-md-1">
+												Ver
+											</div>
+											<div class="col-md-5">
+												Explanation
+											</div>
+											<div class="col-md-2">
+												Last Update
+											</div>
+											<div class="col-md-2"></div>
+										</div>
+										<!-- VERSION TYPE DATA STARTS HERE -------------------- -->
+										<div class="row">
+											<div class="col-md-2">
+												Bare Metal
+											</div>
+											<div class="col-md-1">
+												<a href="#">3.1</a>
+											</div>
+											<div class="col-md-5">
+												<div style="overflow:hidden; height:40px; padding-right:5px;">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare est, ac euismod nulla. 
+													Nunc pulvinar vel eros non tristique. Sed congue massa sed mi sagittis, 
+												</div>
+											</div>
+											<div class="col-md-2">
+												06/25/2015
+											</div>
+											<div class="col-md-2">
+												<div style="float:left; width:33%;">
+													<a href="#">Copy</a>
+												</div>
+												<div style="float:left; width:33%;">
+													<a href="#">Edit</a>
+												</div>
+												<div style="float:left; width:33%;">
+													<a href="#">Create</a>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												Most Likely
+											</div>
+											<div class="col-md-1">
+												<a href="#">2.11</a>
+											</div>
+											<div class="col-md-5">
+												<div style="overflow:hidden; height:40px; padding-right:5px;">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare est, ac euismod nulla. 
+													Nunc pulvinar vel eros non tristique. Sed congue massa sed mi sagittis, 
+												</div>
+											</div>
+											<div class="col-md-2">
+												08/15/2013
+											</div>
+											<div class="col-md-2">
+												<div style="float:left; width:33%;">
+													<a href="#">Copy</a>
+												</div>
+												<div style="float:left; width:33%;">
+													<a href="#">Edit</a>
+												</div>
+												<div style="float:left; width:33%;">
+													<a href="#">Create</a>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												Operational
+											</div>
+											<div class="col-md-1">
+												<a href="#">5.6</a>
+											</div>
+											<div class="col-md-5">
+												<div style="overflow:hidden; height:40px; padding-right:5px;">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare est, ac euismod nulla. 
+													Nunc pulvinar vel eros non tristique. Sed congue massa sed mi sagittis, 
+												</div>
+											</div>
+											<div class="col-md-2">
+												09/22/2014
+											</div>
+											<div class="col-md-2">
+												<div style="float:left; width:33%;">
+													<a href="#">Copy</a>
+												</div>
+												<div style="float:left; width:33%;">
+													<a href="#">Edit</a>
+												</div>
+												<div style="float:left; width:33%;">
+													<a href="#">Create</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>				
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ PROJECT TABS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+		<div id="proj_tabs" >
+			<ul>
+				<li>
+					<a href="#proj-resource-1">Home Page<br>&nbsp;</a>
+				</li>
+				<li>
+					<a href="#proj-resource-1">Resource Analysis<br>&nbsp;</a>
+				</li>
+				<li class="ui-tabs-active">
+					<a href="#proj-tabs-1">Gigapower<br>Bare Metal - v2.1</a>
+					<i class="fa fa-times-circle close-tab" title="Close project tab"></i>
+				</li>
+				<!--
+				<li>
+					<a href="#add-new-project" title="Create New Project">+ Create New<br>&nbsp;<br></a>
+				</li>
+				<li>
+					<a href="#proj-tabs-3">Advanced Directives<br>Operational - v7.2
+					</a><span class="close-tab" title="Close project tab"></span>
+				</li>-->
+			</ul>
+			<!-- CREATE PROJECT MODAL DIALOG SAVE CONTAINER STARTS HERE ------------------------------------------------ -->
+			<div style="clear:both;"></div>
+				<div id="createNewModal" class="modal fade" tabindex="-1" role="dialog" style="display:;">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">Create New Project</h4>
+							</div>
+							<div class="modal-body form-group form-inline">
+								<div class="alert alert-danger">
+									Please fill in all the required fields.
+								</div>					
+								<label for="usr">Master Proj. Code:</label>
+								<input type="text" class="form-control" id="mstrProjCd"><br />
+								<label for="usr">Master Proj Name:</label>
+								<input type="text" class="form-control" id="mstrProjName"><br />
+								<label for="usr">Ver. Type:</label>
+								<select class="form-control" id="verType">
+									<option value="Bare Metal">BareMetal</option>
+									<option value="CPFM">CPFM</option>
+									<option value="Most Likely">Most Likely</option>
+									<option value="Operational">Operational</option>
+								</select>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-cancel" data-dismiss="modal" value="cancel">Cancel</button>
+								<button type="button" class="btn btn-blue" value="Create" id="createNewBtn">Create</button>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+				<div id="closeProjectModal" class="modal fade" tabindex="-1" role="dialog" style="display:;">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							</div>
+							<div class="modal-body form-group form-inline">				
+								Are you sure you want to close the <span id="projNameInCloseModal" style="font-weight:bold"></span> Tab. <br />
+								Any unsaved changes will be lost.
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-cancel" data-dismiss="modal" value="cancel">Cancel</button>
+								<button type="button" class="btn btn-blue" value="Create" id="closeProjectModalBtn">Close</button>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div id="proj-resource-1">
+					<div class="tab-container">
+						Resource Reports Go Here
+					</div>
+				</div>
+				<!-- TAB 1 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+				<div id="proj-tabs-1">
+					<div class="tab-container">
+						<!-- TAB ACTION BUTTONS ----------------------- -->
+						<div id="proj_details_act_1">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-7 col-md-8"></div>
+									<div class="col-sm-5 col-md-4">
+										<div class="txtRight">
+											<input type="button" class="btn btn-blue btn-reload" value="Reload"/>
+											<span class="divider">|</span>
+											<div class="btn-group"> 
+												<div class="dd-label">Save</div>
+												<button type="button" class="btn btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<i class="fa fa-angle-down"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<li><a href="javascript:void(0);" class="save-project">Save</a></li>
+													<li><a href="javascript:void(0);" class="save-project">Save As</a></li>
+													<!-- <li><a data-remote="save_project.html" data-name="GigaPower" data-version-type="Bare-Metal" data-version="2.1" data-toggle="modal" data-target="#save_modal">Test</a> -->
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- PROJECT INFO \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+						<div class="project-info-wrapper">
+							<div class="container-fluid project-info">
+								<div id="project_1" class="row quick-view">
+									<div class="col-sm-2 col-md-2">	
+										<span>Master Proj Code:</span>
+										<input type="text" id="txt_proj_code_1" value="123456abc" style="width:100%;" readonly="true"/>
+									</div>
+									<div class="col-sm-10 col-md-2">
+										<span>Master Proj Name:</span>
+										<input id="txt_proj_name_1" type="text" style="width:100%;" value="GigaPower"/>
+									</div>
+									<div class="col-sm-6 col-md-2">
+										<span>Ver. Type:</span>
+										<select id="sel_ver_type_1" style="width:100%;">
+											<option value="bare-metal" selected>Bare Metal</option>
+											<option value="cpfm">CPFM</option>
+											<option value="most-likely">Most Likely</option>
+											<option value="operational">Operational</option>
+										</select>
+									</div>
+									<div class="col-sm-6 col-md-1">
+										<span>Ver:</span>
+										<input id="txt_version_1" type="text" value="2.1" disabled="true" />
+									</div>	
+									<div class="col-sm-5 col-md-2">
+										<span>Est. Budget:</span>
+										<input id="txt_est_budget_1" type="text" style="width:92%;" value="$" />
+									</div>
+									<div class="col-md-2">
+										<div class="row">
+											<div class="col-sm-5 col-md-5">
+												<span>Start Dt:</span>
+												<i class="fa fa-calendar"></i>
+												<input id="txt_start_dt_1" class="date-picker" type="text" style="width:92%;" />
+												
+											</div>
+											<div class="col-sm-1 col-md-1"></div>
+											<div class="col-sm-5 col-md-5">
+												<span>End Dt:</span>
+												<i class="fa fa-calendar"></i>
+												<input id="txt_end_dt_1" class="date-picker" type="text" style="width:92%;" />
+											</div>	
+											<div class="col-sm-1 col-md-1"></div>
+										</div>
+									</div>
+									<div class="hidden-xs col-sm-1 col-md-1 expandable"> 
+										<div class="expand-details closed"></div>
+									</div>
+									<!-- XS HIDDEN EXPAND BUTTON ^^^^^^^^^^^^^^^^^^^^^^^^ -->
+									<div class="col-xs-12 hidden-sm hidden-md hidden-lg"> 
+										<div class="btn-expand">
+											<div>Expand <i class="fa fa-caret-down"></i>
+											</div>
+										</div>
+									</div>
+									<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+								</div>
+							</div>
+							<!--  EXPANDED PROJECT DETAILS ------------------------------------------------------------>
+							<!--  ------------------------------------------------------------------------------------->
+							<div id="project_1_details" class="container-fluid project-details">
+								<div class="row">
+									<div class="col-md-6"><!-- LEFT-COLUMN -->
+										<div class="project-title"><span>Project</span></div>
+										<div class="row">
+											<div class="col-md-4 title">Priority:</div>
+											<div class="col-md-8">
+												<input type="text" id="sel_priority_1" class="ctrl" style="width:30%" disabled="disabled" value="High"/>
+												<!-- <select id="sel_priority_1" class="ctrl" style="width:30%">
+													<option value="High">High</option>
+													<option value="Medium">Medium</option>
+													<option value="Low">Low</option> 
+												</select-->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Author:</div>
+											<div class="col-md-8">
+												<span id="spn_project_author_1">Jim Carrey</span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Description:</div>
+											<div class="col-md-8">
+												<textarea id="txt_project_description_1" rows="4" class="ctrl" style="width:95%;" disabled="true">A description goes here</textarea>
+											</div>
+										</div>
+										<div class="project-title"><span>Strategic Initiatives</span></div>
+										<div class="row">
+											<div class="col-md-4 title">SI 1:</div>
+											<div class="col-md-8">
+												<input type="text" id="si1_1" class="ctrl" style="width:95%;" disabled="true" value="HOME SOLUTIONS (HS)"/>
+												<!-- <select id="si1_1" class="ctrl" style="width:95%;">
+													<option value="1">BUSINESS SOLUTIONS (ABS)</option>
+													<option value="1">Corporate</option>
+													<option value="1">EOY BV Not Mapped</option>
+													<option value="1">HOME SOLUTIONS (HS)</option>
+													<option value="1">Mobility</option>
+													<option value="1">WIRELINE / SHARED</option>
+												</select> -->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">SI 2:</div>
+											<div class="col-md-8">
+												<input type="text" id="si2_1" class="ctrl" style="width:95%;" disabled="true" value="CAPITAL MANAGEMENT (CORP RM)" />
+											<!-- <select id="sel_si2_1" class="ctrl" style="width:95%;">
+													<option value="1">ABS SHARED (BUS RM)</option>
+													<option value="1">AGILE (CORP RM)</option>
+													<option value="1">ALTERNATIVE CELLS (MOB RM)</option>
+													<option value="1">AT&T INTEGRATED CLOUD (SHARED RM)</option>
+													<option value="1">BIG DATA (CORP RM)</option>
+													<option value="1">BROADBAND (HS RM)</option>
+													<option value="1">BVOIP (BUS RM)</option>
+													<option value="1">CAPITAL MANAGEMENT (CORP RM)</option>
+													<option value="1">CAPITAL MANAGEMENT (SHARED RM)</option>
+													<option value="1">CELL SITE BACKHAUL (MOB RM)</option>
+													<option value="1">CLOUD (BUS RM)</option>
+													<option value="1">COLLABORATION (BUS RM)</option>
+													<option value="1">COMMON (HS RM)</option>
+													<option value="1">COMMON INFRASTRUCTURE (MOB RM)</option>
+													<option value="1">CORPORATE OTHER (CORP RM)</option>
+													<option value="1">CSO (CORP RM)</option>
+													<option value="1">EMERGING BUSINESS MARKETS (BUS RM)</option>
+													<option value="1">ENTERPRISE NETWORKING (BUS RM)</option>
+													<option value="1">EOY BV Not Mapped</option>
+													<option value="1">ETHERNET (BUS RM)</option>
+													<option value="1">FIBER POR (HS RM)</option>
+													<option value="1">FTTB (BUS RM)</option>
+													<option value="1">FWLL (CORP RM)</option>
+													<option value="1">GLOBAL ACCESS MANAGEMENT (SHARED RM)</option>
+													<option value="1">GROWTH PLATFORMS (BUS RM)</option>
+													<option value="1">HOME SOLUTIONS BREAKAGE (HS RM)</option>
+													<option value="1">HSPA+ (MOB RM)</option>
+													<option value="1">INFRASTRUCTURE (SHARED RM)</option>
+													<option value="1">INTERCITY INFRASTRUCTURE (SHARED RM)</option>
+													<option value="1">IPV6 (SHARED RM)</option>
+													<option value="1">IUSACELL INTEGRATION (CORP RM)</option>
+													<option value="1">LABS (CORP RM)</option>
+													<option value="1">LEGACY (BUS RM)</option>
+													<option value="1">LOCAL LOOP (SHARED RM)</option>
+													<option value="1">LTE (MOB RM)</option>
+													<option value="1">MANDATE/REGULATORY (MOB RM)</option>
+													<option value="1">METRO INFRASTRUCTURE (SHARED RM)</option>
+													<option value="1">MOBILITY BREAKAGE (MOB RM)</option>
+													<option value="1">MOBILITY DEVELOPMENT (MOB RM)</option>
+													<option value="1">MOBILITY TOOLS (MOB RM)</option>
+													<option value="1">NEXTEL (CORP RM)</option>
+													<option value="1">NSB (MOB RM)</option>
+													<option value="1">PUBLIC SAFETY (BUS RM)</option>
+													<option value="1">REAL ESTATE (CORP RM)</option>
+													<option value="1">SALES (BUS RM)</option>
+													<option value="1">STAR DTV INTEGRATION (CORP RM)</option>
+													<option value="1">TD COST SAVINGS & EFFICIENCIES (CORP RM)</option>
+													<option value="1">TD MOBILITY (MOB RM)</option>
+													<option value="1">TECHNOLOGY OPERATIONS (SHARED RM)</option>
+													<option value="1">VIDEO (HS RM)</option>
+													<option value="1">VOICE (HS RM)</option>
+													<option value="1">VOICE SERVICES (SHARED RM)</option>
+													<option value="1">WIFI (BUS RM)</option>
+												</select> -->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">SI 2C:</div>
+											<div class="col-md-8">
+												<input type="text" id="si2c_1" class="ctrl" style="width:95%;" disabled="true" value="ABS LEGACY (BUS RM CHLD)"/>
+												<!-- <select id="sel_si2c_1" class="ctrl" style="width:95%;">
+													<option value="1">4E RELATED (SHRD RM CHLD)</option>
+													<option value="1">ABS LEGACY (BUS RM CHLD)</option>
+													<option value="1">ABS SHARED (BUS RM CHLD)</option>
+													<option value="1">ADVANCED MOBILITY SERVICES (AMS) (MOB RM CHLD)</option>
+													<option value="1">API (BUS RM CHLD)</option>
+													<option value="1">API PROGRAM (MOB RM CHLD)</option>
+													<option value="1">AVPN/PNT (BUS RM CHLD)</option>
+													<option value="1">BIG DATA (BUS RM CHLD)</option>
+													<option value="1">BIG DATA (CORP RM CHLD)</option>
+													<option value="1">BREAKAGE (HS RM CHLD)</option>
+													<option value="1">BREAKAGE (MOB RM CHLD)</option>
+													<option value="1">BROADBAND OTHER (HS RM CHLD)</option>
+													<option value="1">BUSINESS MOBILITY CRU (MOB RM CHLD)</option>
+													<option value="1">CAPACITY (SHRD RM CHLD)</option>
+													<option value="1">CAPITAL MANAGEMENT (CORP RM CHLD)</option>
+													<option value="1">CAPITAL MGMT OTHER (SHRD RM CHLD)</option>
+													<option value="1">CC-MIPT (BUS RM CHLD)</option>
+													<option value="1">CLOUD OTHER (BUS RM CHLD)</option>
+													<option value="1">CLOUD SOLUTIONS (BUS RM CHLD)</option>
+													<option value="1">COMMON (HS RM CHLD)</option>
+													<option value="1">COMMON INFRASTRUCTURE (MOB RM CHLD)</option>
+													<option value="1">CONEXUS (SHRD RM CHLD)</option>
+													<option value="1">CONF-COLL (BUS RM CHLD)</option>
+													<option value="1">CONNECTED COMM/OTH (HS RM CHLD)</option>
+													<option value="1">CORE MOBILITY (MOB RM CHLD)</option>
+													<option value="1">COST REDUCTION (SHRD RM CHLD)</option>
+													<option value="1">CPE - RGS (HS RM CHLD)</option>
+													<option value="1">CPE - STB/DVR (HS RM CHLD)</option>
+													<option value="1">CREDIT AND COLLECTIONS (CORP RM CHLD)</option>
+													<option value="1">CRICKET (MOB RM CHLD)</option>
+													<option value="1">CSO (CORP RM CHLD)</option>
+													<option value="1">DATA CENTER INFRASTRUCTURE (SHRD RM CHLD)</option>
+													<option value="1">DATA SERVICES (MOB RM CHLD)</option>
+													<option value="1">DIGITAL FIRST (CORP RM CHLD)</option>
+													<option value="1">DIGITAL LIFE (MOB RM CHLD)</option>
+													<option value="1">EMERGING BUSINESS MARKETS (BUS RM CHLD)</option>
+													<option value="1">ENTERPRISE NETWORKING OTHER (BUS RM CHLD)</option>
+													<option value="1">EOY BV Not Mapped</option>
+													<option value="1">ETHERNET - ASE (BUS RM CHLD)</option>
+													<option value="1">ETHERNET - OTHER (BUS RM CHLD)</option>
+													<option value="1">ETTCS (MOB RM CHLD)</option>
+													<option value="1">EVOLVE MONETIZATION (MOB RM CHLD)</option>
+													<option value="1">FIBER HOUSING STARTS (HS RM CHLD)</option>
+													<option value="1">FIBER POR OTHER (HS RM CHLD)</option>
+													<option value="1">FINANCE (CORP RM CHLD)</option>
+													<option value="1">FINANCE (MOB RM CHLD)</option>
+													<option value="1">FLIGHT OPS (CORP RM CHLD)</option>
+													<option value="1">FTTB (BUS RM CHLD)</option>
+													<option value="1">FTTCS (MOB RM CHLD)</option>
+													<option value="1">FWLL (CORP RM CHLD)</option>
+													<option value="1">GIGAPOWER (HS RM CHLD)</option>
+													<option value="1">GIGAPOWER TOOLS (HS RM CHLD)</option>
+													<option value="1">GIGAPOWER/FTTP SE (HS RM CHLD)</option>
+													<option value="1">GLOBAL ACCESS MANAGEMENT (SHRD RM CHLD)</option>
+													<option value="1">GLOBAL MARKETING (CORP RM CHLD)</option>
+													<option value="1">GOVERNMENT (HS RM CHLD)</option>
+													<option value="1">HOSTING (BUS RM CHLD)</option>
+													<option value="1">HSPA+ CORE (MOB RM CHLD)</option>
+													<option value="1">HSPA+ OTHER (MOB RM CHLD)</option>
+													<option value="1">HSPA+ RAN CAPACITY (MOB RM CHLD)</option>
+													<option value="1">HSPA+ RAN DEPLOYMENT (MOB RM CHLD)</option>
+													<option value="1">HUMAN RESOURCES (CORP RM CHLD)</option>
+													<option value="1">IDC (CORP RM CHLD)</option>
+													<option value="1">INDUSTRIAL INTERNET OF THINGS (IIOT) (MOB RM CHLD)</option>
+													<option value="1">INFRASTRUCTURE MAINTENANCE (SHRD RM CHLD)</option>
+													<option value="1">INTERCITY INFRASTRUCTURE MAINT (SHRD RM CHLD)</option>
+													<option value="1">INTERNET OF THINGS (IOT) (MOB RM CHLD)</option>
+													<option value="1">IP FLEX (BUS RM CHLD)</option>
+													<option value="1">IPDSL SUBSCRIBER (HS RM CHLD)</option>
+													<option value="1">IPTF (BUS RM CHLD)</option>
+													<option value="1">IPV6 (SHRD RM CHLD)</option>
+													<option value="1">IUSACELL INTEGRATION (CORP RM CHLD)</option>
+													<option value="1">LABS (CORP RM CHLD)</option>
+													<option value="1">LEGAL MANDATES (CORP RM CHLD)</option>
+													<option value="1">LOCAL LOOP MANDATE/REGULATORY (SHRD RM CHLD)</option>
+													<option value="1">LTE CORE (MOB RM CHLD)</option>
+													<option value="1">LTE DEV/OTHER (MOB RM CHLD)</option>
+													<option value="1">LTE RAN CAPACITY (MOB RM CHLD)</option>
+													<option value="1">LTE RAN DEPLOYMENT (MOB RM CHLD)</option>
+													<option value="1">MAINTENANCE LOCAL LOOP (SHRD RM CHLD)</option>
+													<option value="1">MANAGED SERVICES (BUS RM CHLD)</option>
+													<option value="1">MANDATE/REGULATORY (MOB RM CHLD)</option>
+													<option value="1">MANDATORY (SHRD RM CHLD)</option>
+													<option value="1">MARKETING OPERATIONS (MOB RM CHLD)</option>
+													<option value="1">METRO INFRASTRUCTURE CAPACITY (SHRD RM CHLD)</option>
+													<option value="1">METRO INFRASTRUCTURE MAINTENANCE (SHRD RM CHLD)</option>
+													<option value="1">METRO INFRASTRUCTURE MANDATORY (SHRD RM CHLD)</option>
+													<option value="1">MICROWAVE/OTHER (MOB RM CHLD)</option>
+													<option value="1">MIS-IP (BUS RM CHLD)</option>
+													<option value="1">MOBILITY CENTERS (MOB RM CHLD)</option>
+													<option value="1">NETWORK INTERFACE - BUILDING & CAP (CORP RM CHLD)</option>
+													<option value="1">NEXTEL (CORP RM CHLD)</option>
+													<option value="1">NSB (MOB RM CHLD)</option>
+													<option value="1">OSP BACKBONE FEEDER (SHRD RM CHLD)</option>
+													<option value="1">OSP DISTRIBUTION (SHRD RM CHLD))</option>
+													<option value="1">OTHER (CORP RM CHLD)</option>
+													<option value="1">OTHER (SHRD RM CHLD)</option>
+													<option value="1">PARENT (CORP RM CHLD)</option>
+													<option value="1">PARTNERSHIP (MOB RM CHLD)</option>
+													<option value="1">PORTFOLIO MANAGEMENT (CORP RM CHLD)</option>
+													<option value="1">POWER & ENERGY (CORP RM CHLD)</option>
+													<option value="1">PRIVATE VENUES (MOB RM CHLD)</option>
+													<option value="1">PUBLIC SAFETY (BUS RM CHLD)</option>
+													<option value="1">PUBLIC SAFETY OTHER (BUS RM CHLD)</option>
+													<option value="1">PUBLIC VENUES (MOB RM CHLD)</option>
+													<option value="1">RETAIL (MOB RM CHLD)</option>
+													<option value="1">SALES ENABLEMENT (BUS RM CHLD)</option>
+													<option value="1">SALES NETWORK SOURCING (BUS RM CHLD)</option>
+													<option value="1">SECURITY (BUS RM CHLD)</option>
+													<option value="1">SHARED API PLATFORM (CORP RM CHLD)</option>
+													<option value="1">SHARED COMPUTE (SHRD RM CHLD)</option>
+													<option value="1">SMALL CELLS/ OTHER (MOB RM CHLD)</option>
+													<option value="1">SMB (BUS RM CHLD)</option>
+													<option value="1">SSOP (SHRD RM CHLD)</option>
+													<option value="1">STAR DTV INTEGRATION (CORP RM CHLD)</option>
+													<option value="1">SUPPLY CHAIN (CORP RM CHLD)</option>
+													<option value="1">TD CS&E OTHER (CORP RM CHLD)</option>
+													<option value="1">TD LEGACY TRANSFORMATION (CORP RM CHLD)</option>
+													<option value="1">TD MOBILITY (MOB RM CHLD)</option>
+													<option value="1">TECHNOLOGY & NETWORK OPERATIONS (CORP RM CHLD)</option>
+													<option value="1">TECHNOLOGY OPERATIONS (SHRD RM CHLD)</option>
+													<option value="1">TOOLS (CORP RM CHLD)</option>
+													<option value="1">TOOLS (MOB RM CHLD)</option>
+													<option value="1">VANGUARD/WMS/INTERNATIONAL ROAMING (MOB RM CHLD)</option>
+													<option value="1">VDNA (BUS RM CHLD), VDSL SUBSCRIBER (HS RM CHLD)</option>
+													<option value="1">VIDEO OTHER (HS RM CHLD)</option>
+													<option value="1">VIRTUALIZED INFRASTRUCTURE (SHRD RM CHLD)</option>
+													<option value="1">VOICE (HS RM CHLD)</option>
+													<option value="1">VOICE SERVICES (MOB RM CHLD)</option>
+													<option value="1">VOICE SVCS OTHER (SHRD RM CHLD)</option>
+													<option value="1">VOIP WHOLESALE & OTHER (BUS RM CHLD)</option>
+													<option value="1">WIFI (BUS RM CHLD)</option>
+												</select> -->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">SI 3:</div>
+											<div class="col-md-8">
+												<input type="text" id="si3_1" class="ctrl" style="width:95%;" disabled="true" value="EOY BV Not Mapped"/>
+												<!-- <select id="sel_si3_1" class="ctrl" style="width:95%;">
+													<option value="1">Build</option>
+													<option value="1">Development</option>
+													<option value="1">EOY BV Not Mapped</option>
+													<option value="1">Maintenance/Mandatory</option>
+													<option value="1">Volume</option>
+												</select> -->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">SI 5:</div>
+											<div class="col-md-8">	
+												<input type="text" id="si5_1" class="ctrl" style="width:95%;" disabled="true" value="Dev - NPQ Escrow"/>
+												<!-- <select id="sel_si5_1" class="ctrl" style="width:95%;">
+													<option value="1">Build - PQ Decisionable</option>
+													<option value="1">Dev - NPQ Capacity/Expansion</option>
+													<option value="1">Dev - NPQ Cost Savings</option>
+													<option value="1">Dev - NPQ Enhancement</option>
+													<option value="1">Dev - NPQ Escrow</option>
+													<option value="1">Dev - NPQ GBC Quality/Reliability</option>
+													<option value="1">Dev - NPQ Revenue Growth</option>
+													<option value="1">Dev - WLT</option>
+													<option value="1">EOY BV Not Mapped</option>
+													<option value="1">M&M - Corp/Admin/Acctng</option>
+													<option value="1">M&M - NPQ GBC</option>
+													<option value="1">M&M - NPQ Maintenance/Other</option>
+													<option value="1">M&M - NPQ Mandatory/Regulatory</option>
+													<option value="1">Volume - NPQ Capacity (Non-Sales)</option>
+													<option value="1">Volume - PQ Capacity (Non-Sales)</option>
+													<option value="1">Volume - PQ Sales</option>
+												</select> -->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">SI 6:</div>
+											<div class="col-md-8">
+												<input type="text" id="si6_1" class="ctrl" style="width:95%;" disabled="true" value="BIG DATA"/>
+												<!-- <select id="sel_si6_1" class="ctrl" style="width:95%;">
+													<option value="1">ABS</option>
+													<option value="1">BIG DATA</option>
+													<option value="1">C&E </option>
+													<option value="1">CAP MGMT</option>
+													<option value="1">CRE</option>
+													<option value="1">CSO</option>
+													<option value="1">EOY BV Not Mapped</option>
+													<option value="1">FINANCE</option>
+													<option value="1">GLOBAL ACCESS MANAGEMENT</option>
+													<option value="1">HOME SOLUTIONS</option>
+													<option value="1">IPV6</option>
+													<option value="1">LABS</option>
+													<option value="1">MOBILITY</option>
+													<option value="1">SUPPLY CHAIN</option>
+													<option value="1">TD</option>
+													<option value="1">TECH OPS</option>
+													<option value="1">TP&E </option>
+												</select> -->
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Work Drivers:</div>
+											<div class="col-md-8">
+												<input id="txt_work_drivers_1" type="text" class="ctrl" style="width:95%;" disabled="true" value="Work Driver 1"/>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Business Unit:</div>
+											<div class="col-md-8">
+												<input type="text" id="business_unit_1" class="ctrl" style="width:95%;" disabled="true" value="NETWORK METHODS AND SUPPORT"/>
+												<!-- <select id="sel_business_unit_1" class="ctrl" style="width:95%">
+													<option value="1">EAST CONSTRUCTION & ENGR</option>
+													<option value="1">MIDWEST CONSTRUCTION & ENGR</option>
+													<option value="1">MOBILITY CONSTRUCTION & ENGR</option>
+													<option value="1">NATIONAL CONSTRUCTION & ENGR</option>
+													<option value="1">NETWORK METHODS AND SUPPORT</option>
+													<option value="1">SOUTHEAST CONSTRUCTION & ENGR</option>
+													<option value="1">SOUTHWEST CONSTRUCTION & ENGR</option>
+													<option value="1">WEST CONSTRUCTION & ENGR</option>
+												</select> -->
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6"><!-- RIGHT-COLUMN -->
+										<div class="project-title"><span>Version</span></div>
+										<div class="row">
+											<div class="col-md-4 title">Description:</div>
+											<div class="col-md-8">
+												<textarea id="txt_version_description_1" rows="4" class="ctrl" style="width:95%;"></textarea>
+											</div>
+										</div>
+										<div class="project-title">
+											<span>Budget</span>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Version:</div>
+											<div class="col-md-8">
+												<input id="txt_budget_ver_1" type="text" class="ctrl" style="width:95%;"/>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Status:</div>
+											<div class="col-md-8">
+												<select id="sel_status_1" class="ctrl" style="width:50%">
+													<option value="funded">Funded</option>
+													<option value="partially funded" selected>Partially Funded</option>
+													<option value="unfunded">Unfunded</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Funding Indicator:</div>
+											<div class="col-md-8">
+												<select id="sel_funding_ind_1" class="ctrl" style="width:35%">
+													<option value="1">Capital</option>
+													<option value="1">Expense</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Submission Date:</div>
+											<div class="col-md-8">
+												<i class="fa fa-calendar" style="color:#000; position:absolute; left:35%; top:8px;"></i>
+												<input id="txt_submission_dt_1" class="date-picker" type="text" style="width:32%;" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Capital Cost:</div>
+											<div class="col-md-8">
+												<input id="txt_capital_cost_1" type="text" class="ctrl" style="width:35%;" value="$" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 title">Expense Cost:</div>
+											<div class="col-md-8">
+												<input id="txt_expense_cost_1" type="text" class="ctrl" style="width:35%;" value="$" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="clear:both;"></div>
+						<!-- ---------------------------- MAIN CONTAINER STARTS HERE ----------------------------------->
+						<div id="project_1_main" class="project-main">
+							<!-- 
+							<div class="import-wrapper">
+								<input type="button" class="btn btn-orange" value="Import" />
+							</div>
+							 -->
+							<div id="vert_tab_menu_1" class="vert-tab-menu">
+								<ul>
+									<li>
+										<a href="#vert_tab_cost_1">&nbsp;&nbsp;Cost&nbsp;&nbsp;</a>
+									</li>
+									<li>
+										<a href="#vert_tab_volume_1">Volume</a>
+									</li>
+								</ul>
+								<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+								<!-- TAB - COST DATA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+								<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+								<div id="vert_tab_cost_1">
+									<div class="cost-wrapper"> 
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="forecast-estimate">
+														<div class="project-title">
+															<span>Base Forecast Model</span>
+														</div>
+														<div>Business Unit: 
+															<!-- TODO: populate based on database values -->
+															<select class="cost-regions" id="sel_cost_region_1">
+																<option value="Midwest">Midwest</option>
+															</select>
+														</div>
+														<div>Year Forecasting:&nbsp;	
+															<!-- years are dynamically added -->
+															<select class="select-year" id="sel_year_forecast_1"></select>
+														</div>
+														<div class="value-range">Range of dates used for rates: <span>01/2014 - 08/2014</span></div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="forecast-estimate">
+														<div class="project-title">
+															<span>Current Project Estimate</span>
+														</div>
+														<div>Project Total Cost: $
+															<input id="txt_proj_total_cost_1" type="text" value="4,000,000,000.00" />
+														</div>
+														<div class="value-range">FTE: <span>3,018</span></div>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="reload-recalculate">										
+														<input type="button" class="btn btn-blue btn-reload" value="Cost Reload"/>
+														<span class="divider">|</span>
+														<input type="button" value="Recalculate" class="btn btn-blue" />
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-10"></div>
+												<div class="col-md-2">
+													<div class="expand-all-container">
+														<input type="button" id="expand_all_1" class="btn btn-blue expand-all" value="Expand All" />
+													</div>
+												</div>
+											</div>
+											<div class="project-title">
+												<span>Variables</span>
+											</div>
+											<!-- GLOBAL VARIABLES ----------------------------------------------- -->
+											<div class="cost-detail">
+												<div class="container-fluid">
+													<div class="row" id="global_variables_1" >
+														<div class="col-xs-11 col-sm-11 col-md-11">
+															<div class="row-expansion">
+																Global Variables
+															</div>
+														</div>
+														<div class="col-xs col-sm-1 col-md-1 expandable">
+															<div class="expand-details closed"></div>
+														</div>
+													</div>
+												</div>
+												<div id="global_variables_1_details" class="detail-wrapper">
+													<div class="container-fluid detail-container">
+														<div class="row header">
+															<div class="col-md-3">
+																H4/ASI/Non-Telco Wages<i id="help_h4aw_1" class="fa fa-lg fa-question-circle hidden-help"></i>
+															</div>
+															<div class="col-md-3">
+																Net Cross Charges<i id="help_ncg_1" class="fa fa-lg fa-question-circle hidden-help"></i>
+															</div>
+															<div class="col-md-3">
+																Clearances From Others<i id="help_cfo_1" class="fa fa-lg fa-question-circle hidden-help"></i>
+															</div>
+															<div class="col-md-3">
+																Nominal Percent Capitalization Output
+															</div>
+														</div>
+														<!-- DEFINITION ------------------------------------------------- H4/ASI/NON-TELCO -->
+														<div class="row hidden-help-details" id="help_h4aw_1_details" style="display:none;">
+															<div class="col-md-3">
+																<span>H4/ASI/Non-Telco Wages</span>
+															</div>
+															<div class="col-md-8">
+																Incurred wages of employees paid on Non Telco, Non Mobility payroll companies. Wages for such employees are 
+																not paid through the Telco and as a result are not included in the cost pools represented in the Capital driven force model. In MW 
+																this includes the charges using XC B52 which are excluded in the core FDW queries.
+															</div>
+															<div class="col-md-1 hidden-help-close">
+																<i class="fa fa-times-circle fa-lg" title="Close Definition"></i>
+															</div>
+														</div>
+														<!-- DEFINITION ------------------------------------------------- NET CROSS CHARGES -->
+														<div class="row hidden-help-details" id="help_ncg_1_details" style="display:none;">
+															<div class="col-md-3">
+																<span>Net Cross Charges</span>
+															</div>
+															<div class="col-md-8">
+																Essentially the net of cross charging between C&E and entities like CIM. This has to tie off with input from the involved organizations.
+																Clearances From Others Clearances associated with wages of employees paid outside the regional VP organizations but within legal entity 
+																and force group combinations included in the CADs rates of the regional VP. This includes employees assigned to an indirect cost pool 
+																that are paid through the Telco legal entities on an RC beginning with %%KA%. Such employees have incurred dollars that are budgeted 
+																under a staff organization and have clearances distributed through the productive hours of the regional C&E organization. For example, 
+																centers employees working under Nonetta Sode on RC S0KA37L00 on JFC 325A will have incurred payroll dollars budgeted in centers and 
+																labor clearance dollars budgeted under SW C&E. In this example, even though payroll is issued against S0KA37L00, the dollars fall 
+																into the indirect B33 cost pool that is distributed at the Legal Entity (SWBT) / Force Group (E03) level&#8230; meaning the dollars 
+																get added to the B33 rate that is cleared by the productive hours of the regional C&E organization
+															</div>
+															<div class="col-md-1 hidden-help-close">
+																<i class="fa fa-times-circle fa-lg" title="Close Definition"></i>
+															</div>
+														</div>
+														<!-- DEFINITION ------------------------------------------------- NET CROSS CHARGES -->
+														<div class="row hidden-help-details" id="help_cfo_1_details" style="display:none;">
+															<div class="col-md-3">
+																<span>Clearances From Others</span>
+															</div>
+															<div class="col-md-8">
+																Clearances associated with wages of employees paid outside the regional VP organizations but within legal entity and force group combinations 
+																included in the CADs rates of the regional VP. This includes employees assigned to an indirect cost pool that are paid through the Telco legal 
+																entities on an RC beginning with %%KA%. Such employees have incurred dollars that are budgeted under a staff organization and have clearances 
+																distributed through the productive hours of the regional C&E organization. For example, centers employees working under Nonetta Sode on RC S0KA37L00 on JFC 325A 
+																will have incurred payroll dollars budgeted in centers and labor clearance dollars budgeted under SW C&E. In this example, even though payroll 
+																is issued against S0KA37L00, the dollars fall into the indirect B33 cost pool that is distributed at the Legal Entity (SWBT) / Force Group (E03) 
+																level...meaning the dollars get added to the B33 rate that is cleared by the productive hours of the regional C&E organization
+															</div>
+															<div class="col-md-1 hidden-help-close">
+																<i class="fa fa-times-circle fa-lg" title="Close Definition"></i>
+															</div>
+														</div>
+														<div class="row alt-row">
+															<div class="col-md-3">
+																<!-- <input type="text" id="non_telco_wages_1" class="dollar" value="$" /> -->
+																<span id="non_telco_wages_1">$ --</span>
+															</div> 
+															<div class="col-md-3">
+																<!-- <input type="text" id="net_cross_charges_1" class="dollar" value="$" /> -->
+																<span id="net_cross_charges_1">$ --</span>
+															</div>
+															<div class="col-md-3">
+																<!-- <input type="text" id="clear_from_others_1" class="dollar" value="$" /> -->
+																<span id="clear_from_others_1">$ --</span>
+															</div>
+															<div class="col-md-3">
+																<span id="clear_from_others_1">-- </span>%
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- MACRO VARIABLES ------------------------------------------------ -->
+											<div class="cost-detail">
+												<div class="container-fluid">
+													<div class="row" id="macro_variables_1" >
+														<div class="col-xs-11 col-sm-11 col-md-11">
+															<div class="row-expansion">
+																Macro Variables
+															</div>
+														</div>
+														<div class="col-xs col-sm-1 col-md-1 expandable">
+															<div class="expand-details closed"></div>
+														</div>
+													</div>
+												</div>
+												<div id="macro_variables_1_details" class="detail-wrapper">
+													<div class="container-fluid detail-container">
+														<div class="row header">
+															<div class="col-md-4">
+																Output Description
+															</div>
+															<div class="col-md-2">
+																Original Value
+															</div>
+															<div class="col-md-2">
+																Input Value
+															</div>
+															<div class="col-md-2">
+																Export to Output
+															</div>
+															<div class="col-md-2">
+																Output Variance
+															</div>
+														</div>
+														<div class="row alt-row">
+															<div class="col-md-4">
+																Expense Target
+															</div>
+															<div class="col-md-2">
+																<span id="exp_target_orig_val_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+																<input type="text" id="exp_target_input_val_1" class="dollar" value="$" />
+															</div>
+															<div class="col-md-2">
+																<span id="exp_target_export_output_1">$76,336</span>
+															</div>
+															<div class="col-md-2">
+																<span id="exp_target_output_variance_1">$3,664</span>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-4">
+																DEG
+															</div>
+															<div class="col-md-2">
+																<span id="deg_target_orig_val_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+																<input type="text" id="deg_target_input_val_1" class="dollar" value="$" />
+															</div>
+															<div class="col-md-2">
+																<span id="deg_target_export_output_1">$26,325</span>
+															</div>
+															<div class="col-md-2">
+																<span id="deg_target_output_variance_1">($23,000)</span>
+															</div>
+														</div>
+														<div class="row alt-row">
+															<div class="col-md-4">
+																Eng
+															</div>
+															<div class="col-md-2">
+																<span id="eng_target_orig_val_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+																<input type="text" id="eng_target_input_val_1" class="dollar" value="$" />
+															</div>
+															<div class="col-md-2">
+																<span id="eng_target_export_output_1">$14,049</span>
+															</div>
+															<div class="col-md-2">
+																<span id="eng_target_output_variance_1">$51</span>
+															</div>
+														</div>	
+														<div class="row">
+															<div class="col-md-4">
+																Const
+															</div>
+															<div class="col-md-2">
+																<span id="const_target_orig_val_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+																<input type="text" id="const_target_input_val_1" class="dollar" value="$" />
+															</div>
+															<div class="col-md-2">
+																<span id="const_target_export_output_1">$20,906</span>
+															</div>
+															<div class="col-md-2">
+																<span id="const_target_output_variance_1">($2,343)</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- INPUT MODEL ---------------------------------------------------- -->
+											<div class="cost-detail">
+												<div class="container-fluid">
+													<div class="row" id="input_model_1" >
+														<div class="col-xs-11 col-sm-11 col-md-11">
+															<div class="row-expansion">
+																Input Model
+															</div>
+														</div>
+														<div class="col-xs col-sm-1 col-md-1 expandable">
+															<div class="expand-details closed"></div>
+														</div>
+													</div>
+												</div>
+												<div id="input_model_1_details" class="detail-wrapper">
+													<div class="container-fluid">
+														<div class="row">
+															<!-- INPUT MODEL - CAPITAL ------------- -->
+															<div class="col-md-6" style="padding:0;">
+																<div class="container-fluid detail-container">
+																	<div class="row header">
+																		<div class="col-md-12">
+																			Capital
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-md-3"></div>
+																		<div class="col-md-3">Telco Eng<br>Cap Rate</div>
+																		<div class="col-md-3">Telco Labor<br>Cap Rate</div>
+																		<div class="col-md-3">Telco DEG<br>Cap Rate</div>
+																	</div>
+																	<div class="row alt-row">
+																		<div class="col-md-3">Latest Value</div>
+																		<div class="col-md-3">
+																			<!-- <span id="pt_ov_telco_eng_cap_rate_1">--</span>% -->
+																			<input type="text" id="pt_ov_telco_eng_cap_rate_1" class="percent" />%
+																		</div>
+																		<div class="col-md-3">
+																			<!-- <span id="pt_ov_telco_labor_cap_rate_1">--</span>% -->
+																			<input type="text" id="pt_ov_telco_labor_cap_rate_1" class="percent" />%
+																		</div>
+																		<div class="col-md-3">
+																			<!-- <span id="pt_ov_telco_deg_cap_rate_1">--</span>% -->
+																			<input type="text" id="pt_ov_telco_deg_cap_rate_1" class="percent" />%
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-md-6" style="padding:0;">
+																<div class="container-fluid detail-container">
+																	<div class="row header">
+																		<div class="col-md-12">
+																			Expense
+																		</div>
+																	</div>
+																	<!-- TODO: adjust row height to compensate for previous grids title height -->
+																	<div class="row" style="min-height:61px;">
+																		<div class="col-md-3"></div>
+																		<div class="col-md-3">Telco Eng</div>
+																		<div class="col-md-3">Telco Labor</div>
+																		<div class="col-md-3">Telco DEG</div>
+																	</div>
+																	<div class="row alt-row">
+																		<div class="col-md-3">Latest Value</div>
+																		<div class="col-md-3">
+																			<!-- <span id="pt_ov_telco_eng_cap_rate_1">--</span>% -->
+																			<input type="text" id="pt_ov_telco_eng_cap_rate_1" class="percent" />%
+																		</div>
+																		<div class="col-md-3">
+																			<!-- <span id="pt_ov_telco_labor_cap_rate_1">--</span>% -->
+																			<input type="text" id="pt_ov_telco_labor_cap_rate_1" class="percent" />%
+																		</div>
+																		<div class="col-md-3">
+																			<!-- <span id="pt_ov_telco_deg_cap_rate_1">--</span>% -->
+																			<input type="text" id="pt_ov_telco_deg_cap_rate_1" class="percent" />%
+																		</div>
+																	</div>
+																	<!--
+																	<div class="row">
+																		<div class="col-md-3" style="margin-top:8px;">Input Value</div>
+																		<div class="col-md-3"><input type="text" id="pt_iv_telco_eng_cap_rate_1" class="percent" />%</div>
+																		<div class="col-md-3"><input type="text" id="pt_iv_telco_labor_cap_rate_1" class="percent" />%</div>
+																		<div class="col-md-3"><input type="text" id="pt_iv_telco_deg_cap_rate_1" class="percent" />%</div>
+																	</div>
+																	-->
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- AVERAGE ANNUAL LABOR RATE -------------------------------------- -->
+											<div class="cost-detail">
+												<div class="container-fluid">
+													<div class="row" id="annual_avg_labor_1">
+														<div class="col-xs-11 col-sm-11 col-md-11">
+															<div class="row-expansion">
+																Average Annual Labor Rate<i id="help_aalr_1" class="fa fa-lg fa-question-circle hidden-help-expanded"></i>
+															</div>
+														</div>
+														<div class="col-xs col-sm-1 col-md-1 expandable">
+															<div class="expand-details closed"></div>
+														</div>
+													</div>
+												</div>
+												<div id="annual_avg_labor_1_details" class="detail-wrapper">
+													<div class="container-fluid detail-container">
+														<div class="row header">
+															<div class="col-md-2">
+																Telco Labor
+															</div>
+															<div class="col-md-2">
+																ASI
+															</div>
+															<div class="col-md-2">
+																Telco Eng
+															</div>
+															<div class="col-md-2">
+																Net Cross Charge Out/In
+															</div>
+															<div class="col-md-2">
+																Telco DEG
+															</div>
+														</div>
+														<!-- DEFINITION ------------------------------------------------- AVERAGE ANNUAL LABOR RATE -->
+														<div class="row hidden-help-details" id="help_aalr_1_details" style="display:none;">
+															<div class="col-md-3">
+																<span>Average Annual Labor Rate</span>
+															</div>
+															<div class="col-md-8">
+																provided by the expense team and manually input on the Baseline tab for the year 
+																of the Baseline data. Input on the Model Input_PY tab, Section 4, AVERAGE ANNUAL LABOR RATE represents the 
+																rate for the year being forecast. These values are provided for the specific categories.
+															</div>
+															<div class="col-md-1 hidden-help-close">
+																<i class="fa fa-times-circle fa-lg" title="Close Definition"></i>
+															</div>
+														</div>
+														<div class="row alt-row">
+															<div class="col-md-2">
+																<!-- <input type="text" id="aalr_telco_labor_1" class="dollar" value="$" /> -->
+																<span id="aalr_telco_labor_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+																<!-- <input type="text" id="aalr_asi_1" class="dollar" value="$" /> -->
+																<span id="aalr_asi_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+																<!-- <input type="text" id="aalr_telco_eng_1" class="dollar" value="$" /> -->
+																<span id="aalr_telco_eng_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+																<!-- <input type="text" id="aalr_net_cross_charge_1" class="dollar" value="$" /> -->
+																<span id="aalr_net_cross_charge_1">$ --</span>
+															</div>
+															<div class="col-md-2">
+															<span id="aalr_telco_labor_1">$ --</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="project-title">
+												<span>Financial Results</span>
+											</div>
+											<!-- PERCENTAGE DATA ------------------------------------------------ -->
+											<div class="cost-detail">
+												<div class="container-fluid">
+													<div class="row" id="percentage_data_1">
+														<div class="col-xs-11 col-sm-11 col-md-11">
+															<div class="row-expansion">
+																Percentage Data
+															</div>
+														</div>
+														<div class="col-xs col-sm-1 col-md-1 expandable">
+															<div class="expand-details closed"></div>
+														</div>
+													</div>
+												</div>
+												<div id="percentage_data_1_details" class="detail-wrapper">
+													<div class="container-fluid detail-container">
+														<div class="row header">
+															<div class="col-md-3">
+																Engineering Shift from Telco to Contractor
+															</div>
+															<div class="col-md-3">
+																Labor Shift from Telco to Contract Labor
+															</div>
+															<div class="col-md-3">
+																DEG Shift from Telco to Contract DEG
+															</div>
+															<div class="col-md-3"></div>
+														</div>
+														<div class="row alt-row">
+															<div class="col-md-3">
+																<input type="text" id="pd_eng_shift_telco_to_contract_1" class="percent" /> %
+															</div>
+															<div class="col-md-3">
+																<input type="text" id="pd_labor_shift_telco_to_contract_1" class="percent" /> %
+															</div>
+															<div class="col-md-3">
+																<input type="text" id="pd_deg_shift_telco_to_contract_1" class="percent" /> %
+															</div>
+															<div class="col-md-3"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- C&E BUSINESS UNITS --------------------------------------------- -->
+											<div class="cost-detail">
+												<div class="container-fluid">
+													<div class="row" id="ce_business_units_1">
+														<div class="col-xs-11 col-sm-11 col-md-11">
+															<div class="row-expansion">
+																C&E Business Units
+															</div>
+														</div>
+														<div class="col-xs col-sm-1 col-md-1 expandable">
+															<div class="expand-details closed"></div>
+														</div>
+													</div>
+												</div>
+												<div id="ce_business_units_1_details" class="detail-wrapper">
+													<div class="detail-container">
+														<div class="container-fluid detail-container">
+														<div class="row header">
+															<div class="col-md-1">
+																Telco Eng % of Total
+															</div>
+															<div class="col-md-1">
+																Telco Labor % of Total
+															</div>
+															<div class="col-md-1">
+																Telco DEG % of Total
+															</div>
+															<div class="col-md-1">
+																Supp/Cont Eng Dollars
+															</div>
+															<div class="col-md-1">
+																Supp/Cont Labor & DEG Dollars
+															</div>
+															<div class="col-md-1">
+																Supp/Cont Other
+															</div>
+															<div class="col-md-1">
+																Materials
+															</div>
+															<div class="col-md-1">
+																Other
+															</div>
+															<div class="col-md-1">
+																Amt Billed
+															</div>
+															<div class="col-md-2"></div>
+														</div>
+														<div class="row alt-row">
+															<div class="col-md-1">
+																<span id="cebu_telco_eng_total_1">5.1%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_telco_labor_total_1">6.6%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_telco_deg_total_1">1.5%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_supp_cont_eng_dollars_1">2.5%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_supp_cont_labor_deg_dollars_1">59.1%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_supp_cont_other_1">9.0%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_materials_1">6.7%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_other_1">8.7%</span>
+															</div>
+															<div class="col-md-1">
+																<span id="cebu_amount_billed_1">0.0%</span>
+															</div>
+															<div class="col-md-2"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- PERCENTAGE DATA (NON C&E BUSINESS UNITS )-------------------------------------------- -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="percentage_data_non_ce_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Percentage Data (Non C&E Business Units)
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="percentage_data_non_ce_1_details" class="detail-wrapper">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-2">
+															Non C&E BU Engineering
+														</div>
+														<div class="col-md-2">
+															Non C&E BU Labor
+														</div>
+														<div class="col-md-8"></div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															<span id="pdnce_bu_engineering_1">0.3%</span>
+														</div>
+														<div class="col-md-2">
+															<span id="pdnce_bu_labor_1">0.5%</span>
+														</div>
+														<div class="col-md-8"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- TRAILING EXPENSE ON CAPITAL PROJECTS -------------------------------------------- -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="te_capital_projects_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Trailing Expense On Capital Projects
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="te_capital_projects_1_details" class="detail-wrapper">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-3">
+															Telco Eng Exp Dollars
+														</div>
+														<div class="col-md-3">
+															Telco Labor Exp Dollars
+														</div>
+														<div class="col-md-3">
+															Telco DEG Exp Dollars
+														</div>
+														<div class="col-md-3">
+															Total
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-3">
+															<span id="tecp_telco_eng_eng_dollars_1">$23</span>
+														</div>
+														<div class="col-md-3">
+															<span id="tecp_telco_labor_exp_dollars_1">$46</span>
+														</div>
+														<div class="col-md-3">
+															<span id="tecp_telco_deg_exp_dollars_1">$4</span>
+														</div>
+														<div class="col-md-3">
+															<span id="tecp_total_1">$73</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="project-title">
+											<span>Output - Gigapower - Bare Metal v2.1</span>
+										</div>
+										<!-- CAPITAL EXPENSE ----------------------------------------------------------------- -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="capital_expense_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Capital Expense
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="capital_expense_1_details" class="detail-wrapper">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-1">
+															Telco Eng<br>Cap $
+														</div>
+														<div class="col-md-1">
+															Telco Eng<br>Exp $
+														</div>
+														<div class="col-md-1">
+															Eng Cap Rate
+														</div>
+														<div class="col-md-1">
+															Telco Labor<br>Cap $
+														</div>
+														<div class="col-md-1">
+															Telco Labor<br>Exp $
+														</div>
+														<div class="col-md-1">
+															Labor Cap Rate
+														</div>
+														<div class="col-md-1">
+															Telco DEG Cap $
+														</div>
+														<div class="col-md-1">
+															Telco DEG Exp $
+														</div>
+														<div class="col-md-1">
+															DEG Cap Rate
+														</div>
+														<div class="col-md-3">
+															DEG Cap Rate
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-1">
+															<span id="ce_telco_eng_cap_dollars_1">$415</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_telco_eng_exp_dollars_1">$23</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_eng_cap_rate_1">94.8%</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_telco_labor_cap_dollars_1">$536</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_telco_labor_exp_dollars_1">$46</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_labor_cap_rate_1">92.1%</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_telco_deg_cap_dollars_1">$125</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_telco_deg_exp_dollars_1">$4</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_deg_cap_rate_1">96.5</span>%
+														</div>
+														<div class="col-md-3">
+															<span id="ce_supp_cont_eng_dollars_1">$199</span>
+														</div>
+													</div>
+												</div>
+												<div style="height:10px;"></div>
+												<!-- TABLE 2 STARTS HERE -------------------------------------------------- -->
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-1">
+															Supp/Cont Eng $
+														</div>
+														<div class="col-md-1">
+															Supp/Cont Labor $
+														</div>
+														<div class="col-md-1">
+															Supp/Cont Other $
+														</div>
+														<div class="col-md-1">
+															Materials
+														</div>
+														<div class="col-md-1">
+															Other
+														</div>
+														<div class="col-md-1">
+															Amount Billed
+														</div>
+														<div class="col-md-1">
+															YTD C&E BU Subtotal
+														</div>
+														<div class="col-md-1">
+															Non C&E<br>BU Eng
+														</div>
+														<div class="col-md-1">
+															Non C&E<br>BU Labor
+														</div>
+														<div class="col-md-3">
+															YTD LNO<br>C&E Total
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-1">
+															<span id="ce_supp_cont_eng_dollars_1">$4792</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_supp_cont_labor_dollars_1">$4792</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_supp_cont_other_dollars_1">$733</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_materials_1">$541</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_other_1">$701</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_amount_billed_1">($1)</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_ytd_ce_bu_subtotal_1">$8042</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_non_ce_bu_eng_1">$42</span>
+														</div>
+														<div class="col-md-1">
+															<span id="ce_non_ce_bu_labor_1">$42</span>
+														</div>
+														<div class="col-md-3">
+															<span id="ce_ytd_lno_ce_total_1">$8105</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- EXPENSE ONLY ------------------------------------------------------------ -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="expense_only_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Expense Only
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="expense_only_1_details" class="detail-wrapper">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-3">
+															Output Description
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4">Telco Eng Cap $</div>
+																<div class="col-md-4">Telco Eng Exp $</div>
+																<div class="col-md-4">Eng Cap Rate</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4">Telco Labor Cap $</div>
+																<div class="col-md-4">Telco Labor Exp $</div>
+																<div class="col-md-4">Labor Cap Rate</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4">Telco DEG Cap $</div>
+																<div class="col-md-4">Telco DEG Exp $</div>
+																<div class="col-md-4">Telco DEG Cap Rate</div>
+															</div>
+														</div>
+													</div>
+													<!-- ROW 2 - EXPENSE ONLY ------>
+													<div class="row alt-row">
+														<div class="col-md-3">
+															Expense Only Projects
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_eop_telco_eng_cap_dollars_1">-</span></div>
+																<div class="col-md-4"><span id="eo_eop_telco_eng_exp_dollars_1">10,000,000</span></div>
+																<div class="col-md-4"><span id="eo_eop_eng_cap_rate_1">10</span>%</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_eop_telco_labor_cap_1">-</span></div>
+																<div class="col-md-4"><span id="eo_eop_telco_labor_exp_1"></div>
+																<div class="col-md-4"><span id="eo_eop_labor_cap_rate_1">0.0</span>%</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_eop_telco_deg_cap_dollars_1">-</span></div>
+																<div class="col-md-4"><span id="eo_eop_telco_deg_exp_dollars_1">2,861</span></div>
+																<div class="col-md-4"><span id="eo_eop_deg_cap_rate_1">0.0</span>%</div>
+															</div>
+														</div>
+													</div>
+													<!-- ROW 3 - EXPENSE ONLY ------>
+													<div class="row">
+														<div class="col-md-3">
+																Projects w/ Capital/Exps
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_pce_telco_eng_cap_dollars_1">65,506</span></div>
+																<div class="col-md-4"><span id="eo_pce_telco_eng_exp_dollars_1">11,535</span></div>
+																<div class="col-md-4"><span id="eo_pce_eng_cap_rate_1">85.0</span>%</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_pce_telco_labor_cap_1">75,888</span></div>
+																<div class="col-md-4"><span id="eo_pce_telco_labor_exp_1">17,436</span></div>
+																<div class="col-md-4"><span id="eo_pce_labor_cap_rate_1">81.3</span>%</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_pce_telco_deg_cap_dollars_1">8,025</span></div>
+																<div class="col-md-4"><span id="eo_pce_telco_deg_exp_dollars_1">450</span></div>
+																<div class="col-md-4"><span id="eo_pce_deg_cap_rate_1">94.7</span>%</div>
+															</div>
+														</div>
+													</div>
+													<!-- ROW 4 - EXPENSE ONLY ------>
+													<div class="row alt-row">
+														<div class="col-md-3">
+															Total Projects
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_tp_telco_eng_cap_dollars_1">65,506</span></div>
+																<div class="col-md-4"><span id="eo_tp_telco_eng_exp_dollars_1">18,824</span></div>
+																<div class="col-md-4"><span id="eo_tp_eng_cap_rate_1">77.7</span>%</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_tp_telco_labor_cap_1">75,888</span></div>
+																<div class="col-md-4"><span id="eo_tp_telco_labor_exp_1">28,101</span></div>
+																<div class="col-md-4"><span id="eo_tp_labor_cap_rate_1">73.0</span>%</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_tp_telco_deg_cap_dollars_1">8,025</span></div>
+																<div class="col-md-4"><span id="eo_tp_telco_deg_exp_dollars_1">3,311</span></div>
+																<div class="col-md-4"><span id="eo_tp_deg_cap_rate_1">70.8</span>%</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div style="height:10px;"></div>
+												<!-- TABLE 2 STARTS HERE ---------------------------------------------- --->
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-3">
+															Output Description
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4">Supp / Cont Eng $</div>
+																<div class="col-md-4">Supp / Cont Labor $</div>
+																<div class="col-md-4">Supp / Cont Other $</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4">Materials</div>
+																<div class="col-md-4">Other</div>
+																<div class="col-md-4">Amount Billed</div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4">Ytd - C&E BU Subtotal</div>
+																<div class="col-md-8"></div>
+															</div>
+														</div>
+													</div>
+													<!-- ROW 2 - EXPENSE ONLY ------>
+													<div class="row alt-row">
+														<div class="col-md-3">
+															Expense Only Projects
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_eop_supp_cont_eng_dollars_1">-</span></div>
+																<div class="col-md-4"><span id="eo_eop_supp_cont_labor_dollars_1">-</span></div>
+																<div class="col-md-4"><span id="eo_eop_supp_cont_other_dollars_1">-</span></div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_eop_materials_1">-</span></div>
+																<div class="col-md-4"><span id="eo_eop_other_1">-</span></div>
+																<div class="col-md-4"><span id="eo_eop_amt_billed_1">-</span></div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_eop_ytd_ce_bu_subtotal_1">-</span></div>
+																<div class="col-md-8"></div>
+															</div>
+														</div>
+													</div>
+													<!-- ROW 3 - EXPENSE ONLY ------>
+													<div class="row">
+														<div class="col-md-3">
+															Projects w/ Capital/Exps
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_pce_supp_cont_eng_dollars_1">335</span></div>
+																<div class="col-md-4"><span id="eo_pce_supp_cont_labor_dollars_1">158,523</span></div>
+																<div class="col-md-4"><span id="eo_pce_supp_cont_other_dollars_1">138,523</span></div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_pce_materials_1">67,635</span></div>
+																<div class="col-md-4"><span id="eo_pce_other_1">77,567</span></div>
+																<div class="col-md-4"><span id="eo_pce_amt_billed_1">($5,443)</span></div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_pce_ytd_ce_bu_subtotal_1">586,586</span></div>
+																<div class="col-md-8"></div>
+															</div>
+														</div>
+													</div>
+													<!-- ROW 4 - EXPENSE ONLY ------>
+													<div class="row alt-row">
+														<div class="col-md-3">
+															Total Projects
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_tp_supp_cont_eng_dollars_1">335</span></div>
+																<div class="col-md-4"><span id="eo_tp_supp_cont_labor_dollars_1">158,552</span></div>
+																<div class="col-md-4"><span id="eo_tp_supp_cont_other_dollars_1">138,523</span></div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_tp_materials_1">67,635</span></div>
+																<div class="col-md-4"><span id="eo_tp_other_1">77,567</span></div>
+																<div class="col-md-4"><span id="eo_tp_amt_billed_1">($5,443)</span></div>
+															</div>
+														</div>
+														<div class="col-md-3">
+															<div class="row int-row">
+																<div class="col-md-4"><span id="eo_tp_ytd_ce_bu_subtotal_1">149,418</span></div>
+																<div class="col-md-8"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- NON-PROJECT DOLLARS -------------------------------------------- -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="non_proj_dollars_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Non-Project Dollars<i id="help_npd_1" class="fa fa-lg fa-question-circle hidden-help-expanded"></i>
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="non_proj_dollars_1_details" class="detail-wrapper">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-2">
+															Output Description
+														</div>
+														<div class="col-md-2">
+															Telco Eng Dollars
+														</div>
+														<div class="col-md-2">
+															Telco Labor Dollars
+														</div>
+														<div class="col-md-2">
+															Telco DEG Dollars
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<!-- DEFINITION ------------------------------------------------- AVERAGE ANNUAL LABOR RATE -->
+													<div class="row hidden-help-details" id="help_npd_1_details" style="display:none;">
+														<div class="col-md-3">
+															<span>Non-Project Dollars</span>
+														</div>
+														<div class="col-md-8">
+															Depends on Percent Project Time to calculate Total Non-Project Dollars. The initial version had the Percent Project Time 
+															hardcoded (input from Steve Collins team using KOW report) on the Baseline tab. Section 5 on the Model Input_PY tab was 
+															added to provide an input to affect the Output tab.
+														</div>
+														<div class="col-md-1 hidden-help-close">
+															<i class="fa fa-times-circle fa-lg" title="Close Definition"></i>
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															Total Project Dollars
+														</div>
+														<div class="col-md-2">
+															<span id="npd_tpd_telco_eng_dollars_1">$84,330</span>
+														</div>
+														<div class="col-md-2">
+															<span id="npd_tpd_telco_labor_dollars_1">$103,989</span>
+														</div>
+														<div class="col-md-2">
+															<span id="npd_tpd_telco_deg_dollars_1">$11,336</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row">
+														<div class="col-md-2">
+															Percent Project Time
+														</div>
+														<div class="col-md-2">
+															<span id="npd_ppt_telco_eng_dollars_1">92.6</span>%
+														</div>
+														<div class="col-md-2">
+															<span id="npd_ppt_telco_labor_dollars_1">91.0</span>%
+														</div>
+														<div class="col-md-2">
+															<span id="npd_ppt_telco_deg_dollars_1">32.6</span>%
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															Total Incurred Dollars
+														</div>
+														<div class="col-md-2">
+															<span id="npd_tid_telco_eng_dollars_1">$91,090</span>
+														</div>
+														<div class="col-md-2">
+															<span id="npd_tid_telco_labor_dollars_1">$114,230</span>
+														</div>
+														<div class="col-md-2">
+															<span id="npd_ppt_telco_deg_dollars_1">$34,800</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row">
+														<div class="col-md-2">
+															Non-Project Percentage
+														</div>
+														<div class="col-md-2">
+															<span id="npd_npp_telco_eng_dollars_1">7.4</span>%
+														</div>
+														<div class="col-md-2">
+															<span id="npd_npp_telco_labor_dollars_1">9.0</span>%
+														</div>
+														<div class="col-md-2">
+															<span id="npd_npp_telco_deg_dollars_1">67.4</span>%
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- OTHER C&E DOLLARS -------------------------------------------- -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="other_ce_dollars_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Other C&E Dollars<i id="help_oced_1" class="fa fa-lg fa-question-circle hidden-help-expanded"></i>
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="other_ce_dollars_1_details" class="detail-wrapper">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-2">
+															Output Description
+														</div>
+														<div class="col-md-2">
+															Telco Eng Dollars
+														</div>
+														<div class="col-md-2">
+															Telco Labor Dollars
+														</div>
+														<div class="col-md-2">
+															Telco DEG Dollars
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<!-- DEFINITION ------------------------------------------------- OTHER C&E DOLLARS -->
+														<div class="row hidden-help-details" id="help_oced_1_details" style="display:none;">
+															<div class="col-md-3">
+																<span>Other C&E Dollars</span>
+															</div>
+															<div class="col-md-8">
+																(e.g. Trunk and Toll) Accounts for capital work done that maps away from C&E budget. In the 
+																current versions this uses manual input on the Baseline tab which in turn feeds Model Input_PY, Section 2, 
+																Trunk & Toll which in turn leverages Output.
+															</div>
+															<div class="col-md-1 hidden-help-close">
+																<i class="fa fa-times-circle fa-lg" title="Close Definition"></i>
+															</div>
+														</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															Capital
+														</div>
+														<div class="col-md-2">
+															<!-- <input type="text" id="oce_capital_telco_eng_dollars_1" class="dollar" value="$" /> -->
+															<span id="oce_capital_telco_eng_dollars_1">$ --</span>
+														</div>
+														<div class="col-md-2">
+															<!-- <input type="text" id="oce_capital_telco_labor_dollars_1" class="dollar" value="$" /> -->
+															<span id="oce_capital_telco_labor_dollars_1">$ --</span>
+														</div>
+														<div class="col-md-2">
+															<!-- <input type="text" id="oce_capital_telco_deg_dollars_1" class="dollar" value="$" /> -->
+															<span id="oce_capital_telco_deg_dollars_1">$ --</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row">
+														<div class="col-md-2">
+															Expense
+														</div>
+														<div class="col-md-2">
+															<!-- <input type="text" id="oce_exp_telco_eng_dollars_1" class="dollar" value="$" /> -->
+															<span id="oce_exp_telco_eng_dollars_1">$ --</span>
+														</div>
+														<div class="col-md-2">
+															<!-- <input type="text" id="oce_exp_telco_labor_dollars_1" class="dollar" value="$" /> -->
+															<span id="oce_exp_telco_labor_dollars_1">$ --</span>
+														</div>
+														<div class="col-md-2">
+															<!-- <input type="text" id="oce_exp_telco_deg_dollars_1" class="dollar" value="$" /> -->
+															<span id="oce_exp_telco_deg_dollars_1">$ --</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															Total Project Dollars
+														</div>
+														<div class="col-md-2">
+															$<span id="oce_tpd_telco_deg_dollars_1">888</span>
+														</div>
+														<div class="col-md-2">
+															$<span id="oce_tpd_telco_deg_dollars_1">3,355</span>
+														</div>
+														<div class="col-md-2">
+															$<span id="oce_tpd_telco_deg_dollars_1">470</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row">
+														<div class="col-md-2">
+															Percent Project Time
+														</div>
+														<div class="col-md-2">
+															<span id="oce_ppt_telco_deg_dollars_1">92.6</span> %
+														</div>
+														<div class="col-md-2">
+															<span id="oce_ppt_telco_deg_dollars_1">91.0</span> %
+														</div>
+														<div class="col-md-2">
+															<span id="oce_ppt_telco_deg_dollars_1">32.6</span> %
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															Total Incurred Dollars
+														</div>
+														<div class="col-md-2">
+															$<span id="oce_tid_telco_deg_dollars_1">6,760</span>
+														</div>
+														<div class="col-md-2">
+															$<span id="oce_tid_telco_deg_dollars_1">10,240</span>
+														</div>
+														<div class="col-md-2">
+															$<span id="oce_tid_telco_deg_dollars_1">23,464</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- TOTAL INCURRED DOLLARS -------------------------------------------- -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="total_incurred_dollars_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Total Incurred Dollars
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="total_incurred_dollars_1_details" class="detail-wrapper inc-dollars">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-3">
+															Output Description
+														</div>
+														<div class="col-md-1">
+															Telco Eng<br>Cap Dollars
+														</div>
+														<div class="col-md-1">
+															Telco Eng<br>Exp Dollars
+														</div>
+														<div class="col-md-1">
+															Eng Cap Rate
+														</div>
+														<div class="col-md-1">
+															Telco Labor<br>Cap Dollars
+														</div>
+														<div class="col-md-1">
+															Telco Labor<br>Exp Dollars
+														</div>
+														<div class="col-md-1">
+															Labor Cap Rate
+														</div>
+														<div class="col-md-1">
+															Telco DEG<br>Cap Dollars
+														</div>
+														<div class="col-md-1">
+															Telco DEG<br>Exp Dollars
+														</div>
+														<div class="col-md-1">
+															DEG Cap Rate
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-3 emph">
+															Total Incurred Dollars
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_telco_eng_cap dollars_1">$ 66,022</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_telco_eng_exp dollars_1">$ 25,957</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_eng_cap rate_1">71.8%</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_telco_labor_cap dollars_1">$ 76,490</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_telco_labor_exp dollars_1">$ 41,094</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_labor_cap_rate_1">65.1%</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_telco_deg_cap_dollars_1">$ 8,141</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_telco_deg_exp_dollars_1">$ 27,128</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tid_deg_cap_rate_1">23.1%</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6 emph">
+															Model Summary
+														</div>
+														<div class="col-md-6">
+															<div class="row int-row">
+																<div class="col-md-2 emph">Eng</div>
+																<div class="col-md-2 emph">Const.</div>
+																<div class="col-md-2 emph">DEG</div>
+																<div class="col-md-2 emph">Cons. & DEG</div>
+																<div class="col-md-2 emph">Total</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tcd_end_total_1">$(5346)</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-6 emph-divided">
+															Total Capital Dollars
+														</div>
+														<div class="col-md-6">
+															<div class="row int-row">
+																<div class="col-md-2">
+																	<span id="tid_ms_tcd_eng_1">$666</span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tcd_const_1">$666</span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tcd_deg_1">$666</span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tcd_cons_and_deg_1">$666</span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tcd_total">$ 666</span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tcd_end_total_1">$150,653</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-6 emph-divided">
+															Total Expense Dollars
+														</div>
+														<div class="col-md-6">
+															<div class="row int-row">
+																<div class="col-md-2">
+																	<span id="tid_ms_ted_const_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_ted_const_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_ted_deg_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_ted_cons_and_deg_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_ted_total"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_ted_end_total_1">$94,179</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-6 emph-divided">
+															Total Excl. Non-Telco<br>Wages & X Chgs
+														</div>
+														<div class="col-md-6">
+															<div class="row int-row">
+																<div class="col-md-2">
+																	<span id="tid_ms_tentw_const_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tentw_const_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tentw_deg_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tentw_cons_and_deg_1"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tentw_total"></span>
+																</div>
+																<div class="col-md-2">
+																	<span id="tid_ms_tentw_end_total_1">$239,485</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-3 emph">
+															H4/A SI/Non-Telco Wages
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_telco_eng_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_telco_eng_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_eng_cap rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_telco_labor_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_telco_labor_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_labor_cap_rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_telco_deg_cap_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_telco_deg_exp_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_h4ntw_end_total_1">$15,507</span>
+														</div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-3 emph">
+															Net Cross Charges Out/In
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_telco_eng_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_telco_eng_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_eng_cap rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_telco_labor_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_telco_labor_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_labor_cap_rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_telco_deg_cap_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_telco_deg_exp_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_nccoi_end_total_1">$ -</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-3 emph">
+															TOTAL WAGES
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_telco_eng_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_telco_eng_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_eng_cap rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_telco_labor_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_telco_labor_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_labor_cap_rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_telco_deg_cap_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_telco_deg_exp_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tw_end_total_1">$254,542</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-3 emph">
+															Clearance From Others
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_telco_eng_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_telco_eng_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_eng_cap rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_telco_labor_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_telco_labor_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_labor_cap_rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_telco_deg_cap_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_telco_deg_exp_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_cfo_end_total_1">$5,346</span>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-3 emph">
+															Total Clearances
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_telco_eng_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_telco_eng_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_eng_cap rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_telco_labor_cap dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_telco_labor_exp dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_labor_cap_rate_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_telco_deg_cap_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_telco_deg_exp_dollars_1"></span>
+														</div>
+														<div class="col-md-1">
+															<span id="tid_tc_end_total_1">$155,999</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- TOTAL FORCE ALL -------------------------------------------- -->
+										<div class="cost-detail">
+											<div class="container-fluid">
+												<div class="row" id="total_force_all_1">
+													<div class="col-xs-11 col-sm-11 col-md-11">
+														<div class="row-expansion">
+															Total Force All
+														</div>
+													</div>
+													<div class="col-xs col-sm-1 col-md-1 expandable">
+														<div class="expand-details closed"></div>
+													</div>
+												</div>
+											</div>
+											<div id="total_force_all_1_details" class="detail-wrapper">
+												<div class="container-fluid detail-container">
+													<div class="row header">
+														<div class="col-md-2">
+															Output Description
+														</div>
+														<div class="col-md-1">
+															Telco Eng Dollars
+														</div>
+														<div class="col-md-1">
+															ASI/Non-Telco
+														</div>
+														<div class="col-md-1">
+															Telco Labor Dollars
+														</div>
+														<div class="col-md-1">
+															Net Cross Charge Out/In
+														</div>
+														<div class="col-md-1">
+															Telco DEG Dollars
+														</div>
+														<div class="col-md-1">
+															Total Force
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															Average Annual Rate
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_aar_telco_eng_dollars_1">$80.67</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_aar_asi_non_telco_1">$110.49</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_aar_telco_labor_dollars_1">$84.58</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_aar_net_cross_charge_1">$84.58</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_aar_telco_deg_dollars_1">$84.46</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_aar_total_force_1">$84.34</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row">
+														<div class="col-md-2">
+															Project Force
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_pf_telco_eng_dollars_1">$990</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_pf_asi_non_telco_1">$ --</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_pf_telco_labor_dollars_1">$1269</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_pf_net_cross_charge_1">$ --</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_pf_telco_deg_dollars_1">$140</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_pf_total_force_1">$2399</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row alt-row">
+														<div class="col-md-2">
+															Non-Project Force
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_npf_telco_eng_dollars_1">$84</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_npf_asi_non_telco_1">$136</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_npf_telco_labor_dollars_1">$121</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_npf_net_cross_charge_1">-</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_npf_telco_deg_dollars_1">$278</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_npf_total_force_1">$619</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+													<div class="row">
+														<div class="col-md-2">
+															Total
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_total_telco_eng_dollars_1">$1,074</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_total_asi_non_telco_1">$136</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_total_telco_labor_dollars_1">$1390</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_total_net_cross_charge_1">-</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_total_telco_deg_dollars_1">$418</span>
+														</div>
+														<div class="col-md-1">
+															<span id="tfa_total_total_force_1">$3,018</span>
+														</div>
+														<div class="col-md-4"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+							<!-- TAB - VOLUME DATA \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+							<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+							<div id="vert_tab_volume_1">
+								<div class="vol-wrapper"> 
+									<div data-ng-app = "headCountVol">
+										<div data-ng-controller="wkEffortController">
+											<div class="container">
+												<!-- COST SPREAD -->
+												<div class="cost-spread">
+													<div>
+														<span class="title">Project Total Cost:</span>&nbsp;<span id="project_total_cost_1" class="pt-value">$2,000,000.00</span>
+														<input type="button" value="Cost Spread" class="btn btn-blue" id="btn_cost_spread" />
+													</div>
+												</div>
+												<!-- ADD WORK EFFORT -->
+												<div class="add-work-effort" id="add_we_1">
+													<div class="action-buttons">
+														<input type="button" value="Add Work Effort" class="btn btn-blue" />
+													</div>
+												</div>
+												<style>
+													.work-effort {}
+													.work-effort .no-border { border:0; }
+													.work-effort i { color:#067ab4; cursor:pointer; }
+													.work-effort i.fa-minus-square { color:#ef6f00; }
+													.work-effort .table .header { min-height:45px; }
+													 table .header th {padding-bottom:10px; padding-left:10px; }
+													/* .table td { padding-top:10px !important; } */
+													/* .add-new-row td.no-pad {padding-top:5px !important; } */
+													.no-pad { padding-top:5px !important; }
+													.work-effort-row-data { border-top: 1px solid #ccc; }
+												</style>
+												<!-- WORK EFFORT DATATABLE STARTS HERE ------------------------------------------->
+												<div class="container work-effort">
+													<div style="border:1px solid #ccc;" >
+														<!-- ADD NEW WORK EFFORT SLIDE UP --------------------------------------->
+														<table class="table table-hover table-condensed table-striped">
+															<thead>
+																<tr class="header">
+																	<th style="width:3%" class="hdr_divider"></th>
+																	<th style="width:41% !important;" class="hdr_divider">Work Effort</th>
+																	<th style="width:13%;" class="hdr_divider">Due Date Minus</th>
+																	<th style="width:13%;" class="hdr_divider">Total Volume</th>
+																	<th style="width:13%;" class="hdr_divider">Total Est. Cost</th>
+																	<th style="width:13%;" class="hdr_divider">Per Unit Total</th>
+																	<th style="width:2% !important">&nbsp;</th>
+																	<th style="width:2% !important;">&nbsp;</th>
+																</tr>
+															</thead>
+															<tbody>
+																<!-- hidden add work effort row ------------------------------- -->
+																<tr id="add_new_work_effort_1" class="add-new-row" style="display:none;">
+																	<td>&nbsp;&nbsp;</td>
+																	<td>
+																		<input data-ng-model="newWorkEffortName" type='text' style="width:98%;" />
+																	</td>
+																	<td>
+																		<input data-ng-model="newDueDateMinus" type='text' style="width:95%;" />
+																	</td>
+																	<td>
+																		<input data-ng-model="newTotalVol" type='text' style="width:95%;" />
+																	</td>
+																	<td>
+																		<input data-ng-model="newTotalVolEst" type='text' style="width:95%;" />
+																	</td>
+																	<td>
+																		<input data-ng-model="newPerUnitTotal" type='text' style="width:95%;" />
+																	</td>
+																	<td class="action-btn">
+																		<i class="fa fa-lg fa-save add" data-ng-click="addWorkEffort()"></i>
+																	</td>
+																	<td class="action-btn">
+																		<i class="fa fa-lg fa-times cancel"></i>
+																	</td>
+																</tr> 
+																<tbody class="no-border" data-ng-repeat="eachRow in workEffort track by $index">
+																	<tr class="work-effort-row-data" >									
+																		<td style="text-align:center; padding:10px;">
+																			<i title="Click for {{eachRow.workEffortName}} details" ng-class="{'fa fa-minus-square fa-lg': isCollapsed, 'fa fa-plus-square fa-lg': !isCollapsed}" 
+																			   data-ng-click="eachRow.showTransactions=!eachRow.showTransactions;isCollapsed = !isCollapsed"></i> 
+																		</td>
+																		<td>
+																			<input data-ng-model="eachRow.workEffortName" type='text' disabled="true"/>
+																		</td>
+																		<td>
+																			<input data-ng-model="eachRow.dueDateMinus" type='text' disabled="true"/>
+																		</td>    
+																		<td>
+																			<input data-ng-model="eachRow.totalVol" type='text' disabled="true"/>
+																		</td>
+																		<td>
+																			<input data-ng-model="eachRow.totalVolEst" type='text' disabled="true"/>
+																		</td>
+																		<td>
+																			<input data-ng-model="eachRow.perUnitTotal" type='text' disabled="true"/>
+																		</td>	
+																		<td style="width:2% !important;">&nbsp;&nbsp;
+																		<!-- edit functionality for later on 
+																			<i class="fa fa-lg fa-edit edit" data-ng-click="editWorkEffort($index)"></i>
+																		-->
+																		</td>
+																		<td style="width:2% !important; padding:10px;">
+																			<i class="fa fa-lg fa-trash-o remove" data-ng-click="removeWorkEffort($index)"></i>
+																		</td>
+																	</tr>
+																	<tr data-ng-show="eachRow.showTransactions">
+																		<td colspan="8" style="padding:0 !important; background-color:#fff !important;">
+																			<div style="border-left:15px solid #ef6f00;">
+																				<div style="padding-left:75px;">
+																					<div style="padding:20px;">
+																						<div class="add-role" id="add_role_1" style="padding-bottom:20px;">
+																							<div class="action-buttons">
+																								<input type="button" value="Add Role" class="btn btn-blue" />
+																							</div>
+																						</div>
+																						<div class="role">
+																							<div style="border:1px solid #ccc;">
+																								<table class="table table-hover table-condensed table-striped">
+																									<thead>
+																										<tr class="header">
+																											<th class="hdr_divider" style="width:23%;">Role</th>
+																											<th class="hdr_divider" style="width:23%;">Activity</th>
+																											<th class="hdr_divider" style="width:25%;">Per Unit Hours</th>
+																											<th class="hdr_divider" style="width:10%;">Due Date Minus</th>
+																											<th class="hdr_divider" style="width:15%;">Capital vs. Expense Ratio</th>
+																											<th style="width:2% !important;">&nbsp;&nbsp;</th>	
+																											<th style="width:2% !important;">&nbsp;&nbsp;</th>																										
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<!-- hidden add role row --------------------------------------------------------------------- -->
+																										<tr id="add_new_role_1" class="add-new-row" style="display:none;">
+																											<td class="no-pad"> 
+																												<select data-ng-model="newRoles[$index]" data-ng-options="role.roleName for role in globalRoles" /></select>
+																											</td>
+																											<td class="no-pad"> 
+																												<select data-ng-model="newActivity[$index]" data-ng-options="activity.activityName for activity in globalActivities" /></select>
+																											</td>
+																											<td class="no-pad"> 
+																												<input data-ng-model="newPerUnitHours[$index]" type='text' />
+																											</td>
+																											<td class="no-pad"> 
+																												<input data-ng-model="newDueDateMinus[$index]" type='text' />
+																											</td>
+																											<td class="no-pad"> 
+																												<input data-ng-model="newCostRatio[$index]" type='text' />
+																											</td>
+																											<td>
+																												<i class="fa fa-lg fa-save add" data-ng-click="addRoleData()" style="padding:10px;"></i>
+																											</td>		
+																											<td>
+																												<i class="fa fa-lg fa-times cancel" style="padding:10px;"></i>
+																											</td>																										
+																										</tr>
+																										<tr data-ng-repeat="roleDataRow in roleData track by $index" data-ng-if="eachRow.workEffortId === roleDataRow.workEffortId">	                                                                    	
+																											<td> 
+																												<input type='text' data-ng-model="roleDataRow.role" disabled="true">
+																											</td>
+																											<td> 
+																												<input type='text' data-ng-model="roleDataRow.activity" disabled="true">
+																											</td>
+																											<td> 
+																												<input type='text' data-ng-model="roleDataRow.perUnitHours" disabled="true">
+																											</td>
+																											<td> 
+																												<input type='text' data-ng-model="roleDataRow.dueDateMinus" disabled="true">
+																											</td>
+																											<td> 
+																												<input type='text' data-ng-model="roleDataRow.capitalRatio" disabled="true">
+																											</td>	
+																											<td>&nbsp;
+																											<!-- edit functionality for later on 
+																												<i class="fa fa-lg fa-edit edit" data-ng-click="editWorkEffortRole($index)"></i>
+																											-->
+																											</td>
+																											<td>
+																												<i class="fa fa-lg fa-trash-o remove" data-ng-click="removeWorkEffortRole(roleDataRow)" style="padding:10px;"></i>
+																											</td>			                                                                      
+																										</tr>
+																									</tbody>
+																								</table>
+																							</div>
+																						</div>
+																						<!-- ------------------------------------------------------------------------------- -->
+																						<!-- ------------------------------------------------------------------------------- -->   
+																						<div style="padding:20px 0;">
+																							<div id="add_dma_1" class="add-location" style="padding-bottom:20px;">
+																								<div class="action-buttons">
+																									<input type="button" value="Add DMA" class="btn btn-blue" />
+																								</div>
+																							</div>
+																							<div class="location">
+																								<div style="border:1px solid #ccc;">
+																									<table class="table table-condensed table-striped">
+																										<thead>
+																											<tr class="header">
+																												<th class="hdr_divider" style="min-width:2% !important;"></th>
+																												<th class="hdr_divider" style="width:45%;">DMA</th>
+																												<th class="hdr_divider" style="width:16%;">Priority</th>
+																												<th class="hdr_divider" style="width:16%;">DMA Volume</th>
+																												<th class="hdr_divider" style="width:17%;">DMA Estimated Cost</th>	
+																												<th style="min-width:2% !important;">&nbsp;&nbsp;</th>	
+																												<th style="min-width:2% !important;">&nbsp;&nbsp;</th>																										
+																											</tr>
+																										</thead>
+																										<tr id="add_new_dma_1" class="add-new-row" style="display:none;">
+																											<!-- <td>&nbsp;{{eachRow.workEffortName}} {{eachRow.workEffortId}}</td> -->
+																											<td>&nbsp;</td>
+																											<td class="no-pad"> 
+																												<input data-ng-model="newDMA[$index]" type='text' />
+																											</td>
+																											<td class="no-pad"> 
+																												<select data-ng-model="newPriority[$index]" data-ng-options="priority.type for priority in globalPriority" /></select>
+																											</td>
+																											<td class="no-pad"> 
+																												<input data-ng-model="newDMAVol[$index]" type='text' />
+																											</td>
+																											<td class="no-pad"> 
+																												<input data-ng-model="newDMAEstCost[$index]" type='text' />
+																											</td>
+																											<td>
+																												<i class="fa fa-lg fa-save add" data-ng-click="addLocation()" style="padding:10px;"></i>
+																											</td>
+																											<td>
+																												<i class="fa fa-lg fa-times cancel" style="padding:10px;"></i>
+																											</td>															
+																										</tr>
+																										<!-- addVolumeData -->
+																										<tbody class="no-border" data-ng-repeat="locationDataRow in workEffortLocation track by $index">
+																											<tr>
+																												<td style="text-align:center; padding:10px;">
+																													<i title="Click for {{locationDataRow.workEffortLocation}} volume details" ng-class="{'fa fa-minus-square fa-lg': isLocCollapsed, 'fa fa-plus-square fa-lg': !isLocCollapsed}" 
+																													   data-ng-click="locationDataRow.showTransactions=!locationDataRow.showTransactions;isLocCollapsed = !isLocCollapsed"></i> 
+																												</td>
+																												<td>
+																													<input type='text' data-ng-model="locationDataRow.location" disabled="true">
+																												</td>
+																												<td> 
+																													<input type='text' data-ng-model="locationDataRow.priority" disabled="true">
+																												</td>
+																												<td> 
+																													<input type='text' data-ng-model="locationDataRow.dmaVol" disabled="true">
+																												</td>
+																												<td> 
+																													<input type='text' data-ng-model="locationDataRow.dmaCost" disabled="true">
+																												</td>
+																												<td>&nbsp;&nbsp;
+																													<!-- edit functionality for later on 
+																														<i class="fa fa-lg fa-edit edit" data-ng-click="editWorkEffortLocation($index)"></i>
+																													-->
+																												</td>
+																												<td>
+																													<i class="fa fa-lg fa-trash-o remove" data-ng-click="removeWorkEffortLocation(locationDataRow)" style="padding:10px;"></i>
+																												</td>			                                                                      
+																											</tr> 
+																											<tr data-ng-show="locationDataRow.showTransactions">
+																												<td colspan="7" style="padding:0 !important; background-color:#fff !important;">
+																													<div style="border-left:15px solid #ef6f00;">
+																														<div style="padding:5px 20px 20px 20px;">
+																															<div class="container">
+																																<div class="row" style="padding-bottom:5px;">
+																																	<div class="col-md-11 units">
+																																		<span>Number of units:</span>&nbsp;<input id="vol_number_of_units_0" type="text">&nbsp;&nbsp;
+																																		<input value="Monthly Spread" class="btn btn-blue" type="button">
+																																	</div>
+																																	<div class="col-md-1">
+																																		<span>Year:</span>
+																																		<select class="select-year"></select>
+																																	</div>
+																																</div>
+																															</div>
+																															<div>
+																																<div style="border:1px solid #ccc;">
+																																	<table class="table table-condensed table-responsive">
+																																		<thead>
+																																			<tr class="no-border header">
+																																				<th></th>
+																																				<th>Jan</th>
+																																				<th>Feb</th>
+																																				<th>Mar</th>
+																																				<th>Apr</th>
+																																				<th>May</th>
+																																				<th>Jun</th>
+																																				<th>Jul</th>
+																																				<th>Aug</th>
+																																				<th>Sep</th>
+																																				<th>Oct</th>
+																																				<th>Nov</th>
+																																				<th>Dec</th>
+																																				<th>Total</th>
+																																			</tr>
+																																		</thead>
+																																		<tbody>
+																																			<tr class="alt-row">
+																																				<td style="font-weight:bold">Volume</td>
+																																				<td class="no-pad"><input data-ng-model="vol_jan[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_feb[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_march[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_april[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_may[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_june[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_july[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_aug[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_sept[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_oct[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_nov[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vol_dec[$index]" type="text" style="width: 50px"></td>
+																																				<td><span id="vol_total[$index]">[AUTO]</span></td>
+																																			</tr>
+																																			<tr>
+																																				<td style="font-weight:bold">Volume%</td>
+																																				<td><span id="vol_per_jan_0">[val]</span></td>
+																																				<td><span id="vol_per_feb_0">[val]</span></td>
+																																				<td><span id="vol_per_mar_0">[val]</span></td>
+																																				<td><span id="vol_per_apr_0">[val]</span></td>
+																																				<td><span id="vol_per_may_0">[val]</span></td>
+																																				<td><span id="vol_per_jun_0">[val]</span></td>
+																																				<td><span id="vol_per_jul_0">[val]</span></td>
+																																				<td><span id="vol_per_aug_0">[val]</span></td>
+																																				<td><span id="vol_per_sep_0">[val]</span></td>
+																																				<td><span id="vol_per_oct_0">[val]</span></td>
+																																				<td><span id="vol_per_nov_0">[val]</span></td>
+																																				<td><span id="vol_per_dec_0">[val]</span></td>
+																																				<td><span id="vol_per_total_0">[AUTO]</span></td>
+																																			</tr>
+																																			<tr class="alt-row">
+																																				<td style="font-weight:bold">Estimated Cost</B></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_jan[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_feb[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_march[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_april[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_may[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_june[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_july[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_aug[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_sept[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_oct[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="est_cost_nov[$index]" type="text" style="width: 50px"></td>
+																																				<td class="no-pad"><input data-ng-model="vest_cost_dec[$index]" type="text" style="width: 50px"></td>
+																																				<td><span id="est_cost_total_0">[AUTO]</span></td>
+																																			</tr>
+																																			<tr>
+																																				<td style="font-weight:bold">Estimated Cost %</B></td>
+																																				<td><span id="vol_est_cost_jan_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_feb_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_mar_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_apr_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_may_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_jun_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_jul_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_aug_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_sep_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_oct_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_nov_0">[val]</span></td>
+																																				<td><span id="vol_est_cost_dec_0">[val]</span></td>
+																																				<td><span id="vol_per_total_0">[AUTO]</span></td>
+																																			</tr>
+																																		</tbody>
+																																	</table>
+																																</div>
+																															</div>   
+																														</div>
+																													</div>
+																												</td>		                                                                   
+																											</tr>
+																										</tbody>
+																									</table>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</td>																		
+																	</tr>
+																</tbody>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ****** Footer starts here ****** -->
+			<div class="container-fluid" id="footer">
+				<div class="row">
+					<div class="col-sm-3">
+						<h5>Support</h5>
+						<ul>
+							<li><a href="#">Resource and Financial Forecasting tSPace Community</a></li>
+							<li><a href="#">Resource and Financial Forecasting Wiki</a></li>
+							<li><a href="#">SI-Financials Toolkit</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<h5>Contact Us</h5>
+						<ul>
+							<li><a href="#">Feedback</a></li>
+							<li><a href="#">Forum</a></li>
+							<li><a href="#">Report Issues</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<h5>Resources</h5>
+						<ul>
+							<li><a href="#">CPFM</a></li>
+							<li><a href="#">Construction and Engineering Portal</a></li>
+							<li><a href="#">FDW</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3">
+						<h5>Tools</h5>
+						<ul>
+							<li><a href="#">eLink</a></li>
+							<li><a href="#">AT &amp; T</a></li>
+							<li><a href="#">Speakeasy</a></li>
+						</ul>
+					</div>
+					<div style="clear:both;"></div>
+					<div class="small">
+						&copy; 2015 AT&amp;T Resource and Financial Forecasting<br />
+						AT&amp;T Proprietary (Internal Use Only) | Not for use or disclosure outside the AT&amp;T companies except under written agreement.
+					</div>
+				</div>
+			</div>
+			<!-- MODAL DIALOG SAVE CONTAINER STARTS HERE ------------------------------------------------ -->
+			<div style="clear:both;"></div>
+			<div id="save_modal" class="modal fade" tabindex="-1" role="dialog" style="display:none;">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Save</h4>
+						</div>
+						<div class="modal-body">
+						
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-cancel" data-dismiss="modal" value="cancel">Cancel</button>
+							<button type="button" class="btn btn-blue" value="save">Save</button>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!-- MODAL DIALOG SAVE AS CONTAINER STARTS HERE --------------------------------------------- -->
+			<div style="clear:both;"></div>
+			<div id="save_as_modal" class="modal fade" tabindex="-1" role="dialog" style="display:none;">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Save As</h4>
+						</div>
+						<div class="modal-body">
+						
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-cancel" data-dismiss="modal" value="cancel">Cancel</button>
+							<button type="button" class="btn btn-blue" value="save">Save</button>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!-- MODAL DIALOG RELOAD CONFIRMATION STARTS HERE ------------------------------------------ -->
+			<div style="clear:both;"></div>
+			<div id="reload_modal" class="modal fade" tabindex="-1" role="dialog" style="display:none;">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Reload</h4>
+						</div>
+						<div class="modal-body">
+						
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-cancel" data-dismiss="modal" value="cancel">Cancel</button>
+							<button type="button" class="btn btn-blue" value="ok">OK</button>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+		<script type='text/javascript' src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" language="javascript" src="js/bootbox.min.js"></script>
+		<script type="text/javascript" language="javascript" src="js/headcount.js"></script>
+		<script type="text/javascript" language="javascript" src="js/volume.js"></script>
+		<script type="text/javascript" language="javascript" src="js/work_effort.js"></script>
+		<script type="text/javascript" language="javascript" src="js/work_effortAng.js"></script>
+		<script type="text/javascript" language="javascript" class="init">
+		$(document).ready(function() {
+			$('.date-picker').datepicker();
+			$('#proj_tabs').tabs();
+			$('.vert-tab-menu').tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
+			PopulateYears();
+
+			var table = $('#tbl_we_1').DataTable({
+				"bFilter":  false,								//hides filtering and disables filter listeners 
+				"bSort": true,
+				"aoColumnDefs": [
+					{ "bSortable": false, "aTargets": [0]},
+					{ "bSortable": false, "aTargets": [6]},
+					{ "bSortable": false, "aTargets": [7]}
+				],
+				"ajax": "data/headcount.txt",
+				"sDom": "<'top'><'clear'>",						//hides the show entries selector alt = "sDom": "<'top'>rt<'bottom'flp><'clear'>"
+				"columns": [
+					{
+						"className":      'details-control',
+						"info": 		  true,
+						"orderable":      false,
+						"data":           null,
+						"defaultContent": ''
+					},
+					{ "data": "work effort" },
+					{ "data": "due date minus" },
+					{ "data": "total volume" },
+					{ "data": "total estimated cost" },
+					{ "data": "per unit total" },
+					{
+						"className":      'cAlign',
+						"bSortable": 	  false,
+						"info": 		  true,
+						"orderable":      false,
+						"data":           null,
+						"defaultContent": '&nbsp;' //<i class="fa fa-lg fa-edit remove"></i>
+					},
+					{
+						"className":      'cAlign',
+						"bSortable": 	  false,
+						"info": 		  true,
+						"orderable":      false,
+						"data":           null,
+						"defaultContent": '<i class="fa fa-lg fa-minus-circle remove"></i>'
+					}
+				],
+				"order": [[1, 'asc']]
+			});
+		});
+	
+		// ############ LOCATION YEAR POPULATION #####################################
+		function PopulateYears(id){
+			var d = new Date();
+			var year = d.getFullYear();
+			var y;
+			
+			for(var i=0; i<7;i++){
+				y = '<option value="'+(year+i)+'">'+(year+i)+'</option>';
+				$('.select-year').append(y);
+			};
+			// select a specific year if needed
+			//$(selector).find('option[value="'+(year+2)+'"]').attr("selected",true);
+		}
+
+		//$('#proj_tabs ul:first').append('<li class="ui-state-default ui-corner-top"><a href="#Create-New-Project" title="Create New Project" id="createNewTab" class="ui-tabs-anchor">+ Create New<br>&nbsp;<br></a></li>')
+			
+
+			$('#createNewTab').bind('click',function(){
+				$('#createNewModal').modal('show');
+				$('#createNewModal .alert').css({'display':'none'});
+				$('#mstrProjCd').val('');
+				$('#mstrProjName').val('');
+				$('#verType').val('Bare Metal');
+			});
+		
+			tabNbr = $('#proj_tabs ul:first li').length - 1;
+			fillerHTML = $('#proj-tabs-1').html();
+			closeModalFn();
+			$('#createNewBtn').bind('click',function(){
+				 projObj = {};
+				 projObj.projCd = $('#mstrProjCd').val();
+				 projObj.projName = $('#mstrProjName').val();
+				 projObj.verType = $('#verType').val();
+				 //alert(projObj.projCd +" - "+ projObj.projName +" - "+ projObj.verTyp);
+
+				 if (projObj.projCd=='' || projObj.projName==''){
+					$('#createNewModal .alert').css({'display':'block'});
+				 }
+				 else{
+					tabNbr = tabNbr + 1;
+					//$('#proj_tabs ul').first().find('li').removeClass('ui-tabs-active');
+					$('<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="proj-resource-1" aria-labelledby="ui-id-'+ tabNbr +'" aria-selected="false" aria-expanded="false" id="newTab"><a href="#'+ projObj.projCd +'" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-'+ tabNbr +'">' + projObj.projName + '<br>'+ projObj.verType +'</a><span class="close-tab" title="Close project tab"></li>').insertBefore('#proj_tabs ul:first li:last-child');
+					$('#createNewModal .alert').css({'display':'none'});
+					$('#mstrProjCd').val('');
+					$('#mstrProjName').val('');
+					$('#verType').val('Bare Metal');
+
+					$('#proj_tabs').append('<div id="'+ projObj.projCd +'">'+ fillerHTML +'</div>');
+					$('#' + projObj.projCd + ' #txt_proj_code_1').val(projObj.projCd);
+					$('#' + projObj.projCd + ' #txt_proj_name_1').val(projObj.projName);
+					$('#' + projObj.projCd + ' #sel_ver_type_1').val(projObj.verType.toLowerCase());
+					$('#proj_tabs').tabs("refresh");
+					$( "#proj_tabs" ).tabs({ active: tabNbr-1 });
+					$('#createNewModal').modal('hide');
+					//ui-tabs-active
+					closeModalFn();
+				 }	
+			});
+
+			function closeModalFn(){
+				$('.close-tab').bind('click',function(){
+					$('#closeProjectModal').modal('show');
+					$('#projNameInCloseModal').html($(this).parent().find('a').text());
+					tabToBeRemoved = $(this).parent().attr('aria-labelledby');
+					$('#closeProjectModalBtn').attr({'rel':tabToBeRemoved})
+					$('#closeProjectModalBtn').bind('click',function(){
+						tabToBeRemovedRel = $(this).attr('rel');
+						$('#proj_tabs').find('li[aria-labelledby=' + tabToBeRemovedRel +']').remove();
+						$('#closeProjectModal').modal('hide');
+						$('#proj_tabs').tabs("refresh");
+					});
+
+				});
+			}
+		</script>
+	</body>
+</html>

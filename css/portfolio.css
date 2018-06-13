@@ -1158,9 +1158,9 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     box-shadow: none;
     border: none; }
     .project-slides button.prev-slide {
-      left: 50px; }
+      left: 5%; }
     .project-slides button.next-slide {
-      right: 50px; }
+      right: 5%; }
     .project-slides button svg {
       color: #ccc; }
   .project-slides img {
@@ -1171,7 +1171,8 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     display: block;
     padding: 40px 0;
     width: 80%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    min-height: 60px; }
 
 /* -------------- Project navigation ------------- */
 .proj-slides-nav {

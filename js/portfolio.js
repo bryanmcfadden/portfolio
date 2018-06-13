@@ -257,11 +257,22 @@ $(document).ready(function(){
 			$('.proj-slides-nav ul li:first-child span').addClass("active");
 	}
 
+	function ScrollMeTo(element){
+		var elementTarget;
+		if(element == "about"){ elementTarget = "#aboutMe";}
+		$(".mainContentBox").mCustomScrollbar("stop").mCustomScrollbar("scrollTo",$(elementTarget),{scrollEasing:"easeInOut", scrollInertia: 1000});
+	}
+
+	$("body").on("click", ".sectionIntro .btnNext", function() {
+		ScrollMeTo("about");
+	});
+
+ 	//((((((((((((((((( PROJECT SLIDE NAVIGATION BUTTON DOTS ))))))))))))))))))))
 	$("body").on("click", ".proj-slides-nav ul li", function() {
 		projectSlide = $(this).index();
 		LoadProjectSlides();
 		SetProjectSlideNavigation();
-	})
+	});
 
 	//((((((((((((((((((((((((( PREVIOUS PROJECT BUTTON )))))))))))))))))))))))))
 	$("body").on("click", ".previous-project", function(){
