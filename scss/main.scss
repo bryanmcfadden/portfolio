@@ -196,7 +196,7 @@ $default-section-bg-alt: #f7f7f7;
   html, body {
     height:100%;
     width:100%;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Roboto Lt', Arial, sans-serif;
     font-size:1em;
     color: rgb(51,51,51);
   /*	overflow:hidden; */
@@ -249,7 +249,8 @@ $default-section-bg-alt: #f7f7f7;
     letter-spacing:1.2px;}
   p {
     padding:1.2em 2em;
-    line-height:1.5em;}
+    line-height:1.5em;
+    letter-spacing:.5px;}
 
   a {
     text-decoration:none;
@@ -421,8 +422,7 @@ $default-section-bg-alt: #f7f7f7;
     padding:10px;
     top:0;
     left:0;
-    z-index:900;
-  }
+    z-index:900;}
   /* ------- Hamburger icon  ------------ */
   .hamburger.light .hamburger-inner {
     background-color::#fff !important; }
@@ -431,30 +431,146 @@ $default-section-bg-alt: #f7f7f7;
     opacity:1;
   }
 
-    /* ------- Main-Menu  --------------- */
-    .mainMenu {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      display: none;
-      z-index: 300;
-    }
-    .mainMenu {
-      opacity: 0;
-      background-color: #fff;
-      transform: scale(1.2);
-      transition: opacity .5s, transform .5s;
-      transform-origin: right top 0;
-    }
-    /*
-    @media screen and (max-width: 700px;) {
-      .mainMenu { background-color: #fff; }
-    }
-    */
-    .mainMenu.visible {
+  /* Main Menu  ============================================================= */
+  /* ------- Endorsements  -------------- */
+  .endorsementWrapper, .mainMenuLinks {
+    height: 50%;
+    top: 25%;
+    position: absolute;
+  }
+  .endorsementWrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 72%;
+    color: #fff;
+    font-family: 'Apple Garamond', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @media screen and (max-width: 700px) {
+    .endorsementWrapper { display: none; }
+  }
+  .endorsementSubWrapper {
+    position: absolute;
+    bottom: 12.5%;
+    right: 10%;
+    display: block;
+    width: 70%;
+    padding: 1em;
+    text-align: right;
+  }
+  .endorsementWrapper h3 {
+    text-align: right;
+    font-size: 1.8em;
+    opacity: 0.1;
+    padding-right: 10px;
+  }
+  .pictoQuote {
+    color: #FC0;
+    font-size: 3em;
+    padding: 0 10px;
+    font-style: normal;
+  }
+  .endorsement {
+    font-size: 1.7em;
+    display: inline-block;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+  }
+  .endorsement::before, .endorsement::after {
+    color: $default-color;
+    font-size: 1.8em;
+    font-style: normal;
+  }
+  .endorsement::before {
+    content: "“";
+    padding-right: 15px;
+  }
+  .endorsement::after {
+    content: "”";
+    padding-left: 15px;
+    position: absolute;
+  }
+  .endorsementAuthor {
+    opacity: .4;
+    font-size: 1em;
+    padding-right: 10px;
+    letter-spacing: 1.1px;
+    font-family: 'Apple Garamond', Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+  }
+  /* ------- Main-Menu  ----------------- */
+  .mainMenu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+    z-index: 300;
+    opacity: 0;
+    background-color: #222;
+    transform: scale(1.2);
+    transition: opacity .5s, transform .5s;
+    transform-origin: right top 0;
+
+    &.visible {
       opacity: 1;
+      transform: scale(1);}
+
+    .mainMenuLinks {
+      display:block;
+      margin:0;
+      opacity:0;
+      padding:0;
+      width:28%;
+      left:70%;
+      min-height:200px;
+      color: #fff;
+      font-size:1.8em;
+      font-weight:300;
+      font-style: normal;
+      list-style: none;
+      z-index:2;
+      filter: blur(30px);
+
+      &.visible {
+        opacity:1;
+        transform: translateX(30px);
+        transition: transform .5s;
+        transform-origin: left;
+        filter: blur(0);
+
+        .menuLink {
+          a {
+            display: table-cell;
+            color: #fff;
+            vertical-align: middle;
+            padding:0 20px;
+            letter-spacing: 4px;
+            transition: opacity 0.5s;
+            background-color: transparent;}
+        }
+      }
+    }
+
+    .menuLink {
+      display:table;
+      height:20%;
+      line-height:20%;
+      padding-left:10%;
+      opacity:0;
+      bottom:20px;
+      position:relative;
+      transform: scale(.8);
+      transform: translateX(30px);
+      transition: opacity 0.5s, transform 0.5s, filter 0.5s;
+      transform-origin: right center;}
+
+    .homeLink, .aboutLink, .skillsLink, .currentProjLink, .contactLink {
+      opacity: 1;
+      bottom: 0;
       transform: scale(1);
     }
+  }

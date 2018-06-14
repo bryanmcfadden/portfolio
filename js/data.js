@@ -37,15 +37,15 @@ var xmasTreePermit = new Array(
   "UX Researcher",
   new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
   new Array(
-    new Array(imgPath+"xmastreepermit/epermit_01.jpg","Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio dfdfdfdf."),
-    new Array(imgPath+"xmastreepermit/epermit_02.jpg","Suspendisse tellus odio, aliquet quis lorem ipsum dolor sit amet, consectetur commodo eget, efficitur vel eros. Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio.dfdfdfdf.")
+    new Array(imgPath+"epermit/epermit_01.jpg","Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio dfdfdfdf."),
+    new Array(imgPath+"epermit/epermit_02.jpg","Suspendisse tellus odio, aliquet quis lorem ipsum dolor sit amet, consectetur commodo eget, efficitur vel eros. Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio.dfdfdfdf.")
   )
 );
 
 
 var disasterDataPortal = new Array(
   "Disaster Data Portal",
-  "H.U.D.",
+  "Dept. of Housing and Urban Development",
   "Internal web app",
   "UX / IxD / Front-end",
   "Lorem ipsum aliquet quis commodo eget, dolor sit amet, consectetur Suspendisse tellus odio, sollicitudin leo sit amet suscipit euismod efficitur vel eros. Nulla. Aliquam iaculis "+

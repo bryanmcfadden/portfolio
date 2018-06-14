@@ -49,7 +49,7 @@ $(window).load(function(){
 				//show skills animation if necessary
 				if(!skillsShown){
 					$('.bar-chart #skill1').css({'opacity': 1,'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
-					$('.bar-chart #skill2').css({'opacity': 1,'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
+					$('.bar-chart #skill2').css({'opacity': 1,'height': '0%'}).stop().delay(400).animate({'height':'65%'}, 1000, 'easeOutExpo');
 					$('.bar-chart #skill3').css({'opacity': 1,'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
 					$('.bar-chart #skill4').css({'opacity': 1,'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
 					$('.bar-chart #skill5').css({'opacity': 1,'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
@@ -90,7 +90,19 @@ $(document).ready(function(){
 	}
 
 	$('.hamburger').on('click', function(e){
-		DisplayProjectView();
+		//show main menu modal
+		$('.mainMenu').css("display", "block");
+		setTimeout( function(){
+			$('.mainMenu').addClass("visible");
+
+				setTimeout( function(){
+					$('.mainMenuLinks').addClass("visible");
+				},500);
+
+		},100);
+
+		//
+
 	});
   /* ========= Introduction ================================================== */
 
