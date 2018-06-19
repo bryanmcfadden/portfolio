@@ -126,3 +126,8 @@ var projectsList = new Array(
   tspace,
   tdc
 );
+
+var endorsementQoutes = new Array (
+  new Array ( "Bryan brings a high level of competency, passion and skills to deliver the best UX experience to the user. Bryan can work with the user to come up with the best UX design and then turn right around and write the code to deliver the desired UX experience.", "David Geiger - Associate Director - AT&T" ),
+	new Array ( "I'm often searching for talented independdent contractors who understand the needs and tight budgets of a small business. Bryan gets it. He delivers top-quality work at very reasonable rates. And, on top of that, he's honest, hard working and personable.", "Loren Goldfarb - COO/Partner - Everwell" )
+);

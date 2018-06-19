@@ -6,6 +6,7 @@ All functionality required for my portfolio pages
 ============================================================================= */
 var skillsShown;
 var project, projectSlide, projSlideTotal;
+var viewingProject = false;
 var projTotal = projectsList.length;
 var speed = 800;
 
@@ -33,34 +34,43 @@ $(window).load(function(){
 		mouseWheel:{ scrollAmount: 300 },
 		callbacks:{
 			whileScrolling:function(){
-				//do something
+				MenuButtonBackground((this.mcs.top)*-1);
 			}
 		}
 	});
 
-	function MenuButtonBackground(scrollTopValue){
-		var secIntro = $(".sectionIntro").height() + parseInt($(".sectionIntro").css("padding-top")) + parseInt($(".sectionIntro").css("padding-bottom")) - 74; // - 80
-		if(scrollTopValue>secIntro){
-			//alert('scrollTopValue='+scrollTopValue+'< tempHeight='+tempHeight);
-			//change the menu button background color to black
-			if($(".hamburger").hasClass("light")){
-				$(".hamburger").removeClass("light");
 
-				//show skills animation if necessary
-				if(!skillsShown){
-					$('.bar-chart #skill1').css({'opacity': 1,'height': '0%'}).stop().delay(200).animate({'height':'95%'}, 1000, 'easeOutExpo');
-					$('.bar-chart #skill2').css({'opacity': 1,'height': '0%'}).stop().delay(400).animate({'height':'65%'}, 1000, 'easeOutExpo');
-					$('.bar-chart #skill3').css({'opacity': 1,'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
-					$('.bar-chart #skill4').css({'opacity': 1,'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
-					$('.bar-chart #skill5').css({'opacity': 1,'height': '0%'}).stop().delay(1000).animate({'height':'15%'}, 1000, 'easeOutExpo');
-					skillsShown = true;
-				}
+	function MenuButtonBackground(scrollTopValue){
+		//true == project viewport
+		//false == main view
+		var secIntro;
+			if(viewingProject){
+				secIntro = $(".project-details header").height() + parseInt($(".project-details header").css("padding-top")) + parseInt($(".project-details header").css("padding-bottom")) - 74;
+			}else{
+				secIntro = $(".sectionIntro").height() + parseInt($(".sectionIntro").css("padding-top")) + parseInt($(".sectionIntro").css("padding-bottom")) - 74; // - 80
 			}
-		}else{
-			//change the menu button background color to white
-			$(".hamburger").addClass("light");
-		}
- }
+
+			if(scrollTopValue>secIntro){
+				//alert('scrollTopValue='+scrollTopValue+'< tempHeight='+tempHeight);
+				//change the menu button background color to black
+				if($(".hamburger").hasClass("light")){
+					$(".hamburger").removeClass("light");
+
+						//show skills animation if necessary
+						if(!viewingProject && !skillsShown){
+							$('.bar-chart #skill1').css({'opacity': 1,'height': '0%'}).stop().delay(200).animate({'height':'90%'}, 1000, 'easeOutExpo');
+							$('.bar-chart #skill2').css({'opacity': 1,'height': '0%'}).stop().delay(400).animate({'height':'60%'}, 1000, 'easeOutExpo');
+							$('.bar-chart #skill3').css({'opacity': 1,'height': '0%'}).stop().delay(600).animate({'height':'95%'}, 1000, 'easeOutExpo');
+							$('.bar-chart #skill4').css({'opacity': 1,'height': '0%'}).stop().delay(800).animate({'height':'75%'}, 1000, 'easeOutExpo');
+							$('.bar-chart #skill5').css({'opacity': 1,'height': '0%'}).stop().delay(1000).animate({'height':'88%'}, 1000, 'easeOutExpo');
+							skillsShown = true;
+						}
+				}
+			}else{
+				//change the menu button background color to white
+				$(".hamburger").addClass("light");
+			}
+ 	}
 });
 
 $(document).ready(function(){
@@ -77,43 +87,88 @@ $(document).ready(function(){
 			});
 			$('.mainContentBox').animate({opacity: 1, visibility: "visible"},1000);
 			//$(".recent-projects").animate({opacity: 1, visibility: "visible"},1000);
-			$('.hamburger').toggleClass('light is-active');
+			$('.hamburger').removeClass("light is-active");
 		}else{
 			//alert('opening project view');
 			proj.toggleClass("open");
 			proj.removeClass("close");
-			proj.css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},500);
+			proj.css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},1000);
 			//$(".recent-projects").animate({opacity: 0, visibility: "hidden"},1000);
 			$('.mainContentBox').animate({opacity: 0, visibility: "hidden"},1000);
-			$('.hamburger').toggleClass('light is-active');
+			$('.hamburger').addClass("light is-active");
 		}
 	}
 
+	/* ========= Main Menu ===================================================== */
+	/* ========================================================================= */
 	$('.hamburger').on('click', function(e){
-		//show main menu modal
-		$('.mainMenu').css("display", "block");
-		setTimeout( function(){
-			$('.mainMenu').addClass("visible");
-
+		if(viewingProject){
+			DisplayProjectView();
+			viewingProject = false;
+		}else{
+			if($(this).hasClass("is-active")){
+				//main menu is open and we are closing it
+				$('.mainMenuLinks').removeClass("visible");
+				$('.mainMenu').removeClass("visible");
+				//if we are in the top half with the light class applied when opening the menu
+				//how do we make sure we keep it there?
+				$('.hamburger').removeClass("light is-active");
+				$('.mainMenu').css("display", "none");
 				setTimeout( function(){
-					$('.mainMenuLinks').addClass("visible");
-				},500);
+					//do something
+				},1000);
+			}else{
+				//show main menu modal
+				$('.mainMenu').css("display", "block");
+				setTimeout( function(){
+					$('.mainMenu').addClass("visible");
+					$('.hamburger').addClass("light is-active");
 
-		},100);
+						setTimeout( function(){
+							$('.mainMenuLinks').addClass("visible");
+						},500);
+				},100);
+			}
+		}
+		$('.hamburger').blur();
+	});
 
-		//
+  //((((((((((((((((((((( MAIN MENU NAVIGATION LINKS ))))))))))))))))))))))))))
+	$('body').on('click', '.mainMenuLinks .menuLink', function(){
+		var location;
+		if( $(this).hasClass('aboutLink') ){ location = 'about'; }
+		else if( $(this).hasClass('skillsLink') ){ location = 'skills'; }
+		else if( $(this).hasClass('currentProjLink') ){ location = 'projects'; }
+		else if( $(this).hasClass('contactLink') ){ location = 'contact'; }
+		else{
+			//selected homeLink
+			location = 'main';
+		}
 
+		$('.mainMenuLinks').removeClass("visible");
+		$('.mainMenu').removeClass("visible");
+		$('.hamburger').removeClass("is-active");
+		setTimeout( function(){
+			$('.mainMenu').css("display", "none");
+			ScrollMeTo(location);
+		},1000);
 	});
   /* ========= Introduction ================================================== */
+	/* ========================================================================= */
+
+
+
+
+
 
 
 	/* ========= My Projects =================================================== */
 	/* ========================================================================= */
-
 	$('.current-project-list li').on('click', function(){
 		LoadSelectedProject($(this).index()); //array based - starts at 0
 		//alert(projectsList[selProj][0]);
 		 DisplayProjectView();
+		 viewingProject = true;
 	});
 
 
@@ -177,6 +232,7 @@ $(document).ready(function(){
 		}
 	}
 
+  //FUNCTION *************************************
 	function LoadProjectView(){
 		//project name
 		$('.project-details header h2').fadeOut(speed, function(){
@@ -215,6 +271,7 @@ $(document).ready(function(){
 		BuildProjectSlideNavigation();
 	}
 
+	//FUNCTION *************************************
 	function LoadProjectSlides(){
 		$('.project-slides img').fadeOut(speed, function(){
 			$('.project-slides img').attr("src", projectsList[project][7][(projectSlide)][0]).fadeIn(speed);
@@ -233,7 +290,7 @@ $(document).ready(function(){
 		}else{
 			DisableProjectSlideNavigation("next", true);
 		}
-		//disable the previous slide button if we are at the first slide in list
+		//FUNCTION -- disable the previous slide button if we are at the first slide in list
 		if(projectSlide==0){
 			DisableProjectSlideNavigation("prev", true);
 		}else{
@@ -241,7 +298,7 @@ $(document).ready(function(){
 		}
 	}
 
-	//set project slide navigation
+	//FUNCTION *************************************
 	function SetProjectSlideNavigation(){
 		$('.proj-slides-nav ul li span').each(function(index){
 			$(this).removeClass("active");
@@ -271,7 +328,14 @@ $(document).ready(function(){
 
 	function ScrollMeTo(element){
 		var elementTarget;
-		if(element == "about"){ elementTarget = "#aboutMe";}
+		if( element == "main" || element == "about" || element == "skills" || element == "projects" || element == "contact" )
+		{
+			if(element == "about"){ elementTarget = "#aboutMe"; }
+			else if(element == "skills"){ elementTarget = "#mySkills"; }
+			else if(element == "projects"){ elementTarget = "#recentProjects"; }
+			else if(element == "contact"){ elementTarget = "#contactMe"; }
+			else if(element == "main"){ elementTarget = "#main"; }
+		}
 		$(".mainContentBox").mCustomScrollbar("stop").mCustomScrollbar("scrollTo",$(elementTarget),{scrollEasing:"easeInOut", scrollInertia: 1000});
 	}
 

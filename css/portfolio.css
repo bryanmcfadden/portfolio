@@ -517,10 +517,12 @@ button {
 .hamburger.light .hamburger-inner {
   background-color: #fff !important; }
 
-.hamburger:hover {
-  background-color: #2298d8;
-  opacity: 1; }
-
+/*
+  .hamburger:hover {
+    background-color: rgba(0,0,0,.25);
+    opacity:1;
+  }
+  */
 /* Main Menu  ============================================================= */
 /* ------- Endorsements  -------------- */
 .endorsementWrapper, .mainMenuLinks {
@@ -532,7 +534,8 @@ button {
   background-color: rgba(0, 0, 0, 0.3);
   width: 72%;
   color: #fff;
-  font-family: 'Apple Garamond', Arial, sans-serif;
+  /* font-family: 'Apple Garamond', Arial, sans-serif; */
+  font-family: 'Work Sans', Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
 
@@ -562,7 +565,8 @@ button {
   font-style: normal; }
 
 .endorsement {
-  font-size: 1.7em;
+  font-size: 1.3em;
+  line-height: 1.3em;
   display: inline-block;
   margin-bottom: 10px;
   letter-spacing: 1.2px; }
@@ -617,7 +621,7 @@ button {
     left: 70%;
     min-height: 200px;
     color: #fff;
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: 300;
     font-style: normal;
     list-style: none;
@@ -637,6 +641,9 @@ button {
         letter-spacing: 4px;
         transition: opacity 0.5s;
         background-color: transparent; }
+        .mainMenu .mainMenuLinks.visible .menuLink a:hover {
+          opacity: 1;
+          color: #2298d8; }
   .mainMenu .menuLink {
     display: table;
     height: 20%;
