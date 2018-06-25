@@ -292,7 +292,8 @@ h1 {
   margin: 0; }
 
 h2 {
-  font-family: 'Monteserrat', Arial, sans-serif;
+  font-family: 'Quicksand', Arial, sans-serif;
+  color: #2298d8;
   font-size: 2.2em;
   letter-spacing: .05em;
   margin: 0 auto 20px;
@@ -321,11 +322,17 @@ h4 {
   font-size: 1em;
   font-weight: 300;
   letter-spacing: 1.2px; }
+  @media only screen and (max-width: 600px) {
+    h4 {
+      font-size: 1.5em; } }
 
 p {
   padding: 1.2em 2em;
   line-height: 1.5em;
   letter-spacing: .5px; }
+  @media only screen and (max-width: 600px) {
+    p {
+      font-size: 1.5em; } }
 
 a {
   text-decoration: none;
@@ -613,7 +620,7 @@ button {
     opacity: 0;
     padding: 0;
     width: 28%;
-    left: 70%;
+    left: 68%;
     min-height: 200px;
     color: #fff;
     font-size: 1.4em;

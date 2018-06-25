@@ -297,7 +297,8 @@ h1 {
   margin: 0; }
 
 h2 {
-  font-family: 'Monteserrat', Arial, sans-serif;
+  font-family: 'Quicksand', Arial, sans-serif;
+  color: #2298d8;
   font-size: 2.2em;
   letter-spacing: .05em;
   margin: 0 auto 20px;
@@ -326,11 +327,17 @@ h4 {
   font-size: 1em;
   font-weight: 300;
   letter-spacing: 1.2px; }
+  @media only screen and (max-width: 600px) {
+    h4 {
+      font-size: 1.5em; } }
 
 p {
   padding: 1.2em 2em;
   line-height: 1.5em;
   letter-spacing: .5px; }
+  @media only screen and (max-width: 600px) {
+    p {
+      font-size: 1.5em; } }
 
 a {
   text-decoration: none;
@@ -618,7 +625,7 @@ button {
     opacity: 0;
     padding: 0;
     width: 28%;
-    left: 70%;
+    left: 68%;
     min-height: 200px;
     color: #fff;
     font-size: 1.4em;
@@ -679,7 +686,8 @@ button {
 .subWrapper {
   width: 100%;
   display: table-cell;
-  vertical-align: middle; }
+  vertical-align: middle;
+  padding: 0 10px; }
 
 /* Introduction  ============================================================ */
 .sectionIntro {
@@ -772,11 +780,17 @@ button {
       .sectionIntro .my-roles h1 span {
         margin-right: 10px;
         font-size: .5em; }
+        @media only screen and (max-width: 600px) {
+          .sectionIntro .my-roles h1 span {
+            font-size: 1em; } }
       .sectionIntro .my-roles h1 .role-title {
         font-family: 'Oxygen', Arial, sans-serif;
         font-weight: normal;
         color: #2298d8;
         text-transform: uppercase; }
+      @media only screen and (max-width: 600px) {
+        .sectionIntro .my-roles h1 .role-title {
+          font-size: 1em; } }
     .sectionIntro .my-roles #location:hover {
       cursor: pointer;
       color: #2298d8; }
@@ -917,7 +931,8 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     margin: 0px; }
     .bar-chart-wrapper .bar-chart .label {
       color: #666666;
-      margin: -0.6em 0 100px 0;
+      text-align: right;
+      margin: -0.6em 20px 100px 0;
       font-size: 12px;
       font-size: 1rem;
       font-weight: normal;
@@ -963,21 +978,21 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
       bottom: 10px;
       width: 100%;
       font-size: 16px;
-      font-size: .8em; }
-
-.bar-chart .blue {
-  height: 0px;
-  border-color: #2298d8;
-  background-color: #2298d8; }
-
-.bar-chart .red {
-  border-color: #e14949;
-  background-color: #da6d6c;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ca4544), color-stop(1, #da6d6c));
-  background-image: -ms-linear-gradient(bottom, #ca4544, #da6d6c);
-  /*background-image: -webkit-linear-gradient(bottom, @start, @stop);*/
-  background-image: -moz-linear-gradient(center bottom, #ca4544 0%, #da6d6c 100%);
-  background-image: -o-linear-gradient(bottom, #ca4544, #da6d6c); }
+      font-size: .7em; }
+    .bar-chart-wrapper .bar-chart .blue, .bar-chart-wrapper .bar-chart .green, .bar-chart-wrapper .bar-chart .red, .bar-chart-wrapper .bar-chart .brown {
+      height: 0px; }
+    .bar-chart-wrapper .bar-chart .blue {
+      border-color: #2298d8;
+      background-color: #2298d8; }
+    .bar-chart-wrapper .bar-chart .red {
+      border-color: #e14949;
+      background-color: #da6d6c; }
+    .bar-chart-wrapper .bar-chart .green {
+      border-color: #61b3a9;
+      background-color: #61b3a9; }
+    .bar-chart-wrapper .bar-chart .brown {
+      border-color: #bd8f5c;
+      background-color: #bd8f5c; }
 
 .bar-chart li.axis {
   width: 8%;
@@ -991,7 +1006,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 
 @media only screen and (min-width: 768px) {
   .bar-chart-wrapper {
-    width: 90%; } }
+    /* width:90%; */ } }
 
 @media only screen and (max-width: 768px) {
   .bar-chart-wrapper {
@@ -1060,20 +1075,6 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 #recentProjects ul li.hidden {
   display: none; }
 
-#recentProjects ul li:nth-child(1) {
-  border-radius: 10px 0 0 0; }
-
-#recentProjects ul li:nth-child(3) {
-  border-radius: 0 10px 0 0;
-  border-right: none; }
-
-#recentProjects ul li:nth-child(4) {
-  border-radius: 0 0 0 10px; }
-
-#recentProjects ul li:nth-child(6) {
-  border-radius: 0 0 10px 0;
-  border-right: none; }
-
 #recentProjects span.project {
   transition: none;
   background-position: center;
@@ -1084,6 +1085,65 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   left: 0;
   top: 0;
   z-index: 5; }
+
+@media only screen and (max-width: 600px) {
+  #recentProjects ul li {
+    border-right: 0;
+    border-radius: 0; }
+    #recentProjects ul li:nth-child(1) {
+      border-radius: 10px 10px 0 0; }
+    #recentProjects ul li:nth-child(6) {
+      border-radius: 0 0 10px 10px; } }
+
+@media only screen and (min-width: 600px) {
+  #recentProjects ul li:nth-child(1) {
+    border-radius: 10px 0 0 0; }
+  #recentProjects ul li:nth-child(2) {
+    border-radius: 0 10px 0 0;
+    border-right: 0; }
+  #recentProjects ul li:nth-child(3) {
+    border-top-right-radius: 0; }
+  #recentProjects ul li:nth-child(4) {
+    border-right: 0; }
+  #recentProjects ul li:nth-child(5) {
+    border-bottom-left-radius: 10px; }
+  #recentProjects ul li:nth-child(6) {
+    border-radius: 0 0 10px 0;
+    border-right: 0; } }
+
+@media only screen and (min-width: 992px) {
+  #recentProjects ul li:nth-child(1) {
+    border-radius: 10px 0 0 0; }
+  #recentProjects ul li:nth-child(2) {
+    border-radius: 0 10px 0 0;
+    border-right: 0; }
+  #recentProjects ul li:nth-child(3) {
+    border-radius: 0; }
+  #recentProjects ul li:nth-child(4) {
+    border-radius: 0 0 0 10px; }
+  #recentProjects ul li:nth-child(5) {
+    border-bottom-right-radius: 0; }
+  #recentProjects ul li:nth-child(6) {
+    border-radius: 0 0 10px 0;
+    border-right: none; } }
+
+@media only screen and (min-width: 1200px) {
+  #recentProjects ul li:nth-child(1) {
+    border-radius: 10px 0 0 0; }
+  #recentProjects ul li:nth-child(2) {
+    border-radius: 0 !important;
+    border-right: 2px solid #fff; }
+  #recentProjects ul li:nth-child(3) {
+    border-top-right-radius: 10px;
+    border-right: none; }
+  #recentProjects ul li:nth-child(4) {
+    border-radius: 0 0 0 10px;
+    border-right: 2px solid #fff; }
+  #recentProjects ul li:nth-child(5) {
+    border-radius: 0; }
+  #recentProjects ul li:nth-child(6) {
+    border-radius: 0 0 10px 0;
+    border-right: none; } }
 
 #recentProjects .details-wrapper {
   display: table;
@@ -1106,13 +1166,6 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   padding: 0 25px;
   transition: transform .5s;
   box-sizing: border-box; }
-
-@media only screen and (max-width: 768px) {
-  #recentProjects ul li {
-    margin-bottom: 10px;
-    border-radius: 0 !important;
-    border-right: 0;
-    /*&:nth-child(1), &:nth-child(3) { border-radius:0; }*/ } }
 
 .details-wrapper .details:hover {
   transform: scale(1.2); }

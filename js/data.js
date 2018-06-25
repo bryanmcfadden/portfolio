@@ -35,10 +35,12 @@ var xmasTreePermit = new Array(
   "Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis "+
   "adipiscing elit. Curabitur feugiat in eros in hendrerit. nunc et sapien rutrum, ut porttitor. Lorem ipsum dolor sit amet, consectetur",
   "UX Researcher",
-  new Array("Information Architecture", "UX", "Personas", "Interactive Design", "User Interviews", "Card-Sorting"),
+  new Array("Information Architecture", "Personas", "Interactive Design", "User Taskflows", "Wireframes"),
   new Array(
-    new Array(imgPath+"epermit/epermit_01.jpg","Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio dfdfdfdf."),
-    new Array(imgPath+"epermit/epermit_02.jpg","Suspendisse tellus odio, aliquet quis lorem ipsum dolor sit amet, consectetur commodo eget, efficitur vel eros. Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio.dfdfdfdf.")
+    new Array(imgPath+"epermit/epermit_01.jpg","Something here about the XMAS tree epermit project and how it is a module from the epermit application."),
+    new Array(imgPath+"epermit/epermit_02.jpg","There should be a detailed description about how we created the user taskflows based from requirements gathering."),
+    new Array(imgPath+"epermit/epermit_03.jpg","This would be all about the data matrix."),
+    new Array(imgPath+"epermit/epermit_04.jpg","Description about how we came up with the final permit design goes here.")
   )
 );
 
@@ -53,8 +55,8 @@ var disasterDataPortal = new Array(
   "Sr. UX Designer",
   new Array("interactive design", "wireframes", "user task flows", "user interviews", "front-end development"),
   new Array(
-    new Array(imgPath+"disasterdataportal/hud_01.jpg","This would be a description of the Disaster Data Portal project"),
-    new Array(imgPath+"disasterdataportal/hud_01.jpg","Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis")
+    new Array(imgPath+"disasterdataportal/hud_01.jpg","This would be a description of what the Disaster Data Portal project is and how it would be used."),
+    new Array(imgPath+"disasterdataportal/hud_02.jpg","Lorem ipsum dolor sit amet, consectetur Suspendisse tellus odio, aliquet quis commodo eget, efficitur vel eros. Nulla sollicitudin leo sit amet suscipit euismod. Aliquam iaculis")
   )
 );
 
