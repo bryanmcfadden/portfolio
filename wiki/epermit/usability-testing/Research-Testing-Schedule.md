@@ -14,10 +14,11 @@ Review of the page's purpose:
 * Is there anything that stands out or that the user does not like about the page?
 * Is it clear which forest they are currently viewing?
 
+
 Page layouts tested:  
 [layout 01](../assets/page-layouts/Option-1.png)  
 [layout 02](../assets/page-layouts/Option-2.png)  
-[layout 03](../assets/page-layouts/Option-3.png) 
+[layout 03](../assets/page-layouts/Option-3.png)
 
 [Research Plan](NA)  
 [Results](Sprint-01-Design-Feedback-Email-Summary-October-27-2017.md)  
@@ -43,6 +44,7 @@ Review of the tree species page:
 Review of the tree cutting page:
 * Does this information allow the user to identify a wildlife designated tree?
 * What are the requirements of a stump when harvesting a tree?
+
 
 [Research Plan](NA)  
 [Results](Sprint-02-Christmas-tree-ePermit-Research-Results-Summary-November-6-2017.md)  
@@ -71,6 +73,7 @@ Review of the overall website design:
 * Do people want to see more graphics within the content?
 * What problems are most severe?
 
+
 [Research Plan](NA)  
 [Results](Sprint-03-Christmas-tree-ePermit-Research-Results-Summary-November-13-2017.md)  
 
@@ -98,6 +101,7 @@ User tasks:
 * Using the website, can users find the size limitations of the trees they can cut?
 * Why is it important to check the weather conditions and road hazards before taking a trip to the forest?
 
+
 [Research Plan](Sprint-04-UT-Research-Plan.md)    
 [Results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)   
 
@@ -118,8 +122,9 @@ Research of the Christmas tree permit:
 * Where do people expect to find instructions on displaying their permit after cutting a tree?
 * How do people expect to receive their permit(s) after purchasing?
 
+
 Permit designs:  
-[permit design 01](../assets/sp_05_permit_design.png)  
+[permit design](../assets/sp_05_permit_design.png)  
 [permit design - updated](../assets/sp_05_permit_design_updated.png)  
 [permit design - sprint final](../assets/sp_05_permit_design_updated_v.1.png)  
 
@@ -147,6 +152,7 @@ User research:
 * What email applications do most people use?
 * Since this application isn't finished yet, is there anything you would like to see in the final version?
 
+
 [Research Plan](Sprint-06-UT-Research-Plan.md)  
 [Results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)  
 
@@ -172,6 +178,7 @@ Review of the Christmas tree permit:
 
 Error research:
 * Do people understand how to get help on an error message they may receive on the website?
+
 
 Permit designs:  
 [permit design 01](../assets/sp_07_permit_design_updated_v.2.1.jpg)  
