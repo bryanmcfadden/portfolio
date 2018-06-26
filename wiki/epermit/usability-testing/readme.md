@@ -1,10 +1,10 @@
-**User research schedule**
+**Schedule**
 
-[Usability Testing Research Schedule](Research-Testing-Schedule.md)
+[Usability Testing & Research](Research-Testing-Schedule.md)
 
-**User research results**
+**Results**
 
-[Sprint-01 - Design Feedback Email Summary - October 27, 2017](Sprint-01-Design-Feedback-Email-Summary-October-27-2017.md)
+[Sprint-01 - Design Feedback Summary (Email) - October 27, 2017](Sprint-01-Design-Feedback-Email-Summary-October-27-2017.md)
 
 [Sprint 02 - Christmas tree ePermit - Research Results Summary - November 6, 2017](Sprint-02-Christmas-tree-ePermit-Research-Results-Summary-November-6-2017.md)
 
