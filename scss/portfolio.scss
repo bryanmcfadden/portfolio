@@ -129,11 +129,12 @@ gray = #ccc; rgba(0,0,0,0.5)
       color:#fff;
 
       span {
+        font-family: 'Quicksand', Arial, sans-serif;
         margin-right:10px;
         font-size: .5em;
 
         @media only screen and (max-width: 600px) {
-          font-size:1em;
+          font-size:.8em;
         }
       }
 
@@ -472,6 +473,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
     #recentProjects ul li {
       border-right:0;
       border-radius: 0;
+      margin-bottom:5px;
 
       &:nth-child(1) { border-radius:10px 10px 0 0; }
       &:nth-child(6) { border-radius:0 0 10px 10px; }
@@ -565,7 +567,12 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   letter-spacing:.03em;
   font-weight: 100;
   margin-top: 2px;
-  display: inline-block;}
+  display: inline-block;
+
+  @media only screen and (max-width: 600px) {
+    font-size: .8em;
+  }
+}
 
 .details-wrapper .infoCompWork .company-name {
   text-transform: uppercase;}
@@ -577,13 +584,16 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   margin-top:20px;
   display: inline-block;}
 
+/*
 @media only screen and (max-width: 768px){
   .details-wrapper {
-    .workTitle { font-size: .7em;
-      line-height:.5em;}
-    .infoCompWork { font-size: .5em; }
+    .workTitle { font-size: 1em;
+      line-height:1em;}
+    .infoCompWork { font-size: .8em; }
   }
 }
+*/
+
 /* -------------- Project details --------------*/
 .project-details {
 
@@ -827,7 +837,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 }
 
 @media only screen and (max-width: 400px) {
-  .footer-ico, .footer-social-ico p { font-size:1.4em; }
+  .footer-ico, .footer-social-ico p { font-size:1.6em; }
   .footer-social-ico {
     margin-top: 40px;
     margin-bottom: 15px;

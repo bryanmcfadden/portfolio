@@ -629,6 +629,10 @@ button {
     list-style: none;
     z-index: 2;
     filter: blur(30px); }
+    @media screen and (max-width: 600px) {
+      .mainMenu .mainMenuLinks {
+        left: 0;
+        width: 100%; } }
     .mainMenu .mainMenuLinks.visible {
       opacity: 1;
       transform: translateX(30px);

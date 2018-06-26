@@ -634,6 +634,10 @@ button {
     list-style: none;
     z-index: 2;
     filter: blur(30px); }
+    @media screen and (max-width: 600px) {
+      .mainMenu .mainMenuLinks {
+        left: 0;
+        width: 100%; } }
     .mainMenu .mainMenuLinks.visible {
       opacity: 1;
       transform: translateX(30px);
@@ -778,11 +782,12 @@ button {
     .sectionIntro .my-roles h1 {
       color: #fff; }
       .sectionIntro .my-roles h1 span {
+        font-family: 'Quicksand', Arial, sans-serif;
         margin-right: 10px;
         font-size: .5em; }
         @media only screen and (max-width: 600px) {
           .sectionIntro .my-roles h1 span {
-            font-size: 1em; } }
+            font-size: .8em; } }
       .sectionIntro .my-roles h1 .role-title {
         font-family: 'Oxygen', Arial, sans-serif;
         font-weight: normal;
@@ -1089,7 +1094,8 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 @media only screen and (max-width: 600px) {
   #recentProjects ul li {
     border-right: 0;
-    border-radius: 0; }
+    border-radius: 0;
+    margin-bottom: 5px; }
     #recentProjects ul li:nth-child(1) {
       border-radius: 10px 10px 0 0; }
     #recentProjects ul li:nth-child(6) {
@@ -1185,6 +1191,9 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   font-weight: 100;
   margin-top: 2px;
   display: inline-block; }
+  @media only screen and (max-width: 600px) {
+    .details-wrapper .infoCompWork {
+      font-size: .8em; } }
 
 .details-wrapper .infoCompWork .company-name {
   text-transform: uppercase; }
@@ -1196,13 +1205,15 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   margin-top: 20px;
   display: inline-block; }
 
-@media only screen and (max-width: 768px) {
-  .details-wrapper .workTitle {
-    font-size: .7em;
-    line-height: .5em; }
-  .details-wrapper .infoCompWork {
-    font-size: .5em; } }
-
+/*
+@media only screen and (max-width: 768px){
+  .details-wrapper {
+    .workTitle { font-size: 1em;
+      line-height:1em;}
+    .infoCompWork { font-size: .8em; }
+  }
+}
+*/
 /* -------------- Project details --------------*/
 .project-details .previous-project, .project-details .next-project {
   border: 1px solid #fff;
@@ -1424,7 +1435,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 
 @media only screen and (max-width: 400px) {
   .footer-ico, .footer-social-ico p {
-    font-size: 1.4em; }
+    font-size: 1.6em; }
   .footer-social-ico {
     margin-top: 40px;
     margin-bottom: 15px; }

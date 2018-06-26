@@ -550,6 +550,11 @@ $default-section-bg-alt: #f7f7f7;
       z-index:2;
       filter: blur(30px);
 
+      @media screen and (max-width: 600px) {
+        left:0;
+        width:100%;
+      }
+
       &.visible {
         opacity:1;
         transform: translateX(30px);
