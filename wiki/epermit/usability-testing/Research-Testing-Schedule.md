@@ -15,7 +15,9 @@ Review of the page's purpose:
 * Is there anything that stands out or that the user does not like about the page?
 * Is it clear which forest they are currently viewing?
 
-[Results](wiki/Design-Feedback-Email-Summary---October-27,-2017)
+[Results](Design-Feedback-Email-Summary---October-27,-2017)
+
+
 
 
 
@@ -38,7 +40,9 @@ Review of the tree cutting page:
 * Does this information allow the user to identify a wildlife designated tree?
 * What are the requirements of a stump when harvesting a tree?
 
-[Results](wiki/Usability-testing-session-1-summary-November-6,-2017)
+[Results](Usability-testing-session-1-summary-November-6,-2017)
+
+
 
 
 
@@ -63,7 +67,7 @@ Review of the overall website design:
 * Do people want to see more graphics within the content?
 * What problems are most severe?
 
-[Results](wiki/epermit/usability-testing/Sprint-03-Christmas-tree-ePermit-Research-Results-Summary.md)
+[Results](usability-testing/Sprint-03-Christmas-tree-ePermit-Research-Results-Summary.md)
 
 
 
@@ -90,7 +94,7 @@ User tasks:
 * Using the website, can users find the size limitations of the trees they can cut?
 * Why is it important to check the weather conditions and road hazards before taking a trip to the forest?
 
-[Results](wiki/epermit/usability-testing/Sprint-04-UT-Research-Plan.md)
+[Results](usability-testing/Sprint-04-UT-Research-Plan.md)
 
 
 
@@ -110,7 +114,7 @@ Research of the Christmas tree permit:
 * Where do people expect to find instructions on displaying their permit after cutting a tree?
 * How do people expect to receive their permit(s) after purchasing?
 
-[Results](wiki/epermit/usability-testing/Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)
+[Results](Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)
 
 
 
@@ -134,4 +138,4 @@ User research:
 * What email applications do most people use?
 * Since this application isn't finished yet, is there anything you would like to see in the final version?
 
-[Results](/Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)
+[Results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)
