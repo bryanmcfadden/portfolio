@@ -5,7 +5,7 @@
 **Results**
 
 # Sprint 01 - October 27, 2017
-Number of Users: 10
+Number of Users: 10  
 Type: Public
 
 Review of the considered page designs and patterns to get reactions, expectations and feedback.
@@ -21,7 +21,7 @@ Review of the page's purpose:
 * Is it clear which forest they are currently viewing?
 
 
-Page layouts tested:  
+**Page layouts tested:**    
 [layout 01](../assets/page-layouts/Option-1.png)  
 [layout 02](../assets/page-layouts/Option-2.png)  
 [layout 03](../assets/page-layouts/Option-3.png)
@@ -30,12 +30,11 @@ Page layouts tested:
 [Results](Sprint-01-Design-Feedback-Email-Summary-October-27-2017.md)
 
 
-____
 
 
 # Sprint 02 - November 6, 2017
-Number of Users: 5
-Type: Public
+Number of Users: 5  
+Type: Public  
 
 Review of the initial menu and navigation along with the tree species and cutting pages.
 
@@ -56,12 +55,11 @@ Review of the tree cutting page:
 [Results](Sprint-02-Christmas-tree-ePermit-Research-Results-Summary-November-6-2017.md)  
 
 
-____
 
 
 # Sprint 03 - November 13, 2017
-Number of Users: 3
-Type: Public
+Number of Users: 3  
+Type: Public  
 
 Research of forest mapping, labeling and navigation of the current design.
 
@@ -84,12 +82,11 @@ Review of the overall website design:
 [Results](Sprint-03-Christmas-tree-ePermit-Research-Results-Summary-November-13-2017.md)
 
 
-____
 
 
 # Sprint 04 - November 29, 2017
-Number of Users: 4
-Type: Public
+Number of Users: 4  
+Type: Public  
 
 Research of forest selections, rules and Christmas tree permit information.
 
@@ -114,13 +111,11 @@ User tasks:
 [Results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)  
 
 
-____
-
 
 
 # Sprint 05 - December 12, 2017
-Number of Users: 4
-Type: Public
+Number of Users: 4  
+Type: Public  
 
 General and Christmas tree permit user research.
 
@@ -134,7 +129,7 @@ Research of the Christmas tree permit:
 * How do people expect to receive their permit(s) after purchasing?
 
 
-Permit designs:  
+**Permit designs:**  
 [permit design](../assets/sp_05_permit_design.png)  
 [permit design - updated](../assets/sp_05_permit_design_updated.png)  
 [permit design - sprint final](../assets/sp_05_permit_design_updated_v.1.png)  
@@ -143,12 +138,11 @@ Permit designs:
 [Results](Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)
 
 
-____
 
 
 # Sprint 06 - January 03, 2017
-Number of Users: 5 (previous participants)
-Type: Public
+Number of Users: 5 (previous participants)  
+Type: Public  
 
 Review of initial forest landing page, Christmas tree permit transactions and page design.
 
@@ -170,12 +164,11 @@ User research:
 [Results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)  
 
 
-____
 
 
 # Sprint 07 - January 24, 2018
-Number of Users: 4 (2 previous participants)
-Type: Public
+Number of Users: 4 (2 previous participants)  
+Type: Public  
 
 Review of Christmas tree permit buying page and off season user visitation.
 
@@ -194,7 +187,7 @@ Error research:
 * Do people understand how to get help on an error message they may receive on the website?
 
 
-Permit designs:  
+**Permit designs:**  
 [permit design 01](../assets/sp_07_permit_design_updated_v.2.1.jpg)  
 [permit design 01.1](../assets/sp_07_permit_design_updated_v.2.1.1.jpg)   
 [permit design 02](../assets/sp_07_permit_design_updated_v.2.2.jpg)  
@@ -205,12 +198,11 @@ Permit designs:
 [Results](Sprint-07-Christmas-tree-ePermit-Research-Results-Summary-January-24-2018.md)  
 
 
-____
 
 
 # Sprint 08 - February 7, 2018
-Number of Users: 5
-Type: Subject Matter Experts (SMEs)
+Number of Users: 5  
+Type: Subject Matter Experts (SMEs)  
 
 Review of the overall website information.
 
@@ -233,7 +225,6 @@ Permit designs (not reviewed):
 [Results](Sprint-08-Christmas-tree-ePermit-SME-Content-Review-Research-Results-Summary-February-7-2018.md)  
 
 
-____
 
 
 # Sprint 09
@@ -243,12 +234,11 @@ Conducted no user research due to the following:
 * Focus was put on design efforts while participant recruitment process was underway.
 * Any research data gathered was included into later sprint summaries.
 
-___
 
 
 # Sprint 10 - March 07, 2018
-Number of Users: 8
-Type: Subject Matter Experts (SMEs)
+Number of Users: 8  
+Type: Subject Matter Experts (SMEs)  
 
 Continued SME review of the website information.
 
@@ -269,12 +259,11 @@ Review of initial ADMIN reporting functionality:
 [Results](Sprint-10-Christmas-tree-ePermit-SME-Review-Research-Results-Summary-March-07-2018.md)
 
 
-____
 
 
 # Sprint 11 - March 21, 2018
-Number of Users: 4
-Type: Law Enforcement Officers (LEOs)
+Number of Users: 4  
+Type: Law Enforcement Officers (LEOs)  
 
 Overall LEO review of the website and Christmas tree permit design.
 
@@ -295,12 +284,11 @@ Review of initial ADMIN reporting functionality:
 [Results](Sprint-11-Christmas-tree-ePermit-LEO-Research-Results-Summary-March-21-2018.md)  
 
 
-____
 
 
 # Sprint 12 - April 04, 2018
 Number of Users: 11
-Type: US Forest Service Administrators (ADMINs)
+Type: US Forest Service Administrators (ADMINs)  
 
 Overall ADMIN review of the website and website update functionality.
 
