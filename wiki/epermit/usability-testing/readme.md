@@ -24,7 +24,7 @@ Review of the page's purpose:
 **Page layouts tested:**    
 [layout 01](../assets/page-layouts/Option-1.png)  
 [layout 02](../assets/page-layouts/Option-2.png)  
-[layout 03](../assets/page-layouts/Option-3.png)
+[layout 03](../assets/page-layouts/Option-3.png)  
 
 [Research Plan](NA)  
 [Results](Sprint-01-Design-Feedback-Email-Summary-October-27-2017.md)
@@ -53,10 +53,10 @@ Review of the tree cutting page:
 **IA - card sort results:**    
 [list](../assets/card_sort_card_list.jpg)  
 [categories](../assets/card_sort_categories.jpg)  
-[participant analysis](../assets/card_sort_participant_analysis.jpg)
-[similarities](../assets/card_sort_similarities.jpg)
-[standardization grid](../assets/card_sort_standard_grid.jpg)
-[result - information architecture](../assets/task-flows/ia_card_sort.v1.pdf)
+[participant analysis](../assets/card_sort_participant_analysis.jpg)  
+[similarities](../assets/card_sort_similarities.jpg)  
+[standardization grid](../assets/card_sort_standard_grid.jpg)  
+[result - information architecture](../assets/task-flows/ia_card_sort.v1.pdf)  
 
 [Research Plan](NA)  
 [Results](Sprint-02-Christmas-tree-ePermit-Research-Results-Summary-November-6-2017.md)  
@@ -116,8 +116,8 @@ User tasks:
 
 **Rules - card sort results:**   
 [categories](../assets/rules_categories.jpg)  
-[participant analysis](../assets/rules_participants.jpg)  
-[standardization grid](../assets/rules_standardization_grid.jpg)  
+[participant analysis](../assets/rules_participants.jpg)   
+[standardization grid](../assets/rules_standardization_grid.jpg)    
 [similarities](../assets/rules_similarities.jpg)  
 
 [research plan](Sprint-04-UT-Research-Plan.md)     
@@ -145,11 +145,11 @@ Research of the Christmas tree permit:
 
 **Permit designs:**  
 [permit design](../assets/sp_05_permit_design.png)  
-[permit design - updated](../assets/sp_05_permit_design_updated.png)  
+[permit design - updated](../assets/sp_05_permit_design_updated.png)    
 [permit design - sprint final](../assets/sp_05_permit_design_updated_v.1.png)  
 
 [research plan](Sprint-05-UT-Research-Plan.md)  
-[results](Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)
+[results](Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)  
 
 
 
@@ -173,10 +173,10 @@ User research:
 * What email applications do most people use?
 * Since this application isn't finished yet, is there anything you would like to see in the final version?
 
-[task flow - pay.gov](../assets/task-flows/user_task_flow.pay.gov.pdf)  
+[task flow - pay.gov](../assets/task-flows/user_task_flow.pay.gov.pdf)   
 
 [research plan](Sprint-06-UT-Research-Plan.md)  
-[results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)  
+[results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)   
 
 
 
@@ -204,8 +204,8 @@ Error research:
 
 **Permit designs:**  
 [permit design 01](../assets/sp_07_permit_design_updated_v.2.1.jpg)  
-[permit design 01.1](../assets/sp_07_permit_design_updated_v.2.1.1.jpg)   
-[permit design 02](../assets/sp_07_permit_design_updated_v.2.2.jpg)  
+[permit design 01.1](../assets/sp_07_permit_design_updated_v.2.1.1.jpg)     
+[permit design 02](../assets/sp_07_permit_design_updated_v.2.2.jpg)    
 [permit design 03](../assets/sp_07_permit_design_updated_v.3.jpg)  
 [permit design 04](../assets/sp_07_permit_design_updated_v.4.jpg)  
 
@@ -231,8 +231,8 @@ Review of initial ADMIN reporting functionality:
 * Does the reporting functionality provide the Forest Service staff with the information they need and is it useful?
 
 Permit designs (not reviewed):  
-[permit design 01](../assets/sp_08_permit_design_updated_v.5.0.1.jpg)  
-[permit design 02](../assets/sp_08_permit_design_updated_v.5.0.2.jpg)   
+[permit design 01](../assets/sp_08_permit_design_updated_v.5.0.1.jpg)    
+[permit design 02](../assets/sp_08_permit_design_updated_v.5.0.2.jpg)    
 [permit design 02](../assets/sp_08_permit_design_updated_v.5.0.3.jpg)  
 
 
