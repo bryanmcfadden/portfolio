@@ -93,8 +93,8 @@ User tasks:
 * Using the website, can users find the size limitations of the trees they can cut?
 * Why is it important to check the weather conditions and road hazards before taking a trip to the forest?
 
-[Research Plan](Sprint-05-UT-Research-Plan.md)
-[Results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)
+[Research Plan](Sprint-05-UT-Research-Plan.md)  
+[Results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)  
 
 
 
@@ -114,11 +114,11 @@ Research of the Christmas tree permit:
 * How do people expect to receive their permit(s) after purchasing?
 
 Permit designs:
-[permit design 01](../sp_05_permit_design.png)
-[permit design - updated](../sp_05_permit_design_updated.png)
-[permit design - sprint final](../sp_05_permit_design_updated_v.1.png)
+[permit design 01](../assets/sp_05_permit_design.png)  
+[permit design - updated](../assets/sp_05_permit_design_updated.png)  
+[permit design - sprint final](../assets/sp_05_permit_design_updated_v.1.png)  
 
-[Research Plan](Sprint-05-UT-Research-Plan.md)
+[Research Plan](Sprint-05-UT-Research-Plan.md)  
 [Results](Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)
 
 
