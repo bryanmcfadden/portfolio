@@ -14,8 +14,13 @@ Review of the page's purpose:
 * Is there anything that stands out or that the user does not like about the page?
 * Is it clear which forest they are currently viewing?
 
-[Research Plan](NA)
-[Results](Sprint-01-Design-Feedback-Email-Summary-October-27-2017.md)
+Page layouts tested:  
+[layout 01](../assets/page-layouts/Option-1.png)  
+[layout 02](../assets/page-layouts/Option-2.png)  
+[layout 03](../assets/page-layouts/Option-3.png) 
+
+[Research Plan](NA)  
+[Results](Sprint-01-Design-Feedback-Email-Summary-October-27-2017.md)  
 
 
 
@@ -39,8 +44,8 @@ Review of the tree cutting page:
 * Does this information allow the user to identify a wildlife designated tree?
 * What are the requirements of a stump when harvesting a tree?
 
-[Research Plan](NA)
-[Results](Sprint-02-Christmas-tree-ePermit-Research-Results-Summary-November-6-2017.md)
+[Research Plan](NA)  
+[Results](Sprint-02-Christmas-tree-ePermit-Research-Results-Summary-November-6-2017.md)  
 
 
 
@@ -66,8 +71,8 @@ Review of the overall website design:
 * Do people want to see more graphics within the content?
 * What problems are most severe?
 
-[Research Plan](NA)
-[Results](Sprint-03-Christmas-tree-ePermit-Research-Results-Summary-November-13-2017.md)
+[Research Plan](NA)  
+[Results](Sprint-03-Christmas-tree-ePermit-Research-Results-Summary-November-13-2017.md)  
 
 
 
@@ -93,8 +98,8 @@ User tasks:
 * Using the website, can users find the size limitations of the trees they can cut?
 * Why is it important to check the weather conditions and road hazards before taking a trip to the forest?
 
-[Research Plan](Sprint-05-UT-Research-Plan.md)  
-[Results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)  
+[Research Plan](Sprint-04-UT-Research-Plan.md)    
+[Results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)   
 
 
 
@@ -113,7 +118,7 @@ Research of the Christmas tree permit:
 * Where do people expect to find instructions on displaying their permit after cutting a tree?
 * How do people expect to receive their permit(s) after purchasing?
 
-Permit designs:
+Permit designs:  
 [permit design 01](../assets/sp_05_permit_design.png)  
 [permit design - updated](../assets/sp_05_permit_design_updated.png)  
 [permit design - sprint final](../assets/sp_05_permit_design_updated_v.1.png)  
@@ -142,8 +147,8 @@ User research:
 * What email applications do most people use?
 * Since this application isn't finished yet, is there anything you would like to see in the final version?
 
-[Research Plan](Sprint-06-UT-Research-Plan.md)
-[Results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)
+[Research Plan](Sprint-06-UT-Research-Plan.md)  
+[Results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)  
 
 
 
@@ -168,8 +173,15 @@ Review of the Christmas tree permit:
 Error research:
 * Do people understand how to get help on an error message they may receive on the website?
 
-[Research Plan](Sprint-07-UT-Research-Plan.md)
-[Results](Sprint-07-Christmas-tree-ePermit-Research-Results-Summary-January-24-2018.md)
+Permit designs:  
+[permit design 01](../assets/sp_07_permit_design_updated_v.2.1.jpg)  
+[permit design 01.1](../assets/sp_07_permit_design_updated_v.2.1.1.jpg)   
+[permit design 02](../assets/sp_07_permit_design_updated_v.2.2.jpg)  
+[permit design 03](../assets/sp_07_permit_design_updated_v.3.jpg)  
+[permit design 04](../assets/sp_07_permit_design_updated_v.4.jpg)  
+
+[Research Plan](Sprint-07-UT-Research-Plan.md)  
+[Results](Sprint-07-Christmas-tree-ePermit-Research-Results-Summary-January-24-2018.md)  
 
 
 
@@ -189,8 +201,14 @@ Review of the website information:
 Review of initial ADMIN reporting functionality:
 * Does the reporting functionality provide the Forest Service staff with the information they need and is it useful?
 
-[Research Plan](Sprint-08-UT-Research-Plan-SME.md)
-[Results](Sprint-08-Christmas-tree-ePermit-SME-Content-Review-Research-Results-Summary-February-7-2018.md)
+Permit designs (not reviewed):  
+[permit design 01](../assets/sp_08_permit_design_updated_v.5.0.1.jpg)  
+[permit design 02](../assets/sp_08_permit_design_updated_v.5.0.2.jpg)   
+[permit design 02](../assets/sp_08_permit_design_updated_v.5.0.3.jpg)  
+
+
+[Research Plan](Sprint-08-UT-SME-Content-Review-Research-Plan.md)  
+[Results](Sprint-08-Christmas-tree-ePermit-SME-Content-Review-Research-Results-Summary-February-7-2018.md)  
 
 
 
@@ -224,14 +242,14 @@ Review of the Christmas tree permit design:
 Review of initial ADMIN reporting functionality:
 * Do the SMEs find the reporting component valuable?
 
-[Research Plan](Sprint-10-UT-SME-Research-Plan.md)
-[Results](Sprint-10-Christmas-tree-ePermit-SME-Review-Research-Results-Summary-March-07-2018.md)
+[Research Plan](Sprint-10-UT-SME-Research-Plan.md)  
+[Results](Sprint-10-Christmas-tree-ePermit-SME-Review-Research-Results-Summary-March-07-2018.md)  
 
 
 
 
 
-# Sprint 11 - March 07, 2018
+# Sprint 11 - March 21, 2018
 Number of Users: 4
 Type: Law Enforcement Officers (LEOs)
 
@@ -250,8 +268,8 @@ Research of Christmas tree cutting season:
 Review of initial ADMIN reporting functionality:
 * Do LEOs find the reporting to be useful?
 
-[Research Plan](Sprint-11-UT-LEO-Research-Plan.md)
-[Results](Sprint-11-Christmas-tree-ePermit-LEO-Research-Results-Summary-March-21-2018.md)
+[Research Plan](Sprint-11-UT-LEO-Research-Plan.md)  
+[Results](Sprint-11-Christmas-tree-ePermit-LEO-Research-Results-Summary-March-21-2018.md)  
 
 
 
@@ -276,5 +294,5 @@ Research and review of website update functionality:
 Review of initial ADMIN reporting functionality:
 * Do the reports give the ADMINs the information they need?
 
-[Research Plan](Sprint-12-UT-ADMIN-Research-Plan.md)
-[Results](Sprint-12-Christmas-tree-ePermit-ADMIN-Research-Results-Summary-April-04-2018.md)
+[Research Plan](Sprint-12-UT-ADMIN-Research-Plan.md)  
+[Results](Sprint-12-Christmas-tree-ePermit-ADMIN-Research-Results-Summary-April-04-2018.md)  
