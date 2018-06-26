@@ -50,6 +50,13 @@ Review of the tree cutting page:
 * Does this information allow the user to identify a wildlife designated tree?
 * What are the requirements of a stump when harvesting a tree?
 
+**IA - card sort results:**    
+[list](../assets/card_sort_card_list.jpg)  
+[categories](../assets/card_sort_categories.jpg)  
+[participant analysis](../assets/card_sort_participant_analysis.jpg)
+[similarities](../assets/card_sort_similarities.jpg)
+[standardization grid](../assets/card_sort_standard_grid.jpg)
+[result - information architecture](../assets/task-flows/ia_card_sort.v1.pdf)
 
 [Research Plan](NA)  
 [Results](Sprint-02-Christmas-tree-ePermit-Research-Results-Summary-November-6-2017.md)  
@@ -78,8 +85,8 @@ Review of the overall website design:
 * What problems are most severe?
 
 
-[Research Plan](NA)  
-[Results](Sprint-03-Christmas-tree-ePermit-Research-Results-Summary-November-13-2017.md)
+[research plan](NA)  
+[results](Sprint-03-Christmas-tree-ePermit-Research-Results-Summary-November-13-2017.md)
 
 
 
@@ -107,8 +114,14 @@ User tasks:
 * Why is it important to check the weather conditions and road hazards before taking a trip to the forest?
 
 
-[Research Plan](Sprint-04-UT-Research-Plan.md)    
-[Results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)  
+**Rules - card sort results:**   
+[categories](../assets/rules_categories.jpg)  
+[participant analysis](../assets/rules_participants.jpg)  
+[standardization grid](../assets/rules_standardization_grid.jpg)  
+[similarities](../assets/rules_similarities.jpg)  
+
+[research plan](Sprint-04-UT-Research-Plan.md)     
+[results](Sprint-04-Christmas-tree-ePermit-Research-Results-Summary-November-29-2017.md)  
 
 
 
@@ -128,14 +141,15 @@ Research of the Christmas tree permit:
 * Where do people expect to find instructions on displaying their permit after cutting a tree?
 * How do people expect to receive their permit(s) after purchasing?
 
+[permit button placement](../assets/sp_05_purchase_permit_proposal_02.1.jpg)  
 
 **Permit designs:**  
 [permit design](../assets/sp_05_permit_design.png)  
 [permit design - updated](../assets/sp_05_permit_design_updated.png)  
 [permit design - sprint final](../assets/sp_05_permit_design_updated_v.1.png)  
 
-[Research Plan](Sprint-05-UT-Research-Plan.md)  
-[Results](Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)
+[research plan](Sprint-05-UT-Research-Plan.md)  
+[results](Sprint-05-Christmas-tree-ePermit-research-results-December-12-2017.md)
 
 
 
@@ -159,9 +173,10 @@ User research:
 * What email applications do most people use?
 * Since this application isn't finished yet, is there anything you would like to see in the final version?
 
+[task flow - pay.gov](../assets/task-flows/user_task_flow.pay.gov.pdf)  
 
-[Research Plan](Sprint-06-UT-Research-Plan.md)  
-[Results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)  
+[research plan](Sprint-06-UT-Research-Plan.md)  
+[results](Sprint-06-Christmas-tree-ePermit-research-results-January-3-2018.md)  
 
 
 
@@ -194,8 +209,8 @@ Error research:
 [permit design 03](../assets/sp_07_permit_design_updated_v.3.jpg)  
 [permit design 04](../assets/sp_07_permit_design_updated_v.4.jpg)  
 
-[Research Plan](Sprint-07-UT-Research-Plan.md)  
-[Results](Sprint-07-Christmas-tree-ePermit-Research-Results-Summary-January-24-2018.md)  
+[research plan](Sprint-07-UT-Research-Plan.md)  
+[results](Sprint-07-Christmas-tree-ePermit-Research-Results-Summary-January-24-2018.md)  
 
 
 
@@ -221,8 +236,8 @@ Permit designs (not reviewed):
 [permit design 02](../assets/sp_08_permit_design_updated_v.5.0.3.jpg)  
 
 
-[Research Plan](Sprint-08-UT-SME-Content-Review-Research-Plan.md)  
-[Results](Sprint-08-Christmas-tree-ePermit-SME-Content-Review-Research-Results-Summary-February-7-2018.md)  
+[research plan](Sprint-08-UT-SME-Content-Review-Research-Plan.md)  
+[results](Sprint-08-Christmas-tree-ePermit-SME-Content-Review-Research-Results-Summary-February-7-2018.md)  
 
 
 
@@ -255,8 +270,8 @@ Review of the Christmas tree permit design:
 Review of initial ADMIN reporting functionality:
 * Do the SMEs find the reporting component valuable?
 
-[Research Plan](Sprint-10-UT-SME-Research-Plan.md)  
-[Results](Sprint-10-Christmas-tree-ePermit-SME-Review-Research-Results-Summary-March-07-2018.md)
+[research plan](Sprint-10-UT-SME-Research-Plan.md)  
+[results](Sprint-10-Christmas-tree-ePermit-SME-Review-Research-Results-Summary-March-07-2018.md)
 
 
 
@@ -280,8 +295,8 @@ Research of Christmas tree cutting season:
 Review of initial ADMIN reporting functionality:
 * Do LEOs find the reporting to be useful?
 
-[Research Plan](Sprint-11-UT-LEO-Research-Plan.md)  
-[Results](Sprint-11-Christmas-tree-ePermit-LEO-Research-Results-Summary-March-21-2018.md)  
+[research plan](Sprint-11-UT-LEO-Research-Plan.md)  
+[results](Sprint-11-Christmas-tree-ePermit-LEO-Research-Results-Summary-March-21-2018.md)  
 
 
 
@@ -306,5 +321,7 @@ Research and review of website update functionality:
 Review of initial ADMIN reporting functionality:
 * Do the reports give the ADMINs the information they need?
 
-[Research Plan](Sprint-12-UT-ADMIN-Research-Plan.md)  
-[Results](Sprint-12-Christmas-tree-ePermit-ADMIN-Research-Results-Summary-April-04-2018.md)  
+[ADMIN task flow](../assets/task-flows/admin_task_flow.pdf)  
+
+[research plan](Sprint-12-UT-ADMIN-Research-Plan.md)  
+[results](Sprint-12-Christmas-tree-ePermit-ADMIN-Research-Results-Summary-April-04-2018.md)  
