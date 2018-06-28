@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Portfolio | Bryan McFadden - UI / UX Designer & Researcher, Code Monkey</title>
+<meta name="description" content="Web portfolio of Bryan McFadden - UI / UX Designer & Researcher based in Newnan, GA.">
+<!-- Crafting awesome high quality responsive websites and exceptional user experience, motivated by a big passion for the digital world. Currently open to worldwide new opportunities. -->
+<meta name="keywords" content="web, ux, user experience, UX Designer, UX Developer, UI/UX designer, creative designer, portfolio, usability, UX researcher">
+<meta name="viewport" content="initial-scale=1.0,width=device-width,maximum-scale=1">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio | Bryan McFadden - UI / UX Designer & Researcher, Code Monkey">
+<meta property="og:description" content="Web portfolio of Bryan McFadden - UI / UX Designer & Researcher based in Newnan, GA.">
+<meta property="og:url" content="http://portfolio.fertileimagination.com/">
+<meta property="og:image" content="http://portfolio.fertileimagination.com/img/portfolio_logo.jpg">
+<link href="http://portfolio.fertileimagination.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<!-- <link rel="icon" href="http://mikedekker.com/wp-content/uploads/2016/11/256x256-150x150.png" sizes="32x32"> -->
+
+<link rel="stylesheet" href="css/normalize.css">
+<!-- CSS Preprocessor -->
+<link rel="stylesheet" href="css/portfolio.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/vendor/jquery.mCustomScrollbar.css" type="text/css">
+<link rel="stylesheet" href="css/vendor/hamburgers.css" type="text/css" media="all">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro|Work+Sans|Roboto|Exo|Montserrat|Oxygen" rel="stylesheet">
+<!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+<style>
+*, ::before, ::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.panel-grid-cell {
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.panel-no-style {
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+}
+.panel-grid.panel-no-style, .panel-grid.panel-has-style > .panel-row-style {
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    -ms-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.gallery-default.alignment-center {
+	margin-left: 40px;
+	text-align: center;
+}
+.gallery-default.hover-effect-caption a {
+	position: relative;
+}
+a:hover, a:focus, a:active {
+  opacity:1;
+	color: #cb4332;
+}
+.gallery-caption-title span {
+	font-size: 16px;
+	opacity: .5;
+}
+.gallery-default.border-style-square-white a, .gallery-default.border-style-square-white a:hover {
+	border: 5px solid #FFF !important;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+.gallery-default.border-style-square-white a, .gallery-default.border-style-square-white a:hover {
+	border: 5px solid #FFF !important;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+.gallery-default.spacing-width-25 a {
+	margin-right: 25px;
+	margin-bottom: 25px;
+}
+.gallery-default a {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: top;
+	max-width: 100%;
+}
+.gallery-default a img {
+	border-radius: 0;
+	display: block;
+	-webkit-transition: none;
+	transition: none;
+	max-width: 100%;
+	height: auto;
+}
+.gallery-default a img {
+	vertical-align: top;
+}
+.gallery-default.hover-effect-caption.hover-caption-full-fade a:hover .gallery-caption {
+	opacity: 1;
+}
+.gallery-default.hover-effect-caption.hover-caption-full-fade .gallery-caption {
+	display: block;
+	opacity: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+}
+.gallery-default .gallery-caption {
+	display: none;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 100;
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+	-ms-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+	width: 100%;
+	overflow: hidden;
+}
+.gallery-default.hover-effect-caption.hover-caption-full-fade .gallery-caption-inner {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.gallery-default.hover-effect-caption .gallery-caption-title {
+	font-size: 1em;
+}
+.gallery-default.hover-effect-caption .gallery-caption-title, .gallery-default.hover-effect-caption .gallery-caption-desc {
+	color: #fff;
+	font-size: 1.4em;
+	padding: 0.25em;
+}
+.gallery-caption-desc {
+	font-size: 16px !important;
+	color: #2298d8 !important;
+	margin-top: 15px !important;
+}
+</style>
+<script>
+function ViewMoreProjects(){
+  var btn = $('#btnViewMoreProjects');
+  if(btn.hasClass('open')){
+    $('.gallery-container .hidden-projects').animate({opacity: 0}, 500, function(){
+      $('.gallery-container .hidden-projects').css('display', 'none');
+      btn.html('+ more projects');
+    })
+  }else{
+    $('.gallery-container .hidden-projects').animate({opacity: 1}, 500, function(){
+      $('.gallery-container .hidden-projects').css('display', 'block');
+      btn.html('+ less projects');
+    });
+  }
+  btn.toggleClass('open');
+}
+</script>
+</head>
+<body style="text-align:center; padding-top:8%;">
+  <div style="width:76%; margin:0 auto;">
+    <div class="panel-grid panel-no-style">
+      <div style="width: 100%; width: calc(100% - ( 0 * 30px ) );" class="panel-grid-cell">
+        <div>
+          <div class="gallery-container gallery-default spacing-width-25 hover-effect-caption border-style-square-white alignment-center hover-caption-full-fade">
+          	<a href="http://portfolio.fertileimagination.com/index.php/portfolio/usfs-christmas-tree-epermit/">
+              <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_epermit/1228612028.jpg" width="320" height="250">
+              <div class="gallery-caption">
+                <div class="gallery-caption-inner">
+                  <div class="gallery-caption-title">
+                    Christmas Tree ePermit
+                    <br>
+                    <span>U.S. Forest Service / consumer web app</span>
+                  </div>
+                  <div class="gallery-caption-desc">UX research / visual design</div>
+                </div>
+              </div>
+            </a>
+            <a href="http://portfolio.fertileimagination.com/index.php/portfolio/hud-disaster-data-portal/">
+              <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_hud/-1882402532.jpg" width="320" height="250">
+              <div class="gallery-caption">
+                <div class="gallery-caption-inner">
+                  <div class="gallery-caption-title">
+                    Disaster Data Portal
+                    <br>
+                    <span>H.U.D. / internal web app</span>
+                  </div>
+                  <div class="gallery-caption-desc">UX / IxD / front-end</div>
+                </div>
+              </div>
+            </a>
+            <a href="http://portfolio.fertileimagination.com/index.php/portfolio/raft-resource-allocation-forecasting-tool/">
+              <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_raft/-1566691793.jpg" width="320" height="250">
+              <div class="gallery-caption">
+                <div class="gallery-caption-inner">
+                  <div class="gallery-caption-title">
+                    R.A.F.T.
+                    <br>
+                    <span>AT&amp;T  / financial web app</span>
+                  </div>
+                  <div class="gallery-caption-desc">UX / IxD / UI / front-end</div>
+                </div>
+              </div>
+            </a>
+            <a href="http://portfolio.fertileimagination.com/index.php/portfolio/ntm-notice-to-mariners/">
+              <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_ntm/-461959311.jpg" width="320" height="250">
+              <div class="gallery-caption">
+                <div class="gallery-caption-inner">
+                  <div class="gallery-caption-title">
+                    Notice to Mariners
+                    <br>
+                    <span>N.G.A. / desktop app</span>
+                  </div>
+                  <div class="gallery-caption-desc">UX / IxD</div>
+                </div>
+              </div>
+            </a>
+            <a href="http://portfolio.fertileimagination.com/index.php/portfolio/tspace/">
+              <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_tspace/-2019531075.jpg" width="320" height="250">
+              <div class="gallery-caption">
+                <div class="gallery-caption-inner">
+                  <div class="gallery-caption-title">
+                    tSpace
+                    <br>
+                    <span>AT&amp;T / social media app</span>
+                  </div>
+                  <div class="gallery-caption-desc">UX / IxD / visual design</div>
+                </div>
+              </div>
+            </a>
+            <a href="http://portfolio.fertileimagination.com/index.php/portfolio/tdc-technology-delivery-center/">
+              <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_tdc/-2138422011.jpg" width="320" height="250">
+              <div class="gallery-caption">
+                <div class="gallery-caption-inner">
+                  <div class="gallery-caption-title">
+                    Technology Delivery Center
+                    <br>
+                    <span>AT&amp;T / internal web portal</span>
+                  </div>
+                  <div class="gallery-caption-desc">UX / IxD / UI / front-end</div>
+                </div>
+              </div>
+            </a>
+            <div class="hidden-projects" style="display:none; opacity:0;">
+              <a href="http://portfolio.fertileimagination.com/index.php/portfolio/usfs-christmas-tree-epermit/">
+                <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_epermit/1228612028.jpg" width="320" height="250">
+                <div class="gallery-caption">
+                  <div class="gallery-caption-inner">
+                    <div class="gallery-caption-title">
+                      Christmas Tree ePermit
+                      <br>
+                      <span>U.S. Forest Service / consumer web app</span>
+                    </div>
+                    <div class="gallery-caption-desc">UX research / visual design</div>
+                  </div>
+                </div>
+              </a>
+              <a href="http://portfolio.fertileimagination.com/index.php/portfolio/hud-disaster-data-portal/">
+                <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_hud/-1882402532.jpg" width="320" height="250">
+                <div class="gallery-caption">
+                  <div class="gallery-caption-inner">
+                    <div class="gallery-caption-title">
+                      Disaster Data Portal
+                      <br>
+                      <span>H.U.D. / internal web app</span>
+                    </div>
+                    <div class="gallery-caption-desc">UX / IxD / front-end</div>
+                  </div>
+                </div>
+              </a>
+              <a href="http://portfolio.fertileimagination.com/index.php/portfolio/usfs-christmas-tree-epermit/">
+                <img src="http://portfolio.fertileimagination.com/wp-content/uploads/cache/2018/04/sel_epermit/1228612028.jpg" width="320" height="250">
+                <div class="gallery-caption">
+                  <div class="gallery-caption-inner">
+                    <div class="gallery-caption-title">
+                      Christmas Tree ePermit
+                      <br>
+                      <span>U.S. Forest Service / consumer web app</span>
+                    </div>
+                    <div class="gallery-caption-desc">UX research / visual design</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div style="padding:40px 0;">
+          <button id="btnViewMoreProjects" onclick="ViewMoreProjects();">+ more projects</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================ JAVASCRIPT FILES ======================================================== -->
+  <!-- <script src="https://code.jquery.com//jquery-3.2.1.min.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script> -->
+
+  <!-- vendor JS files-->
+  <script src="js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script> -->
+  <script src="js/vendor/jquery.simpleWeather.min.js"></script>
+  <script src="js/vendor/jquery.waypoints.1.1.7.js"></script>
+
+  <!-- Include font-awesome icons -->
+  <!-- local -->
+  <script src="js\vendor\font-awesome.5.0.12.all.js"></script>
+  <!-- web
+  <script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
+  -->
+
+  <script src="js/data.js"></script>
+  <!-- portfolio JS file-->
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
