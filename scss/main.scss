@@ -65,8 +65,8 @@ $default-section-bg-alt: #f7f7f7;
   .row {
     float:left;
     width:100%;
-    margin-left:15px;
-    margin-right:15px;
+  /*  margin-left:15px;
+    margin-right:15px; */
   }
   /* for mobile handset devices */
   [class*="col-"] {
@@ -99,7 +99,6 @@ $default-section-bg-alt: #f7f7f7;
     .col-xs-12 { width: 100%; }
 
     h1 {font-size: 1.2em;}
-    .project-details em {margin:20px 0 60px !important;}
   }
   @media only screen and (min-width: 600px) {
     .sm-hidden {display:none;}
@@ -201,7 +200,13 @@ $default-section-bg-alt: #f7f7f7;
     color: rgb(51,51,51);
   /*	overflow:hidden; */
     margin:0;
-    padding:0;}
+    padding:0;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.5em;
+    }
+
+  }
 
   header {
     padding:80px 5% 60px;
@@ -257,10 +262,6 @@ $default-section-bg-alt: #f7f7f7;
     padding:1.2em 2em;
     line-height:1.5em;
     letter-spacing:.5px;
-
-    @media only screen and (max-width: 600px) {
-      font-size: 1.5em;
-    }
   }
 
   a {
@@ -551,9 +552,9 @@ $default-section-bg-alt: #f7f7f7;
       filter: blur(30px);
 
       @media screen and (max-width: 600px) {
+        font-size:1.6em;
         left:0;
-        width:100%;
-      }
+        width:100%;}
 
       &.visible {
         opacity:1;
@@ -593,7 +594,7 @@ $default-section-bg-alt: #f7f7f7;
       transition: opacity 0.5s, transform 0.5s, filter 0.5s;
       transform-origin: right center;}
 
-    .homeLink, .aboutLink, .skillsLink, .currentProjLink, .contactLink {
+    .homeLink, .aboutLink, .skillsLink, .workLink, .contactLink {
       opacity: 1;
       bottom: 0;
       transform: scale(1);

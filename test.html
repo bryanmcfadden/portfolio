@@ -41,7 +41,7 @@
 	-webkit-align-items: flex-start;
 	align-items: flex-start;
 }
-.panel-grid.panel-no-style, .panel-grid.panel-has-style > .panel-row-style {
+.panel-grid.panel-no-style {
     display: -webkit-flex;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -150,17 +150,17 @@ a:hover, a:focus, a:active {
 function ViewMoreProjects(){
   var btn = $('#btnViewMoreProjects');
   if(btn.hasClass('open')){
-    $('.gallery-container .hidden-projects').animate({opacity: 0}, 500, function(){
+    $('.gallery-container .hidden-projects').animate({opacity: 0}, 800, function(){
       $('.gallery-container .hidden-projects').css('display', 'none');
       btn.html('+ more projects');
     })
   }else{
-    $('.gallery-container .hidden-projects').animate({opacity: 1}, 500, function(){
-      $('.gallery-container .hidden-projects').css('display', 'block');
+    $('.gallery-container .hidden-projects').animate({opacity: 1, 'display':'block'}, 800, function(){
       btn.html('+ less projects');
     });
   }
   btn.toggleClass('open');
+  btn.blur();
 }
 </script>
 </head>

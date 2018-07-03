@@ -63,8 +63,8 @@ gray = #ccc; rgba(0,0,0,0.5)
 .row {
   float: left;
   width: 100%;
-  margin-left: 15px;
-  margin-right: 15px; }
+  /*  margin-left:15px;
+    margin-right:15px; */ }
 
 /* for mobile handset devices */
 [class*="col-"] {
@@ -106,9 +106,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   .col-xs-12 {
     width: 100%; }
   h1 {
-    font-size: 1.2em; }
-  .project-details em {
-    margin: 20px 0 60px !important; } }
+    font-size: 1.2em; } }
 
 @media only screen and (min-width: 600px) {
   .sm-hidden {
@@ -276,6 +274,9 @@ html, body {
   /*	overflow:hidden; */
   margin: 0;
   padding: 0; }
+  @media only screen and (max-width: 600px) {
+    html, body {
+      font-size: 1.5em; } }
 
 header {
   padding: 80px 5% 60px;
@@ -330,9 +331,6 @@ p {
   padding: 1.2em 2em;
   line-height: 1.5em;
   letter-spacing: .5px; }
-  @media only screen and (max-width: 600px) {
-    p {
-      font-size: 1.5em; } }
 
 a {
   text-decoration: none;
@@ -631,6 +629,7 @@ button {
     filter: blur(30px); }
     @media screen and (max-width: 600px) {
       .mainMenu .mainMenuLinks {
+        font-size: 1.6em;
         left: 0;
         width: 100%; } }
     .mainMenu .mainMenuLinks.visible {
@@ -662,7 +661,7 @@ button {
     transform: translateX(30px);
     transition: opacity 0.5s, transform 0.5s, filter 0.5s;
     transform-origin: right center; }
-  .mainMenu .homeLink, .mainMenu .aboutLink, .mainMenu .skillsLink, .mainMenu .currentProjLink, .mainMenu .contactLink {
+  .mainMenu .homeLink, .mainMenu .aboutLink, .mainMenu .skillsLink, .mainMenu .workLink, .mainMenu .contactLink {
     opacity: 1;
     bottom: 0;
     transform: scale(1); }

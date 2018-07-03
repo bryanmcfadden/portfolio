@@ -68,8 +68,8 @@ gray = #ccc; rgba(0,0,0,0.5)
 .row {
   float: left;
   width: 100%;
-  margin-left: 15px;
-  margin-right: 15px; }
+  /*  margin-left:15px;
+    margin-right:15px; */ }
 
 /* for mobile handset devices */
 [class*="col-"] {
@@ -111,9 +111,7 @@ gray = #ccc; rgba(0,0,0,0.5)
   .col-xs-12 {
     width: 100%; }
   h1 {
-    font-size: 1.2em; }
-  .project-details em {
-    margin: 20px 0 60px !important; } }
+    font-size: 1.2em; } }
 
 @media only screen and (min-width: 600px) {
   .sm-hidden {
@@ -281,6 +279,9 @@ html, body {
   /*	overflow:hidden; */
   margin: 0;
   padding: 0; }
+  @media only screen and (max-width: 600px) {
+    html, body {
+      font-size: 1.5em; } }
 
 header {
   padding: 80px 5% 60px;
@@ -335,9 +336,6 @@ p {
   padding: 1.2em 2em;
   line-height: 1.5em;
   letter-spacing: .5px; }
-  @media only screen and (max-width: 600px) {
-    p {
-      font-size: 1.5em; } }
 
 a {
   text-decoration: none;
@@ -636,6 +634,7 @@ button {
     filter: blur(30px); }
     @media screen and (max-width: 600px) {
       .mainMenu .mainMenuLinks {
+        font-size: 1.6em;
         left: 0;
         width: 100%; } }
     .mainMenu .mainMenuLinks.visible {
@@ -667,7 +666,7 @@ button {
     transform: translateX(30px);
     transition: opacity 0.5s, transform 0.5s, filter 0.5s;
     transform-origin: right center; }
-  .mainMenu .homeLink, .mainMenu .aboutLink, .mainMenu .skillsLink, .mainMenu .currentProjLink, .mainMenu .contactLink {
+  .mainMenu .homeLink, .mainMenu .aboutLink, .mainMenu .skillsLink, .mainMenu .workLink, .mainMenu .contactLink {
     opacity: 1;
     bottom: 0;
     transform: scale(1); }
@@ -758,6 +757,9 @@ button {
     opacity: 1;
     transition: top 1s, opacity 1s;
     transition-delay: .3s; }
+    @media only screen and (max-width: 600px) {
+      .sectionIntro .intro-title {
+        font-size: 3em; } }
     .sectionIntro .intro-title em {
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: normal;
@@ -1045,7 +1047,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   width: 100%; }
 
 /* Recent projects  ========================================================= */
-#recentProjects {
+#work {
   padding: 90px 0;
   display: block;
   background-color: #fff;
@@ -1054,16 +1056,16 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   overflow: hidden;
   box-sizing: border-box; }
 
-#recentProjects button span {
+#work button span {
   margin-right: 10px; }
 
-#recentProjects ul {
+#work ul {
   padding: 0;
   margin: 60px 15% 60px;
   list-style: none;
   box-sizing: border-box; }
 
-#recentProjects ul li {
+#work ul li {
   height: 240px;
   cursor: pointer;
   display: block;
@@ -1077,10 +1079,10 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   list-style: none;
   box-sizing: border-box; }
 
-#recentProjects ul li.hidden {
+#work ul li.hidden {
   display: none; }
 
-#recentProjects span.project {
+#work span.project {
   transition: none;
   background-position: center;
   background-size: cover;
@@ -1092,66 +1094,54 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   z-index: 5; }
 
 @media only screen and (max-width: 600px) {
-  #recentProjects ul li {
+  #work ul li {
     border-right: 0;
-    border-radius: 0;
-    margin-bottom: 5px; }
-    #recentProjects ul li:nth-child(1) {
-      border-radius: 10px 10px 0 0; }
-    #recentProjects ul li:nth-child(6) {
-      border-radius: 0 0 10px 10px; } }
+    border-radius: 0; } }
 
 @media only screen and (min-width: 600px) {
-  #recentProjects ul li:nth-child(1) {
+  #work ul li:nth-child(1) {
     border-radius: 10px 0 0 0; }
-  #recentProjects ul li:nth-child(2) {
-    border-radius: 0 10px 0 0;
-    border-right: 0; }
-  #recentProjects ul li:nth-child(3) {
-    border-top-right-radius: 0; }
-  #recentProjects ul li:nth-child(4) {
-    border-right: 0; }
-  #recentProjects ul li:nth-child(5) {
-    border-bottom-left-radius: 10px; }
-  #recentProjects ul li:nth-child(6) {
-    border-radius: 0 0 10px 0;
+  #work ul li:nth-child(2) {
+    border-radius: 0 10px 0 0; }
+  #work ul li:nth-child(1), #work ul li:nth-child(3), #work ul li:nth-child(5) {
+    border-right: 2px solid #fff; }
+  #work ul li:nth-child(2), #work ul li:nth-child(4), #work ul li:nth-child(6) {
     border-right: 0; } }
 
 @media only screen and (min-width: 992px) {
-  #recentProjects ul li:nth-child(1) {
+  #work ul li:nth-child(1) {
     border-radius: 10px 0 0 0; }
-  #recentProjects ul li:nth-child(2) {
+  #work ul li:nth-child(2) {
     border-radius: 0 10px 0 0;
     border-right: 0; }
-  #recentProjects ul li:nth-child(3) {
+  #work ul li:nth-child(3) {
     border-radius: 0; }
-  #recentProjects ul li:nth-child(4) {
+  #work ul li:nth-child(4) {
     border-radius: 0 0 0 10px; }
-  #recentProjects ul li:nth-child(5) {
+  #work ul li:nth-child(5) {
     border-bottom-right-radius: 0; }
-  #recentProjects ul li:nth-child(6) {
-    border-radius: 0 0 10px 0;
+  #work ul li:nth-child(6) {
     border-right: none; } }
 
 @media only screen and (min-width: 1200px) {
-  #recentProjects ul li:nth-child(1) {
+  #work ul li:nth-child(1) {
     border-radius: 10px 0 0 0; }
-  #recentProjects ul li:nth-child(2) {
+  #work ul li:nth-child(2) {
     border-radius: 0 !important;
     border-right: 2px solid #fff; }
-  #recentProjects ul li:nth-child(3) {
+  #work ul li:nth-child(3) {
     border-top-right-radius: 10px;
     border-right: none; }
-  #recentProjects ul li:nth-child(4) {
+  #work ul li:nth-child(4) {
     border-radius: 0 0 0 10px;
     border-right: 2px solid #fff; }
-  #recentProjects ul li:nth-child(5) {
+  #work ul li:nth-child(5) {
     border-radius: 0; }
-  #recentProjects ul li:nth-child(6) {
+  #work ul li:nth-child(6) {
     border-radius: 0 0 10px 0;
     border-right: none; } }
 
-#recentProjects .details-wrapper {
+#work .details-wrapper {
   display: table;
   width: 100%;
   height: 100%;
@@ -1163,7 +1153,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   font-size: 1.2em;
   transition: opacity .5s; }
 
-#recentProjects .details-wrapper:hover {
+#work .details-wrapper:hover {
   opacity: 1; }
 
 .details-wrapper .details {
@@ -1181,6 +1171,9 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   font-size: 1.1em;
   font-weight: normal;
   font-style: normal; }
+  @media only screen and (max-width: 600px) {
+    .details-wrapper .workTitle {
+      font-size: .8em; } }
 
 .details-wrapper .infoCompWork {
   opacity: 0.5;
@@ -1193,7 +1186,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   display: inline-block; }
   @media only screen and (max-width: 600px) {
     .details-wrapper .infoCompWork {
-      font-size: .8em; } }
+      font-size: .7em; } }
 
 .details-wrapper .infoCompWork .company-name {
   text-transform: uppercase; }
@@ -1215,6 +1208,10 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
 }
 */
 /* -------------- Project details --------------*/
+.project-details .project-details-nav {
+  position: relative;
+  top: -30px; }
+
 .project-details .previous-project, .project-details .next-project {
   border: 1px solid #fff;
   color: #fff;
@@ -1253,6 +1250,19 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
   display: inline-block;
   font-family: 'Roboto', Arial, sans-serif; }
 
+@media only screen and (max-width: 600px) {
+  .project-details h2 {
+    font-size: 2em;
+    line-height: 36px; }
+  .project-details h3 {
+    margin-top: 10px;
+    font-size: 1.1em; }
+  .project-details em {
+    margin: 20px 0 60px !important;
+    font-size: 1.3em; }
+  .project-details .project-details-nav {
+    top: 0; } }
+
 .project-summary {
   padding: 60px 0;
   text-align: center;
@@ -1271,18 +1281,25 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     .project-summary div.wrapper .row div:first-child {
       font-weight: bold; }
   .project-summary div.wrapper ul li {
-    font-size: .8em;
+    font-size: .9em;
     border-radius: 4px;
     color: #fff;
     background-color: #2298d8;
     padding: 2px 10px;
     display: inline-block;
-    margin: 0 5px 5px 0; }
+    margin: 2px 5px 2px 0; }
 
 /* -------------- Project slides ------------------ */
 .project-slides {
   position: relative;
   overflow: hidden; }
+  .project-slides ul li {
+    opacity: 0; }
+    .project-slides ul li.hidden {
+      display: none; }
+    .project-slides ul li span {
+      display: block;
+      margin: 40px 0; }
   .project-slides button {
     position: absolute;
     top: 250px;
@@ -1315,7 +1332,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
     list-style-type: none; }
     .proj-slides-nav ul li {
       display: inline-block;
-      margin-right: 5px;
+      margin-right: 10px;
       vertical-align: middle; }
       .proj-slides-nav ul li button {
         height: 12px;
@@ -1332,8 +1349,12 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover {
         height: 100%;
         display: block;
         background-color: #ccc; }
-        .proj-slides-nav ul li span.active {
-          background-color: #2298d8; }
+      .proj-slides-nav ul li.active button {
+        cursor: default; }
+        .proj-slides-nav ul li.active button:hover {
+          opacity: 1; }
+      .proj-slides-nav ul li.active span {
+        background-color: #2298d8; }
 
 /* -------------- Project images ------------- */
 @media only screen and (max-width: 800px) {

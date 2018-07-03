@@ -49,7 +49,7 @@
             <br>
             <em>UX / UI Design</em>
             <br>
-            <div style="position:relative; top:-30px;">
+            <div class="project-details-nav">
               <div class="col-sm-6 col-xs-6 lalign">
                 <!-- left navigation button xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
                 <button class="previous-project">
@@ -80,7 +80,7 @@
                 <div class="col-sm-8 col-md-10 col-lg-10 job-title"></div>
               </div>
               <div class="row">
-                <div class="col-sm-4 col-md-2 col-lg-2">DIL:</div>
+                <div class="col-sm-4 col-md-2 col-lg-2">Deliverables:</div>
                 <div class="col-sm-8 col-md-10 col-lg-10 deliverables">
                   <ul>
                     <li>information architecture</li>
@@ -117,10 +117,12 @@
                   <i class="fas fa-chevron-left fa-5x"></i>
                 </button>
               </div>
-              <div class="col-md-8 slide">
-                  <img src="" />
-                  <span class="title"></span>
-              </div>
+              <ul>
+                <!-- <div class="col-md-8 slide">
+                    <img src="" />
+                    <span class="title"></span>
+                </div> -->
+              </ul>
               <div class="col-md-2 xs-hidden">&nbsp;
                 <!-- Right Arrow -->
                 <button class="next-slide">
@@ -256,7 +258,7 @@
           <!-- ************************************************************************************ -->
           <!-- ***************    RECENT PROJECTS SELECTOR    ************************************* -->
           <!-- ************************************************************************************ -->
-          <section id="recentProjects" class="recent-projects">
+          <section id="work" class="work">
             <h2>recent projects<span class="title-underline"></span></h2>
             <ul class="current-project-list clear-fix">
               <li class="col-xl-4 col-sm-6 col-xs-12">
@@ -343,9 +345,51 @@
                   </span>
                 </span>
               </li>
+              <li class="hidden-project hidden col-xl-4 col-sm-6 col-xs-12">
+                <span class="project" style="background-image:url('img/projects/_selector/sel_tdc.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Another Project 1</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Data portal</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+              <li class="hidden-project hidden col-xl-4 col-sm-6 col-xs-12">
+                <span class="project" style="background-image:url('img/projects/_selector/sel_tdc.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Another Project 2</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Data portal</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
+              <li class="hidden-project hidden col-xl-4 col-sm-6 col-xs-12">
+                <span class="project" style="background-image:url('img/projects/_selector/sel_tdc.jpg');"></span>
+                <span class="details-wrapper">
+                  <span class="details">
+                    <span class="workTitle">Another Project 3</span>
+                    <br>
+                    <span class="infoCompWork">
+                      <span class="company-name">AT&T</span> / <span>Data portal</span>
+                    </span>
+                    <br>
+                    <em>UX / IxD / Front-end</em>
+                  </span>
+                </span>
+              </li>
             </ul>
             <div style="clear:both; text-align:center; padding-top:60px;">
-              <button disabled="disabled">
+              <button class="view-more-projects">
                 <span>+</span>More projects
               </button>
             </div>
@@ -425,8 +469,8 @@
         	<li class="menuLink skillsLink">
             <a href="#" class="" onclick="event.preventDefault(); return false;">My Skills</a>
           </li>
-        	<li class="menuLink currentProjLink">
-            <a href="#" class="" onclick="event.preventDefault(); return false;">Recent Projects</a>
+        	<li class="menuLink workLink">
+            <a href="#" class="" onclick="event.preventDefault(); return false;">Work</a>
           </li>
         	<li class="menuLink contactLink">
             <a href="#" class="" onclick="event.preventDefault(); return false;">Contact</a>
@@ -456,6 +500,7 @@
 <script src="js/data.js"></script>
 <!-- portfolio JS file-->
 <script src="js/portfolio.js"></script>
+<script src="js/work.js"></script>
 
 </body>
 </html>

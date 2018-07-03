@@ -100,6 +100,9 @@ gray = #ccc; rgba(0,0,0,0.5)
     transition: top 1s, opacity 1s;
     transition-delay: .3s;
 
+    @media only screen and (max-width: 600px) {
+      font-size:3em;}
+
     em {
       font-family: 'Montserrat', Arial, sans-serif;
       font-weight: normal;
@@ -425,7 +428,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
     width:100%;}
 }
 /* Recent projects  ========================================================= */
-#recentProjects {
+#work {
   padding:90px 0;
   display: block;
   background-color: $default-section-bg;;
@@ -434,16 +437,16 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   overflow:hidden;
   box-sizing:border-box;}
 
-#recentProjects button span {
+#work button span {
   margin-right:10px;}
 
-#recentProjects ul {
+#work ul {
   padding:0;
   margin:60px 15% 60px;
   list-style:none;
   box-sizing:border-box;}
 
-  #recentProjects ul li {
+  #work ul li {
   height:240px;
   cursor:pointer;
   display:block;
@@ -457,8 +460,8 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   list-style:none;
   box-sizing:border-box;}
 
-#recentProjects ul li.hidden { display:none; }
-#recentProjects span.project {
+#work ul li.hidden { display:none; }
+#work span.project {
   transition: none;
   background-position:center;
   background-size:cover;
@@ -470,33 +473,23 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   z-index:5;}
 
   @media only screen and (max-width: 600px) {
-    #recentProjects ul li {
+    #work ul li {
       border-right:0;
       border-radius: 0;
-      margin-bottom:5px;
-
-      &:nth-child(1) { border-radius:10px 10px 0 0; }
-      &:nth-child(6) { border-radius:0 0 10px 10px; }
     }
   }
 
   @media only screen and (min-width: 600px) {
-    #recentProjects ul li {
-
+    #work ul li {
       &:nth-child(1) { border-radius:10px 0 0 0; }
-      &:nth-child(2) {
-        border-radius:0 10px 0 0;
-        border-right:0;}
-      &:nth-child(3) { border-top-right-radius:0;}
-      &:nth-child(4) { border-right:0; }
-      &:nth-child(5) { border-bottom-left-radius:10px; }
-      &:nth-child(6) { border-radius:0 0 10px 0;
-        border-right:0;}
+      &:nth-child(2) { border-radius:0 10px 0 0; }
+      &:nth-child(1), &:nth-child(3), &:nth-child(5) { border-right:2px solid #fff; }
+      &:nth-child(2), &:nth-child(4), &:nth-child(6) { border-right:0; }
     }
   }
 
 @media only screen and (min-width: 992px) {
-  #recentProjects ul li {
+  #work ul li {
     &:nth-child(1) { border-radius:10px 0 0 0; }
     &:nth-child(2) {
       border-radius:0 10px 0 0;
@@ -504,14 +497,12 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
     &:nth-child(3) { border-radius:0;}
     &:nth-child(4) { border-radius:0 0 0 10px; }
     &:nth-child(5) { border-bottom-right-radius:0; }
-    &:nth-child(6) {
-      border-radius:0 0 10px 0;
-      border-right:none;}
+    &:nth-child(6) { border-right:none; }
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  #recentProjects ul li {
+  #work ul li {
     &:nth-child(1) { border-radius:10px 0 0 0; }
     &:nth-child(2) {
       border-radius: 0 !important;
@@ -530,7 +521,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 }
 
 
-#recentProjects .details-wrapper {
+#work .details-wrapper {
   display: table;
   width: 100%;
   height: 100%;
@@ -542,7 +533,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   font-size: 1.2em;
   transition: opacity .5s;}
 
-#recentProjects .details-wrapper:hover { opacity: 1; }
+#work .details-wrapper:hover { opacity: 1; }
 .details-wrapper .details {
   display: table-cell;
   vertical-align:middle;
@@ -557,7 +548,12 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   color: #fff;
   font-size: 1.1em;
   font-weight: normal;
-  font-style: normal;}
+  font-style: normal;
+
+  @media only screen and (max-width: 600px) {
+    font-size:.8em;
+  }
+}
 
 .details-wrapper .infoCompWork {
   opacity: 0.5;
@@ -570,7 +566,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
   display: inline-block;
 
   @media only screen and (max-width: 600px) {
-    font-size: .8em;
+    font-size: .7em;
   }
 }
 
@@ -596,6 +592,10 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 
 /* -------------- Project details --------------*/
 .project-details {
+
+  .project-details-nav {
+    position:relative;
+    top:-30px;}
 
   .previous-project, .next-project {
     border:1px solid #fff;
@@ -627,6 +627,19 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
     margin-top:50px;
     display:inline-block;
     font-family:'Roboto', Arial, sans-serif;}
+
+    @media only screen and (max-width:600px){
+      h2 {
+        font-size:2em;
+        line-height:36px;}
+      h3 {
+        margin-top:10px;
+        font-size:1.1em;}
+      em {
+        margin:20px 0 60px !important;
+        font-size:1.3em;}
+      .project-details-nav { top:0; }
+    }
 }
 
 .project-summary {
@@ -651,13 +664,13 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 
     ul {
       li {
-        font-size:.8em;
+        font-size:.9em;
         border-radius:4px;
         color:#fff;
         background-color:#2298d8;
         padding:2px 10px;
         display:inline-block;
-        margin:0 5px 5px 0;}
+        margin:2px 5px 2px 0;}
     }
   }
 }
@@ -665,6 +678,18 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 .project-slides {
   position:relative;
   overflow:hidden;
+
+  ul {
+      li {
+        opacity:0;
+
+        &.hidden { display:none; }
+        span {
+          display:block;
+          margin:40px 0;
+        }
+      }
+  }
 
    button {
     position:absolute;
@@ -705,7 +730,7 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
 
     li {
       display:inline-block;
-      margin-right:5px;
+      margin-right:10px;
       vertical-align:middle;
 
         button {
@@ -724,9 +749,16 @@ html:not(.can-touch) .subWrapperBtnNextSection:hover { color: #ffff00; }
           height:100%;
           display:block;
           background-color:#ccc;
-          &.active {background-color:#2298d8;}
         }
+
+      &.active {
+        button {
+          cursor:default;
+          &:hover {opacity:1;}
+        }
+        span { background-color:#2298d8; }
       }
+    }
   }
 }
 /* -------------- Project images ------------- */

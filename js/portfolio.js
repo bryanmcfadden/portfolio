@@ -2,10 +2,14 @@
 05/15/2018
 Bryan McFadden
 
-All functionality required for my portfolio pages
+All global events and functionality required for my portfolio pages
+
+Additional scripting files:
+work.js
+contact.js
 ============================================================================= */
 var skillsShown;
-var project, projectSlide, projSlideTotal;
+var project, projSlideTotal;
 var viewingProject = false;
 var projTotal = projectsList.length;
 var speed = 800;
@@ -39,7 +43,8 @@ $(window).load(function(){
 		}
 	});
 
-
+	// FUNCTION ******************************************************************
+ 	// changes color of hamburger menu according to page background
 	function MenuButtonBackground(scrollTopValue){
 		//true == project viewport
 		//false == main view
@@ -74,33 +79,9 @@ $(window).load(function(){
 });
 
 $(document).ready(function(){
-
-	function DisplayProjectView(){
-		var proj = $(".projContentBox");
-
-		if(proj.hasClass("open")){
-			//alert('closing project view');
-			proj.toggleClass("open");
-			proj.addClass("close");
-			proj.animate({opacity: 0.0,},1000,function(){
-				proj.css({visibility: "hidden"});
-			});
-			$('.mainContentBox').animate({opacity: 1, visibility: "visible"},1000);
-			//$(".recent-projects").animate({opacity: 1, visibility: "visible"},1000);
-			$('.hamburger').removeClass("light is-active");
-		}else{
-			//alert('opening project view');
-			proj.toggleClass("open");
-			proj.removeClass("close");
-			proj.css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},1000);
-			//$(".recent-projects").animate({opacity: 0, visibility: "hidden"},1000);
-			$('.mainContentBox').animate({opacity: 0, visibility: "hidden"},1000);
-			$('.hamburger').addClass("light is-active");
-		}
-	}
-
-	/* ========= Main Menu ===================================================== */
-	/* ========================================================================= */
+	/* ========= Main Menu ==================================================== */
+	/* ======================================================================== */
+	// /////////////////// HAMBURGER MENU BUTTON ////////////////////////////////
 	$('.hamburger').on('click', function(e){
 		if(viewingProject){
 			DisplayProjectView();
@@ -133,12 +114,12 @@ $(document).ready(function(){
 		$('.hamburger').blur();
 	});
 
-  //((((((((((((((((((((( MAIN MENU NAVIGATION LINKS ))))))))))))))))))))))))))
+	// /////////////////// MAIN NAVAGATION LINKS ////////////////////////////////
 	$('body').on('click', '.mainMenuLinks .menuLink', function(){
 		var location;
 		if( $(this).hasClass('aboutLink') ){ location = 'about'; }
 		else if( $(this).hasClass('skillsLink') ){ location = 'skills'; }
-		else if( $(this).hasClass('currentProjLink') ){ location = 'projects'; }
+		else if( $(this).hasClass('workLink') ){ location = 'work'; }
 		else if( $(this).hasClass('contactLink') ){ location = 'contact'; }
 		else{
 			//selected homeLink
@@ -153,253 +134,31 @@ $(document).ready(function(){
 			ScrollMeTo(location);
 		},1000);
 	});
+	/* ========================================================================= */
   /* ========= Introduction ================================================== */
 	/* ========================================================================= */
 
-
-
-
-
-
-
-	/* ========= My Projects =================================================== */
-	/* ========================================================================= */
-	$('.current-project-list li').on('click', function(){
-		LoadSelectedProject($(this).index()); //array based - starts at 0
-		//alert(projectsList[selProj][0]);
-		 DisplayProjectView();
-		 viewingProject = true;
+	// ///////////// INTRO SECTION - NEXT SECTION BUTTON /////////////////////////
+	$("body").on("click", ".sectionIntro .btnNext", function() {
+		ScrollMeTo("about");
 	});
 
-
-	//this function loads a selected project from the project selector into view
-	function LoadSelectedProject(pid) {
-		project = pid;
-		//check to see if project exists...then fetch Data
-
-		//populate project values
-		$('.project-details header h2').html(projectsList[pid][0]); //project name
-		$('.project-details header h3').html(projectsList[pid][1] + ' / ' + projectsList[pid][2]); //project company + / + project type
-		$('.project-details header em').html(projectsList[pid][3]); //ux methods
-		$('.project-details .brief').html(projectsList[pid][4]); //project brief
-		$('.project-details .job-title').html(projectsList[pid][5]); //assigned job title(s)
-		$('.project-slides .summary').html(projectsList[pid][4]); //image description
-		/*Grab first image within array */
-		$('.project-slides img').attr("src", projectsList[pid][7][0][0]); //image source (aka img/mm_img_tspace.jpg)
-		$('.project-slides .title').html(projectsList[pid][7][0][1]); //image caption
-		projSlideTotal = projectsList[pid][7].length;
-		BuildProjectSlideNavigation();
-
-		//load images
-		/*
-		for(let i=0; i<projectsList[pid][5].length; i++){
-			alert(projectsList[pid][5][i][0] + '-' + projectsList[pid][5][i][1]);
-		}
-
-		*/
-		//function to load all ux deliverables
-		LoadProjectUXDeliverables();
-
-		//disable previous/next project buttons according to which project was selected
-		if((pid+1) >= projTotal){
-			DisableProjectNavigation('next', true);
-		}else if(pid == 0){
-			DisableProjectNavigation('previous', true);
-		}
-		//always default to disabling the previous project slide since we are loading
-		//the project for the first time
-		$('.prev-slide').prop("disabled", true);
-		projectSlide=0;
-	}
-
-	//this function loads all ux deliverables from a project into the header as tags
-	function LoadProjectUXDeliverables(){
-	var i;
-		$('.project-details .deliverables ul').html('');
-		for(i=0;i<projectsList[project][6].length;i++){
-			$('.project-details .deliverables ul').append('<li>'+ projectsList[project][6][i] + '</li>');
-		}
-	}
-
- //this function enables/disables the prev/next buttons to view projects
-  function DisableProjectNavigation(btn, val){
-		if(val){
-			$('.'+btn+'-project').addClass("disabled");
-			$('.'+btn+'-project').prop("disabled", true);
-		}else{
-			$('.'+btn+'-project').removeClass("disabled");
-			$('.'+btn+'-project').prop("disabled", false);
-		}
-	}
-
-  //FUNCTION *************************************
-	function LoadProjectView(){
-		//project name
-		$('.project-details header h2').fadeOut(speed, function(){
-			$('.project-details header h2').html(projectsList[project][0]).fadeIn(speed);
-			//enable previous project button
-			if(project<projectsList.length){
-				$('.previous-project').removeClass("disabled");
-			}
-		});
-		//project company and type
-		$('.project-details header h3').fadeOut(speed, function(){
-			$('.project-details header h3').html(projectsList[project][1] + ' / ' + projectsList[project][2]).fadeIn(speed);
-		});
-		//ux methods
-		$('.project-details header em').fadeOut(speed, function(){
-			$('.project-details header em').html(projectsList[project][3]).fadeIn(speed);
-		});
-		//project brief
-		$('.project-summary .brief').fadeOut(speed, function(){
-			$('.project-summary .brief').html(projectsList[project][4]).fadeIn(speed);
-		});
-		//assigned job title(s)
-		$('.project-summary .job-title').fadeOut(speed, function(){
-			$('.project-summary .job-title').html(projectsList[project][5]).fadeIn(speed);
-		});
-		//ux deliverable(s)
-		$('.project-summary .deliverables').fadeOut(speed, function(){
-		 LoadProjectUXDeliverables();
-		 $('.project-summary .deliverables').fadeIn(speed);
-	 	});
-
-		projSlideTotal = projectsList[project][7].length;
-		//reset project slides to 0 since we are loading a new project into view
-		projectSlide=0;
-		LoadProjectSlides();
-		BuildProjectSlideNavigation();
-	}
-
-	//FUNCTION *************************************
-	function LoadProjectSlides(){
-		$('.project-slides img').fadeOut(speed, function(){
-			$('.project-slides img').attr("src", projectsList[project][7][(projectSlide)][0]).fadeIn(speed);
-		});
-
-		$('.project-slides .title').fadeOut(speed, function(){
-			$('.project-slides .title').html(projectsList[project][7][(projectSlide)][1]).fadeIn(speed);
-		});
-
-	  //disable next slide button if we are at the end of the list count
-		if(projectSlide<(projSlideTotal-1)){
-			if((projSlideTotal-1)==0){
-				DisableProjectSlideNavigation("next", true);
-			}
-			DisableProjectSlideNavigation("next", false);
-		}else{
-			DisableProjectSlideNavigation("next", true);
-		}
-		//FUNCTION -- disable the previous slide button if we are at the first slide in list
-		if(projectSlide==0){
-			DisableProjectSlideNavigation("prev", true);
-		}else{
-			DisableProjectSlideNavigation("prev", false);
-		}
-	}
-
-	//FUNCTION *************************************
-	function SetProjectSlideNavigation(){
-		$('.proj-slides-nav ul li span').each(function(index){
-			$(this).removeClass("active");
-		});
-		$('.proj-slides-nav ul li:nth-child('+ (projectSlide+1) +') span').addClass('active');
-	}
-
-	//this function enables/disables the prev/next buttons to view project slides
-   function DisableProjectSlideNavigation(btn, val){
- 		if(val){
- 			$('.'+btn+'-slide').addClass("disabled");
- 			$('.'+btn+'-slide').prop("disabled", true);
- 		}else{
- 			$('.'+btn+'-slide').removeClass("disabled");
- 			$('.'+btn+'-slide').prop("disabled", false);
- 		}
- 	}
-
-	function BuildProjectSlideNavigation(){
-		$('.proj-slides-nav ul').html('');
-		//todo: need to add unique titles to data and then insert into each list item title
-		for(var i=0;i<projectsList[project][7].length;i++){
-			$('.proj-slides-nav ul').append('<li><button title="Project view '+(i+1)+'"><span></span></button></li>');
-		}
-			$('.proj-slides-nav ul li:first-child span').addClass("active");
-	}
-
+	// FUNCTION ******************************************************************
+	// scrolls user to specific area
 	function ScrollMeTo(element){
 		var elementTarget;
-		if( element == "main" || element == "about" || element == "skills" || element == "projects" || element == "contact" )
+		if( element == "main" || element == "about" || element == "skills" || element == "work" || element == "contact" )
 		{
 			if(element == "about"){ elementTarget = "#aboutMe"; }
 			else if(element == "skills"){ elementTarget = "#mySkills"; }
-			else if(element == "projects"){ elementTarget = "#recentProjects"; }
+			else if(element == "work"){ elementTarget = "#work"; }
 			else if(element == "contact"){ elementTarget = "#contactMe"; }
 			else if(element == "main"){ elementTarget = "#main"; }
 		}
 		$(".mainContentBox").mCustomScrollbar("stop").mCustomScrollbar("scrollTo",$(elementTarget),{scrollEasing:"easeInOut", scrollInertia: 1000});
 	}
 
-	$("body").on("click", ".sectionIntro .btnNext", function() {
-		ScrollMeTo("about");
-	});
-
- 	//((((((((((((((((( PROJECT SLIDE NAVIGATION BUTTON DOTS ))))))))))))))))))))
-	$("body").on("click", ".proj-slides-nav ul li", function() {
-		projectSlide = $(this).index();
-		LoadProjectSlides();
-		SetProjectSlideNavigation();
-	});
-
-	//((((((((((((((((((((((((( PREVIOUS PROJECT BUTTON )))))))))))))))))))))))))
-	$("body").on("click", ".previous-project", function(){
-		project--;
-		//alert((project+1) + ' ' + projectsList.length);
-		LoadProjectView();
-
-		if(project == 0){
-			DisableProjectNavigation('previous', true);
-		}
-		DisableProjectNavigation('next', false);
-	});
-
-	//((((((((((((((((((((((((((( NEXT PROJECT BUTTON ))))))))))))))))))))))))))))
-	$("body").on("click", ".next-project", function(){
-		project++;
-		//alert((project+1) + ' ' + projectsList.length);
-		LoadProjectView();
-
-		if(project == (projectsList.length-1)){
-			DisableProjectNavigation('next', true);
-		}
-		DisableProjectNavigation('previous', false);
-	});
-
-	//((((((((((((((((((((( PREVIOUS SLIDE (PROJECT) BUTTON ))))))))))))))))))))))
-	$("body").on("click", ".prev-slide", function(){
-		projectSlide--;
-		LoadProjectSlides();
-		SetProjectSlideNavigation();
-		/*
-		if(project == 0){
-			DisableProjectNavigation('previous', true);
-		}
-		DisableProjectNavigation('next', false);
-		*/
-	});
-
-	//((((((((((((((((((((( PREVIOUS SLIDE (PROJECT) BUTTON ))))))))))))))))))))))
-	$("body").on("click", ".next-slide", function(){
-		projectSlide++;
-		LoadProjectSlides();
-		SetProjectSlideNavigation();
-		/*
-		if(project == 0){
-			DisableProjectNavigation('previous', true);
-		}
-		DisableProjectNavigation('next', false);
-		*/
-	});
-
+	/* ========================================================================= */
   /* ========= About Me ====================================================== */
 	/* ========================================================================= */
   var timerResumeButtons = {
