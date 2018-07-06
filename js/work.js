@@ -22,8 +22,8 @@ function DisplayProjectView(){
     proj.animate({opacity: 0.0,},1000,function(){
       proj.css({visibility: "hidden"});
       // clear all slides from project view
-      $('.project-slides ul').empty();
-      $('.proj-slides-nav ul').empty();
+      $('.project-details .project-slides ul').html('');
+      $('.project-details .proj-slides-nav ul').html('');
     });
     $('.mainContentBox').animate({opacity: 1, visibility: "visible"},1000);
     //$(".work").animate({opacity: 1, visibility: "visible"},1000);
@@ -277,22 +277,31 @@ $("body").on("click", ".next-project", function(){
 });
 
 // Previous project slide button
+// -----------------------------------------------------------------------------
 $("body").on("click", ".prev-slide", function(){
 	projectSlide--;
-	LoadProjectSlides();
-	SetProjectSlideNavigation();
 
-  var sel;
-	var prev = '.project-details .project-slides ul li.slide_' + (projectSlide+1);
+  var sel = '.project-details .project-slides ul li.slide_' + projectSlide;
+  var prev = '.project-details .project-slides ul li.slide_'+ (projectSlide+1);
+  $('.project-slides .prev-slide').blur();
 
+  // enable/disable slide buttons
+  if(projectSlide == 0){
+    DisableProjectSlideNavigation("prev", true);
+  }else{
+    DisableProjectSlideNavigation("prev", false);
+  }
 
+	$(prev).animate({'opacity' : 0}, speed, function(){
+		$(prev).addClass('hidden');
+		// TODO: need to deselect and set secondary navigation
+    SetProjectSlideNavigation();
 
-
-
-
-
-
-
+		$(sel).removeClass('hidden');
+		$(sel).animate({'opacity':1}, speed, function(){
+			 // TODO: enable previous/next slide buttons
+		});
+	});
 });
 
 // Next project slide button
