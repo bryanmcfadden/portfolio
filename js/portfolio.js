@@ -101,6 +101,7 @@ $(document).ready(function(){
 			}else{
 				//show main menu modal
 				$('.mainMenu').css("display", "block");
+				LoadEndorsement();
 				setTimeout( function(){
 					$('.mainMenu').addClass("visible");
 					$('.hamburger').addClass("light is-active");
@@ -134,7 +135,18 @@ $(document).ready(function(){
 			ScrollMeTo(location);
 		},1000);
 	});
-	/* ========================================================================= */
+
+	// FUNCTION ******************************************************************
+	// loads random endorsement on menu opening
+	function LoadEndorsement(){
+		var num = Math.floor(Math.random() * endorsementQoutes.length);
+		//alert(num);
+		$('.endorsementWrapper .endorsement').html(endorsementQoutes[num][0]);
+		$('.endorsementWrapper .endorsementAuthor').html(endorsementQoutes[num][1]);
+		num = null;
+	}
+
+  /* ========================================================================= */
   /* ========= Introduction ================================================== */
 	/* ========================================================================= */
 

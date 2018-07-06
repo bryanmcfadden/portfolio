@@ -281,12 +281,18 @@ $("body").on("click", ".prev-slide", function(){
 	projectSlide--;
 	LoadProjectSlides();
 	SetProjectSlideNavigation();
-	/*
-	if(project == 0){
-		DisableProjectNavigation('previous', true);
-	}
-	DisableProjectNavigation('next', false);
-	*/
+
+  var sel;
+	var prev = '.project-details .project-slides ul li.slide_' + (projectSlide+1);
+
+
+
+
+
+
+
+
+
 });
 
 // Next project slide button
@@ -315,23 +321,14 @@ $("body").on("click", ".next-slide", function(){
     DisableProjectSlideNavigation("prev", true);
   }
 
-	$(prev).animate({'opacity' : 0}, 500, function(){
+	$(prev).animate({'opacity' : 0}, speed, function(){
 		$(prev).addClass('hidden');
 		// TODO: need to deselect and set secondary navigation
     SetProjectSlideNavigation();
 
 		$(sel).removeClass('hidden');
-		$(sel).animate({'opacity':1}, 500, function(){
+		$(sel).animate({'opacity':1}, speed, function(){
 			 // TODO: enable previous/next slide buttons
 		});
 	});
-
-	//LoadProjectSlides();
-	//SetProjectSlideNavigation();
-	/*
-	if(project == 0){
-		DisableProjectNavigation('previous', true);
-	}
-	DisableProjectNavigation('next', false);
-	*/
 });
